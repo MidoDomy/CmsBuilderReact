@@ -2,12 +2,12 @@ import type { NextPage } from "next";
 
 import Layout from '../layouts/Layout';
 
-const Home: NextPage = () => {
+const Settings: NextPage = () => {
     return (
         <Layout>
-            Home
+            Settings
         </Layout>
     )
 }
 
-export default Home;
+export default Settings;
