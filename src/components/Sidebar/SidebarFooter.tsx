@@ -5,7 +5,7 @@ type Props = {
   className?: string
 }
 
-const SidebarHeader: React.FC<Props> = ({children, className}) => {
+const SidebarFooter: React.FC<Props> = ({children, className}) => {
   return (
     <div className={`py-2 px-5 ${className}`}>
       {children}
@@ -13,4 +13,4 @@ const SidebarHeader: React.FC<Props> = ({children, className}) => {
   )
 }
 
-export default SidebarHeader;
+export default SidebarFooter;

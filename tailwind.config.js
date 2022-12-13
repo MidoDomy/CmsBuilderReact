@@ -16,8 +16,8 @@ module.exports = {
   ],
   theme: {
     container: (theme) => ({
-      // center: true,
-      // padding: theme("spacing.4")
+      center: true,
+      padding: theme("spacing.4")
     }),
     extend: {
       colors: {
@@ -32,6 +32,9 @@ module.exports = {
           info: withOpacity('--color-info'),
           disabled: withOpacity('--color-disabled')
         }
+      },
+      borderWidth: {
+        6: '6px'
       }
     },
   },

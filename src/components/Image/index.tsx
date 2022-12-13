@@ -3,9 +3,8 @@ import {default as NextImage} from 'next/image';
 
 type ImageProps = {
   className?: string;
-  src: string;
+  src?: string;
   alt?: string;
-  size?: number;
 }
 
 const Image: React.FC<ImageProps> = ({ className, src, alt }) => {
@@ -21,9 +20,9 @@ const Image: React.FC<ImageProps> = ({ className, src, alt }) => {
 
   return (
     <NextImage
-        className={className}
-        src={image}
-        alt={alt}
+      className={className}
+      src={image}
+      alt={alt}
     />
   );
 }
