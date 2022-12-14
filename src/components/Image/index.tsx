@@ -1,13 +1,13 @@
 import React from 'react';
 import {default as NextImage} from 'next/image';
 
-type ImageProps = {
+type Props = {
   className?: string;
   src?: string;
   alt?: string;
 }
 
-const Image: React.FC<ImageProps> = ({ className, src, alt }) => {
+const Image: React.FC<Props> = ({ className, src, alt }) => {
   
   let image: string;
 

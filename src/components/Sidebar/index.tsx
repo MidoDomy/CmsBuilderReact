@@ -11,7 +11,7 @@ type Props = {
 
 const Sidebar: React.FC<Props> = ({children, className}) => {
   return (
-    <div className={'flex flex-col ' + className}>
+    <div className={'flex flex-col min-h-screen shadow-lg ' + className}>
       {children}
     </div>
   )

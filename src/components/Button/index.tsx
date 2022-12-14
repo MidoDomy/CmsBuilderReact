@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-type ButtonProps = {
+type Props = {
   children: React.ReactNode,
   className?: string;
   variant?: 'primary' | 'secondary' | 'default';
@@ -14,7 +14,7 @@ type ButtonProps = {
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, className, variant, size, disabled, block, outline, square, href, onClick }) => {
+const Button: React.FC<Props> = ({ children, className, variant, size, disabled, block, outline, square, href, onClick }) => {
 
   const variantClasses = (() => {switch(variant) {
     case 'primary':
@@ -35,7 +35,7 @@ const Button: React.FC<ButtonProps> = ({ children, className, variant, size, dis
   }})()
 
   const getClasses = () => {
-    return `border-2 ${variantClasses} ${sizeClasses} ${block ? 'w-full' : ''} ${className}`;
+    return `transition-colors rounded-md border-2 ${variantClasses} ${sizeClasses} ${block ? 'w-full' : ''} ${className}`;
   }
 
   return (

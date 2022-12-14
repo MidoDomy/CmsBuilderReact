@@ -20,6 +20,9 @@ module.exports = {
       padding: theme("spacing.4")
     }),
     extend: {
+      fontSize: {
+        '2xs': '0.6rem'
+      },
       colors: {
         base: {
           primary: withOpacity('--color-primary'),
@@ -30,7 +33,9 @@ module.exports = {
           danger: withOpacity('--color-danger'),
           warning: withOpacity('--color-warning'),
           info: withOpacity('--color-info'),
-          disabled: withOpacity('--color-disabled')
+          disabled: withOpacity('--color-disabled'),
+          white: withOpacity('--color-white'),
+          black: withOpacity('--color-black')
         }
       },
       borderWidth: {

@@ -1,13 +1,13 @@
 import React from 'react';
 import {default as NextImage} from 'next/image';
 
-type IconProps = {
+type Props = {
   className?: string;
   name: string;
   size?: number;
 }
 
-const Icon: React.FC<IconProps> = ({ className, name, size }) => {
+const Icon: React.FC<Props> = ({ className, name, size }) => {
   const src = require(`assets/icons/${name}.svg`).default;
 
   return (

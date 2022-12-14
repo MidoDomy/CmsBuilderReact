@@ -2,14 +2,14 @@ import React from 'react';
 
 import Image from 'components/Image';
 
-type AvatarProps = {
+type Props = {
   className?: string;
   src?: string;
   alt?: string;
   size?: 'sm' | 'md' | 'lg';
 }
 
-const Avatar: React.FC<AvatarProps> = ({ className, src, alt, size }) => {
+const Avatar: React.FC<Props> = ({ className, src, alt, size }) => {
 
   const sizeClasses = (() => {switch(size) {
     case 'lg':
