@@ -2,12 +2,12 @@ import type { NextPage } from "next";
 
 import Layout from 'layouts/Layout';
 
-const Collections: NextPage = () => {
+const CollectionBlogs: NextPage = () => {
   return (
     <Layout>
-      Collections
+      Collection Blogs
     </Layout>
   )
 }
 
-export default Collections;
+export default CollectionBlogs;

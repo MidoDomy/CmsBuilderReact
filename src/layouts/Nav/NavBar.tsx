@@ -15,7 +15,7 @@ type Props = {
 const NavBar: React.FC<Props> = ({className, darkMode, toggleDarkMode}) => {
   return (
     <header className='px-4'>
-      <div className='container max-w-7xl flex items-center gap-4 py-4 bg-white rounded-b-lg shadow-md'>
+      <div className='container max-w-7xl flex items-center gap-4 py-4 bg-base-white rounded-b-lg shadow-md'>
         {/* Search */}
         <div className='flex-1'>
           <input className='bg-base-light rounded-md px-4 py-2 w-full shadow-sm'

@@ -1,41 +1,36 @@
 import React, {useState} from 'react';
 
-import Image from 'components/Image';
+import Icon from 'components/Icon';
 import Modal from 'components/Modal';
 import Button from 'components/Button';
+import Tooltip from 'components/Tooltip';
 
 type Props = {
   className?: string,
-  img?: string,
+  icon: string,
   name: string
 }
 
-const FontCard: React.FC<Props> = ({className, img, name}) => {
+const IconCard: React.FC<Props> = ({className, icon, name}) => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleModal = () => setIsOpen(!isOpen);
+  const toggleModal = () => setIsOpen(!isOpen)
 
   return (
     <>
-      <div className={`flex flex-col w-56 shadow-md bg-base-white p-4 rounded-lg cursor-pointer ${className}`}
-        onClick={toggleModal}
-      >
-        <div className='relative flex-1 aspect-video'>
-          <Image src={img} />
+      <Tooltip text={name}>
+        <div className={`shadow-md bg-base-white p-3 rounded-lg cursor-pointer ${className}`} onClick={toggleModal}>
+          <Icon name={icon} size={24} />
         </div>
-
-        <div className='pt-1.5 font-medium text-base-dark'>
-          {name}
-        </div>
-      </div>
-    
+      </Tooltip>
+      
       {/* Modal edit font */}
       <Modal size='sm' isOpen={isOpen} toggle={toggleModal}>
-        <Modal.Header headline="Edit font" toggle={toggleModal} />
+        <Modal.Header headline="Edit icon" toggle={toggleModal} />
 
         <Modal.Body>
-          Modal body content here ..
+          Icon svg file uploud here..
         </Modal.Body>
 
         <Modal.Footer>
@@ -63,8 +58,8 @@ const FontCard: React.FC<Props> = ({className, img, name}) => {
   )
 }
 
-FontCard.defaultProps = {
+IconCard.defaultProps = {
   className: ''
 }
 
-export default FontCard;
+export default IconCard;

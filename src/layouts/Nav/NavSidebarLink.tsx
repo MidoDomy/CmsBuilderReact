@@ -24,7 +24,7 @@ const NavSidebarLink: React.FC<NavSidebarLinkProps> = ({ children, className, st
     <li className={`pt-2 select-none ${structuring ? '' : 'pr-4'}`}>
       { structuring ?
         <>
-          <button className={`w-full flex items-center py-3 px-5 ${router.pathname.includes(link) ? 'bg-base-primary bg-opacity-10' : 'hover:bg-base-primary hover:bg-opacity-10 transition-colors'}`} 
+          <button className={`w-full flex items-center py-3 px-5 text-base-dark ${router.pathname.includes(link) ? 'bg-base-primary bg-opacity-10' : 'hover:bg-base-primary hover:bg-opacity-10 transition-colors'}`} 
             onClick={() => setcollapse(!collapse)}
           >
             <div className='w-5 mr-3'>
@@ -45,7 +45,7 @@ const NavSidebarLink: React.FC<NavSidebarLinkProps> = ({ children, className, st
           }
         </>
         :
-        <Link href={link} className={`w-full flex items-center px-5 rounded-r-full hover:bg-opacity-10 hover:bg-base-primary transition-colors ${router.pathname == link ? 'border-l-6 border-t-4 border-b-4 border-l-base-primary border-transparent text-base-primary py-2 pl-3' : 'py-3'}`} >
+        <Link href={link} className={`w-full flex items-center px-5 text-base-dark rounded-r-full hover:bg-opacity-10 hover:bg-base-primary transition-colors ${router.pathname == link ? 'border-l-6 border-t-4 border-b-4 border-l-base-primary border-transparent text-base-primary py-2 pl-3' : 'py-3'}`} >
           <div className='w-5 mr-3'>
             {icon ? <Icon name={icon} size={iconSize} className='mx-auto' /> : ''}
           </div>

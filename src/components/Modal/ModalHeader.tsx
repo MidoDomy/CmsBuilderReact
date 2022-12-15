@@ -12,7 +12,7 @@ type Props = {
 
 const ModalHeader: React.FC<Props> = ({ children, className, headline, toggle }) => {
   return (
-    <div className={`flex items-center py-4 px-6 border-b ${className}`}>
+    <div className={`flex items-center py-4 px-6 border-b border-base-light ${className}`}>
       <div className='flex-1 text-xl'>
         {headline ? headline : children}
       </div>

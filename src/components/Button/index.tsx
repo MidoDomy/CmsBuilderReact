@@ -20,7 +20,7 @@ const Button: React.FC<Props> = ({ children, className, variant, size, disabled,
     case 'primary':
       return (outline ? 'bg-transparent' : 'bg-base-primary hover:bg-opacity-80') + ' border-base-primary hover:bg-base-primary'
     case 'secondary':
-      return (outline ? 'bg-transparent' : 'bg-base-secondary hover:bg-opacity-80') + ' border-base-secondary hover:bg-base-secondary'
+      return (outline ? 'bg-transparent' : 'bg-base-secondary hover:bg-opacity-80 text-base-light') + ' border-base-secondary hover:bg-base-secondary'
     default: 
       return 'hover:bg-base-light border-transparent'
   }})()

@@ -14,7 +14,7 @@ const Layout: React.FC<Props> = ({children, className}) => {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className={`flex ${darkMode ? "theme-dark" : "theme-light"}`}>
+    <div id='mainLayout' className={`flex ${darkMode ? "theme-dark" : "theme-light"}`}>
       <Head>
         <title>Cms builder</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />

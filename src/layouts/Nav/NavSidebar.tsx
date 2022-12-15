@@ -15,7 +15,14 @@ const NavSidebar: React.FC = () => {
         <ul>
           <NavSidebarLink icon='home' name='Dashboard' link='/' />
           <NavSidebarLink icon='categories' name='Categories' link='/categories' />
-          <NavSidebarLink icon='collections' name='Collections' link='/collections' />
+
+          <NavSidebarLink icon='collections' name='Collections' link='/collections' structuring={true}>
+            <ul>
+              <NavSidebarLink icon='circle' iconSize={10} name='Overview' link='/collections/overview' />
+              {/* Custom collections */}
+              <NavSidebarLink icon='circle' iconSize={10} name='Blogs' link='/collections/blogs' />
+            </ul>
+          </NavSidebarLink>
           
           <NavSidebarLink icon='content' name='Content' link='/content' structuring={true}>
             <ul>

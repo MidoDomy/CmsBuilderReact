@@ -26,14 +26,14 @@ const Modal: React.FC<Props> = ({ children, className, size, isOpen, toggle }) =
   }})()
 
   return (
-    <Portal to='body'>
+    <Portal to='#mainLayout'>
       {isOpen && 
         <div className={`fixed inset-0 ${className}`}>
           {/* Overlay */}
-          <div className='absolute inset-0 bg-base-dark bg-opacity-20' onClick={toggle}></div>
+          <div className='absolute inset-0 bg-base-dark bg-opacity-30' onClick={toggle}></div>
 
           {/* Modal */}
-          <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-base-white w-full rounded-md ${sizeClasses}`}>
+          <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-base-white text-base-dark w-full rounded-md ${sizeClasses}`}>
             {children}
           </div>
         </div>
