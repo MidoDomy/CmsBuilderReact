@@ -9,7 +9,7 @@ import CollectionsCard from 'layouts/Collections/CollectionsCard';
 
 const CollectionsOverview: NextPage = () => {
 
-  const [isTableView, setIsTableView] = useState(false);
+  const [isTableView, setIsTableView] = useState(true);
 
   return (
     <Layout>
@@ -19,6 +19,7 @@ const CollectionsOverview: NextPage = () => {
         <div>
           <Button className='transform translate-y-1/2 bg-red-400 rounded-full'
             square
+            onPress={() => alert('Button pressed!')}
           >
             <Icon name='plus' />
           </Button>
@@ -26,10 +27,10 @@ const CollectionsOverview: NextPage = () => {
       </div>
 
       <div className='flex gap-2 items-center justify-end border-b border-base-white mb-4 py-3'>
-        <Button 
+        <Button className='neka klasa'
           variant='secondary' 
           square
-          onClick={() => setIsTableView(false)}  
+          onPress={() => setIsTableView(false)}  
         >
           <Icon name='categories' />
         </Button>
@@ -37,7 +38,7 @@ const CollectionsOverview: NextPage = () => {
         <Button 
           variant='secondary' 
           square
-          onClick={() => setIsTableView(true)}  
+          onPress={() => setIsTableView(true)}  
         >
           Table
         </Button>
@@ -46,7 +47,6 @@ const CollectionsOverview: NextPage = () => {
       {isTableView ? 
         <div>
           Table view
-          {/* Todo: table grid component */}
         </div>
         :
         <div className='flex flex-wrap gap-4'>

@@ -31,33 +31,29 @@ const FontCard: React.FC<Props> = ({className, img, name}) => {
       </div>
     
       {/* Modal edit font */}
-      <Modal size='sm' isOpen={isOpen} toggle={toggleModal}>
-        <Modal.Header headline="Edit font" toggle={toggleModal} />
+      <Modal size='sm' isOpen={isOpen} toggle={toggleModal} headline="Edit font">
+        <div className='pb-4'>
+          Edit font
+        </div>
+        
+        <div className="flex gap-4">
+          <Button 
+            variant='secondary' 
+            outline
+            size='sm'
+            onPress={toggleModal}
+          >
+            Cancel
+          </Button>
 
-        <Modal.Body>
-          Modal body content here ..
-        </Modal.Body>
-
-        <Modal.Footer>
-          <div className="flex gap-4">
-            <Button 
-              variant='secondary' 
-              outline
-              size='sm'
-              onClick={toggleModal}
-            >
-              Cancel
-            </Button>
-
-            <Button 
-              variant='primary' 
-              size='sm'
-              onClick={toggleModal}
-            >
-              Save
-            </Button>
-          </div>
-        </Modal.Footer>
+          <Button 
+            variant='primary' 
+            size='sm'
+            onPress={toggleModal}
+          >
+            Save
+          </Button>
+        </div>
       </Modal>
     </>
   )

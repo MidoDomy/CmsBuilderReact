@@ -1,20 +1,25 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { FocusScope } from '@react-aria/focus';
+import { Overlay, useModalOverlay } from '@react-aria/overlays';
+import { useDialog } from '@react-aria/dialog';
 
-import Portal from 'hocs/Portal';
-
-import ModalHeader from './ModalHeader';
-import ModalBody from './ModalBody';
-import ModalFooter from './ModalFooter';
+import Button from 'components/Button';
+import Icon from 'components/Icon';
 
 type Props = {
   children?: React.ReactNode,
   className?: string,
   size?: 'sm' | 'md' | 'lg',
+  headline?: string,
   isOpen: boolean,
   toggle: () => void
 }
 
-const Modal: React.FC<Props> = ({ children, className, size, isOpen, toggle }) => {
+const Modal: React.FC<Props> = ({ children, className, size, headline, isOpen, toggle, ...props }) => {
+
+  let ref = useRef<HTMLDivElement>(null);
+  let { modalProps, underlayProps } = useModalOverlay(props, isOpen, ref);
+  let { dialogProps, titleProps } = useDialog(props, ref);
 
   const sizeClasses = (() => {switch(size) {
     case 'sm':
@@ -26,19 +31,52 @@ const Modal: React.FC<Props> = ({ children, className, size, isOpen, toggle }) =
   }})()
 
   return (
-    <Portal to='#mainLayout'>
-      {isOpen && 
-        <div className={`fixed inset-0 ${className}`}>
-          {/* Overlay */}
-          <div className='absolute inset-0 bg-base-dark bg-opacity-30' onClick={toggle}></div>
+    <>
+      {isOpen &&
+        <Overlay>
+          <div className={`fixed inset-0${className ? ' ' + className : ''}`}
+            {...underlayProps}
+          >
+            {/* Overlay */}
+            <div className='absolute inset-0 bg-base-dark bg-opacity-30' 
+              onClick={toggle}
+            />
 
-          {/* Modal */}
-          <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-base-white text-base-dark w-full rounded-md ${sizeClasses}`}>
-            {children}
+            {/* Modal */}
+            <FocusScope contain autoFocus restoreFocus>
+              <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-base-white text-base-dark w-full rounded-md ${sizeClasses}`}
+                {...modalProps}
+                {...dialogProps}
+                ref={ref}
+              >
+                <div className='flex justify-between items-center py-4 px-6 border-b border-base-light'>
+                  {/* Header */}
+                  {headline &&
+                    <h3 className='text-xl' 
+                      {...titleProps}
+                    >
+                      {headline}
+                    </h3>
+                  }
+
+                  {/* Close button */}
+                  <Button square
+                    onPress={toggle}
+                  >
+                    <Icon name='x' />
+                  </Button>
+                </div>
+
+                {/* Children content */}
+                <div className='px-6 py-4'>
+                  {children}
+                </div>
+              </div>
+            </FocusScope>
           </div>
-        </div>
+        </Overlay>
       }
-    </Portal>
+    </>
   );
 }
 
@@ -46,8 +84,4 @@ Modal.defaultProps = {
   size: 'md'
 }
 
-export default Object.assign(Modal, {
-  Header: ModalHeader,
-  Body: ModalBody,
-  Footer: ModalFooter
-});
+export default Modal;

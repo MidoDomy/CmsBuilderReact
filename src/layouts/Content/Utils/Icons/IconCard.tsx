@@ -26,33 +26,27 @@ const IconCard: React.FC<Props> = ({className, icon, name}) => {
       </Tooltip>
       
       {/* Modal edit font */}
-      <Modal size='sm' isOpen={isOpen} toggle={toggleModal}>
-        <Modal.Header headline="Edit icon" toggle={toggleModal} />
+      <Modal size='sm' isOpen={isOpen} toggle={toggleModal} headline="Edit icon">
+        Icon svg file uploud here..
+        
+        <div className="flex gap-4">
+          <Button 
+            variant='secondary' 
+            outline
+            size='sm'
+            onClick={toggleModal}
+          >
+            Cancel
+          </Button>
 
-        <Modal.Body>
-          Icon svg file uploud here..
-        </Modal.Body>
-
-        <Modal.Footer>
-          <div className="flex gap-4">
-            <Button 
-              variant='secondary' 
-              outline
-              size='sm'
-              onClick={toggleModal}
-            >
-              Cancel
-            </Button>
-
-            <Button 
-              variant='primary' 
-              size='sm'
-              onClick={toggleModal}
-            >
-              Save
-            </Button>
-          </div>
-        </Modal.Footer>
+          <Button 
+            variant='primary' 
+            size='sm'
+            onClick={toggleModal}
+          >
+            Save
+          </Button>
+        </div>
       </Modal>
     </>
   )

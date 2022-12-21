@@ -1,21 +1,24 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import Link from 'next/link';
+import { useButton } from 'react-aria';
 
 type Props = {
   children: React.ReactNode,
   className?: string;
   variant?: 'primary' | 'secondary' | 'default';
   size?: 'sm' | 'md' | 'lg';
-  disabled?: boolean;
   block?: boolean;
   outline?: boolean;
   square?: boolean;
   href?: string;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button: React.FC<Props> = ({ children, className, variant, size, disabled, block, outline, square, href, onClick }) => {
+const Button: React.FC<Props> = ({ children, className, variant, size, block, outline, square, href, ...props }) => {
+  
+  let ref = useRef<HTMLButtonElement | HTMLAnchorElement>(null);
+  let { buttonProps } = useButton(props, ref);
 
+  // Classes -----------------------------------
   const variantClasses = (() => {switch(variant) {
     case 'primary':
       return (outline ? 'bg-transparent' : 'bg-base-primary hover:bg-opacity-80') + ' border-base-primary hover:bg-base-primary'
@@ -35,21 +38,24 @@ const Button: React.FC<Props> = ({ children, className, variant, size, disabled,
   }})()
 
   const getClasses = () => {
-    return `transition-colors rounded-md border-2 ${variantClasses} ${sizeClasses} ${block ? 'w-full' : ''} ${className}`;
+    return `transition-colors border-2 ${variantClasses} ${sizeClasses}${block ? ' w-full' : ''}${className ? ' ' + className : ''}`;
   }
+  // -----------------------------------
 
   return (
     <>
       { href ? 
         <Link className={getClasses()} 
           href={href}
+          ref={ref}
+          {...buttonProps}
         >
           {children}
         </Link>
       :
         <button className={getClasses()}
-          onClick={onClick}
-          disabled={disabled}
+          ref={ref}
+          {...buttonProps}
         >
           {children}
         </button>
