@@ -1,77 +1,66 @@
 import type { NextPage } from 'next';
 
 import Layout from 'layouts/Layout';
-import ColorCard from 'layouts/Content/Utils/Colors/ColorCard';
+import Container from 'components/Grid/Container';
+import ColorsGroup from 'layouts/Content/Utils/Colors/ColorsGroup';
+import Button from 'components/Button';
+import Icon from 'components/Icon';
 
 const Colors: NextPage = () => {
+  const basicColors = [
+    {name: 'White', value: '#ffffff'},
+    {name: 'Black', value: '#000000'},
+    {name: 'Primary', value: '#0284c7'},
+    {name: 'Secondary', value: '#475569'},
+  ];
+
+  const primaryColors = [
+    {name: '50', value: '#f0f9ff'},
+    {name: '100', value: '#e0f2fe'},
+    {name: '200', value: '#bae6fd'},
+    {name: '300', value: '#7dd3fc'},
+    {name: '400', value: '#38bdf8'},
+    {name: '500', value: '#0ea5e9'}
+  ];
+
+  const secondaryColors = [
+    {name: '50', value: '#f8fafc'},
+    {name: '100', value: '#f1f5f9'},
+    {name: '200', value: '#e2e8f0'},
+    {name: '300', value: '#cbd5e1'},
+    {name: '400', value: '#94a3b8'},
+    {name: '500', value: '#64748b'}
+  ];
+
   return (
     <Layout>
-      <h1 className='mb-10 text-center text-4xl font-medium drop-shadow-md text-base-dark'>Colors</h1>
+      {/* Header */}
+      <div className='mb-20 mt-10'>
+        <Container>
+          <div className='flex justify-between pb-3 border-b border-gray-200 dark:border-gray-700'>
+            <h2 className='text-3xl text-slate-900 dark:text-slate-100 font-bold'>Colors</h2>
 
-      {/* Group */}
-      <div className='mb-12'>
-        <h2 className='mb-4 text-2xl text-base-dark'>Basic</h2>
+            <div className='flex gap-2.5'>
+              <Button>
+                <Icon name='edit' size={18} />
+                <span>Edit</span>
+              </Button>
 
-        {/* List */}
-        <div className='flex gap-4 flex-wrap'>
-          <ColorCard
-            name='Primary' 
-            color='#73964a' 
-          />
-
-          <ColorCard
-            name='Secondary' 
-            color='#6d757d' 
-          />
-
-          <ColorCard
-            name='Light' 
-            color='#f5f5f5' 
-          />
-
-          <ColorCard
-            name='White' 
-            color='#ffffff' 
-          />
-
-          <ColorCard
-            name='Black' 
-            color='#000000' 
-          />
-        </div>
+              <Button variant='primary'>
+                <Icon name='checkmark' size={18} />
+                <span>Publish</span>
+              </Button>
+            </div>
+          </div>
+        </Container>
       </div>
 
-      {/* Group */}
       <div>
-        <h2 className='mb-4 text-2xl text-base-dark'>Shades</h2>
-
-        {/* List */}
-        <div className='flex gap-4 flex-wrap'>
-          <ColorCard
-            name='Primary' 
-            color='#73964a' 
-          />
-
-          <ColorCard
-            name='Secondary' 
-            color='#6d757d' 
-          />
-
-          <ColorCard
-            name='Light' 
-            color='#f5f5f5' 
-          />
-
-          <ColorCard
-            name='White' 
-            color='#ffffff' 
-          />
-
-          <ColorCard
-            name='Black' 
-            color='#000000' 
-          />
-        </div>
+        <Container>
+          <ColorsGroup name='Basic' colors={basicColors} />
+          <ColorsGroup name='Primary' colors={primaryColors} />
+          <ColorsGroup name='Secondary' colors={secondaryColors} />
+        </Container>
       </div>
     </Layout>
   )

@@ -6,11 +6,7 @@ import NavSidebarLink from './NavSidebarLink';
 
 const NavSidebar: React.FC = () => {
   return (
-    <Sidebar className='w-80'>
-      <Sidebar.Header>
-        <h1 className='text-2xl text-center'>Logo</h1>
-      </Sidebar.Header>
-
+    <Sidebar className='w-72 bg-white dark:bg-zinc-800'>
       <Sidebar.Body>
         <ul>
           <NavSidebarLink icon='home' name='Dashboard' link='/' />

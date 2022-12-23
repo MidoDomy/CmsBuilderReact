@@ -1,14 +1,6 @@
-function withOpacity(variableName) {
-  return ({opacityValue}) => {
-    if(opacityValue !== undefined) {
-      return `rgba(var(${variableName}), ${opacityValue})`
-    }
-    return `rgb(var(${variableName}))`
-  }
-}
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/layouts/**/*.{js,ts,jsx,tsx}",
@@ -22,21 +14,6 @@ module.exports = {
     extend: {
       fontSize: {
         '2xs': '0.6rem'
-      },
-      colors: {
-        base: {
-          primary: withOpacity('--color-primary'),
-          secondary: withOpacity('--color-secondary'),
-          light: withOpacity('--color-light'),
-          dark: withOpacity('--color-dark'),
-          success: withOpacity('--color-success'),
-          danger: withOpacity('--color-danger'),
-          warning: withOpacity('--color-warning'),
-          info: withOpacity('--color-info'),
-          disabled: withOpacity('--color-disabled'),
-          white: withOpacity('--color-white'),
-          black: withOpacity('--color-black')
-        }
       },
       borderWidth: {
         6: '6px'

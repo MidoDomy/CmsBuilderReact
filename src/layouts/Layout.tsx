@@ -9,31 +9,37 @@ type Props = {
   className?: string
 }
 
-const Layout: React.FC<Props> = ({children, className}) => {
+const Layout: React.FC<Props> = ({children, className, ...props}) => {
 
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div id='mainLayout' className={`flex ${darkMode ? "theme-dark" : "theme-light"}`}>
+    <>
       <Head>
         <title>Cms builder</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <meta property='og:title' content='Cms builder' key='title' />
       </Head>
+    
+      <div id='mainLayout' className={`${className ? className : ''} ${darkMode ? 'dark' : ''}`} {...props}>
+        <div className='bg-white dark:bg-neutral-900 text-slate-500 dark:text-slate-300'>
+          <NavBar 
+            darkMode={darkMode} 
+            toggleDarkMode={() => setDarkMode(!darkMode)}
+          />
 
-      <NavSidebar />
+          <div className='flex'>
+            {/* Sidebar */}
+            <NavSidebar />
 
-      <main className={`flex-1 bg-base-light ${className}`}>
-        <NavBar 
-          darkMode={darkMode} 
-          toggleDarkMode={() => setDarkMode(!darkMode)}
-        />
-
-        <div className='container max-w-7xl pt-16'>
-          {children}
+            {/* Main content */}
+            <main className='flex-1'>
+              {children}
+            </main>
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </>
   )
 }
 

@@ -21,23 +21,25 @@ const NavSidebarLink: React.FC<NavSidebarLinkProps> = ({ children, className, st
   const [collapse, setcollapse] = useState(router.pathname.includes(link) ? true : false);
 
   return (
-    <li className={`pt-2 select-none ${structuring ? '' : 'pr-4'}`}>
+    <li className='select-none mb-1'>
       { structuring ?
         <>
-          <button className={`w-full flex items-center py-3 px-5 text-base-dark ${router.pathname.includes(link) ? 'bg-base-primary bg-opacity-10' : 'hover:bg-base-primary hover:bg-opacity-10 transition-colors'}`} 
+          {/* Collapse btn */}
+          <button className={`w-full flex items-center py-3 px-5 bg-sky-600 dark:bg-sky-400 hover:bg-opacity-10 dark:hover:bg-opacity-10 transition-colors ${router.pathname.includes(link) ? 'bg-opacity-10 dark:bg-opacity-10 text-sky-600 dark:text-sky-400' : 'bg-opacity-0 dark:bg-opacity-0'}`} 
             onClick={() => setcollapse(!collapse)}
           >
-            <div className='w-5 mr-3'>
-              {icon ? <Icon name={icon} size={iconSize} className='mx-auto' /> : ''}
+            <div className='w-5 mr-4'>
+              {icon && <Icon name={icon} size={iconSize} className='mx-auto' />}
             </div>
             <span>{name}</span>
 
-            {collapse ? <Icon name='arrow-head-up' size={18} className='ml-auto' /> : ''}
-            {!collapse ? <Icon name='arrow-head-down' size={18} className='ml-auto' /> : ''}
+            {collapse && <Icon name='arrow-head-up' size={18} className='ml-auto' />}
+            {!collapse && <Icon name='arrow-head-down' size={18} className='ml-auto' />}
           </button>
 
-          { collapse ?
-            <div>
+          {/* Collapse content */}
+          {collapse ?
+            <div className='pt-1'>
               {children}
             </div>
             :
@@ -45,11 +47,12 @@ const NavSidebarLink: React.FC<NavSidebarLinkProps> = ({ children, className, st
           }
         </>
         :
-        <Link href={link} className={`w-full flex items-center px-5 text-base-dark rounded-r-full hover:bg-opacity-10 hover:bg-base-primary transition-colors ${router.pathname == link ? 'border-l-6 border-t-4 border-b-4 border-l-base-primary border-transparent text-base-primary py-2 pl-3' : 'py-3'}`} >
-          <div className='w-5 mr-3'>
-            {icon ? <Icon name={icon} size={iconSize} className='mx-auto' /> : ''}
-          </div>
-          <span>{name}</span>
+        <Link href={link} className={`flex items-center px-5 py-3 bg-sky-600 dark:bg-sky-400 hover:bg-opacity-10 dark:hover:bg-opacity-10 transition-colors ${router.pathname == link ? 'pl-3 bg-opacity-10 dark:bg-opacity-10 text-sky-600 dark:text-sky-400 border-l-6 border-sky-600 dark:border-sky-400' : 'bg-opacity-0 dark:bg-opacity-0'}`}>
+            <div className='w-5 mr-4'>
+              {icon ? <Icon name={icon} size={iconSize} className='mx-auto' /> : ''}
+            </div>
+
+            <span>{name}</span>
         </Link>
       }
     </li>
@@ -57,8 +60,8 @@ const NavSidebarLink: React.FC<NavSidebarLinkProps> = ({ children, className, st
 }
 
 NavSidebarLink.defaultProps = {
-    iconSize: 20,
-    structuring: false
+  iconSize: 20,
+  structuring: false
 }
 
 export default NavSidebarLink;
