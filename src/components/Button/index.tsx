@@ -10,10 +10,11 @@ type Props = {
   block?: boolean;
   outline?: boolean;
   square?: boolean;
+  rounded?: boolean;
   href?: string;
 }
 
-const Button: React.FC<Props> = ({ children, className, variant, size, block, outline, square, href, ...props }) => {
+const Button: React.FC<Props> = ({ children, className, variant, size, block, outline, square, rounded, href, ...props }) => {
   
   let ref = useRef<HTMLButtonElement | HTMLAnchorElement>(null);
   let { buttonProps } = useButton(props, ref);
@@ -32,15 +33,15 @@ const Button: React.FC<Props> = ({ children, className, variant, size, block, ou
 
   const sizeClasses = (() => {switch(size) {
     case 'sm':
-      return (square ? 'p-1.5' : 'py-1.5 px-3') + ' text-xs'
+      return (square || rounded ? 'p-1.5' : 'py-1.5 px-3') + ' text-xs'
     case 'lg':
-      return (square ? 'p-2.5' : 'py-2.5 px-5') + ' text-md'
+      return (square || rounded ? 'p-2.5' : 'py-2.5 px-5') + ' text-md'
     default: 
-      return (square ? 'p-2' : 'py-2 px-4') + ' text-sm'
+      return (square || rounded ? 'p-2' : 'py-2 px-4') + ' text-sm'
   }})()
 
   const getClasses = () => {
-    return `inline-flex gap-2 items-center cursor-pointer rounded-md border font-medium shadow-sm transition-colors disabled:bg-gray-400 dark:disabled:bg-gray-400 dark:disabled:text-slate-700 disabled:border-gray-400 dark:disabled:border-gray-400 disabled:hover:bg-opacity-100 ${variantClasses} ${sizeClasses}${block ? ' w-full' : ''} ${className}`;
+    return `inline-flex gap-2 items-center cursor-pointer border font-medium shadow-sm transition-colors disabled:bg-gray-400 dark:disabled:bg-gray-400 dark:disabled:text-slate-700 disabled:border-gray-400 dark:disabled:border-gray-400 disabled:hover:bg-opacity-100 ${variantClasses} ${sizeClasses} ${block ? 'w-full' : ''} ${rounded ? 'rounded-full' : 'rounded-md'} ${className}`;
   }
   // -----------------------------------
 

@@ -17,7 +17,7 @@ const IconCard: React.FC<Props> = ({className, icon}) => {
   return (
     <>
       <Tooltip text={icon}>
-        <div className={`p-3 rounded-lg ring-1 ring-black/5 dark:ring-white/10 hover:shadow-lg dark:shadow-white/5 cursor-pointer transition-shadow ${className}`} 
+        <div className={`flex items-center justify-center h-full p-3 rounded-lg ring-1 ring-black/5 dark:ring-white/10 hover:shadow-lg dark:shadow-white/5 cursor-pointer transition-shadow ${className}`} 
           onClick={toggleModal}
         >
           <Icon name={icon} size={24} />

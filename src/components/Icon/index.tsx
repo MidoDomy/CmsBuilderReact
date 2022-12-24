@@ -14,8 +14,7 @@ const Icon: React.FC<Props> = ({ className, name, size, ...props }) => {
     <NextImage className={`icon-${name} ${className}`}
       src={src}
       alt={name}
-      width={size}
-      height={size}
+      style={{width: size + 'px', height: size + 'px'}}
       {...props}
     />
   );
