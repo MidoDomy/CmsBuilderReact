@@ -10,7 +10,6 @@ type Props = {
 }
 
 const Tooltip: React.FC<Props> = ({ children, className, text, small, click, onClick, ...props }) => {
-
   const [show, setShow] = useState(false);
 
   useEffect(() => {

@@ -4,6 +4,7 @@ import Icon from 'components/Icon';
 import Modal from 'components/Modal';
 import Button from 'components/Button';
 import Tooltip from 'components/Tooltip';
+import ContextMenu from 'components/ContextMenu';
 
 type Props = {
   className?: string,
@@ -16,13 +17,18 @@ const IconCard: React.FC<Props> = ({className, icon}) => {
 
   return (
     <>
-      <Tooltip text={icon}>
-        <div className={`flex items-center justify-center h-full p-3 rounded-lg ring-1 ring-black/5 dark:ring-white/10 hover:shadow-lg dark:shadow-white/5 cursor-pointer transition-shadow ${className}`} 
-          onClick={toggleModal}
-        >
-          <Icon name={icon} size={24} />
-        </div>
-      </Tooltip>
+      <div className='relative [&:hover>:first-child]:block'>            
+        <ContextMenu className='absolute -top-2 -right-2 hidden bg-white rounded-full z-10'>
+          <ContextMenu.Item icon='edit' text='Edit' onClick={toggleModal} />
+          <ContextMenu.Item icon='trash' text='Delete' onClick={toggleModal} />
+        </ContextMenu>
+
+        <Tooltip text={icon}>
+          <div className={`flex items-center justify-center h-full p-3 rounded-lg ring-1 ring-black/5 dark:ring-white/10 hover:shadow-lg dark:shadow-white/5 cursor-pointer transition-shadow ${className}`}>
+            <Icon name={icon} size={24} />
+          </div>
+        </Tooltip>
+      </div>
       
       {/* Modal edit font */}
       <Modal size='sm' isOpen={isOpen} toggle={toggleModal} headline="Edit icon">
