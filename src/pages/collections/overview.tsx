@@ -27,7 +27,7 @@ const CollectionsOverview: NextPage = () => {
       </div>
 
       <div className='flex gap-2 items-center justify-end border-b border-base-white mb-4 py-3'>
-        <Button className='neka klasa'
+        <Button
           variant='secondary' 
           square
           onPress={() => setIsTableView(false)}  

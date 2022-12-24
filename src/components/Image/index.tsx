@@ -7,7 +7,7 @@ type Props = {
   alt?: string;
 }
 
-const Image: React.FC<Props> = ({ className, src, alt }) => {
+const Image: React.FC<Props> = ({ className, src, alt, ...props }) => {
   
   let image: string;
 
@@ -23,11 +23,13 @@ const Image: React.FC<Props> = ({ className, src, alt }) => {
       className={className}
       src={image}
       alt={alt}
+      {...props}
     />
   );
 }
 
 Image.defaultProps = {
+  className: '',
   src: 'undefined.png',
   alt: ''
 }

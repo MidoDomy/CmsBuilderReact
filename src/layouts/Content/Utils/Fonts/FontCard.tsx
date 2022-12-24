@@ -1,32 +1,45 @@
 import React, {useState} from 'react';
 
-import Image from 'components/Image';
+import Tag from 'components/Tag';
 import Modal from 'components/Modal';
 import Button from 'components/Button';
+import Icon from 'components/Icon';
 
 type Props = {
   className?: string,
-  img?: string,
-  name: string
+  name: string,
+  weights: Array<String>
 }
 
-const FontCard: React.FC<Props> = ({className, img, name}) => {
-
+const FontCard: React.FC<Props> = ({className, name, weights}) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleModal = () => setIsOpen(!isOpen);
 
   return (
     <>
-      <div className={`flex flex-col w-56 shadow-md bg-base-white p-4 rounded-lg cursor-pointer ${className}`}
-        onClick={toggleModal}
-      >
-        <div className='relative flex-1 aspect-video'>
-          <Image src={img} />
+      <div className={`relative [&:hover>:first-child]:scale-100 flex flex-col w-72 p-4 rounded-lg ring-1 ring-black/5 dark:ring-white/10 hover:shadow-lg dark:shadow-white/5 transition-shadow cursor-pointer ${className}`}>
+        <Button className='absolute top-1 right-1 transform scale-0 transition-transform'
+          square 
+          variant='ghost' 
+          onClick={toggleModal}
+        >
+          <Icon name='edit' size={18} />
+        </Button>
+
+        <div className='text-lg font-medium text-slate-900 dark:text-white'>
+          {name}
         </div>
 
-        <div className='pt-1.5 font-medium text-base-dark'>
-          {name}
+        {weights &&
+          <div className='flex flex-wrap gap-1 mt-1'>
+            {weights.map((weight, index) => (
+              <Tag key={index}>{weight}</Tag>
+            ))}
+          </div>
+        }
+
+        <div className='mt-6 text-2xl'>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         </div>
       </div>
     
@@ -41,7 +54,7 @@ const FontCard: React.FC<Props> = ({className, img, name}) => {
             variant='secondary' 
             outline
             size='sm'
-            onPress={toggleModal}
+            onClick={toggleModal}
           >
             Cancel
           </Button>
@@ -49,7 +62,7 @@ const FontCard: React.FC<Props> = ({className, img, name}) => {
           <Button 
             variant='primary' 
             size='sm'
-            onPress={toggleModal}
+            onClick={toggleModal}
           >
             Save
           </Button>

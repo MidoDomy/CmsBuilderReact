@@ -34,22 +34,23 @@ const Modal: React.FC<Props> = ({ children, className, size, headline, isOpen, t
     <>
       {isOpen &&
         <Overlay>
-          <div className={`fixed inset-0${className ? ' ' + className : ''}`}
+          <div className={`fixed inset-0 z-50 ${className}`}
             {...underlayProps}
           >
             {/* Overlay */}
-            <div className='absolute inset-0 bg-base-dark bg-opacity-30' 
+            <div className='absolute inset-0 bg-gray-600 bg-opacity-30' 
               onClick={toggle}
             />
 
             {/* Modal */}
             <FocusScope contain autoFocus restoreFocus>
-              <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-base-white text-base-dark w-full rounded-md ${sizeClasses}`}
+              <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white shadow w-full rounded-md ${sizeClasses}`}
                 {...modalProps}
                 {...dialogProps}
+                {...props}
                 ref={ref}
               >
-                <div className='flex justify-between items-center py-4 px-6 border-b border-base-light'>
+                <div className='flex justify-between items-center py-4 px-6 border-b border-gray-200'>
                   {/* Header */}
                   {headline &&
                     <h3 className='text-xl' 
@@ -81,6 +82,7 @@ const Modal: React.FC<Props> = ({ children, className, size, headline, isOpen, t
 }
 
 Modal.defaultProps = {
+  className: '',
   size: 'md'
 }
 

@@ -11,7 +11,7 @@ const Color: React.FC<Props> = ({className, color, name}) => {
   return (
     <div className={className ? className : ''}>
       {/* Color */}
-      <div className='relative w-16 h-10 rounded ring-1 ring-black/5 dark:ring-white/5 overflow-hidden'>
+      <div className='relative w-16 h-10 rounded ring-1 ring-black/5 dark:ring-white/10 overflow-hidden'>
         <input className='absolute -mt-[25%] -ml-[25%] w-[150%] h-[200%] bg-transparent cursor-pointer'
           type="color" 
           defaultValue={color} 

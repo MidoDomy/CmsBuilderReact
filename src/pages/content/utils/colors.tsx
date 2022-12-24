@@ -42,13 +42,13 @@ const Colors: NextPage = () => {
 
             <div className='flex gap-2.5'>
               <Button>
-                <Icon name='edit' size={18} />
-                <span>Edit</span>
+                <Icon name='plus' size={18} />
+                <span>Add</span>
               </Button>
 
-              <Button variant='primary'>
+              <Button variant='primary' isDisabled>
                 <Icon name='checkmark' size={18} />
-                <span>Publish</span>
+                <span>Save</span>
               </Button>
             </div>
           </div>

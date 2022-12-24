@@ -7,20 +7,22 @@ type Props = {
   size?: number;
 }
 
-const Icon: React.FC<Props> = ({ className, name, size }) => {
+const Icon: React.FC<Props> = ({ className, name, size, ...props }) => {
   const src = require(`assets/icons/${name}.svg`).default;
 
   return (
-    <NextImage className={`icon-${name} ${className ? className : ''}`}
+    <NextImage className={`icon-${name} ${className}`}
       src={src}
       alt={name}
       width={size}
       height={size}
+      {...props}
     />
   );
 }
 
 Icon.defaultProps = {
+  className: '',
   size: 22
 }
 

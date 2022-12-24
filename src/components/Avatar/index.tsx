@@ -9,7 +9,7 @@ type Props = {
   size?: 'sm' | 'md' | 'lg';
 }
 
-const Avatar: React.FC<Props> = ({ className, src, alt, size }) => {
+const Avatar: React.FC<Props> = ({ className, src, alt, size, ...props }) => {
 
   const sizeClasses = (() => {switch(size) {
     case 'lg':
@@ -22,14 +22,16 @@ const Avatar: React.FC<Props> = ({ className, src, alt, size }) => {
 
   return (
     <Image
-      className={`border-2 border-base-light overflow-hidden rounded-full object-cover object-center ${sizeClasses} ${className ? className : ''}`}
+      className={`border-2 border-base-light overflow-hidden rounded-full object-cover object-center ${sizeClasses} ${className}`}
       src={src}
       alt={alt}
+      {...props}
     />
   );
 }
 
 Avatar.defaultProps = {
+  className: '',
   src: 'undefinedUser.jpeg',
   size: 'md'
 }

@@ -7,7 +7,7 @@ type Props = {
   text?: String
 }
 
-const Badge: React.FC<Props> = ({ children, className, variant, text }) => {
+const Badge: React.FC<Props> = ({ children, className, variant, text, ...props }) => {
 
   const variantClasses = (() => {switch(variant) {
     case 'primary':
@@ -23,13 +23,14 @@ const Badge: React.FC<Props> = ({ children, className, variant, text }) => {
   }
 
   return (
-    <span className={getClasses()}>
+    <span className={getClasses()} {...props}>
       {text ? text : children}
     </span>
   );
 }
 
 Badge.defaultProps = {
+  className: '',
   variant: 'primary'
 }
 
