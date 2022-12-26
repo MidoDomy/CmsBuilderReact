@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Flex from 'components/Structuring/Flex';
 import Color from 'layouts/Content/Utils/Colors/Color';
 
 type Props = {
@@ -10,12 +11,16 @@ type Props = {
 
 const ColorsGroup: React.FC<Props> = ({className, name, colors, ...props}) => {
   return (
-    <div className={`flex gap-4 mb-8 last:mb-0 ${className ? className : ''}`} {...props}>
+    <Flex className={className} 
+      gap={16} 
+      wrap={false}
+      {...props}
+    >
       <div className='w-16 shrink-0'>
         <div className='text-sm font-semibold text-slate-900 dark:text-slate-200'>{name}</div>
       </div>
 
-      <div className='flex gap-2.5 flex-wrap'>
+      <Flex gap={10}>
         {colors?.map((color, index) => (
           <Color
             key={index}
@@ -23,8 +28,8 @@ const ColorsGroup: React.FC<Props> = ({className, name, colors, ...props}) => {
             color={color.value} 
           />
         ))}
-      </div>
-    </div>
+      </Flex>
+    </Flex>
   )
 }
 

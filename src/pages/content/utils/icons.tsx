@@ -2,13 +2,39 @@ import type { NextPage } from 'next';
 import { useState } from 'react';
 
 import Layout from 'layouts/Layout';
-import Container from 'components/Grid/Container';
+import Container from 'components/Structuring/Container';
+import Flex from 'components/Structuring/Flex';
 import Modal from 'components/Modal';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 import IconCard from 'layouts/Content/Utils/Icons/IconCard';
 
 const Icons: NextPage = () => {
+  const icons = [
+    'arrow-head-down', 
+    'arrow-head-left', 
+    'arrow-head-right', 
+    'arrow-head-up',
+    'bell', 
+    'categories', 
+    'circle', 
+    'checkmark', 
+    'collections', 
+    'content', 
+    'edit', 
+    'home', 
+    'letter', 
+    'media',
+    'night',
+    'plus',
+    'search',
+    'settings',
+    'sun',
+    'three-dots',
+    'trash',
+    'x'
+  ]
+
   const [isOpen, setIsOpen] = useState(false);
   const toggleModal = () => setIsOpen(!isOpen);
 
@@ -32,27 +58,11 @@ const Icons: NextPage = () => {
 
       <div>
         <Container>
-          <div className='flex gap-4 flex-wrap'>
-            <IconCard icon='arrow-head-down' />
-            <IconCard icon='arrow-head-up' />
-            <IconCard icon='arrow-left' />
-            <IconCard icon='bell' />
-            <IconCard icon='categories' />
-            <IconCard icon='checkmark' />
-            <IconCard icon='circle' />
-            <IconCard icon='collections' />
-            <IconCard icon='content' />
-            <IconCard icon='edit' />
-            <IconCard icon='home' />
-            <IconCard icon='letter' />
-            <IconCard icon='media' />
-            <IconCard icon='night' />
-            <IconCard icon='sun' />
-            <IconCard icon='plus' />
-            <IconCard icon='search' />
-            <IconCard icon='settings' />
-            <IconCard icon='x' />
-          </div>
+          <Flex gap={15}>
+            {icons?.map((icon, index) => (
+              <IconCard key={index} icon={icon} />
+            ))}
+          </Flex>
         </Container>
       </div>
 

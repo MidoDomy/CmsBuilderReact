@@ -17,8 +17,8 @@ const IconCard: React.FC<Props> = ({className, icon}) => {
 
   return (
     <>
-      <div className='relative [&:hover>:first-child]:block'>            
-        <ContextMenu className='absolute -top-2 -right-2 hidden bg-white rounded-full z-10'>
+      <div className='relative [&:hover>:first-child]:inline-flex'>            
+        <ContextMenu className='absolute -top-2 -right-2 hidden bg-white rounded-full z-10 border'>
           <ContextMenu.Item icon='edit' text='Edit' onClick={toggleModal} />
           <ContextMenu.Item icon='trash' text='Delete' onClick={toggleModal} />
         </ContextMenu>

@@ -6,9 +6,9 @@ type Props = {
   fluid?: boolean;
 }
 
-const Container: React.FC<Props> = ({ children, className, ...props }) => {
+const Container: React.FC<Props> = ({ children, className, fluid, ...props }) => {
   return (
-    <div className={`container max-w-7xl ${className}`} {...props}>
+    <div className={`container ${fluid ? '' : 'max-w-7xl' } ${className}`} {...props}>
       {children}
     </div>
   );

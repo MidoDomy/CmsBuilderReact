@@ -18,7 +18,7 @@ const FontCard: React.FC<Props> = ({className, name, weights}) => {
 
   return (
     <>
-      <div className={`relative [&:hover>:first-child]:block flex flex-col w-72 p-4 rounded-lg ring-1 ring-black/5 dark:ring-white/10 hover:shadow-lg dark:shadow-white/5 transition-shadow cursor-pointer ${className}`}>
+      <div className={`relative [&:hover>:first-child]:block flex flex-col w-full h-full p-4 rounded-lg ring-1 ring-black/5 dark:ring-white/10 hover:shadow-lg dark:shadow-white/5 transition-shadow cursor-pointer ${className}`}>
         <ContextMenu className='absolute top-1 right-1 hidden'>
           <ContextMenu.Item icon='edit' text='Edit' onClick={toggleModal} />
           <ContextMenu.Item icon='trash' text='Delete' onClick={toggleModal} />

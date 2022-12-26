@@ -1,12 +1,22 @@
 import type { NextPage } from 'next';
 
 import Layout from 'layouts/Layout';
-import Container from 'components/Grid/Container';
+import Container from 'components/Structuring/Container';
+import Row from 'components/Structuring/Row';
+import Col from 'components/Structuring/Col';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 import FontCard from 'layouts/Content/Utils/Fonts/FontCard';
 
 const Fonts: NextPage = () => {
+  const fonts = [
+    {name: 'Sans serif', weights: ['100', '200', '300', '400', '500', '600']},
+    {name: 'Roboto', weights: ['100', '400', '500', '600']},
+    {name: 'Hanken Grotesk', weights: ['300', '400', '500', '600']},
+    {name: 'Chivo Mono', weights: ['400', '600']},
+    {name: 'Unbounded', weights: ['200', '400', '600']}
+  ];
+
   return (
     <Layout>
       {/* Header */}
@@ -32,27 +42,30 @@ const Fonts: NextPage = () => {
 
       <div>
         <Container>
-          <div className='flex gap-6 items-start'>
-            <div className='flex flex-wrap gap-6 flex-1'>
-              <FontCard name='Sans serif' weights={['100', '200', '300', '400', '500', '600']} />
-              <FontCard name='Roboto' weights={['100', '400', '500', '600']} />
-              <FontCard name='Hanken Grotesk' weights={['300', '400', '500', '600']} />
-              <FontCard name='Chivo Mono' weights={['400', '600']} />
-              <FontCard name='Unbounded' weights={['200', '400', '600']} />
-              <FontCard name='Open Sans' weights={['100', '200', '300', '400', '500', '600', '700', '900']} />
-            </div>
+          <Row>
+            <Col span={8}>
+              <Row cols={3} gap={16}>
+                {fonts?.map((font, index) => (
+                  <Col key={index}>
+                    <FontCard name={font.name} weights={font.weights} />
+                  </Col>
+                ))}
+              </Row>
+            </Col>
 
-            <div className='w-1/4 py-10 px-6 rounded-lg bg-gray-100 dark:bg-gray-800'>
-              <div className='mb-4 text-xl text-slate-900 dark:text-slate-50'>Controls</div>
+            <Col span={4}>
+              <div className='py-10 px-6 rounded-lg bg-gray-100 dark:bg-gray-800'>
+                <div className='mb-4 text-xl text-slate-900 dark:text-slate-50'>Controls</div>
 
-              <div>Weight</div>
-              <div>Size</div>
-            </div>
-          </div>
+                <div>Weight</div>
+                <div>Size</div>
+              </div>
+            </Col>
+          </Row>
         </Container>
       </div>
     </Layout>
-  )
+  );
 }
 
 export default Fonts;
