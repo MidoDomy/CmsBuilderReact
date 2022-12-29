@@ -13,7 +13,7 @@ const StyleSpacing: React.FC = () => {
       </Collapse.Trigger>
 
       <Collapse.Content className='pt-3 pb-6 px-4'>
-        <div className='relative border border-gray-200 text-sm rounded'>
+        <div className='relative border border-gray-200 dark:border-gray-700 text-sm rounded'>
           <span className='absolute top-0 left-0 p-1 text-xs'>Margin</span>
           <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center text-slate-800 dark:text-slate-200'
             type='number'  
@@ -33,7 +33,7 @@ const StyleSpacing: React.FC = () => {
             </Col>
 
             <Col span={8}>
-              <div className='relative border border-gray-200 rounded'>
+              <div className='relative border border-gray-200 dark:border-gray-700 rounded'>
                 <span className='absolute top-0 left-0 p-1 text-xs'>Padding</span>
                 <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center text-slate-800 dark:text-slate-200'
                   type='number'  
@@ -53,7 +53,7 @@ const StyleSpacing: React.FC = () => {
                   </Col>
 
                   <Col span={6}>
-                    <div className='p-0.5 border border-gray-200 rounded text-xs text-center'>
+                    <div className='p-0.5 border border-gray-200 dark:border-gray-700 rounded text-xs text-center'>
                       Content
                     </div>
                   </Col>

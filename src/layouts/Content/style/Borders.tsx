@@ -97,19 +97,19 @@ const StyleBorders: React.FC = () => {
 
               <Form.Radio id='solid' name='borderStyle' hideRadio>
                 <div className='py-2'>
-                  <div className='w-5 border-t-2 border-solid border-slate-900'></div>
+                  <div className='w-5 border-t-2 border-solid border-slate-900 dark:border-white'></div>
                 </div>
               </Form.Radio>
 
               <Form.Radio id='dashed' name='borderStyle' hideRadio>
                 <div className='py-2'>
-                  <div className='w-5 border-t-2 border-dashed border-slate-900'></div>
+                  <div className='w-5 border-t-2 border-dashed border-slate-900 dark:border-white'></div>
                 </div>
               </Form.Radio>
 
               <Form.Radio id='doted' name='borderStyle' hideRadio>
                 <div className='py-2'>
-                  <div className='w-5 border-t-2 border-dotted border-slate-900'></div>
+                  <div className='w-5 border-t-2 border-dotted border-slate-900 dark:border-white'></div>
                 </div>
               </Form.Radio>
             </Form.Group>

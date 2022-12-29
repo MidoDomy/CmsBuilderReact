@@ -69,7 +69,7 @@ const Components: NextPage = () => {
         </div>
 
         <Sidebar className='w-72'>
-          <Tabs>
+          <Tabs active='Styles'>
             <Tabs.Nav className='m-2'>
               <Tabs.NavItem name='Settings'>Settings</Tabs.NavItem>
               <Tabs.NavItem name='Styles'>Styles</Tabs.NavItem>

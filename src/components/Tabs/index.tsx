@@ -6,11 +6,12 @@ import TabsNavItem from './TabNavItem';
 import TabsContent from './TabContent';
 
 type Props = {
-  children?: React.ReactNode
+  children?: React.ReactNode,
+  active: string
 }
 
-const Tabs: React.FC<Props> = ({ children }) => {
-  const [current, setCurrent] = useState('');
+const Tabs: React.FC<Props> = ({ children, active }) => {
+  const [current, setCurrent] = useState(active ? active : '');
 
   return (
     <TabContext.Provider value={{current, setCurrent}}>
