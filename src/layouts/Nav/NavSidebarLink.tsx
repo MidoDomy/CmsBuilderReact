@@ -36,7 +36,7 @@ const NavSidebarLink: React.FC<NavSidebarLinkProps> = ({ children, className, st
             {!isSidebarCollapsed && <span>{name}</span>}
 
             {collapse && !isSidebarCollapsed && <Icon name='arrow-head-up' size={18} className='ml-auto' />}
-            {!collapse && !isSidebarCollapsed && <Icon name='arrow-head-down' size={18} className='ml-auto' />}
+            {!collapse && !isSidebarCollapsed && <Icon name='arrow-head-right' size={18} className='ml-auto' />}
           </button>
 
           {/* Collapse content */}

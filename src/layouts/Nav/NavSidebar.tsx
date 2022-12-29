@@ -6,7 +6,7 @@ import Sidebar from 'components/Sidebar';
 import NavSidebarLink from './NavSidebarLink';
 
 const NavSidebar: React.FC = () => {
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true);
   const toggleModal = () => setIsSidebarCollapsed(!isSidebarCollapsed);
 
   return (
