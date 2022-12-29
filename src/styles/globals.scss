@@ -3,3 +3,13 @@
 @tailwind utilities;
 
 @import 'abstract/theme';
+
+@layer base {
+  .appearance-textfield {
+    &[type="number"]::-webkit-inner-spin-button,
+    &[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}

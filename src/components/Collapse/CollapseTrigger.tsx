@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { ToggleContext } from 'contexts/Toggle/Context';
+import { CollapseContext } from 'contexts/Collapse';
 import Icon from 'components/Icon';
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
 }
 
 const CollapseTrigger: React.FC<Props> = ({ children, className }) => {
-  const {state, setState} = useContext(ToggleContext);
+  const {state, setState} = useContext(CollapseContext);
 
   return (
     <button className={`flex items-center w-full py-2 px-4 hover:bg-gray-50 dark:hover:bg-gray-900 text-left transition-colors ${state ? 'bg-gray-50 dark:bg-gray-900' : ''} ${className}`} 

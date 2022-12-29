@@ -13,13 +13,13 @@ const StyleBackgrounds: React.FC = () => {
       </Collapse.Trigger>
 
       <Collapse.Content className='pt-3 pb-6 px-4'>
-        <Row cols={2} gap={6}>
+        <Row cols={1} gap={6}>
           <Col>
-            <Form.Input type='number' prefix='W' placeholder='0' />
+            <span className='text-xs'>Uploud (To-do)</span> 
           </Col>
 
           <Col>
-            <Form.Input type='number' prefix='H' placeholder='0' />
+            <Form.Select options={['White', 'Black', 'Primary', 'Secondary']} />
           </Col>
         </Row>
       </Collapse.Content>

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { ToggleContext } from 'contexts/Toggle/Context';
+import { CollapseContext } from 'contexts/Collapse';
 
 type Props = {
   children?: React.ReactNode,
@@ -8,7 +8,7 @@ type Props = {
 }
 
 const CollapseContent: React.FC<Props> = ({ children, className }) => {
-  const {state} = useContext(ToggleContext);
+  const {state} = useContext(CollapseContext);
 
   return (
     <div className={`${className} ${state ? '' : 'hidden'}`}>

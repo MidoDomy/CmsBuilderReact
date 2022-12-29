@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import Toggle from 'contexts/Toggle/Toggle';
+import { CollapseContext } from 'contexts/Collapse';
+
 import CollapseTrigger from './CollapseTrigger';
 import CollapseContent from './CollapseContent';
 
@@ -9,12 +10,14 @@ type Props = {
 }
 
 const Collapse: React.FC<Props> = ({ children }) => {
+  const [state, setState] = useState(false);
+
   return (
-    <Toggle>
+    <CollapseContext.Provider value={{state, setState}}>
       <div>
         {children}
       </div>
-    </Toggle>
+    </CollapseContext.Provider>
   );
 }
 

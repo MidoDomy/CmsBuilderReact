@@ -4,8 +4,14 @@ import Layout from 'layouts/Layout';
 import Container from 'components/Structuring/Container';
 import Flex from 'components/Structuring/Flex';
 import Sidebar from 'components/Sidebar';
+import Tabs from 'components/Tabs';
 import ComponentsNavigationBtn from 'layouts/content/components/ComponentsNavigationBtn';
-import StyleSidebar from 'layouts/content/components/StyleSidebar';
+import StyleAlign from 'layouts/content/style/Align';
+import StyleSize from 'layouts/content/style/Size';
+import StyleSpacing from 'layouts/content/style/Spacing';
+import StyleTypography from 'layouts/content/style/Typography';
+import StyleBackgrounds from 'layouts/content/style/Backgrounds';
+import StyleBorders from 'layouts/content/style/Borders';
 
 const Components: NextPage = () => {
   const components = [
@@ -63,7 +69,25 @@ const Components: NextPage = () => {
         </div>
 
         <Sidebar className='w-72'>
-          <StyleSidebar />
+          <Tabs>
+            <Tabs.Nav className='m-2'>
+              <Tabs.NavItem name='Settings'>Settings</Tabs.NavItem>
+              <Tabs.NavItem name='Styles'>Styles</Tabs.NavItem>
+            </Tabs.Nav>
+
+            <Tabs.Content className='px-4' name='Settings'>
+              Settings
+            </Tabs.Content>
+
+            <Tabs.Content name='Styles'>
+              <StyleAlign />
+              <StyleSize />
+              <StyleSpacing />
+              <StyleTypography />
+              <StyleBackgrounds />
+              <StyleBorders />
+            </Tabs.Content>
+          </Tabs>
         </Sidebar>
       </Flex>
     </Layout>

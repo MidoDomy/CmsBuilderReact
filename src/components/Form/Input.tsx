@@ -8,7 +8,7 @@ type Props = {
 
 const Input: React.FC<Props> = ({ className, prefix, suffix, ...props }) => {
   return (
-    <div className='relative text-sm'>
+    <div className={`relative text-sm ${className}`}>
       {prefix &&
         <span className='absolute w-7 h-full top-0 left-0 flex items-center justify-center text-slate-500'>
           {prefix}
