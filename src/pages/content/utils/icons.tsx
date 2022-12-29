@@ -7,7 +7,7 @@ import Flex from 'components/Structuring/Flex';
 import Modal from 'components/Modal';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
-import IconCard from 'layouts/Content/Utils/Icons/IconCard';
+import IconCard from 'layouts/content/utils/icons/IconCard';
 
 const Icons: NextPage = () => {
   const icons = [

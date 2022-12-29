@@ -58,6 +58,7 @@ const Flex: React.FC<Props> = ({ children, className, gap, wrap, direction, alig
 
 Flex.defaultProps = {
   className: '',
+  gap: 0,
   wrap: true,
   direction: 'row'
 }

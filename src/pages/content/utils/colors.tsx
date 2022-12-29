@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import Layout from 'layouts/Layout';
 import Container from 'components/Structuring/Container';
 import Flex from 'components/Structuring/Flex';
-import ColorsGroup from 'layouts/Content/Utils/Colors/ColorsGroup';
+import ColorsGroup from 'layouts/content/utils/colors/ColorsGroup';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 

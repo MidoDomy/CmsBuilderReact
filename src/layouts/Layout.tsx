@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import Head from 'next/head';
 
-import NavSidebar from 'layouts/Nav/NavSidebar';
-import NavBar from 'layouts/Nav/NavBar';
+import NavSidebar from 'layouts/nav/NavSidebar';
+import NavBar from 'layouts/nav/NavBar';
 
 type Props = {
   children: React.ReactNode,

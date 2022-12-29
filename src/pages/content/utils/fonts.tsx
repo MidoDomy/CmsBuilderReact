@@ -6,7 +6,7 @@ import Row from 'components/Structuring/Row';
 import Col from 'components/Structuring/Col';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
-import FontCard from 'layouts/Content/Utils/Fonts/FontCard';
+import FontCard from 'layouts/content/utils/fonts/FontCard';
 
 const Fonts: NextPage = () => {
   const fonts = [

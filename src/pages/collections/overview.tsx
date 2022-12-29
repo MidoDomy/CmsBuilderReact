@@ -5,7 +5,7 @@ import Button from 'components/Button';
 import Icon from 'components/Icon';
 
 import Layout from 'layouts/Layout';
-import CollectionsCard from 'layouts/Collections/CollectionsCard';
+import CollectionsCard from 'layouts/collections/CollectionsCard';
 
 const CollectionsOverview: NextPage = () => {
 

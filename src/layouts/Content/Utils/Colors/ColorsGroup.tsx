@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Flex from 'components/Structuring/Flex';
-import Color from 'layouts/Content/Utils/Colors/Color';
+import Color from 'layouts/content/utils/colors/Color';
 
 type Props = {
   className?: string,
