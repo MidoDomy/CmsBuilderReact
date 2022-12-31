@@ -2,6 +2,7 @@ import React from 'react';
 
 import Input from './Input';
 import Select from './Select';
+import Switch from './Switch';
 import Radio from './Radio';
 import Check from './Check';
 import Group from './Group';
@@ -26,6 +27,7 @@ Form.defaultProps = {
 export default Object.assign(Form, {
   Input: Input,
   Select: Select,
+  Switch: Switch,
   Radio: Radio,
   Check: Check,
   Group: Group

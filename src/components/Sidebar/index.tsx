@@ -11,10 +11,14 @@ type Props = {
 
 const Sidebar: React.FC<Props> = ({children, className}) => {
   return (
-    <div className={'flex flex-col min-h-screen bg-base-white shadow-lg ' + className}>
+    <div className={`flex flex-col h-screen max-h-[calc(100vh_-_57px)] bg-base-white shadow-lg overflow-auto ${className}`}>
       {children}
     </div>
   )
+}
+
+Sidebar.defaultProps = {
+  className: ''
 }
 
 export default Object.assign(Sidebar, {

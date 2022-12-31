@@ -7,7 +7,7 @@ type Props = {
 
 const SidebarFooter: React.FC<Props> = ({children, className}) => {
   return (
-    <div className={`py-2 px-5 ${className}`}>
+    <div className={`pb-3 px-5 ${className}`}>
       {children}
     </div>
   )

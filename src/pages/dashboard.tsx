@@ -2,12 +2,12 @@ import type { NextPage } from "next";
 
 import Layout from 'layouts/Layout';
 
-const Home: NextPage = () => {
+const Dashboard: NextPage = () => {
   return (
     <Layout>
-      Home
+      Dashboard
     </Layout>
   )
 }
 
-export default Home;
+export default Dashboard;

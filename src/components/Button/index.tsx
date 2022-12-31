@@ -22,13 +22,13 @@ const Button: React.FC<Props> = ({ children, className, variant, size, block, ou
   // Classes -----------------------------------
   const variantClasses = (() => {switch(variant) {
     case 'primary':
-      return (outline ? 'bg-transparent' : 'bg-sky-500 bg-opacity-90 dark:bg-sky-600 dark:bg-opacity-90') + ' border-sky-500 dark:border-sky-600 hover:bg-sky-500 hover:bg-opacity-90 dark:hover:bg-sky-600 dark:hover:bg-opacity-90 text-white'
+      return (outline ? 'bg-transparent' : 'bg-sky-500') + ' border-sky-500 hover:bg-sky-600 hover:border-sky-600 text-white'
     case 'secondary':
       return (outline ? 'bg-transparent' : 'bg-base-secondary hover:bg-opacity-80 text-base-light') + ' border-base-secondary hover:bg-base-secondary'
     case 'ghost':
       return 'border-transparent bg-transparent hover:bg-gray-50 dark:hover:bg-gray-800 shadow-none'
     default: 
-      return 'text-slate-700 dark:text-slate-200 border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800'
+      return 'text-slate-700 dark:text-slate-200 border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'
   }})()
 
   const sizeClasses = (() => {switch(size) {

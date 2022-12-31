@@ -10,22 +10,10 @@ const NavSidebar: React.FC = () => {
   const toggleModal = () => setIsSidebarCollapsed(!isSidebarCollapsed);
 
   return (
-    <Sidebar className={`relative pt-16 bg-white dark:bg-zinc-800 ${isSidebarCollapsed ? '' : 'w-72'}`}>
-      <Button className='absolute top-5 right-0 transform translate-x-1/2'
-        variant='primary'
-        rounded
-        onClick={toggleModal}
-      >
-        {isSidebarCollapsed ? 
-          <Icon name='arrow-head-right' size={16} />
-          :
-          <Icon name='arrow-head-left' size={16} />
-        }
-      </Button>
-
-      <Sidebar.Body>
+    <Sidebar className={`bg-white dark:bg-zinc-800 ${isSidebarCollapsed ? '' : 'w-72'}`}>
+      <Sidebar.Body className='px-0'>
         <ul>
-          <NavSidebarLink icon='home' name='Dashboard' link='/' isSidebarCollapsed={isSidebarCollapsed} />
+          <NavSidebarLink icon='home' name='Dashboard' link='/dashboard' isSidebarCollapsed={isSidebarCollapsed} />
           <NavSidebarLink icon='categories' name='Categories' link='/categories' isSidebarCollapsed={isSidebarCollapsed} />
 
           <NavSidebarLink icon='collections' name='Collections' link='/collections' structuring isSidebarCollapsed={isSidebarCollapsed}>
@@ -54,9 +42,25 @@ const NavSidebar: React.FC = () => {
 
           <NavSidebarLink icon='media' name='Media' link='/media' isSidebarCollapsed={isSidebarCollapsed} />
           <NavSidebarLink icon='letter' name='Emails' link='/emails' isSidebarCollapsed={isSidebarCollapsed} />
-          <NavSidebarLink icon='settings' name='Settings' link='/settings' isSidebarCollapsed={isSidebarCollapsed} />
+          <NavSidebarLink icon='settings' name='Settings' link='/settings/profile' isSidebarCollapsed={isSidebarCollapsed} />
         </ul>
       </Sidebar.Body>
+
+      <Sidebar.Footer className='px-2 pb-10'>
+        <div className='flex justify-center'>
+          <Button 
+            variant='primary'
+            rounded
+            onClick={toggleModal}
+          >
+            {isSidebarCollapsed ? 
+              <Icon name='arrow-head-right' size={16} />
+              :
+              <Icon name='arrow-head-left' size={16} />
+            }
+          </Button>
+        </div>
+      </Sidebar.Footer>
     </Sidebar>
   )
 }

@@ -51,6 +51,7 @@ const Components: NextPage = () => {
     <Layout>
       <Flex>
         <Sidebar className='w-60'>
+          <h3 className='py-4 px-3 uppercase text-sm font-semibold text-slate-700'>Components</h3>
           <ul>
             {components?.map((component, index) => (
               <li key={index}>
@@ -71,12 +72,13 @@ const Components: NextPage = () => {
         <Sidebar className='w-72'>
           <Tabs active='Styles'>
             <Tabs.Nav className='m-2'>
-              <Tabs.NavItem name='Settings'>Settings</Tabs.NavItem>
+              <Tabs.NavItem name='Options'>Options</Tabs.NavItem>
               <Tabs.NavItem name='Styles'>Styles</Tabs.NavItem>
+              <Tabs.NavItem name='Parts'>Parts</Tabs.NavItem>
             </Tabs.Nav>
 
-            <Tabs.Content className='px-4' name='Settings'>
-              Settings
+            <Tabs.Content className='px-4' name='Options'>
+              Options
             </Tabs.Content>
 
             <Tabs.Content name='Styles'>
@@ -86,6 +88,10 @@ const Components: NextPage = () => {
               <StyleTypography />
               <StyleBackgrounds />
               <StyleBorders />
+            </Tabs.Content>
+
+            <Tabs.Content className='px-4' name='Parts'>
+              Parts
             </Tabs.Content>
           </Tabs>
         </Sidebar>
