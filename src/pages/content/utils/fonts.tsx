@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 
-import Layout from 'layouts/Layout';
+import Layout from 'layouts/general/Layout';
 import Container from 'components/Structuring/Container';
 import Row from 'components/Structuring/Row';
 import Col from 'components/Structuring/Col';

@@ -9,7 +9,7 @@ type Props = {
 
 const TabsNav: React.FC<Props> = ({ children, className, ...props }) => {
   return (
-    <Flex gap={6} className={`p-0.5 border border-gray-200 dark:border-gray-700 rounded-3xl text-sm text-slate-900 dark:text-white ${className}`}
+    <Flex gap={6} className={`selection-none p-0.5 bg-white border border-gray-200 dark:border-gray-700 rounded-3xl text-sm text-slate-900 dark:text-white ${className}`}
       {...props}
     > 
       {children}

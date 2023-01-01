@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
 
-import Layout from 'layouts/Layout';
+import Layout from 'layouts/general/Layout';
 import SettingsLayout from 'layouts/settings/SettingsLayout';
-import Section from 'layouts/Section';
+import Section from 'layouts/general/Section';
 import Row from 'components/Structuring/Row';
 import Col from 'components/Structuring/Col';
 import Flex from 'components/Structuring/Flex';

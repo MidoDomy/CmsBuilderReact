@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 
-import Layout from 'layouts/Layout';
+import Layout from 'layouts/general/Layout';
 
 const Categories: NextPage = () => {
   return (

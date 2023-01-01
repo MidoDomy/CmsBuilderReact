@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 
-import Layout from 'layouts/Layout';
+import Layout from 'layouts/general/Layout';
 import Container from 'components/Structuring/Container';
 import Flex from 'components/Structuring/Flex';
 import ColorsGroup from 'layouts/content/utils/colors/ColorsGroup';

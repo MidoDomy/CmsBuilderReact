@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import Head from 'next/head';
 
-import NavSidebar from 'layouts/nav/NavSidebar';
-import NavBar from 'layouts/nav/NavBar';
+import NavSidebar from 'layouts/general/nav/NavSidebar';
+import NavBar from 'layouts/general/nav/NavBar';
 
 type Props = {
   children: React.ReactNode,
@@ -33,7 +33,7 @@ const Layout: React.FC<Props> = ({children, className, ...props}) => {
             <NavSidebar />
 
             {/* Main content */}
-            <main className='flex-1'>
+            <main className='flex-1 overflow-x-hidden'>
               {children}
             </main>
           </div>
