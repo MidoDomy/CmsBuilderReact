@@ -10,7 +10,6 @@ type Props = {
 }
 
 const Layout: React.FC<Props> = ({children, className, ...props}) => {
-
   const [darkMode, setDarkMode] = useState(false);
 
   return (
