@@ -24,7 +24,9 @@ const NavBar: React.FC<Props> = ({ darkMode, toggleDarkMode }) => {
   return (
     <header className={`sticky top-0 z-40 w-full shadow-sm backdrop-blur border-b border-gray-200 dark:border-gray-700 bg-white/75 dark:bg-neutral-900/80 transform transition-transform ${show ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className='flex gap-6 items-center px-5 py-2'>
-        <h1 className='w-64 text-2xl text-slate-900 dark:text-slate-50'>Logo</h1>
+        <h1 className='w-64 text-2xl text-slate-900 dark:text-slate-50'>
+          <Link href='/'>Logo</Link>
+        </h1>
 
         {/* Search */}
         <div className='relative flex-1 flex gap-2'>
