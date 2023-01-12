@@ -4,7 +4,7 @@ import Sidebar from 'components/Sidebar';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 import Tabs from 'components/Tabs';
-import DashboardSidebarOptions from 'layouts/dashboard/sidebar/DashboardSidebarOptions';
+import DashboardSidebarSettings from 'layouts/dashboard/sidebar/DashboardSidebarSettings';
 import DashboardSidebarWidgets from 'layouts/dashboard/sidebar/DashboardSidebarWidgets';
 
 const DashboardSidebar: React.FC = () => {
@@ -21,14 +21,14 @@ const DashboardSidebar: React.FC = () => {
 
       <Sidebar>
         <Sidebar.Body>
-          <Tabs active='Options'>
+          <Tabs active='Settings'>
             <Tabs.Nav className='mb-2'>
-              <Tabs.NavItem name='Options'>Options</Tabs.NavItem>
+              <Tabs.NavItem name='Settings'>Settings</Tabs.NavItem>
               <Tabs.NavItem name='Widgets'>Widgets</Tabs.NavItem>
             </Tabs.Nav>
 
-            <Tabs.Content className='px-0.5' name='Options'>
-              <DashboardSidebarOptions />
+            <Tabs.Content className='px-0.5' name='Settings'>
+              <DashboardSidebarSettings />
             </Tabs.Content>
 
             <Tabs.Content name='Widgets'>

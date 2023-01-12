@@ -4,10 +4,10 @@ import Row from 'components/Structuring/Row';
 import Col from 'components/Structuring/Col';
 import Form from 'components/Form';
 
-const DashboardSidebarOptions: React.FC = () => {
+const DashboardSidebarSettings: React.FC = () => {
   return (
     <>
-      <Row cols={2} gap={8}>
+      <Row cols={2} gap={8} align='center'>
         <Col>
           <Form.Input type='number' prefix='C' defaultValue={20} />
         </Col>
@@ -19,9 +19,13 @@ const DashboardSidebarOptions: React.FC = () => {
         <Col>
           <Form.Input type='number' prefix='G' defaultValue={12} />
         </Col>
+
+        <Col>
+          <Form.Switch id='fullWidthBoard' label='Full width' />
+        </Col>
       </Row>
     </>
   )
 }
 
-export default DashboardSidebarOptions;
+export default DashboardSidebarSettings;

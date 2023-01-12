@@ -1,10 +1,12 @@
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
+import Link from 'next/link';
 
 import Layout from 'layouts/general/Layout';
-import Container from "components/Structuring/Container";
-import Flex from "components/Structuring/Flex";
-import Button from "components/Button";
-import Icon from "components/Icon";
+import Container from 'components/Structuring/Container';
+import Flex from 'components/Structuring/Flex';
+import Button from 'components/Button';
+import Icon from 'components/Icon';
+import MediaFolder from 'layouts/media/MediaFolder';
 
 const Media: NextPage = () => {
   return (
@@ -23,7 +25,7 @@ const Media: NextPage = () => {
                 <span>Add</span>
               </Button>
 
-              <Button variant='primary' isDisabled>
+              <Button variant='primary'>
                 <Icon name='checkmark' size={18} />
                 <span>Save</span>
               </Button>
@@ -33,7 +35,19 @@ const Media: NextPage = () => {
       </div>
 
       <Container>
-        Media
+        <Flex gap={32}>
+          <Link href='/media/details'>
+            <MediaFolder name='Folder One' size='5.8 Mbs' />
+          </Link>
+
+          <Link href='/media/details'>
+            <MediaFolder name='Folder Two' size='14 Mbs' />
+          </Link>
+
+          <Link href='/media/details'>
+            <MediaFolder name='Folder Three' size='1.2 Mbs' />
+          </Link>
+        </Flex>
       </Container>
     </Layout>
   )

@@ -12,4 +12,27 @@
       margin: 0;
     }
   }
+
+  .folder {
+    &::before {
+      content: '';
+      @apply absolute -top-5 left-0 block h-7 w-20 bg-gray-300 rounded-t-lg;
+    }
+
+    &::after {
+      content: '';
+      @apply absolute -top-5 left-14 w-7 h-8 bg-gray-300 rounded-t-lg skew-x-[20deg];
+    }
+
+    > :last-child {
+      @apply transition-transform origin-bottom;
+      transform: perspective(800px) rotateX(0);
+    }
+
+    &:hover {
+      > :last-child {
+        transform: perspective(800px) rotateX(-45deg);
+      }
+    }
+  }
 }

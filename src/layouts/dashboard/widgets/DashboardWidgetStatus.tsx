@@ -8,7 +8,7 @@ const DashboardWidgetStatus: React.FC = () => {
     <div className='w-full h-full p-4 bg-white ring-1 ring-gray-100 rounded-lg hover:shadow-md'>
       <Flex align='start'>
         <div className='flex-1'>
-          <div className='font-semibold text-lg text-slate-900'>Bad</div>
+          <div className='font-semibold text-lg text-slate-900'>Noice</div>
           <div className='text-sm'>Status</div>
         </div>
 

@@ -21,7 +21,7 @@ const Layout: React.FC<Props> = ({children, className, ...props}) => {
       </Head>
     
       <div id='mainLayout' className={`${className ? className : ''} ${darkMode ? 'dark' : ''}`} {...props}>
-        <div className='bg-white dark:bg-neutral-900 text-slate-500 dark:text-slate-300'>
+        <div className='bg-gray-50 dark:bg-neutral-900 text-slate-500 dark:text-slate-300'>
           <NavBar 
             darkMode={darkMode} 
             toggleDarkMode={() => setDarkMode(!darkMode)}

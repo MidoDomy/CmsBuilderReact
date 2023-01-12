@@ -5,7 +5,30 @@ import Container from 'components/Structuring/Container';
 import DashboardDynamicWidgetImport from 'layouts/dashboard/DashboardDynamicWidgetImport';
 
 const DashboardBoard: React.FC = () => {
-  const [board, setBoard] = useState([]);
+  const [board, setBoard] = useState([
+    {
+      colStart: 2,
+      colEnd: 9,
+      rowStart: 3,
+      rowEnd: 5,
+      widget: {
+        id: 1, 
+        element: 'DashboardWidgetActivity',
+        name: 'Activity'
+      }
+    },
+    {
+      colStart: 13,
+      colEnd: 20,
+      rowStart: 3,
+      rowEnd: 5,
+      widget: {
+        id: 1, 
+        element: 'DashboardWidgetStatus',
+        name: 'Status'
+      }
+    }
+  ]);
 
   const [{ isOver }, drop] = useDrop(() => ({
     accept: 'div',
@@ -39,10 +62,9 @@ const DashboardBoard: React.FC = () => {
           </div>
 
           {/* Dashboard content */}
-          {/* style={{gridColumnStart: item.colStart, gridColumnEnd: item.colEnd, gridRowStart: item.rowStart, gridRowEnd: item.rowEnd}} */}
           { board?.map((item, index) => 
             <div className='relative z-10'
-              style={{gridColumn: 'span 4', gridRow: 'span 2'}}
+              style={{gridColumnStart: item.colStart, gridColumnEnd: item.colEnd, gridRowStart: item.rowStart, gridRowEnd: item.rowEnd}}
               key={index} 
             >
               <DashboardDynamicWidgetImport element={item.widget.element} />

@@ -10,7 +10,7 @@ const NavSidebar: React.FC = () => {
   const toggleModal = () => setIsSidebarCollapsed(!isSidebarCollapsed);
 
   return (
-    <Sidebar className={`bg-white dark:bg-zinc-800 ${isSidebarCollapsed ? '' : 'w-72'}`}>
+    <Sidebar className={`bg-white dark:bg-zinc-800 border-r ${isSidebarCollapsed ? '' : 'w-72'}`}>
       <Sidebar.Body className='px-0'>
         <ul>
           <NavSidebarLink icon='home' name='Dashboard' link='/dashboard' isSidebarCollapsed={isSidebarCollapsed} />
