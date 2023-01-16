@@ -57,6 +57,25 @@ const Test: NextPage = () => {
           <Icon name='edit' size={16} />
         </Button>
       </div>
+
+      {/* Button group */}
+      <div className="flex items-center gap-2 mb-4">
+        <span className='pr-2 text-sm font-medium'>Button group:</span>
+
+        <Button.Group>
+          <Button variant='secondary'>Button</Button>
+          <Button variant='primary'>Button</Button>
+          <Button rounded>
+            <Icon name='edit' size={16} />
+          </Button>
+        </Button.Group>
+
+        <Button.Group>
+          <Button>Button</Button>
+          <Button>Button</Button>
+          <Button>Button</Button>
+        </Button.Group>
+      </div>
     </div>
   )
 }

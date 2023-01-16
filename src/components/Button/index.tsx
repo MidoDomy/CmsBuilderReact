@@ -1,8 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 
+import ButtonGroup from './ButtonGroup';
+
 type Props = {
-  children: React.ReactNode,
+  children: React.ReactNode;
   className?: string;
   variant?: 'primary' | 'secondary' | 'default';
   size?: 'sm' | 'md' | 'lg';
@@ -43,11 +45,14 @@ const Button: React.FC<Props> = ({ children, className, variant, size, block, sq
       { href ? 
         <Link className={getClasses()} 
           href={href}
+          {...props}
         >
           {children}
         </Link>
       :
-        <button className={getClasses()}>
+        <button className={getClasses()}
+          {...props}
+        >
           {children}
         </button>
       }
@@ -61,4 +66,6 @@ Button.defaultProps = {
   size: 'md'
 }
 
-export default Button;
+export default Object.assign(Button, {
+  Group: ButtonGroup
+});
