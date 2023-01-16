@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 
 import { TabContext } from 'contexts/Tab';
 import TabsNav from './TabsNav';
-import TabsNavItem from './TabNavItem';
-import TabsContent from './TabContent';
+import TabsNavItem from './TabsNavItem';
+import TabsContent from './TabsContent';
 
 type Props = {
   children?: React.ReactNode,
