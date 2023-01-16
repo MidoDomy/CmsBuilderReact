@@ -1,23 +1,28 @@
 import React from 'react';
 
 import Image from 'components/Image';
+import AvatarGroup from './AvatarGroup';
 
 type Props = {
   className?: string;
   src?: string;
   alt?: string;
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 }
 
 const Avatar: React.FC<Props> = ({ className, src, alt, size, ...props }) => {
 
   const sizeClasses = (() => {switch(size) {
-    case 'lg':
-      return 'h-11 w-11'
+    case 'xs':
+      return 'h-6 w-6'
     case 'sm':
-      return 'h-7 w-7'
+      return 'h-8 w-8'
+    case 'lg':
+      return 'h-12 w-12'
+    case 'xl':
+      return 'h-14 w-14'
     default: 
-      return 'h-9 w-9'
+      return 'h-10 w-10'
   }})()
 
   return (
@@ -36,4 +41,6 @@ Avatar.defaultProps = {
   size: 'md'
 }
 
-export default Avatar;
+export default Object.assign(Avatar, {
+  Group: AvatarGroup
+});
