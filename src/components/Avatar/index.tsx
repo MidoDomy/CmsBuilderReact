@@ -13,16 +13,16 @@ const Avatar: React.FC<Props> = ({ className, src, alt, size, ...props }) => {
 
   const sizeClasses = (() => {switch(size) {
     case 'lg':
-      return 'h-10 w-10'
+      return 'h-11 w-11'
     case 'sm':
-      return 'h-6 w-6'
+      return 'h-7 w-7'
     default: 
-      return 'h-8 w-8'
+      return 'h-9 w-9'
   }})()
 
   return (
     <Image
-      className={`border-2 border-base-light overflow-hidden rounded-full object-cover object-center ${sizeClasses} ${className}`}
+      className={`border-2 border-gray-200 overflow-hidden rounded-full object-cover object-center ${sizeClasses} ${className}`}
       src={src}
       alt={alt}
       {...props}
@@ -32,7 +32,7 @@ const Avatar: React.FC<Props> = ({ className, src, alt, size, ...props }) => {
 
 Avatar.defaultProps = {
   className: '',
-  src: 'undefinedUser.jpeg',
+  src: 'undefinedUser.png',
   size: 'md'
 }
 
