@@ -1,6 +1,8 @@
 import type { NextPage } from 'next';
 
 import Avatar from 'components/Avatar';
+import Button from 'components/Button';
+import Icon from 'components/Icon';
 
 const Test: NextPage = () => {
   return (
@@ -37,6 +39,23 @@ const Test: NextPage = () => {
           <Avatar size='lg' />
           <Avatar size='lg' />
         </Avatar.Group>
+      </div>
+
+      {/* Button */}
+      <div className="flex items-center gap-2 mb-4">
+        <span className='pr-2 text-sm font-medium'>Button:</span>
+
+        <Button size='sm'>Button</Button>
+        <Button>Button</Button>
+        <Button size='lg'>Button</Button>
+        <Button variant='secondary'>Button</Button>
+        <Button variant='primary'>Button</Button>
+        <Button rounded>
+          <Icon name='edit' size={16} />
+        </Button>
+        <Button square>
+          <Icon name='edit' size={16} />
+        </Button>
       </div>
     </div>
   )
