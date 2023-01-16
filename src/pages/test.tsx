@@ -4,6 +4,7 @@ import Avatar from 'components/Avatar';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 import Dropdown from 'components/Dropdown';
+import Tabs from 'components/Tabs';
 
 const Test: NextPage = () => {
   return (
@@ -117,6 +118,29 @@ const Test: NextPage = () => {
             <Dropdown.MenuItem>Item 3</Dropdown.MenuItem>
           </Dropdown.Menu>
         </Dropdown>
+      </div>
+
+      {/* Tabs */}
+      <div className="flex items-center gap-2 mb-4">
+        <span className='pr-2 text-sm font-medium'>Tabs:</span>
+
+        <Tabs active='Settings'>
+          <Tabs.Nav>
+            <Tabs.NavItem name='Home'>Home</Tabs.NavItem>
+            <Tabs.NavItem name='Profile'>Profile</Tabs.NavItem>
+            <Tabs.NavItem name='Settings'>Settings</Tabs.NavItem>
+          </Tabs.Nav>
+
+          <Tabs.Content name='Home'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil facere, aperiam molestiae reiciendis asperiores eum nesciunt labore at ipsum temporibus repellat autem qui optio numquam aliquid vel animi veniam deserunt?
+          </Tabs.Content>
+          <Tabs.Content name='Profile'>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ducimus praesentium maiores, quos, amet iusto vero distinctio possimus illo odio dolor, ex voluptas nulla sapiente itaque ipsum consequatur deleniti! Dolorem!
+          </Tabs.Content>
+          <Tabs.Content name='Settings'>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum labore, rem nihil sint rerum quas aperiam saepe omnis voluptate obcaecati nulla culpa iste nostrum dolorum doloribus recusandae id cumque repellat!
+          </Tabs.Content>
+        </Tabs>
       </div>
     </div>
   )
