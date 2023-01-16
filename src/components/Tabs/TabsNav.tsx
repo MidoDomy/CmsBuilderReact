@@ -5,11 +5,9 @@ type Props = {
   className?: string;
 }
 
-const TabsNav: React.FC<Props> = ({ children, className, ...props }) => {
+const TabsNav: React.FC<Props> = ({ children, className }) => {
   return (
-    <div className={`selection-none flex ${className}`}
-      {...props}
-    > 
+    <div className={`selection-none flex ${className}`}> 
       {children}
     </div>
   )
