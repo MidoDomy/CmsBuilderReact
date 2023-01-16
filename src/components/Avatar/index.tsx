@@ -27,7 +27,7 @@ const Avatar: React.FC<Props> = ({ className, src, alt, size, ...props }) => {
 
   return (
     <Image
-      className={`border-2 border-gray-200 overflow-hidden rounded-full object-cover object-center ${sizeClasses} ${className}`}
+      className={`select-none border-2 border-gray-200 overflow-hidden rounded-full object-cover object-center ${sizeClasses} ${className}`}
       src={src}
       alt={alt}
       {...props}

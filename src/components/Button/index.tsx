@@ -36,7 +36,7 @@ const Button: React.FC<Props> = ({ children, className, variant, size, block, sq
   }})()
 
   const getClasses = () => {
-    return `selection-none inline-flex gap-2 items-center cursor-pointer border font-medium shadow-sm transition-colors disabled:bg-gray-400 disabled:border-gray-400 disabled:hover:bg-opacity-100 ${variantClasses} ${sizeClasses} ${block ? 'w-full justify-center' : ''} ${rounded ? 'rounded-full' : 'rounded-md'} ${className}`;
+    return `select-none inline-flex gap-2 items-center cursor-pointer border font-medium shadow-sm transition-colors disabled:bg-gray-400 disabled:border-gray-400 disabled:hover:bg-opacity-100 ${variantClasses} ${sizeClasses} ${block ? 'w-full justify-center' : ''} ${rounded ? 'rounded-full' : 'rounded-md'} ${className}`;
   }
   // -----------------------------------
 

@@ -3,6 +3,7 @@ import type { NextPage } from 'next';
 import Avatar from 'components/Avatar';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
+import Dropdown from 'components/Dropdown';
 
 const Test: NextPage = () => {
   return (
@@ -75,6 +76,47 @@ const Test: NextPage = () => {
           <Button>Button</Button>
           <Button>Button</Button>
         </Button.Group>
+      </div>
+
+      {/* Dropdown */}
+      <div className="flex items-center gap-2 mb-4">
+        <span className='pr-2 text-sm font-medium'>Dropdown:</span>
+
+        <Dropdown position='bottom right'>
+          <Dropdown.Trigger>
+            <Button>Button</Button>
+          </Dropdown.Trigger>
+          
+          <Dropdown.Menu>
+            <Dropdown.MenuItem>Item 1</Dropdown.MenuItem>
+            <Dropdown.MenuItem>Item 2</Dropdown.MenuItem>
+            <Dropdown.MenuItem>Item 3</Dropdown.MenuItem>
+          </Dropdown.Menu>
+        </Dropdown>
+
+        <Dropdown position='top right'>
+          <Dropdown.Trigger>
+            <Button>Button</Button>
+          </Dropdown.Trigger>
+          
+          <Dropdown.Menu>
+            <Dropdown.MenuItem>Item 1</Dropdown.MenuItem>
+            <Dropdown.MenuItem>Item 2</Dropdown.MenuItem>
+            <Dropdown.MenuItem>Item 3</Dropdown.MenuItem>
+          </Dropdown.Menu>
+        </Dropdown>
+
+        <Dropdown>
+          <Dropdown.Trigger>
+            <Icon name='three-dots' />
+          </Dropdown.Trigger>
+          
+          <Dropdown.Menu>
+            <Dropdown.MenuItem>Item 1</Dropdown.MenuItem>
+            <Dropdown.MenuItem>Item 2</Dropdown.MenuItem>
+            <Dropdown.MenuItem>Item 3</Dropdown.MenuItem>
+          </Dropdown.Menu>
+        </Dropdown>
       </div>
     </div>
   )
