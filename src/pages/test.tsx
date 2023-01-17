@@ -7,6 +7,7 @@ import Icon from 'components/Icon';
 import Dropdown from 'components/Dropdown';
 import Tabs from 'components/Tabs';
 import Modal from 'components/Modal';
+import Sidebar from 'components/Sidebar';
 
 const Test: NextPage = () => {
 
@@ -170,6 +171,27 @@ const Test: NextPage = () => {
             </div>
           </Modal.Footer>
         </Modal>
+      </div>
+
+      {/* Sidebar */}
+      <div className="flex items-center gap-2 mb-4">
+        <span className='pr-2 text-sm font-medium'>Sidebar:</span>
+
+        <div className='w-full h-96'>
+          <Sidebar>
+            <Sidebar.Header>
+              Header
+            </Sidebar.Header>
+
+            <Sidebar.Body>
+              Body
+            </Sidebar.Body>
+
+            <Sidebar.Footer>
+              Footer
+            </Sidebar.Footer>
+          </Sidebar>
+        </div>
       </div>
     </div>
   )
