@@ -23,7 +23,7 @@ const Button: React.FC<Props> = ({ children, className, variant, size, block, sq
     case 'secondary':
       return 'bg-sky-50 border-sky-50 hover:bg-sky-100 hover:border-sky-100 text-sky-600'
     default: 
-      return 'border-gray-300 hover:bg-gray-100 text-slate-700'
+      return 'bg-white border-gray-300 hover:bg-gray-100 text-slate-700'
   }})()
 
   const sizeClasses = (() => {switch(size) {

@@ -1,12 +1,17 @@
 import type { NextPage } from 'next';
+import { useState } from 'react';
 
 import Avatar from 'components/Avatar';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 import Dropdown from 'components/Dropdown';
 import Tabs from 'components/Tabs';
+import Modal from 'components/Modal';
 
 const Test: NextPage = () => {
+
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div className='p-20'>
       {/* Avatar */}
@@ -141,6 +146,30 @@ const Test: NextPage = () => {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum labore, rem nihil sint rerum quas aperiam saepe omnis voluptate obcaecati nulla culpa iste nostrum dolorum doloribus recusandae id cumque repellat!
           </Tabs.Content>
         </Tabs>
+      </div>
+
+      {/* Modal */}
+      <div className="flex items-center gap-2 mb-4">
+        <span className='pr-2 text-sm font-medium'>Modal:</span>
+
+        <Button onClick={()=>setShowModal(true)}>Open modal</Button>
+
+        <Modal isOpen={showModal} onClose={()=>setShowModal(false)} showClose>
+          <Modal.Header>
+            <Modal.Title>Modal title</Modal.Title>
+          </Modal.Header>
+
+          <Modal.Body>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nemo voluptatem laborum esse maiores natus quam quos eius, pariatur vel cupiditate similique voluptatum accusamus eveniet fuga illo debitis. Dicta, nostrum.
+          </Modal.Body>
+
+          <Modal.Footer>
+            <div className='flex gap-3 justify-end'>
+              <Button onClick={()=>setShowModal(false)}>Close</Button>
+              <Button variant='primary' onClick={()=>setShowModal(false)}>Save</Button>
+            </div>
+          </Modal.Footer>
+        </Modal>
       </div>
     </div>
   )
