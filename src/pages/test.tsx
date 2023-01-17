@@ -8,6 +8,7 @@ import Dropdown from 'components/Dropdown';
 import Tabs from 'components/Tabs';
 import Modal from 'components/Modal';
 import Sidebar from 'components/Sidebar';
+import Collapse from 'components/Collapse';
 
 const Test: NextPage = () => {
 
@@ -192,6 +193,18 @@ const Test: NextPage = () => {
             </Sidebar.Footer>
           </Sidebar>
         </div>
+      </div>
+
+      {/* Collapse */}
+      <div className="flex items-center gap-2 mb-4">
+        <span className='pr-2 text-sm font-medium'>Collapse:</span>
+
+        <Collapse className='w-96'>
+          <Collapse.Trigger>Trigger</Collapse.Trigger>
+          <Collapse.Content>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ab est aperiam earum quia sequi. Nam tenetur soluta tempora officia mollitia reprehenderit ea? Tempore, maiores velit cum blanditiis illo aliquam.
+          </Collapse.Content>
+        </Collapse>
       </div>
     </div>
   )
