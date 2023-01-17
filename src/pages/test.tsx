@@ -129,7 +129,7 @@ const Test: NextPage = () => {
       <div className="flex items-center gap-2 mb-4">
         <span className='pr-2 text-sm font-medium'>Tabs:</span>
 
-        <Tabs active='Settings'>
+        <Tabs active='Settings' className='max-w-xl'>
           <Tabs.Nav>
             <Tabs.NavItem name='Home'>Home</Tabs.NavItem>
             <Tabs.NavItem name='Profile'>Profile</Tabs.NavItem>
