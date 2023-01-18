@@ -7,7 +7,7 @@ type Props = {
 
 const SidebarBody: React.FC<Props> = ({children, className}) => {
   return (
-    <div className={`flex-1 px-5 py-3 overflow-auto ${className}`}>
+    <div className={`flex-1 p-3 ${className}`}>
       {children}
     </div>
   )

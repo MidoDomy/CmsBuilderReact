@@ -23,17 +23,17 @@ const DropdownMenu: React.FC<Props> = ({ children, className }) => {
 
   const positionClasses = (() => {switch(position) {
     case 'top left':
-      return 'bottom-full left-0 mb-3 -ml-2'
+      return 'bottom-full left-0 mb-3'
     case 'top center':
       return 'bottom-full left-1/2 -translate-x-1/2 mb-3'
     case 'top right':
-      return 'bottom-full right-0 mb-3 -mr-2'
+      return 'bottom-full right-0 mb-3'
     case 'bottom left':
-      return 'top-full left-0 mt-3 -ml-2'
+      return 'top-full left-0 mt-3'
     case 'bottom center':
       return 'top-full left-1/2 -translate-x-1/2 mt-3'
     case 'bottom right':
-      return 'top-full right-0 mt-3 -mr-2'
+      return 'top-full right-0 mt-3'
     default: 
       return ''
   }})()
