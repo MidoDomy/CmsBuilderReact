@@ -8,10 +8,11 @@ import CollapseContent from './CollapseContent';
 type Props = {
   children?: React.ReactNode;
   className?: string;
+  active?: Boolean;
 }
 
-const Collapse: React.FC<Props> = ({ children, className }) => {
-  const [state, setState] = useState(false);
+const Collapse: React.FC<Props> = ({ children, className, active }) => {
+  const [state, setState] = useState(active);
 
   return (
     <CollapseContext.Provider value={{state, setState}}>
@@ -23,7 +24,8 @@ const Collapse: React.FC<Props> = ({ children, className }) => {
 }
 
 Collapse.defaultProps = {
-  className: ''
+  className: '',
+  active: false
 }
 
 export default Object.assign(Collapse, {

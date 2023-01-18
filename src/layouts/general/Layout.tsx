@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import Head from 'next/head';
+// import Head from 'next/head';
 
-import NavSidebar from 'layouts/general/nav/NavSidebar';
-import NavBar from 'layouts/general/nav/NavBar';
+import NavSidebar from 'layouts/general/navigation/NavigationSidebar';
+import NavBar from 'layouts/general/navigation/NavigationBar';
 
 type Props = {
   children: React.ReactNode,
@@ -14,27 +14,29 @@ const Layout: React.FC<Props> = ({children, className, ...props}) => {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Cms builder</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <meta property='og:title' content='Cms builder' key='title' />
-      </Head>
+      </Head> */}
     
-      <div id='mainLayout' className={`${className ? className : ''} ${darkMode ? 'dark' : ''}`} {...props}>
-        <div className='bg-gray-50 dark:bg-neutral-900 text-slate-500 dark:text-slate-300'>
-          <NavBar 
-            darkMode={darkMode} 
-            toggleDarkMode={() => setDarkMode(!darkMode)}
-          />
-
-          <div className='flex'>
+      <div className={`${className} ${darkMode ? 'dark' : ''}`} 
+        id='mainLayout'
+        {...props}
+      >
+        <div className='bg-gray-50 text-slate-900'>
+          <div className="flex">
             {/* Sidebar */}
             <NavSidebar />
 
-            {/* Main content */}
-            <main className='flex-1 overflow-x-hidden'>
-              {children}
-            </main>
+            <div className='flex-1 flex flex-col h-screen'>
+              {/* <NavBar /> */}
+
+              {/* Main content */}
+              <main className='flex-1 overflow-hidden'>
+                {children}
+              </main>
+            </div>
           </div>
         </div>
       </div>
