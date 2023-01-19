@@ -1,48 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import React from 'react';
 
-import { useScrollDirection } from 'hocs/ScrollDirection';
+import Container from 'components/Structuring/Container';
+import NavigationBarSearch from './bar/NavigationBarSearch';
+import NavigationBarNotifications from './bar/NavigationBarNotifications';
 
-import Button from 'components/Button';
-import Avatar from 'components/Avatar';
-import Icon from 'components/Icon';
-import Badge from 'components/Badge';
-
-const NavBar: React.FC = () => {
-  const [show, setShow] = useState(true);
-  let scroll = useScrollDirection();
-
-  useEffect(() => {
-    scroll == 'up' ? setShow(true) : setShow(false);
-  }, [scroll]);
-
+const NavigationBar: React.FC = () => {
   return (
-    <header className={`sticky top-0 z-40 w-full shadow-sm backdrop-blur border-b border-gray-200 dark:border-gray-700 bg-white/75 dark:bg-neutral-900/80 transform transition-transform ${show ? 'translate-y-0' : '-translate-y-full'}`}>
-      <div className='flex gap-6 items-center px-5 py-2'>
+    <header className={`py-[7px] bg-white/75 border-b border-gray-200 shadow-sm`}>
+      <Container className='flex items-center justify-between'>
         {/* Search */}
-        <div className='relative flex-1 flex gap-2'>
-          <Icon className='absolute top-1/2 left-1 transform -translate-y-1/2' name='search' size={20} />
-
-          <input className='w-full py-2 pl-8 pr-5 focus:outline-none bg-transparent'
-            type='text' 
-            placeholder='Search'
-          />
-        </div>
+        <NavigationBarSearch />
 
         {/* Actions */}
-        <div className='flex'>
-          {/* Notifications */}
-          <Button className='rounded-full relative'
-            square={true}
-            variant='ghost'
-          >
-            <Badge />
-            <Icon name='bell' />
-          </Button>
+        <div className='flex gap-2'>
+          <NavigationBarNotifications />
         </div>
-      </div>
+      </Container>
     </header>
   )
 }
 
-export default NavBar;
+export default NavigationBar;

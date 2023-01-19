@@ -30,7 +30,7 @@ const Layout: React.FC<Props> = ({children, className, ...props}) => {
             <NavSidebar />
 
             <div className='flex-1 flex flex-col h-screen'>
-              {/* <NavBar /> */}
+              <NavBar />
 
               {/* Main content */}
               <main className='flex-1 overflow-hidden'>

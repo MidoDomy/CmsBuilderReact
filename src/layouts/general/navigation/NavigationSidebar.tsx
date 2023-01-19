@@ -19,16 +19,18 @@ const NavigationSidebar: React.FC = () => {
       <Sidebar className='border-r border-gray-200'>
         <Sidebar.Header className='relative flex justify-between items-center border-b border-gray-200'>
           {/* Logo */}
-          <h1 className={`flex items-center gap-2 font-medium text-2xl text-slate-900 ${isSidebarCollapsed ? 'justify-center' : ''}`}>
-            <Image className='h-[26px] w-auto' />
+          <Link href='/'>
+            <h1 className={`flex items-center gap-2 font-medium text-2xl text-slate-900 ${isSidebarCollapsed ? 'justify-center' : ''}`}>
+              <Image className='h-[26px] w-auto' />
 
-            {!isSidebarCollapsed &&
-              <Link href='/'>Logo</Link>
-            }
-          </h1>
+              {!isSidebarCollapsed &&
+                <span>Logo</span>
+              }
+            </h1>
+          </Link>
 
           {/* Collapse button */}
-          <Button className={`${isSidebarCollapsed ? 'absolute right-0 bottom-0 translate-x-1/2 translate-y-1/2' : ''}`}
+          <Button className={`${isSidebarCollapsed ? 'absolute right-0 bottom-0 translate-x-1/2 translate-y-1/2 z-10' : ''}`}
             rounded
             onClick={toggleModal}
           >
