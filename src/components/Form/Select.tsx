@@ -3,29 +3,33 @@ import React from 'react';
 import Icon from 'components/Icon';
 
 type Props = {
-  className?: string,
-  options: Array<string>
+  className?: string;
+  options: Array<Object>;
+  placeholder?: string;
 }
 
-const Select: React.FC<Props> = ({ className, options, ...props }) => {
+const Select: React.FC<Props> = ({ className, options, placeholder, ...props }) => {
   return (
-    <div className='relative'>
-      <Icon className='absolute top-1/2 right-2 transform -translate-y-1/2'
-        name='arrow-head-down' 
-        size={16}
-      />
-
-      <select className={`appearance-none relative w-full px-2 py-1.5 bg-transparent border border-gray-200 dark:border-gray-700 focus:border-sky-600 dark:focus:border-sky-700 outline-none rounded text-sm text-slate-800 dark:text-slate-200 transition-colors`}
+    <div className={`relative flex items-center pl-2.5 pr-6 py-1.5 border border-gray-200 rounded text-sm text-slate-800 transition-colors ${className}`}>
+      <select className='appearance-none bg-transparent focus:outline-none'
         {...props}
       >
+        {placeholder &&
+          <option disabled selected hidden>{placeholder}</option>
+        }
         {options?.map((option, index) => (
           <option key={index} 
-            value={option}
+            value={option.value}
           >
-            {option}
+            {option.name}
           </option>
         ))}
       </select>
+
+      <Icon
+        name='arrow-head-down' 
+        size={16}
+      />
     </div>
   )
 }
