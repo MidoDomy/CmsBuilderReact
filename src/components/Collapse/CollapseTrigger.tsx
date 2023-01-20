@@ -16,7 +16,7 @@ const CollapseTrigger: React.FC<Props> = ({ children, className, openClasses, cl
   const {state, setState} = useContext(CollapseContext);
 
   return (
-    <button className={`flex items-center w-full py-2 px-2 rounded transition-colors ${state ? openClasses : closeClasses} ${className}`} 
+    <button className={`flex items-center w-full py-2 px-2 rounded transition-colors select-none ${state ? openClasses : closeClasses} ${className}`} 
       onClick={() => setState(!state)}
     >
       <span className='flex-1 text-left'>{children}</span>
