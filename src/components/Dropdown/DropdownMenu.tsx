@@ -56,7 +56,7 @@ const DropdownMenu: React.FC<Props> = ({ children, className }) => {
   }})()
 
   return (
-    <div className={`absolute ${positionClasses} py-1 min-w-[180px] bg-white border border-gray-200 shadow rounded ${className} ${state ? '' : 'hidden'}`}
+    <div className={`absolute ${positionClasses} z-50 py-1 min-w-[180px] bg-white border border-gray-200 shadow rounded ${className} ${state ? '' : 'hidden'}`}
       ref={menuRef}
     >
       <div className={`absolute w-3 h-3 bg-white border-t border-l border-gray-200 ${arrowClasses}`}></div>
