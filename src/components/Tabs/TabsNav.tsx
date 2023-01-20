@@ -7,7 +7,7 @@ type Props = {
 
 const TabsNav: React.FC<Props> = ({ children, className }) => {
   return (
-    <div className={`selection-none flex ${className}`}> 
+    <div className={`select-none flex ${className}`}> 
       {children}
     </div>
   )

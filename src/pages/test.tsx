@@ -9,6 +9,7 @@ import Tabs from 'components/Tabs';
 import Modal from 'components/Modal';
 import Sidebar from 'components/Sidebar';
 import Collapse from 'components/Collapse';
+import Form from 'components/Form';
 
 const Test: NextPage = () => {
 
@@ -205,6 +206,47 @@ const Test: NextPage = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ab est aperiam earum quia sequi. Nam tenetur soluta tempora officia mollitia reprehenderit ea? Tempore, maiores velit cum blanditiis illo aliquam.
           </Collapse.Content>
         </Collapse>
+      </div>
+
+      {/* Form */}
+      <div className='text-lg font-medium'>Form components</div>
+      <div className="flex items-center gap-2 mb-4">
+        <span className='pr-2 text-sm font-medium'>Select:</span>
+
+        <Form.Select className='w-56'
+          label='Select field'
+          placeholder='Placeholder'
+          size='sm'
+          options={[
+            {
+              value: 'value',
+              name: 'Value'
+            }
+          ]}
+        />
+
+        <Form.Select className='w-56'
+          label='Select field'
+          placeholder='Placeholder'
+          options={[
+            {
+              value: 'value',
+              name: 'Value'
+            }
+          ]}
+        />
+
+        <Form.Select className='w-56'
+          label='Select field'
+          placeholder='Placeholder'
+          size='lg'
+          options={[
+            {
+              value: 'value',
+              name: 'Value'
+            }
+          ]}
+        />
       </div>
     </div>
   )
