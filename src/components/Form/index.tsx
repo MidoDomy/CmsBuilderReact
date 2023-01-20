@@ -9,13 +9,19 @@ import Check from './Check';
 import Group from './Group';
 
 type Props = {
-  children: React.ReactNode,
-  className?: string
+  children: React.ReactNode;
+  className?: string;
+  action?: string;
+  method?: 'get' | 'post';
 }
 
-const Form: React.FC<Props> = ({children, className, ...props}) => {
+const Form: React.FC<Props> = ({children, className, action, method, ...props}) => {
   return (
-    <form className={`form ${className}`} {...props}>
+    <form className={className} 
+      action={action}
+      method={method}
+      {...props}
+    >
       {children}
     </form>
   )
