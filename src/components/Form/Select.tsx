@@ -6,17 +6,17 @@ import Icon from 'components/Icon';
 type Props = {
   className?: string;
   options: {value: string; name: string;}[];
+  size?: 'sm' | 'md' | 'lg';
   label?: string;
   placeholder?: string;
   required?: Boolean;
-  size?: 'sm' | 'md' | 'lg';
 }
 
 const Select: React.FC<Props> = ({ className, options, label, placeholder, required, size, ...props }) => {
 
   const sizeClasses = (() => {switch(size) {
     case 'sm':
-      return 'py-1 pl-2.5 pr-8 text-sm'
+      return 'py-1.5 pl-2.5 pr-8 text-sm'
     case 'lg':
       return 'py-2 pl-3 pr-8'
     default: 

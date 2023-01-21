@@ -13,7 +13,7 @@ type Props = {
 const BaseField: React.FC<Props> = ({ children, className, label, error, required }) => {
   return (
     <div className={className}>
-      <Label>{label} {required && <span className='font-normal text-xs'>(required)</span>}</Label>
+      {label && <Label>{label} {required && <span className='font-normal text-xs'>(required)</span>}</Label>}
 
       {children}
 
