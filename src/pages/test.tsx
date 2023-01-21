@@ -270,6 +270,26 @@ const Test: NextPage = () => {
           size='lg'
         />
       </div>
+      {/* Radio */}
+      <div className="flex items-center gap-2 mb-4">
+        <span className='pr-2 text-sm font-medium'>Radio:</span>
+
+        <Form.Radio
+          id='testRadio1'
+          name='testRadio'
+          label='Input field 1'
+        />
+        <Form.Radio
+          id='testRadio2'
+          name='testRadio'
+          label='Input field 2'
+        />
+        <Form.Radio
+          id='testRadio3'
+          name='testRadio'
+          label='Input field 3'
+        />
+      </div>
     </div>
   )
 }
