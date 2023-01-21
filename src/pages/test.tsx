@@ -210,6 +210,7 @@ const Test: NextPage = () => {
 
       {/* Form */}
       <div className='text-lg font-medium'>Form components</div>
+      {/* Select */}
       <div className="flex items-center gap-2 mb-4">
         <span className='pr-2 text-sm font-medium'>Select:</span>
 
@@ -246,6 +247,27 @@ const Test: NextPage = () => {
               name: 'Value'
             }
           ]}
+        />
+      </div>
+      {/* Input */}
+      <div className="flex items-center gap-2 mb-4">
+        <span className='pr-2 text-sm font-medium'>Input:</span>
+
+        <Form.Input
+          label='Input field'
+          placeholder='Input field'
+          size='sm'
+        />
+
+        <Form.Input
+          label='Input field'
+          placeholder='Input field'
+        />
+
+        <Form.Input
+          label='Input field'
+          placeholder='Input field'
+          size='lg'
         />
       </div>
     </div>
