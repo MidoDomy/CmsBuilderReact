@@ -278,16 +278,12 @@ const Test: NextPage = () => {
           id='testRadio1'
           name='testRadio'
           label='Input field 1'
+          small
         />
         <Form.Radio
           id='testRadio2'
           name='testRadio'
           label='Input field 2'
-        />
-        <Form.Radio
-          id='testRadio3'
-          name='testRadio'
-          label='Input field 3'
         />
       </div>
     </div>
