@@ -17,8 +17,8 @@ const Switch: React.FC<Props> = ({ children, className, id, value, label, small,
       <label className={`flex items-start cursor-pointer peer-checked:[&>:first-child>div]:ml-auto peer-checked:[&>:first-child>div]:bg-white peer-checked:[&>:first-child]:bg-sky-500 peer-checked:[&>:first-child]:border-transparent`}
         htmlFor={id}
       >
-        <div className={`relative aspect-[2/1] p-0.5 border border-gray-200 rounded-xl ${small ? 'h-4 mt-0.5' : 'h-[18px] mt-px'}`}>
-          <div className='h-full aspect-square bg-gray-300 rounded-full'></div>
+        <div className={`relative aspect-[2/1] p-0.5 border border-gray-200 rounded-xl transition-colors ${small ? 'h-4 mt-0.5' : 'h-[18px] mt-px'}`}>
+          <div className='h-full aspect-square bg-gray-300 rounded-full transition-colors'></div>
         </div>
 
         <span className='pl-2'>
