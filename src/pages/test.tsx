@@ -278,12 +278,30 @@ const Test: NextPage = () => {
           id='testRadio1'
           name='testRadio'
           label='Input field 1'
+          value='Radio 1 value'
           small
         />
         <Form.Radio
           id='testRadio2'
           name='testRadio'
           label='Input field 2'
+          value='Radio 2 value'
+        />
+      </div>
+      {/* Checkbox */}
+      <div className="flex items-center gap-2 mb-4">
+        <span className='pr-2 text-sm font-medium'>Checkbox:</span>
+
+        <Form.Checkbox
+          id='testCheckbox1'
+          label='Input field 1'
+          value='Checkbox 1 value'
+          small
+        />
+        <Form.Checkbox
+          id='testCheckbox2'
+          label='Input field 2'
+          value='Checkbox 2 value'
         />
       </div>
     </div>
