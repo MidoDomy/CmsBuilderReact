@@ -1,6 +1,8 @@
 import React from 'react';
 
 import Input from './Input';
+import InputGroup from './InputGroup';
+import InputGroupText from './InputGroupText';
 import Textarea from './Textarea';
 import Select from './Select';
 import Switch from './Switch';
@@ -33,6 +35,8 @@ Form.defaultProps = {
 
 export default Object.assign(Form, {
   Input: Input,
+  InputGroup: InputGroup,
+  InputGroupText: InputGroupText,
   Textarea: Textarea,
   Select: Select,
   Switch: Switch,
