@@ -5,7 +5,7 @@ import Textarea from './Textarea';
 import Select from './Select';
 import Switch from './Switch';
 import Radio from './Radio';
-import Check from './Check';
+import Checkbox from './Checkbox';
 import Group from './Group';
 
 type Props = {
@@ -37,6 +37,6 @@ export default Object.assign(Form, {
   Select: Select,
   Switch: Switch,
   Radio: Radio,
-  Check: Check,
+  Checkbox: Checkbox,
   Group: Group
 });

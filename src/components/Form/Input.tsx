@@ -36,7 +36,7 @@ const Input: React.FC<Props> = ({ className, prefix, suffix, size, label, placeh
           </span>
         }
 
-        <input className={`w-full bg-transparent border border-gray-200 focus:border-sky-600 rounded outline-none text-slate-800 transition-colors ${sizeClasses}`}
+        <input className={`w-full bg-transparent border border-gray-200 focus:border-sky-500 rounded outline-none text-slate-800 transition-colors ${sizeClasses}`}
           placeholder={placeholder}
           type={type}
           {...props}
