@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'abstract/theme';
-
 @layer base {
   .appearance-textfield {
     &[type="number"]::-webkit-inner-spin-button,
@@ -35,4 +33,21 @@
       }
     }
   }
+
+  .input-group {
+    > *:not(:first-child) {
+      input, select {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+
+    > *:not(:last-child) {
+      input, select {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
 }
+

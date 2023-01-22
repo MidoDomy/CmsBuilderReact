@@ -270,6 +270,34 @@ const Test: NextPage = () => {
           size='lg'
         />
       </div>
+      {/* Input group */}
+      <div className="flex items-center gap-2 mb-4">
+        <span className='pr-2 text-sm font-medium'>Input group:</span>
+
+        <Form.InputGroup label='Input field'>
+          <Form.InputGroupText>
+            Input group text
+          </Form.InputGroupText>
+
+          <Form.Input
+            placeholder='Input field'
+          />
+
+          <Form.InputGroupText>
+            Input group text
+          </Form.InputGroupText>
+
+          <Form.Select
+            placeholder='Placeholder'
+            options={[
+              {
+                value: 'value',
+                name: 'Value'
+              }
+            ]}
+          />
+        </Form.InputGroup>
+      </div>
       {/* Radio */}
       <div className="flex items-center gap-2 mb-4">
         <span className='pr-2 text-sm font-medium'>Radio:</span>
