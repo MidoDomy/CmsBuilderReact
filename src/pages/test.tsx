@@ -304,6 +304,22 @@ const Test: NextPage = () => {
           value='Checkbox 2 value'
         />
       </div>
+      {/* Switch */}
+      <div className="flex items-center gap-2 mb-4">
+        <span className='pr-2 text-sm font-medium'>Switch:</span>
+
+        <Form.Switch
+          id='testSwitch1'
+          label='Input field 1'
+          value='Switch 1 value'
+          small
+        />
+        <Form.Switch
+          id='testSwitch2'
+          label='Input field 2'
+          value='Switch 2 value'
+        />
+      </div>
     </div>
   )
 }

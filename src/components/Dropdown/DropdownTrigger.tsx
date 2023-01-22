@@ -11,7 +11,7 @@ const DropdownTrigger: React.FC<Props> = ({ children, className }) => {
   const {state, setState} = useContext(DropdownContext);
 
   return (
-    <span className={`cursor-pointer ${className}`}
+    <span className={`cursor-pointer select-none ${className}`}
       onClick={() => setState(!state)}
     >
       {children}
