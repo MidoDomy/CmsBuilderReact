@@ -12,7 +12,7 @@ type Props = {
 
 const Checkbox: React.FC<Props> = ({ children, className, id, value, label, hideCheckbox, small, ...props }) => {
   return (
-    <div className={`relative flex items-start gap-2 overflow-hidden ${className}`}>
+    <div className={`relative flex items-start gap-2 overflow-hidden select-none ${className}`}>
       <input className={`peer cursor-pointer appearance-none ml-px ring-1 ring-gray-300 rounded-sm checked:bg-sky-500 checked:ring-1 checked:ring-sky-500 transition-colors ${small ? 'w-3 h-3 mt-1' : 'w-[14px] h-[14px] mt-[5px]'} ${hideCheckbox ? 'hidden' : ''}`} 
         type='checkbox' 
         id={id} 

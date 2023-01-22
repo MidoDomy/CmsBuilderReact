@@ -15,7 +15,9 @@ const BaseField: React.FC<Props> = ({ children, className, label, error, require
     <div className={className}>
       {label && <Label>{label} {required && <span className='font-normal text-xs'>(required)</span>}</Label>}
 
-      {children}
+      <div className='select-none'>
+        {children}
+      </div>
 
       {error && <div className='mt-0.5 text-xs font-medium text-red-600'>{error}</div>}
     </div>
