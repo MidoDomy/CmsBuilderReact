@@ -320,6 +320,21 @@ const Test: NextPage = () => {
           value='Switch 2 value'
         />
       </div>
+      {/* Textarea */}
+      <div className="flex items-center gap-2 mb-4">
+        <span className='pr-2 text-sm font-medium'>Textarea:</span>
+
+        <Form.Textarea
+          label='Textarea small'
+          placeholder='Textarea placeholder'
+          small
+        />
+        <Form.Textarea
+          label='Textarea'
+          placeholder='Textarea placeholder'
+          required
+        />
+      </div>
     </div>
   )
 }
