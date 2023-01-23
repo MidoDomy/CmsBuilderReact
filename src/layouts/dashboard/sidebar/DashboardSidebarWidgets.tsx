@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Flex from 'components/Structuring/Flex';
 import DashboardBaseWidget from '../DashboardBaseWidget';
 import DashboardDynamicWidgetImport from '../DashboardDynamicWidgetImport'
 
@@ -19,15 +18,13 @@ const DashboardSidebarWidgets: React.FC = () => {
   ] 
 
   return (
-    <>
-      <Flex gap={16} direction='column'>
-        {widgets?.map((widget, index) => (
-          <DashboardBaseWidget key={index} widget={widget}>
-            <DashboardDynamicWidgetImport element={widget.element} />
-          </DashboardBaseWidget>
-        ))}
-      </Flex>
-    </>
+    <div className='flex flex-col gap-4'>
+      {widgets?.map((widget, index) => (
+        <DashboardBaseWidget key={index} widget={widget}>
+          <DashboardDynamicWidgetImport element={widget.element} />
+        </DashboardBaseWidget>
+      ))}
+    </div>
   )
 }
 

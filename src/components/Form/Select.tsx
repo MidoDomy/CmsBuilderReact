@@ -31,9 +31,10 @@ const Select: React.FC<Props> = ({ className, selectClass, options, label, place
     >
       <div className='relative'>
         <select className={`appearance-none w-full bg-transparent border border-gray-200 focus:border-sky-500 rounded-md focus:outline-none select-none cursor-pointer ${sizeClasses} ${selectClass}`}
+          defaultValue={'default'}
           {...props}
         >
-          {placeholder && <option disabled selected hidden>{placeholder}</option>}
+          {placeholder && <option disabled value={'default'}>{placeholder}</option>}
 
           {options?.map((option, index) => (
             <option key={index} 

@@ -2,7 +2,8 @@ import type { NextPage } from 'next';
 
 import Layout from 'layouts/general/Layout';
 import Container from 'components/Container';
-import Flex from 'components/Structuring/Flex';
+import Row from 'components/Row';
+import Col from 'components/Col';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 import Image from 'components/Image';
@@ -13,58 +14,66 @@ const MediaDetails: NextPage = () => {
       {/* Header */}
       <div className='mb-20 mt-10'>
         <Container>
-          <Flex className='pb-3 border-b border-gray-200 dark:border-gray-700' 
-            justify='between'
-          >
-            <h2 className='text-3xl text-slate-900 dark:text-slate-100 font-bold'>Folder one</h2>
+          <div className='pb-3 border-b border-gray-200'>
+            <Row justify='between'>
+              <Col>
+                <h2 className='text-3xl text-slate-900 dark:text-slate-100 font-bold'>Folder one</h2>
+              </Col>
 
-            <Flex gap={10}>
-              <Button>
-                <Icon name='plus' size={18} />
-                <span>Add</span>
-              </Button>
+              <Col>
+                <Row gap={10}>
+                  <Col>
+                    <Button>
+                      <Icon name='plus' size={18} />
+                      <span>Add</span>
+                    </Button>
+                  </Col>
 
-              <Button variant='primary'>
-                <Icon name='checkmark' size={18} />
-                <span>Save</span>
-              </Button>
-            </Flex>
-          </Flex>
-        </Container>
-      </div>
-
-      <div>
-        <Container>
-          
+                  <Col>
+                    <Button variant='primary'>
+                      <Icon name='checkmark' size={18} />
+                      <span>Save</span>
+                    </Button>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+          </div>
         </Container>
       </div>
 
       <Container>
-        <Flex gap={16}>
-          <div className='cursor-pointer'>
-            <div className='w-56 p-2 aspect-video bg-white border rounded'>
-              <Image className='w-full h-full object-contain' src='app-image.png' />
+        <Row gap={16}>
+          <Col>
+            <div className='cursor-pointer'>
+              <div className='w-56 p-2 aspect-video bg-white border rounded'>
+                <Image className='w-full h-full object-contain' src='app-image.png' />
+              </div>
+
+              <div className='pt-2 text-sm text-slate-700'>App image</div>
             </div>
+          </Col>
 
-            <div className='pt-2 text-sm text-slate-700'>App image</div>
-          </div>
+          <Col>
+            <div>
+              <div className='w-56 p-2 aspect-video bg-white border rounded'>
+                <Image className='w-full h-full object-contain' src='light-theme.png' />
+              </div>
 
-          <div>
-            <div className='w-56 p-2 aspect-video bg-white border rounded'>
-              <Image className='w-full h-full object-contain' src='light-theme.png' />
+              <div className='pt-2 text-sm text-slate-700'>Light theme</div>
             </div>
+          </Col>
 
-            <div className='pt-2 text-sm text-slate-700'>Light theme</div>
-          </div>
+          <Col>
+            <div>
+              <div className='w-56 p-2 aspect-video bg-white border rounded'>
+                <Image className='w-full h-full object-contain' src='dark-theme.png' />
+              </div>
 
-          <div>
-            <div className='w-56 p-2 aspect-video bg-white border rounded'>
-              <Image className='w-full h-full object-contain' src='dark-theme.png' />
+              <div className='pt-2 text-sm text-slate-700'>Dark theme</div>
             </div>
-
-            <div className='pt-2 text-sm text-slate-700'>Dark theme</div>
-          </div>
-        </Flex>
+          </Col>
+        </Row>
       </Container>
     </Layout>
   )

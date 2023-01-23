@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Flex from 'components/Structuring/Flex';
+import Row from 'components/Row';
+import Col from 'components/Col';
 import Color from 'layouts/content/utils/colors/Color';
 
 type Props = {
@@ -9,27 +10,28 @@ type Props = {
   colors: Object
 }
 
-const ColorsGroup: React.FC<Props> = ({className, name, colors, ...props}) => {
+const ColorsGroup: React.FC<Props> = ({name, colors}) => {
   return (
-    <Flex className={className} 
-      gap={16} 
-      wrap={false}
-      {...props}
-    >
-      <div className='w-16 shrink-0'>
-        <div className='text-sm font-semibold text-slate-900 dark:text-slate-200'>{name}</div>
-      </div>
+    <Row gap={16}>
+      <Col>
+        <div className='w-16 shrink-0'>
+          <div className='text-sm font-semibold text-slate-900 dark:text-slate-200'>{name}</div>
+        </div>
+      </Col>
 
-      <Flex gap={10}>
-        {colors?.map((color, index) => (
-          <Color
-            key={index}
-            name={color.name} 
-            color={color.value} 
-          />
-        ))}
-      </Flex>
-    </Flex>
+      <Col fill>
+        <Row gap={10}>
+          {colors?.map((color, index) => (
+            <Col key={index}>
+              <Color
+                name={color.name} 
+                color={color.value} 
+              />
+            </Col>
+          ))}
+        </Row>
+      </Col>
+    </Row>
   )
 }
 

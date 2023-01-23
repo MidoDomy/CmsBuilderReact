@@ -1,6 +1,6 @@
 import React, { lazy } from 'react';
 
-const importView = element =>
+const importView = (element: string) =>
 lazy(() =>
   import(`./widgets/${element}`)
 );

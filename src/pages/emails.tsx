@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 
 import Layout from 'layouts/general/Layout';
-import Flex from 'components/Structuring/Flex';
 import EmailsNavigationSidebar from 'layouts/emails/EmailsNavigationSidebar';
 import EmailsContent from 'layouts/emails/EmailsContent';
 import EmailsComponentsSidebar from 'layouts/emails/EmailsComponentsSidebar';
@@ -9,11 +8,11 @@ import EmailsComponentsSidebar from 'layouts/emails/EmailsComponentsSidebar';
 const Emails: NextPage = () => {
   return (
     <Layout>
-      <Flex>
+      <div className="flex h-full">
         <EmailsNavigationSidebar />
         <EmailsContent />
         <EmailsComponentsSidebar />
-      </Flex>
+      </div>
     </Layout>
   )
 }

@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 
 import Layout from 'layouts/general/Layout';
 import Container from 'components/Container';
-import Flex from 'components/Structuring/Flex';
 import Sidebar from 'components/Sidebar';
 import Tabs from 'components/Tabs';
 import ComponentsNavigationBtn from 'layouts/content/components/ComponentsNavigationBtn';
@@ -49,7 +48,7 @@ const Components: NextPage = () => {
 
   return (
     <Layout>
-      <Flex>
+      <div className="flex h-full">
         <Sidebar className='w-60'>
           <h3 className='py-4 px-3 uppercase text-sm font-semibold text-slate-700'>Components</h3>
           <ul>
@@ -85,7 +84,7 @@ const Components: NextPage = () => {
               <StyleAlign />
               <StyleSize />
               <StyleSpacing />
-              <StyleTypography />
+              {/* <StyleTypography /> */}
               <StyleBackgrounds />
               <StyleBorders />
             </Tabs.Content>
@@ -95,7 +94,7 @@ const Components: NextPage = () => {
             </Tabs.Content>
           </Tabs>
         </Sidebar>
-      </Flex>
+      </div>
     </Layout>
   )
 }

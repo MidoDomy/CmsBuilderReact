@@ -2,7 +2,8 @@ import type { NextPage } from 'next';
 
 import Layout from 'layouts/general/Layout';
 import Container from 'components/Container';
-import Flex from 'components/Structuring/Flex';
+import Row from 'components/Row';
+import Col from 'components/Col';
 import ColorsGroup from 'layouts/content/utils/colors/ColorsGroup';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
@@ -47,29 +48,37 @@ const Colors: NextPage = () => {
       {/* Header */}
       <div className='mb-20 mt-10'>
         <Container>
-          <Flex className='pb-3 border-b border-gray-200 dark:border-gray-700' 
-            justify='between'
-          >
-            <h2 className='text-3xl text-slate-900 dark:text-slate-100 font-bold'>Colors</h2>
+          <div className='pb-3 border-b border-gray-200 dark:border-gray-700'>
+            <Row justify='between'>
+              <Col>
+                <h2 className='text-3xl text-slate-900 dark:text-slate-100 font-bold'>Colors</h2>
+              </Col>
 
-            <Flex gap={10}>
-              <Button>
-                <Icon name='plus' size={18} />
-                <span>Add</span>
-              </Button>
+              <Col>
+                <Row gap={10}>
+                  <Col>
+                    <Button>
+                      <Icon name='plus' size={18} />
+                      <span>Add</span>
+                    </Button>
+                  </Col>
 
-              <Button variant='primary' isDisabled>
-                <Icon name='checkmark' size={18} />
-                <span>Save</span>
-              </Button>
-            </Flex>
-          </Flex>
+                  <Col>
+                    <Button variant='primary' disabled>
+                      <Icon name='checkmark' size={18} />
+                      <span>Save</span>
+                    </Button>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+          </div>
         </Container>
       </div>
 
       <div>
         <Container>
-          <Flex direction='column' gap={32}>
+          <div className='flex flex-col gap-8'>
             {colorsGroups?.map((group, index) => (
               <ColorsGroup
                 key={index} 
@@ -77,7 +86,7 @@ const Colors: NextPage = () => {
                 colors={group.colors} 
               />
             ))}
-          </Flex>
+          </div>
         </Container>
       </div>
     </Layout>

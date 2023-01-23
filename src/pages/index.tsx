@@ -4,7 +4,6 @@ import Head from 'next/head';
 
 import Row from 'components/Row';
 import Col from 'components/Col';
-import Flex from 'components/Structuring/Flex';
 import Form from 'components/Form';
 import Button from 'components/Button';
 import Image from 'components/Image';
@@ -20,23 +19,17 @@ const Login: NextPage = () => {
 
       <div className='h-screen'>
         <Row className='h-full'
-          cols={2}
           gap={0}
         >
           {/* Left side */}
-          <Col>
-            <Flex className='h-full' 
-              direction='column'
-            >
+          <Col span={6}>
+            <div className='flex flex-col h-full'>
               {/* Header */}
-              <div className='px-16 py-8 border-b font-semibold text-xl text-slate-900'>
+              <div className='w-full px-16 py-8 border-b font-semibold text-xl text-slate-900'>
                 Logo
               </div>
 
-              <Flex className='flex-1 px-10 pt-5 pb-32'
-                align='center'
-                justify='center'
-              >
+              <div className='flex-1 flex items-center justify-center px-10 pt-5 pb-32'>
                 <div className='w-full max-w-md'>
                   {/* Login form */}
                   <Form>
@@ -80,20 +73,21 @@ const Login: NextPage = () => {
                     >Sign up for free</a>
                   </p>
                 </div>
-              </Flex>
-            </Flex>
+              </div>
+            </div>
           </Col>
 
           {/* Right side */}
-          <Col>
-            <Flex className='h-full bg-gray-100'
+          <Col span={6}>
+            <Row className='h-full bg-gray-100'
               align='center'
               justify='center'
             >
               <Image className='scale-90' 
                 src='app-image.png' 
+                alt='App image'
               />
-            </Flex>
+            </Row>
           </Col>
         </Row>
       </div>

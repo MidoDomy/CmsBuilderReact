@@ -19,13 +19,13 @@ const Test: NextPage = () => {
 
   return (
     <div className='p-20'>
-      <Container>
-        <Row gap={32}>
+      <Container className='border'>
+        <Row gap={32} gapX={20} gapY={10}>
           <Col span={6}>
             <div className='bg-red-500 text-white'>nesto <div>vise</div></div>
           </Col>
 
-          <Col>
+          <Col span={6}>
             <div className='bg-red-500 text-white'>nesto</div>
           </Col>
 

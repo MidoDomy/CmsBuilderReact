@@ -6,17 +6,19 @@ type Props = {
   children?: React.ReactNode;
   className?: string;
   span?: number;
+  fill?: Boolean;
 }
 
-const Col: React.FC<Props> = ({ children, className, span, ...props }) => {
-  const {cols, gap} = useContext(RowContext);
+const Col: React.FC<Props> = ({ children, className, span, fill, ...props }) => {
+  const {cols, gap, gapX, gapY} = useContext(RowContext);
 
   const width = span && cols ? (100/cols * span + '%') : 'auto';
-  const padding = gap ? gap/2 + 'px' : '0px';
+  const paddingX = (gapX ? gapX/2 : gap ? gap/2 : 0) + 'px';
+  const paddingY = (gapY ? gapY : gap ? gap : 0) + 'px';
 
   return (
-    <div className={`first:!pl-0 last:!pr-0 ${className}`} 
-      style={{width: width, paddingLeft: padding, paddingRight: padding}}
+    <div className={`${fill ? 'flex-1' : ''} ${className}`} 
+      style={{width: width, paddingLeft: paddingX, paddingRight: paddingX, paddingBottom: paddingY}}
       {...props}
     >
       {children}

@@ -3,7 +3,8 @@ import { useState } from 'react';
 
 import Layout from 'layouts/general/Layout';
 import Container from 'components/Container';
-import Flex from 'components/Structuring/Flex';
+import Row from 'components/Row';
+import Col from 'components/Col';
 import Modal from 'components/Modal';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
@@ -43,31 +44,38 @@ const Icons: NextPage = () => {
       {/* Header */}
       <div className='mb-20 mt-10'>
         <Container>
-          <div className='flex justify-between pb-3 border-b border-gray-200 dark:border-gray-700'>
-            <h2 className='text-3xl text-slate-900 dark:text-slate-100 font-bold'>Icons</h2>
+          <div className='pb-3 border-b border-gray-200'>
+            <Row justify='between'>
+              <Col>
+                <h2 className='text-3xl text-slate-900 dark:text-slate-100 font-bold'>Icons</h2>
+              </Col>
 
-            <div className='flex gap-2.5'>
-              <Button onClick={toggleModal}>
-                <Icon name='plus' size={18} />
-                <span>Add</span>
-              </Button>
-            </div>
+              <Col>
+                <Button onClick={toggleModal}>
+                  <Icon name='plus' size={18} />
+                  <span>Add</span>
+                </Button>
+              </Col>
+            </Row>
           </div>
         </Container>
       </div>
 
       <div>
         <Container>
-          <Flex gap={15}>
+          <div className="flex flex-wrap gap-4">
             {icons?.map((icon, index) => (
               <IconCard key={index} icon={icon} />
             ))}
-          </Flex>
+          </div>
         </Container>
       </div>
 
       {/* Modal edit font */}
-      <Modal size='sm' isOpen={isOpen} toggle={toggleModal} headline='Add icon'>
+      <Modal 
+        size='sm' 
+        isOpen={isOpen} 
+      >
         <div>
           <label className='block pb-1'>Icon name</label>
           <input className='mb-3 w-full border border-gray-200 rounded py-1.5 px-3 placeholder:font-light' type='text' placeholder='Enter icon name' />
@@ -79,20 +87,24 @@ const Icons: NextPage = () => {
           ></textarea>
         </div>
         
-        <div className='flex gap-3 justify-end mt-4 -mx-6 px-6 pt-3 border-t border-gray-200'>
-          <Button 
-            onPress={toggleModal}
-          >
-            Cancel
-          </Button>
+        <Modal.Footer>
+          <Row gap={12}>
+            <Col>
+              <Button onClick={toggleModal}>
+                Cancel
+              </Button>
+            </Col>
 
-          <Button 
-            variant='primary'
-            onPress={toggleModal}
-          >
-            Save
-          </Button>
-        </div>
+            <Col>
+              <Button 
+                variant='primary'
+                onClick={toggleModal}
+              >
+                Save
+              </Button>
+            </Col>
+          </Row>
+        </Modal.Footer>
       </Modal>
     </Layout>
   )
