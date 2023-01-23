@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {useFocus} from 'react-aria'
 
-import FormSelect from 'components/Form/Select';
+import Form from 'components/Form';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 
@@ -22,10 +22,10 @@ const NavigationBarSearch: React.FC = () => {
   }
 
   return (
-    <div className='relative w-1/2'>
+    <div className='relative'>
       {/* Field */}
-      <div className='flex'>
-        <div className='relative flex-1'>
+      <Form.InputGroup>
+        <div className='flex-1 relative'>
           <Icon className='absolute top-1/2 left-3 transform -translate-y-1/2' name='search' size={16} />
 
           <input className='w-full h-full py-1 pl-9 pr-5 bg-gray-50 border border-r-0 border-gray-200 rounded-l-3xl text-sm focus:outline-none placeholder:text-slate-500'
@@ -48,7 +48,7 @@ const NavigationBarSearch: React.FC = () => {
           }
         </div>
 
-        <FormSelect className='rounded-l-none rounded-r-3xl'
+        <Form.Select selectClass='rounded-l-none rounded-r-3xl'
           placeholder='Advanced'
           options={[
             {
@@ -61,7 +61,7 @@ const NavigationBarSearch: React.FC = () => {
             }
           ]}
         />
-      </div>
+      </Form.InputGroup>
 
       {/* Results */}
       {focus && searchValue.length > 0 &&

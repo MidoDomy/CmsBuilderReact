@@ -8,7 +8,9 @@ type Props = {
 
 const Container: React.FC<Props> = ({ children, className, fluid, ...props }) => {
   return (
-    <div className={`container ${fluid ? '' : 'max-w-7xl' } ${className}`} {...props}>
+    <div className={`w-full mx-auto px-4 ${fluid ? '' : 'max-w-7xl' } ${className}`} 
+      {...props}
+    >
       {children}
     </div>
   );

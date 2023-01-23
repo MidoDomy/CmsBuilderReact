@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDrop } from 'react-dnd';
 
-import Container from 'components/Structuring/Container';
+import Container from 'components/Container';
 import DashboardDynamicWidgetImport from 'layouts/dashboard/DashboardDynamicWidgetImport';
 
 const DashboardBoard: React.FC = () => {

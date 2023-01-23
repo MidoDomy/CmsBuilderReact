@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import { useState } from 'react';
 
 import Layout from 'layouts/general/Layout';
-import Container from 'components/Structuring/Container';
+import Container from 'components/Container';
 import Flex from 'components/Structuring/Flex';
 import Modal from 'components/Modal';
 import Button from 'components/Button';
