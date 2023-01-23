@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Link from 'next/link';
 
 import Layout from 'layouts/general/Layout';
-import Container from 'components/Structuring/Container';
+import Container from 'components/Container';
 import Flex from 'components/Structuring/Flex';
 import Button from 'components/Button';
 import Icon from 'components/Icon';

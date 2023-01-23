@@ -5,6 +5,7 @@ import Icon from 'components/Icon';
 
 type Props = {
   className?: string;
+  selectClass?: string;
   options: {value: string; name: string;}[];
   size?: 'sm' | 'md' | 'lg';
   label?: string;
@@ -12,7 +13,7 @@ type Props = {
   required?: Boolean;
 }
 
-const Select: React.FC<Props> = ({ className, options, label, placeholder, required, size, ...props }) => {
+const Select: React.FC<Props> = ({ className, selectClass, options, label, placeholder, required, size, ...props }) => {
 
   const sizeClasses = (() => {switch(size) {
     case 'sm':
@@ -29,7 +30,7 @@ const Select: React.FC<Props> = ({ className, options, label, placeholder, requi
       required={required}
     >
       <div className='relative'>
-        <select className={`appearance-none w-full bg-transparent border border-gray-200 focus:border-sky-500 rounded-md focus:outline-none select-none cursor-pointer ${sizeClasses}`}
+        <select className={`appearance-none w-full bg-transparent border border-gray-200 focus:border-sky-500 rounded-md focus:outline-none select-none cursor-pointer ${sizeClasses} ${selectClass}`}
           {...props}
         >
           {placeholder && <option disabled selected hidden>{placeholder}</option>}

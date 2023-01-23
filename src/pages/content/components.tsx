@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 
 import Layout from 'layouts/general/Layout';
-import Container from 'components/Structuring/Container';
+import Container from 'components/Container';
 import Flex from 'components/Structuring/Flex';
 import Sidebar from 'components/Sidebar';
 import Tabs from 'components/Tabs';

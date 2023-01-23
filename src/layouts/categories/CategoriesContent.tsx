@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Container from 'components/Structuring/Container';
+import Container from 'components/Container';
 import Flex from 'components/Structuring/Flex';
 import Button from 'components/Button';
 import Icon from 'components/Icon';

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Container from 'components/Structuring/Container';
+import Container from 'components/Container';
 import Form from 'components/Form';
 import Section from 'layouts/general/Section';
 
