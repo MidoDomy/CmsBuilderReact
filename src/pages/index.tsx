@@ -2,8 +2,8 @@ import type { NextPage } from 'next';
 import React from 'react';
 import Head from 'next/head';
 
-import Row from 'components/Structuring/Row';
-import Col from 'components/Structuring/Col';
+import Row from 'components/Row';
+import Col from 'components/Col';
 import Flex from 'components/Structuring/Flex';
 import Form from 'components/Form';
 import Button from 'components/Button';
