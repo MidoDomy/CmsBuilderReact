@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Collapse from 'components/Collapse';
-import Row from 'components/Structuring/Row';
-import Col from 'components/Structuring/Col';
+import Row from 'components/Row';
+import Col from 'components/Col';
 import Form from 'components/Form';
 
 const StyleSpacing: React.FC = () => {

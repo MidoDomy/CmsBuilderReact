@@ -2,8 +2,8 @@ import type { NextPage } from 'next';
 
 import Layout from 'layouts/general/Layout';
 import Container from 'components/Container';
-import Row from 'components/Structuring/Row';
-import Col from 'components/Structuring/Col';
+import Row from 'components/Row';
+import Col from 'components/Col';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 import FontCard from 'layouts/content/utils/fonts/FontCard';

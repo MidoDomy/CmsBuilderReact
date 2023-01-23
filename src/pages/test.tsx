@@ -1,6 +1,9 @@
 import type { NextPage } from 'next';
 import { useState } from 'react';
 
+import Container from 'components/Container';
+import Row from 'components/Row';
+import Col from 'components/Col';
 import Avatar from 'components/Avatar';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
@@ -12,11 +15,26 @@ import Collapse from 'components/Collapse';
 import Form from 'components/Form';
 
 const Test: NextPage = () => {
-
   const [showModal, setShowModal] = useState(false);
 
   return (
     <div className='p-20'>
+      <Container>
+        <Row gap={32}>
+          <Col span={6}>
+            <div className='bg-red-500 text-white'>nesto <div>vise</div></div>
+          </Col>
+
+          <Col>
+            <div className='bg-red-500 text-white'>nesto</div>
+          </Col>
+
+          <Col>
+            <div className='bg-red-500 text-white'>nesto</div>
+          </Col>
+        </Row>
+      </Container>
+
       {/* Avatar */}
       <div className="flex items-center gap-2 mb-4">
         <span className='pr-2 text-sm font-medium'>Avatar:</span>
