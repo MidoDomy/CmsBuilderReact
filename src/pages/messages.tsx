@@ -5,6 +5,7 @@ import Layout from 'layouts/general/Layout';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import MessagesInboxSidebar from 'layouts/messages/MessagesInboxSidebar';
+import MessagesChat from 'layouts/messages/MessagesChat';
 
 const Messages: NextPage = () => {
   return (
@@ -17,7 +18,7 @@ const Messages: NextPage = () => {
         </Col>
 
         <Col fill>
-          Messages
+          <MessagesChat />
         </Col>
 
         <Col>

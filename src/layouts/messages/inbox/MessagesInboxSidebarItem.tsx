@@ -10,11 +10,12 @@ type Props = {
   text?: string;
   time?: string;
   isUnread?: Boolean;
+  acive?: Boolean;
 }
 
-const MessagesInboxSidebarItem: React.FC<Props> = ({avatar, name, text, time, isUnread}) => {
+const MessagesInboxSidebarItem: React.FC<Props> = ({avatar, name, text, time, isUnread, active}) => {
   return (
-    <div className={`px-4 [&:last-child>div]:border-b-0 cursor-pointer ${isUnread ? 'bg-sky-50 hover:bg-sky-100' : 'hover:bg-gray-50'}`}>
+    <div className={`px-4 [&:last-child>div]:border-b-0 cursor-pointer ${isUnread && !active ? 'bg-sky-50 hover:bg-sky-100' : active ? 'bg-gray-100' : 'hover:bg-gray-50'}`}>
       <div className='py-3 border-b border-gray-200'>
         <Row gapX={8} noWrap>
           <Col>

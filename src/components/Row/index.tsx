@@ -11,9 +11,10 @@ type Props = {
   align?: 'start' | 'center' | 'end';
   justify?: 'start' | 'center' | 'end' | 'between' | 'around';
   noWrap?: Boolean;
+  reverse?: Boolean;
 }
 
-const Row: React.FC<Props> = ({ children, className, cols, gapX, gapY, align, justify, noWrap, ...props }) => {
+const Row: React.FC<Props> = ({ children, className, cols, gapX, gapY, align, justify, noWrap, reverse, ...props }) => {
   const alignItems = (() => {switch(align) {
     case 'start':
       return 'flex-start'
@@ -47,7 +48,7 @@ const Row: React.FC<Props> = ({ children, className, cols, gapX, gapY, align, ju
   return (
     <RowContext.Provider value={{cols, gapX, gapY}}>
       <div className={`overflow-hidden ${className}`}>
-        <div className={`flex ${noWrap ? 'flex-nowrap' : 'flex-wrap'} h-full`} 
+        <div className={`flex ${reverse ? 'flex-row-reverse' : ''} ${noWrap ? 'flex-nowrap' : 'flex-wrap'} h-full`} 
           style={{alignItems: alignItems, justifyContent: justifyContent, marginLeft: marginLeft, marginRight: marginRight, marginBottom: marginBottom}}
           {...props}
         >
