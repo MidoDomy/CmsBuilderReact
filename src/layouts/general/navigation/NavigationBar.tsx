@@ -3,6 +3,7 @@ import React from 'react';
 import Container from 'components/Container';
 import NavigationBarSearch from './bar/NavigationBarSearch';
 import NavigationBarNotifications from './bar/NavigationBarNotifications';
+import NavigationBarMessages from './bar/NavigationBarMessages';
 
 const NavigationBar: React.FC = () => {
   return (
@@ -14,8 +15,9 @@ const NavigationBar: React.FC = () => {
         </div>
 
         {/* Actions */}
-        <div className='flex gap-2'>
+        <div className='flex items-center gap-2'>
           <NavigationBarNotifications />
+          <NavigationBarMessages />
         </div>
       </Container>
     </header>
