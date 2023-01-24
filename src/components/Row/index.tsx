@@ -47,8 +47,8 @@ const Row: React.FC<Props> = ({ children, className, cols, gap, gapX, gapY, alig
 
   return (
     <RowContext.Provider value={{cols, gap, gapX, gapY}}>
-      <div className='overflow-hidden'>
-        <div className={`flex ${noWrap ? 'flex-nowrap' : 'flex-wrap'} ${className}`} 
+      <div className={`overflow-hidden ${className}`}>
+        <div className={`flex ${noWrap ? 'flex-nowrap' : 'flex-wrap'} h-full`} 
           style={{alignItems: alignItems, justifyContent: justifyContent, marginLeft: marginLeft, marginRight: marginRight, marginBottom: marginBottom}}
           {...props}
         >
