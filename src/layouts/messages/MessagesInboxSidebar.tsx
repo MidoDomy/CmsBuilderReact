@@ -11,23 +11,23 @@ import MessagesInboxSidebarItem from './inbox/MessagesInboxSidebarItem';
 const MessagesInboxSidebar: React.FC = () => {
   return (
     <Sidebar className='w-72'>
-      <Sidebar.Header className='pt-6 px-4 pb-0'>
+      <Sidebar.Header className='pt-6 px-4'>
         <Row justify='between' align='center'>
           <Col>
-            <h4 className='font-medium text-2xl'>Inbox</h4>
+            <h4 className='font-medium text-3xl'>Inbox</h4>
           </Col>
 
           <Col>
             <Row gapX={8}>
               <Col>
                 <Button size='sm' rounded>
-                  <Icon name='search' size={12} />
+                  <Icon name='search' size={14} />
                 </Button>
               </Col>
 
               <Col>
                 <Button size='sm' rounded>
-                  <Icon name='edit' size={12} />
+                  <Icon name='edit' size={14} />
                 </Button>
               </Col>
             </Row>
@@ -86,6 +86,7 @@ const MessagesInboxSidebar: React.FC = () => {
                 name='Robert Fox'
                 text="I'll have the design by morning."
                 time='10:00 am'
+                active
               />
             </div>
           </Tabs.Content>
