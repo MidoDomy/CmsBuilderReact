@@ -6,7 +6,6 @@ type Props = {
   children: React.ReactNode;
   className?: string;
   cols?: number;
-  gap?: number;
   gapX?: number;
   gapY?: number;
   align?: 'start' | 'center' | 'end';
@@ -14,7 +13,7 @@ type Props = {
   noWrap?: Boolean;
 }
 
-const Row: React.FC<Props> = ({ children, className, cols, gap, gapX, gapY, align, justify, noWrap, ...props }) => {
+const Row: React.FC<Props> = ({ children, className, cols, gapX, gapY, align, justify, noWrap, ...props }) => {
   const alignItems = (() => {switch(align) {
     case 'start':
       return 'flex-start'
@@ -41,12 +40,12 @@ const Row: React.FC<Props> = ({ children, className, cols, gap, gapX, gapY, alig
       return 'normal'
   }})();
 
-  const marginLeft = -(gapX ? gapX/2 : gap ? gap/2 : 0) + 'px';
-  const marginRight = -(gapX ? gapX/2 : gap ? gap/2 : 0) + 'px';
-  const marginBottom = -(gapY ? gapY : gap ? gap : 0) + 'px';
+  const marginLeft = -(gapX ? gapX/2 : 0) + 'px';
+  const marginRight = -(gapX ? gapX/2 : 0) + 'px';
+  const marginBottom = -(gapY ? gapY : 0) + 'px';
 
   return (
-    <RowContext.Provider value={{cols, gap, gapX, gapY}}>
+    <RowContext.Provider value={{cols, gapX, gapY}}>
       <div className={`overflow-hidden ${className}`}>
         <div className={`flex ${noWrap ? 'flex-nowrap' : 'flex-wrap'} h-full`} 
           style={{alignItems: alignItems, justifyContent: justifyContent, marginLeft: marginLeft, marginRight: marginRight, marginBottom: marginBottom}}
@@ -62,7 +61,8 @@ const Row: React.FC<Props> = ({ children, className, cols, gap, gapX, gapY, alig
 Row.defaultProps = {
   className: '',
   cols: 12,
-  gap: 32
+  gapX: 32,
+  gapY: 0
 }
 
 export default Row;
