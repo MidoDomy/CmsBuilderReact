@@ -20,7 +20,7 @@ const Image: React.FC<Props> = ({ className, src, alt, ...props }) => {
 
   return (
     <NextImage
-      className={className}
+      className={`max-w-full ${className}`}
       src={image}
       alt={alt}
       {...props}
