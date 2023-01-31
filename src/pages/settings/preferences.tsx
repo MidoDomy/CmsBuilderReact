@@ -11,28 +11,54 @@ import Image from 'components/Image';
 const SettingsPreferences: NextPage = () => {
   return (
     <SettingsLayout 
-      title='Appearance' 
+      title='Preferences' 
       description='Change how administration looks and feelds in your browser.'
+      actions={
+        <Row gapX={12}>
+          <Col>
+            <Button>Cancel</Button>
+          </Col>
+
+          <Col>
+            <Button variant='primary'>Save</Button>
+          </Col>
+        </Row>
+      }
     >
       <Section
         title='Interface theme'
         description='Select or customize your theme.'
       >
-        <Row cols={3} gap={24}>
-          <Col>
-            <Form.Radio className='rounded-xl' id='system-theme' name='theme' hideRadio>
+        <Row cols={3} gapX={24}>
+          <Col fill>
+            <Form.Radio className='rounded-xl' 
+              id='systemTheme' 
+              value='systemTheme'
+              name='theme' 
+              hideRadio
+            >
               <Image className='w-full' src='system-theme.png' />
             </Form.Radio>
           </Col>
 
-          <Col>
-            <Form.Radio className='rounded-xl' id='light-theme' name='theme' hideRadio>
+          <Col fill>
+            <Form.Radio className='rounded-xl' 
+              id='lightTheme' 
+              value='lightTheme'
+              name='theme' 
+              hideRadio
+            >
               <Image className='w-full' src='light-theme.png' />
             </Form.Radio>
           </Col>
 
-          <Col>
-            <Form.Radio className='rounded-xl' id='dark-theme' name='theme' hideRadio>
+          <Col fill>
+            <Form.Radio className='rounded-xl' 
+              id='darkTheme' 
+              value='darkTheme'
+              name='theme' 
+              hideRadio
+            >
               <Image className='w-full' src='dark-theme.png' />
             </Form.Radio>
           </Col>
@@ -45,18 +71,6 @@ const SettingsPreferences: NextPage = () => {
       >
         <Form.Switch id='stickyHeader' />
       </Section>
-
-      <div className='py-5'>
-        <Row justify='end' gap={12}>
-          <Col>
-            <Button>Cancel</Button>
-          </Col>
-
-          <Col>
-            <Button variant='primary'>Save changes</Button>
-          </Col>
-        </Row>
-      </div>
     </SettingsLayout>
   )
 }
