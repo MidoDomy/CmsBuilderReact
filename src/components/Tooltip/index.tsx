@@ -4,8 +4,8 @@ type Props = {
   children: React.ReactNode,
   className?: string,
   text: string,
-  small?: Boolean,
-  click?: Boolean,
+  small?: boolean,
+  click?: boolean,
   onClick?: (event: React.MouseEvent<HTMLDivElement>) => void
 }
 

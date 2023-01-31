@@ -1,16 +1,29 @@
 import React from 'react';
+import Link from 'next/link';
 
 type Props = {
   children?: React.ReactNode;
   className?: string;
-  active?: Boolean;
+  link?: string;
+  active?: boolean;
 }
 
-const DropdownMenuItem: React.FC<Props> = ({ children, className, ...props }) => {
+const DropdownMenuItem: React.FC<Props> = ({ children, className, link, ...props }) => {
   return (
-    <div className={`relative flex items-center gap-1 py-1.5 px-2 text-sm hover:bg-gray-50 cursor-pointer select-none ${className}`} {...props}>
-      {children}
-    </div>
+    <>
+      {link ?
+        <Link className={`relative flex items-center gap-1 py-1.5 px-2 text-sm hover:bg-gray-50 cursor-pointer select-none ${className}`} 
+          href={link}
+          {...props}
+        >
+          {children}
+        </Link>
+        :
+        <div className={`relative flex items-center gap-1 py-1.5 px-2 text-sm hover:bg-gray-50 cursor-pointer select-none ${className}`} {...props}>
+          {children}
+        </div>
+      }
+    </>
   );
 }
 

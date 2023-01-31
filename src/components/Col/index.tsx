@@ -6,7 +6,7 @@ type Props = {
   children?: React.ReactNode;
   className?: string;
   span?: number;
-  fill?: Boolean;
+  fill?: boolean;
 }
 
 const Col: React.FC<Props> = ({ children, className, span, fill, ...props }) => {

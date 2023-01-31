@@ -6,8 +6,8 @@ type Props = {
   className?: string;
   label?: string;
   placeholder?: string;
-  required?: Boolean;
-  small?: Boolean;
+  required?: boolean;
+  small?: boolean;
   rows?: number;
 }
 
@@ -18,7 +18,7 @@ const Textarea: React.FC<Props> = ({ className, label, placeholder, required, sm
       required={required}
     >
       <div>
-        <textarea className={`w-full min-h-[100px] bg-transparent border border-gray-200 focus:border-sky-500 rounded outline-none text-slate-800 transition-colors ${small ? 'px-2.5 py-1.5 text-sm' : 'px-3 py-2'}`}
+        <textarea className={`w-full min-h-[100px] bg-white border border-gray-200 focus:border-sky-500 rounded outline-none text-slate-800 transition-colors ${small ? 'px-2.5 py-1.5 text-sm' : 'px-3 py-2'}`}
           placeholder={placeholder}
           rows={rows}
           {...props}

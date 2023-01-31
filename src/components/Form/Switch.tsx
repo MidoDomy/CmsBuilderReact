@@ -6,7 +6,7 @@ type Props = {
   id: string;
   value: string;
   label?: string;
-  small?: Boolean;
+  small?: boolean;
 }
 
 const Switch: React.FC<Props> = ({ children, className, id, value, label, small, ...props }) => {

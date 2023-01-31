@@ -6,8 +6,8 @@ type Props = {
   id: string;
   value: string;
   label?: string;
-  hideCheckbox?: Boolean;
-  small?: Boolean;
+  hideCheckbox?: boolean;
+  small?: boolean;
 }
 
 const Checkbox: React.FC<Props> = ({ children, className, id, value, label, hideCheckbox, small, ...props }) => {

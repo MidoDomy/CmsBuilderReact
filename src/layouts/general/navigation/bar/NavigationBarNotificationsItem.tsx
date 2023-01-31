@@ -10,7 +10,7 @@ type Props = {
   actionFor?: string;
   time?: string;
   category?: string;
-  unread?: Boolean;
+  unread?: boolean;
 }
 
 const NavigationBarNotificationsItem: React.FC<Props> = ({children, avatar, name, action, actionFor, time, category, unread}) => {

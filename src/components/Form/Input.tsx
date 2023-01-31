@@ -4,13 +4,13 @@ import BaseField from './BaseField';
 
 type Props = {
   className?: string;
-  prefix?: string;
-  suffix?: string;
+  prefix?: string | React.ReactNode;
+  suffix?: string | React.ReactNode;
   size?: 'sm' | 'md' | 'lg';
   label?: string;
   placeholder?: string;
   type?: string;
-  required?: Boolean;
+  required?: boolean;
 }
 
 const Input: React.FC<Props> = ({ className, prefix, suffix, size, label, placeholder, type, required, ...props }) => {
@@ -31,19 +31,19 @@ const Input: React.FC<Props> = ({ className, prefix, suffix, size, label, placeh
     >
       <div className='relative'>
         {prefix &&
-          <span className='absolute w-7 h-full top-0 left-0 flex items-center justify-center text-slate-500'>
+          <span className='absolute w-8 h-full top-0 left-0 flex items-center justify-center text-slate-500'>
             {prefix}
           </span>
         }
 
-        <input className={`w-full bg-transparent border border-gray-200 focus:border-sky-500 rounded outline-none text-slate-800 transition-colors ${sizeClasses}`}
+        <input className={`w-full bg-white border border-gray-200 focus:border-sky-500 rounded outline-none transition-colors placeholder:text-slate-400 ${sizeClasses}`}
           placeholder={placeholder}
           type={type}
           {...props}
         />
 
         {suffix &&
-          <span className='absolute w-7 h-full top-0 right-0 flex items-center justify-center text-slate-500'>
+          <span className='absolute w-8 h-full top-0 right-0 flex items-center justify-center text-slate-500'>
             {suffix}
           </span>
         }

@@ -7,8 +7,8 @@ type Props = {
   name: string;
   value: string;
   label?: string;
-  hideRadio?: Boolean;
-  small?: Boolean;
+  hideRadio?: boolean;
+  small?: boolean;
 }
 
 const Radio: React.FC<Props> = ({ children, className, id, name, value, label, hideRadio, small, ...props }) => {

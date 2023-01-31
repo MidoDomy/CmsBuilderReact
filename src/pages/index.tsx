@@ -19,7 +19,7 @@ const Login: NextPage = () => {
 
       <div className='h-screen'>
         <Row className='h-full'
-          gap={0}
+          gapX={0}
         >
           {/* Left side */}
           <Col span={6}>

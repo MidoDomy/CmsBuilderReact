@@ -8,7 +8,7 @@ import CollapseContent from './CollapseContent';
 type Props = {
   children?: React.ReactNode;
   className?: string;
-  active?: Boolean;
+  active?: boolean;
 }
 
 const Collapse: React.FC<Props> = ({ children, className, active }) => {

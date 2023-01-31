@@ -95,7 +95,7 @@ export const NavigationMenu = [
   },
   {
     id: 13,
-    icon: 'letter',
+    icon: 'letter-plane',
     name: 'Emails',
     link: '/emails',
     children: null

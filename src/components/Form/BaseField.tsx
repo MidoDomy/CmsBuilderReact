@@ -7,7 +7,7 @@ type Props = {
   className?: string;
   label?: string;
   error?: string;
-  required?: Boolean;
+  required?: boolean;
 }
 
 const BaseField: React.FC<Props> = ({ children, className, label, error, required }) => {

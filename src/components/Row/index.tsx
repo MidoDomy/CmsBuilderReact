@@ -10,8 +10,8 @@ type Props = {
   gapY?: number;
   align?: 'start' | 'center' | 'end';
   justify?: 'start' | 'center' | 'end' | 'between' | 'around';
-  noWrap?: Boolean;
-  reverse?: Boolean;
+  noWrap?: boolean;
+  reverse?: boolean;
 }
 
 const Row: React.FC<Props> = ({ children, className, cols, gapX, gapY, align, justify, noWrap, reverse, ...props }) => {
