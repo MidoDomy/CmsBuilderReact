@@ -8,7 +8,7 @@ type Props = {
   avatar?: string;
   name?: string;
   time?: string;
-  right?: Boolean;
+  right?: boolean;
   messages: Array<string>
 }
 

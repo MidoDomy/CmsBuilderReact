@@ -7,7 +7,7 @@ import Icon from 'components/Icon';
 
 const SettingsSidebar: React.FC = () => {
   return (
-    <Sidebar className='w-72 !shadow-none'>
+    <Sidebar className='w-72'>
       <Sidebar.Header className='pt-10'>
         <h3 className='font-semibold text-slate-900'>Settings</h3>
       </Sidebar.Header>
@@ -22,7 +22,7 @@ const SettingsSidebar: React.FC = () => {
           <li>
             <SettingsSidebarLink href="/settings/profile">
               <Icon name='profile' />
-              My profile
+              My details
             </SettingsSidebarLink>
           </li>
 

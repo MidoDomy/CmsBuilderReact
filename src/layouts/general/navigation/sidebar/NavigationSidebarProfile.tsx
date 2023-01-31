@@ -5,7 +5,7 @@ import Avatar from 'components/Avatar';
 import Icon from 'components/Icon';
 
 type Props = {
-  isSidebarCollapsed: Boolean;
+  isSidebarCollapsed: boolean;
 }
 
 const NavigationSidebarProfile: React.FC<Props> = ({ isSidebarCollapsed }) => {
@@ -29,7 +29,9 @@ const NavigationSidebarProfile: React.FC<Props> = ({ isSidebarCollapsed }) => {
       </Dropdown.Trigger>
 
       <Dropdown.Menu className={`${isSidebarCollapsed ? '-ml-0.5' : 'ml-0.5'}`}>
-        <Dropdown.MenuItem>Profile settings</Dropdown.MenuItem>
+        <Dropdown.MenuItem link='/settings/profile'>
+          Profile settings
+        </Dropdown.MenuItem>
 
         <Dropdown.MenuItem>
           <Icon name='logout' size={16} />

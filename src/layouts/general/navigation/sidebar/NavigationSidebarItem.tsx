@@ -9,7 +9,7 @@ type Props = {
   name: string;
   link?: string;
   subCategories?: Array<Object>;
-  isSidebarCollapsed: Boolean;
+  isSidebarCollapsed: boolean;
   level?: number;
 }
 
