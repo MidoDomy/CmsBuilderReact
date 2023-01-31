@@ -8,7 +8,7 @@ type Props = {
   icon?: string;
   name: string;
   link?: string;
-  subCategories?: Array<Object>;
+  subCategories?: Array<Object> | null;
   isSidebarCollapsed: boolean;
   level?: number;
 }

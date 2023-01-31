@@ -12,9 +12,10 @@ type Props = {
   square?: boolean;
   rounded?: boolean;
   href?: string;
+  onClick?: () => void
 }
 
-const Button: React.FC<Props> = ({ children, className, variant, size, block, square, rounded, href, ...props }) => {
+const Button: React.FC<Props> = ({ children, className, variant, size, block, square, rounded, href, onClick, ...props }) => {
 
   // Classes -----------------------------------
   const variantClasses = (() => {switch(variant) {
@@ -55,6 +56,7 @@ const Button: React.FC<Props> = ({ children, className, variant, size, block, sq
         </Link>
       :
         <button className={getClasses()}
+          onClick={onClick}
           {...props}
         >
           {children}

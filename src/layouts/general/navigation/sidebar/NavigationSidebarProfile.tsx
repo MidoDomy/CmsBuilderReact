@@ -33,7 +33,7 @@ const NavigationSidebarProfile: React.FC<Props> = ({ isSidebarCollapsed }) => {
           Profile settings
         </Dropdown.MenuItem>
 
-        <Dropdown.MenuItem>
+        <Dropdown.MenuItem link='/'>
           <Icon name='logout' size={16} />
           Log out
         </Dropdown.MenuItem>
