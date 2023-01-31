@@ -28,7 +28,7 @@ const NavigationBarSearch: React.FC = () => {
         <div className='flex-1 relative'>
           <Icon className='absolute top-1/2 left-3 transform -translate-y-1/2' name='search' size={16} />
 
-          <input className='w-full h-full py-1 pl-9 pr-5 bg-gray-50 border border-r-0 focus:border-r border-gray-200 focus:border-sky-500 rounded-l-3xl text-sm focus:outline-none placeholder:text-slate-500'
+          <input className='w-full h-full py-1 pl-9 pr-5 bg-gray-50 border border-r-0 focus:border-r border-gray-200 focus:border-sky-500 rounded-l-3xl focus:outline-none placeholder:text-slate-500'
             type='text' 
             placeholder='Search'
             {...focusProps}

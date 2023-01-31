@@ -7,7 +7,7 @@ type Props = {
 
 const Group: React.FC<Props> = ({ children, className, ...props }) => {
   return (
-    <div className={`m-2 ${className}`}
+    <div className={`mb-4 last:mb-0 ${className}`}
       {...props}
     > 
       {children}

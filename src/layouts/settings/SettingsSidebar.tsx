@@ -27,16 +27,30 @@ const SettingsSidebar: React.FC = () => {
           </li>
 
           <li>
-            <SettingsSidebarLink href="/settings/users-and-permissions">
-              <Icon name='users' />
-              Users & Permissions
+            <SettingsSidebarLink href="/settings/general">
+              <Icon name='settings' />
+              General
             </SettingsSidebarLink>
           </li>
 
           <li>
-            <SettingsSidebarLink href="/settings/appearance">
+            <SettingsSidebarLink href="/settings/preferences">
               <Icon name='stars' />
-              Appearance
+              Preferences
+            </SettingsSidebarLink>
+          </li>
+
+          <li>
+            <SettingsSidebarLink href="/settings/notifications">
+              <Icon name='bell' />
+              Notifications
+            </SettingsSidebarLink>
+          </li>
+
+          <li>
+            <SettingsSidebarLink href="/settings/members">
+              <Icon name='users' />
+              Members
             </SettingsSidebarLink>
           </li>
 

@@ -40,6 +40,7 @@ const NavigationBarNotifications: React.FC = () => {
             </Tabs.Nav>
 
             <Button
+              href='/settings/notifications'
               variant='ghost'
               size='sm'
               rounded
