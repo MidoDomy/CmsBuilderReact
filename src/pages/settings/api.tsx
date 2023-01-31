@@ -1,18 +1,15 @@
 import type { NextPage } from 'next';
 
-import Layout from 'layouts/general/Layout';
 import SettingsLayout from 'layouts/settings/SettingsLayout';
 
 const SettingsApi: NextPage = () => {
   return (
-    <Layout>
-      <SettingsLayout 
-        title='Api' 
-        description='Go headless.'
-      >
-        
-      </SettingsLayout>
-    </Layout>
+    <SettingsLayout 
+      title='Api' 
+      description='Go headless.'
+    >
+      
+    </SettingsLayout>
   )
 }
 
