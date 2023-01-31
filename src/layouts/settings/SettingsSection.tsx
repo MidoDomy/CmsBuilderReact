@@ -9,7 +9,7 @@ type Props = {
   description?: string;
 }
 
-const Section: React.FC<Props> = ({children, title, description}) => {
+const SettingsSection: React.FC<Props> = ({children, title, description}) => {
   return (
     <section className='py-7 border-b border-gray-200'>
       <Row>
@@ -26,4 +26,4 @@ const Section: React.FC<Props> = ({children, title, description}) => {
   )
 }
 
-export default Section;
+export default SettingsSection;

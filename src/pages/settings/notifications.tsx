@@ -4,7 +4,7 @@ import Row from 'components/Row';
 import Col from 'components/Col';
 import Form from 'components/Form';
 import Button from 'components/Button';
-import Section from 'layouts/general/Section';
+import SettingsSection from 'layouts/settings/SettingsSection';
 import SettingsLayout from 'layouts/settings/SettingsLayout';
 
 const SettingsNotifications: NextPage = () => {
@@ -24,7 +24,7 @@ const SettingsNotifications: NextPage = () => {
         </Row>
       }
     >
-      <Section title='General'>
+      <SettingsSection title='General'>
         <Form.Group>
           <Form.Switch 
             id='assignedTask' 
@@ -42,9 +42,9 @@ const SettingsNotifications: NextPage = () => {
             <span className='text-sm text-slate-500'>Notify me when I'm mentioned in a comment.</span>
           </Form.Switch>
         </Form.Group>
-      </Section>
+      </SettingsSection>
 
-      <Section title='Mobile notifications'>
+      <SettingsSection title='Mobile notifications'>
         <Form.Group>
           <Form.Switch 
             id='mobilePushNotifications' 
@@ -62,16 +62,16 @@ const SettingsNotifications: NextPage = () => {
             <span className='text-sm text-slate-500'>Receive push notification whenever you get a new message.</span>
           </Form.Switch>
         </Form.Group>
-      </Section>
+      </SettingsSection>
 
-      <Section title='System'>
+      <SettingsSection title='System'>
         <Form.Switch 
           id='reminders' 
           label='Reminders'
         >
           <span className='text-sm text-slate-500'>These are notifications to remind you of updates that you might have missed.</span>
         </Form.Switch>
-      </Section>
+      </SettingsSection>
     </SettingsLayout>
   )
 }
