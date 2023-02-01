@@ -2,42 +2,45 @@ import React from 'react';
 
 import Row from 'components/Row';
 import Col from 'components/Col';
-import Color from 'layouts/content/utils/colors/Color';
+import Icon from 'components/Icon';
+import ColorsGroupItem from 'layouts/content/utils/colors/group/ColorsGroupItem';
+import ColorsGroupItemAdd from './group/ColorsGroupItemAdd';
 
 type Props = {
-  className?: string,
-  name?: string,
-  colors: Object
+  name: string;
+  colors: {id: string; value: string; name: string;}[];
 }
 
 const ColorsGroup: React.FC<Props> = ({name, colors}) => {
   return (
-    <Row gap={16}>
-      <Col>
-        <div className='w-16 shrink-0'>
-          <div className='text-sm font-semibold text-slate-900 dark:text-slate-200'>{name}</div>
-        </div>
-      </Col>
+    <div className='[&:hover_.add-color]:opacity-100'>
+      <Row gapX={16}>
+        <Col>
+          <div className='w-16 pt-8 text-sm font-medium'>{name}</div>
+        </Col>
 
-      <Col fill>
-        <Row gap={10}>
-          {colors?.map((color, index) => (
-            <Col key={index}>
-              <Color
-                name={color.name} 
-                color={color.value} 
-              />
+        <Col fill>
+          <Row className='pt-8 pl-px'
+            gapX={10}
+          >
+            {colors.map(color => (
+              <Col key={color.id}>
+                <ColorsGroupItem
+                  name={color.name} 
+                  color={color.value} 
+                />
+              </Col>
+            ))}
+
+            {/* Add color */}
+            <Col>
+              <ColorsGroupItemAdd />
             </Col>
-          ))}
-        </Row>
-      </Col>
-    </Row>
+          </Row>
+        </Col>
+      </Row>
+    </div>
   )
-}
-
-ColorsGroup.defaultProps = {
-  className: '',
-  name: ''
 }
 
 export default ColorsGroup;

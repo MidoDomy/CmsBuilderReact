@@ -14,7 +14,7 @@ type Props = {
   className?: string;
   size?: 'sm' | 'md' | 'lg';
   isOpen: boolean;
-  showClose: boolean;
+  showClose?: boolean;
   onClose: () => void;
 }
 

@@ -1,24 +1,25 @@
 import React, {useState} from 'react';
-// import Head from 'next/head';
+import Head from 'next/head';
 
 import NavSidebar from 'layouts/general/navigation/NavigationSidebar';
 import NavBar from 'layouts/general/navigation/NavigationBar';
 
 type Props = {
-  children: React.ReactNode,
-  className?: string
+  children: React.ReactNode;
+  className?: string;
+  metaTitle?: string;
 }
 
-const Layout: React.FC<Props> = ({children, className, ...props}) => {
+const Layout: React.FC<Props> = ({children, className, metaTitle, ...props}) => {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
     <>
-      {/* <Head>
-        <title>Cms builder</title>
+      <Head>
+        <title>{metaTitle}</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-        <meta property='og:title' content='Cms builder' key='title' />
-      </Head> */}
+        <meta property='og:title' content={metaTitle} key='title' />
+      </Head>
     
       <div className={`${className} ${darkMode ? 'dark' : ''}`} 
         id='mainLayout'
@@ -45,7 +46,8 @@ const Layout: React.FC<Props> = ({children, className, ...props}) => {
 }
 
 Layout.defaultProps = {
-  className: ''
+  className: '',
+  metaTitle: 'Cms builder'
 }
 
 export default Layout;
