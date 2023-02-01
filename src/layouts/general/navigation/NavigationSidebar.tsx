@@ -139,7 +139,7 @@ const NavigationSidebar: React.FC = () => {
         <Sidebar.Header className='relative flex justify-between items-center border-b border-gray-200'>
           {/* Logo */}
           <Link href='/dashboard'>
-            <h1 className={`flex items-center gap-2 font-medium text-2xl text-slate-900 ${isSidebarCollapsed ? 'justify-center' : ''}`}>
+            <h1 className={`flex items-center gap-2 font-medium text-xl text-slate-900 ${isSidebarCollapsed ? 'justify-center' : ''}`}>
               <Image className='h-[26px] w-auto' />
 
               {!isSidebarCollapsed &&
