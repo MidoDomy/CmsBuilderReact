@@ -22,7 +22,7 @@ const ColorsGroupItem: React.FC<Props> = ({color, name}) => {
   return (
     <>
       <div className='relative [&:hover>:first-child]:block'>
-        {/* Remove color */}
+        {/* Dropdown menu (edit, delete) */}
         <Dropdown 
           closedClasses='hidden'
           openClasses='block'
@@ -37,11 +37,12 @@ const ColorsGroupItem: React.FC<Props> = ({color, name}) => {
           </Dropdown.Trigger>
           
           <Dropdown.Menu className='-mr-[19px] mt-[18px]'>
-            <Dropdown.MenuItem>
+            <Dropdown.MenuItem icon='edit'>
               Edit
             </Dropdown.MenuItem>
 
             <Dropdown.MenuItem 
+              icon='trash'
               variant='danger'
               onClick={toggleModal}
             >
