@@ -2,12 +2,14 @@ import type { NextPage } from 'next';
 import { useState } from 'react';
 
 import Layout from 'layouts/general/Layout';
+import PageHeader from 'layouts/general/PageHeader';
 import Container from 'components/Container';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Modal from 'components/Modal';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
+import Form from 'components/Form';
 import IconCard from 'layouts/content/utils/icons/IconCard';
 
 const Icons: NextPage = () => {
@@ -41,29 +43,22 @@ const Icons: NextPage = () => {
 
   return (
     <Layout>
-      {/* Header */}
-      <div className='mb-20 mt-10'>
-        <Container>
-          <div className='pb-3 border-b border-gray-200'>
-            <Row justify='between'>
-              <Col>
-                <h2 className='text-3xl text-slate-900 dark:text-slate-100 font-bold'>Icons</h2>
-              </Col>
+      {/* Page header */}
+      <PageHeader
+        title='Icons'
+        description='Add icons that you will use in your project.'
+        actions={
+          <Button onClick={toggleModal}>
+            <Icon name='plus' size={18} />
+            <span>Add icon</span>
+          </Button>
+        }
+      />
 
-              <Col>
-                <Button onClick={toggleModal}>
-                  <Icon name='plus' size={18} />
-                  <span>Add</span>
-                </Button>
-              </Col>
-            </Row>
-          </div>
-        </Container>
-      </div>
-
+      {/* Content */}
       <div>
         <Container>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-5">
             {icons?.map((icon, index) => (
               <IconCard key={index} icon={icon} />
             ))}
@@ -71,26 +66,37 @@ const Icons: NextPage = () => {
         </Container>
       </div>
 
-      {/* Modal edit font */}
+      {/* Modal add icon */}
       <Modal 
         size='sm' 
         isOpen={isOpen} 
+        onClose={toggleModal}
       >
-        <div>
-          <label className='block pb-1'>Icon name</label>
-          <input className='mb-3 w-full border border-gray-200 rounded py-1.5 px-3 placeholder:font-light' type='text' placeholder='Enter icon name' />
+        <Modal.Header>
+          Add new icon
+        </Modal.Header>
 
-          <label className='block pb-1'>Svg</label>
-          <textarea className='w-full border border-gray-200 rounded py-1.5 px-3 placeholder:font-light'
-            rows='7' 
-            placeholder='Enter svg ...'
-          ></textarea>
-        </div>
+        <Modal.Body>
+          <Form.Group>
+            <Form.Input label='Icon name' 
+              placeholder='Enter icon name...'
+            />
+          </Form.Group>
+
+          <Form.Group>
+            <Form.Textarea label='Svg content' 
+              placeholder='Enter svg ...'
+            />
+          </Form.Group>
+        </Modal.Body>
         
         <Modal.Footer>
-          <Row gap={12}>
+          <Row gapX={8} justify='end'>
             <Col>
-              <Button onClick={toggleModal}>
+              <Button 
+                size='sm'
+                onClick={toggleModal}
+              >
                 Cancel
               </Button>
             </Col>
@@ -98,6 +104,7 @@ const Icons: NextPage = () => {
             <Col>
               <Button 
                 variant='primary'
+                size='sm'
                 onClick={toggleModal}
               >
                 Save
