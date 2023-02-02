@@ -6,20 +6,27 @@ type Props = {
   className?: string;
   link?: string;
   active?: boolean;
+  variant?: 'danger' | 'default';
+  onClick?: () => void;
 }
 
-const DropdownMenuItem: React.FC<Props> = ({ children, className, link, ...props }) => {
+const DropdownMenuItem: React.FC<Props> = ({ children, className, link, variant, onClick, ...props }) => {
+  const variantClasses = variant == 'default' ? 'hover:bg-gray-50' : 'hover:bg-red-50 text-red-500'
+
   return (
     <>
       {link ?
-        <Link className={`relative flex items-center gap-1 py-1.5 px-2 text-sm hover:bg-gray-50 cursor-pointer select-none ${className}`} 
+        <Link className={`relative flex items-center gap-1 py-1.5 px-2 text-sm cursor-pointer select-none ${variantClasses} ${className}`} 
           href={link}
           {...props}
         >
           {children}
         </Link>
         :
-        <div className={`relative flex items-center gap-1 py-1.5 px-2 text-sm hover:bg-gray-50 cursor-pointer select-none ${className}`} {...props}>
+        <div className={`relative flex items-center gap-1 py-1.5 px-2 text-sm cursor-pointer select-none ${variantClasses} ${className}`} 
+          onClick={onClick}
+          {...props}
+        >
           {children}
         </div>
       }
@@ -28,7 +35,8 @@ const DropdownMenuItem: React.FC<Props> = ({ children, className, link, ...props
 }
 
 DropdownMenuItem.defaultProps = {
-  className: ''
+  className: '',
+  variant: 'default'
 }
 
 export default DropdownMenuItem;

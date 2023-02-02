@@ -47,13 +47,11 @@ const Row: React.FC<Props> = ({ children, className, cols, gapX, gapY, align, ju
 
   return (
     <RowContext.Provider value={{cols, gapX, gapY}}>
-      <div className={`overflow-hidden ${className}`}>
-        <div className={`flex ${reverse ? 'flex-row-reverse' : ''} ${noWrap ? 'flex-nowrap' : 'flex-wrap'} h-full`} 
-          style={{alignItems: alignItems, justifyContent: justifyContent, marginLeft: marginLeft, marginRight: marginRight, marginBottom: marginBottom}}
-          {...props}
-        >
-          {children}
-        </div>
+      <div className={`flex ${reverse ? 'flex-row-reverse' : ''} ${noWrap ? 'flex-nowrap' : 'flex-wrap'} h-full ${className}`} 
+        style={{alignItems: alignItems, justifyContent: justifyContent, marginLeft: marginLeft, marginRight: marginRight, marginBottom: marginBottom}}
+        {...props}
+      >
+        {children}
       </div>
     </RowContext.Provider>
   );

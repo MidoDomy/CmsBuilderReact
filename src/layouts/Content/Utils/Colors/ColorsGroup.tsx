@@ -16,13 +16,11 @@ const ColorsGroup: React.FC<Props> = ({name, colors}) => {
     <div className='[&:hover_.add-color]:opacity-100'>
       <Row gapX={16}>
         <Col>
-          <div className='w-16 pt-8 text-sm font-medium'>{name}</div>
+          <div className='w-16 text-sm font-medium'>{name}</div>
         </Col>
 
         <Col fill>
-          <Row className='pt-8 pl-px'
-            gapX={10}
-          >
+          <Row gapX={10}>
             {colors.map(color => (
               <Col key={color.id}>
                 <ColorsGroupItem

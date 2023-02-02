@@ -57,13 +57,14 @@ const Colors: NextPage = () => {
 
   return (
     <Layout metaTitle='Cms builder - colors'>
+      {/* Page header */}
       <PageHeader
         title='Colors'
         description='Add colors that you will use in your project.'
         actions={
           <Button onClick={toggleModal}>
             <Icon name='plus' size={18} />
-            <span>Add</span>
+            <span>Add Group</span>
           </Button>
         }
       />
@@ -71,7 +72,7 @@ const Colors: NextPage = () => {
       {/* Content */}
       <div>
         <Container>
-          <div className='flex flex-col'>
+          <div className='flex flex-col gap-8'>
             {colorsGroups?.map(group => (
               <ColorsGroup
                 key={group.id} 
@@ -83,6 +84,7 @@ const Colors: NextPage = () => {
         </Container>
       </div>
 
+      {/* Add color group modal */}
       <Modal 
         size='sm'
         isOpen={showModal} 

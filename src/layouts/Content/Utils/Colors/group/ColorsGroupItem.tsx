@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import Dropdown from 'components/Dropdown';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 import Tooltip from 'components/Tooltip';
@@ -22,14 +23,32 @@ const ColorsGroupItem: React.FC<Props> = ({color, name}) => {
     <>
       <div className='relative [&:hover>:first-child]:block'>
         {/* Remove color */}
-        <Button className='absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 z-10 hidden'
-          variant='danger'
-          size='xs'
-          rounded
-          onClick={toggleModal}
+        <Dropdown 
+          closedClasses='hidden'
+          openClasses='block'
         >
-          <Icon name='x' size={10} />
-        </Button>
+          <Dropdown.Trigger>
+            <Button className='absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 z-10'
+              size='xs'
+              rounded
+            >
+              <Icon name='three-dots' size={13} />
+            </Button>
+          </Dropdown.Trigger>
+          
+          <Dropdown.Menu className='-mr-[19px] mt-[18px]'>
+            <Dropdown.MenuItem>
+              Edit
+            </Dropdown.MenuItem>
+
+            <Dropdown.MenuItem 
+              variant='danger'
+              onClick={toggleModal}
+            >
+              Delete
+            </Dropdown.MenuItem>
+          </Dropdown.Menu>
+        </Dropdown>
 
         {/* Color */}
         <div className='relative w-16 h-10 rounded ring-1 ring-black/5 overflow-hidden'>
@@ -53,6 +72,7 @@ const ColorsGroupItem: React.FC<Props> = ({color, name}) => {
         </Tooltip>
       </div>
 
+      {/* Confirm delete color modal */}
       <Modal 
         size='sm'
         isOpen={showModal} 
