@@ -36,8 +36,8 @@ const NavigationSidebarProfile: React.FC<Props> = ({ isSidebarCollapsed }) => {
         <Dropdown.MenuItem 
           link='/'
           variant='danger'
+          icon='logout'
         >
-          <Icon name='logout' size={16} />
           Log out
         </Dropdown.MenuItem>
       </Dropdown.Menu>

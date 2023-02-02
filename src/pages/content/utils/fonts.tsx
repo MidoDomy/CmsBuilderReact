@@ -1,12 +1,15 @@
 import type { NextPage } from 'next';
+import { useState } from 'react';
 
 import Layout from 'layouts/general/Layout';
+import PageHeader from 'layouts/general/PageHeader';
 import Container from 'components/Container';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
-import FontCard from 'layouts/content/utils/fonts/FontCard';
+import FontsCard from 'layouts/content/utils/fonts/FontsCard';
+import FontsSidebarControls from 'layouts/content/utils/fonts/FontsSidebarControls';
 
 const Fonts: NextPage = () => {
   const fonts = [
@@ -17,49 +20,47 @@ const Fonts: NextPage = () => {
     {name: 'Unbounded', weights: ['200', '400', '600']}
   ];
 
+  const [currentFontSize, setCurrentSize] = useState(16);
+  const [currentFontWeight, setCurrentWeight] = useState(400);
+
   return (
     <Layout>
-      {/* Header */}
-      <div className='mb-20 mt-10'>
-        <Container>
-          <div className='flex justify-between pb-3 border-b border-gray-200 dark:border-gray-700'>
-            <h2 className='text-3xl text-slate-900 dark:text-slate-100 font-bold'>Fonts</h2>
+      {/* Page header */}
+      <PageHeader
+        title='Fonts'
+        description='Add fonts that you will use in your project.'
+        actions={
+          <Button>
+            <Icon name='plus' size={18} />
+            <span>Import font</span>
+          </Button>
+        }
+      />
 
-            <div className='flex gap-2.5'>
-              <Button>
-                <Icon name='plus' size={18} />
-                <span>Add</span>
-              </Button>
-
-              <Button variant='primary'>
-                <Icon name='checkmark' size={18} />
-                <span>Save</span>
-              </Button>
-            </div>
-          </div>
-        </Container>
-      </div>
-
+      {/* Content */}
       <div>
         <Container>
           <Row>
             <Col span={8}>
-              <Row cols={3} gap={16}>
+              <Row gapX={16} gapY={16}>
                 {fonts?.map((font, index) => (
-                  <Col key={index}>
-                    <FontCard name={font.name} weights={font.weights} />
+                  <Col span={12} key={index}>
+                    <FontsCard 
+                      name={font.name} 
+                      weights={font.weights} 
+                      fontSize={currentFontSize}
+                      fontWeight={currentFontWeight}
+                    />
                   </Col>
                 ))}
               </Row>
             </Col>
 
             <Col span={4}>
-              <div className='py-10 px-6 rounded-lg bg-gray-100 dark:bg-gray-800'>
-                <div className='mb-4 text-xl text-slate-900 dark:text-slate-50'>Controls</div>
-
-                <div>Weight</div>
-                <div>Size</div>
-              </div>
+              <FontsSidebarControls 
+                fontSize={currentFontSize}
+                fontWeight={currentFontWeight}
+              />
             </Col>
           </Row>
         </Container>

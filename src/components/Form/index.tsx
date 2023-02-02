@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Label from './Label';
 import Input from './Input';
 import InputGroup from './InputGroup';
 import InputGroupText from './InputGroupText';
@@ -35,6 +36,7 @@ Form.defaultProps = {
 }
 
 export default Object.assign(Form, {
+  Label: Label,
   Input: Input,
   InputGroup: InputGroup,
   InputGroupText: InputGroupText,
