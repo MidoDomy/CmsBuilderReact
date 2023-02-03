@@ -8,9 +8,9 @@ import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
-import MediaFolder from 'layouts/media/overview/MediaFolder';
+import MediaOverviewFolder from 'layouts/media/overview/MediaOverviewFolder';
 
-const Media: NextPage = () => {
+const MediaOverview: NextPage = () => {
   return (
     <Layout>
       {/* Page header */}
@@ -31,19 +31,19 @@ const Media: NextPage = () => {
           <Row>
             <Col>
               <Link href='/media/folder'>
-                <MediaFolder name='Images' size='5.8 Mbs' />
+                <MediaOverviewFolder name='Images' size='5.8 Mbs' />
               </Link>
             </Col>
 
             <Col>
               <Link href='/media/folder'>
-                <MediaFolder name='Videos' size='14 Mbs' />
+                <MediaOverviewFolder name='Videos' size='14 Mbs' />
               </Link>
             </Col>
 
             <Col>
               <Link href='/media/folder'>
-                <MediaFolder name='Banners' size='1.2 Mbs' />
+                <MediaOverviewFolder name='Banners' size='1.2 Mbs' />
               </Link>
             </Col>
           </Row>
@@ -53,4 +53,4 @@ const Media: NextPage = () => {
   )
 }
 
-export default Media;
+export default MediaOverview;
