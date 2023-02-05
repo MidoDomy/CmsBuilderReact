@@ -4,7 +4,7 @@ import MessagesChatContentItem from './MessagesChatContentItem';
 
 const MessagesChatContent: React.FC = () => {
   return (
-    <div className='flex flex-col justify-end gap-2 h-full px-6'>
+    <div className='flex flex-col justify-end gap-2 h-full pb-6 px-6'>
       <MessagesChatContentItem 
         name='Robert Fox'
         time='10:15 am'
