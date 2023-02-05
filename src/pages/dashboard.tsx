@@ -1,18 +1,24 @@
 import type { NextPage } from 'next';
 import React from 'react';
 
+import Row from 'components/Row';
+import Col from 'components/Col';
 import Layout from 'layouts/general/Layout';
 import DashboardBoard from 'layouts/dashboard/DashboardBoard';
-import DashboardSidebar from 'layouts/dashboard/DashboardSidebar';
+// import DashboardSidebar from 'layouts/dashboard/DashboardSidebar';
 
 const Dashboard: NextPage = () => {
   return (
     <Layout>
-      <div className="flex">
-        <DashboardBoard />
+      <Row gapX={0}>
+        <Col fill>
+          <DashboardBoard />
+        </Col>
 
-        <DashboardSidebar />
-      </div>
+        <Col>
+          {/* <DashboardSidebar /> */}
+        </Col>
+      </Row>
     </Layout>
   )
 }

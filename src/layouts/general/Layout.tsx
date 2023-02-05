@@ -34,7 +34,7 @@ const Layout: React.FC<Props> = ({children, className, metaTitle, ...props}) => 
               <NavBar />
 
               {/* Main content */}
-              <main className='flex-1 overflow-hidden'>
+              <main className='flex-1 overflow-x-hidden'>
                 {children}
               </main>
             </div>
