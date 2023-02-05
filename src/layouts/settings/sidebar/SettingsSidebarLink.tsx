@@ -17,7 +17,7 @@ const SettingsSidebarLink: React.FC<Props> = ({children, className, link, icon, 
 
   return (
     <li>
-      <Link className={`flex items-center gap-2 py-2 px-3 hover:bg-gray-100 rounded-md text-sm ${active ? 'bg-gray-100' : ''} ${className}`}
+      <Link className={`flex items-center gap-2 py-2 px-3 rounded-md text-sm ${active ? 'bg-gray-100' : 'hover:bg-gray-50'} ${className}`}
         href={link}
         {...props}
       >

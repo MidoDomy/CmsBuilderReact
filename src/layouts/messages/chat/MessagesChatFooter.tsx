@@ -8,9 +8,9 @@ import Icon from 'components/Icon';
 
 const MessagesChatFooter: React.FC = () => {
   return (
-    <div className='px-6 py-8'>
+    <div className='px-6 py-8 border-t border-gray-200'>
       <div className="relative">
-        <Form.Input className='[&_input]:pr-36 bg-white'
+        <Form.Input className='[&_input]:pr-36'
           placeholder='Type Something...'
           size='lg'
         />

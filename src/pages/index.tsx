@@ -25,53 +25,73 @@ const Login: NextPage = () => {
           <Col span={6}>
             <div className='flex flex-col h-full'>
               {/* Header */}
-              <div className='w-full px-16 py-8 border-b font-semibold text-xl text-slate-900'>
+              <div className='w-full px-16 py-7 border-b font-semibold text-2xl'>
                 Logo
               </div>
 
               <div className='flex-1 flex items-center justify-center px-10 pt-5 pb-32'>
                 <div className='w-full max-w-md'>
-                  {/* Login form */}
-                  <Form>
-                    <h1 className='mb-1 font-semibold text-3xl text-slate-900'>Welcome back</h1>
-                    <p className='mb-6 text-slate-500'>Welcome back! Please enter your details.</p>
+                  <div className='mb-6'>
+                    <h1 className='mb-1 font-semibold text-3xl'>Welcome back</h1>
+                    <p className='text-slate-500'>Welcome back! Please enter your details.</p>
+                  </div>
 
-                    <div className='mb-3'>
-                      <label className='inline-flex mb-1 font-medium' htmlFor="">Email</label>
-                      <Form.Input size='lg' placeholder='hi@example.com' />
-                    </div>
+                  <div className='mb-5'>
+                    <Form>
+                      <Form.Group>
+                        <Form.Input 
+                          label='Email'
+                          size='lg' 
+                          placeholder='hi@example.com' 
+                        />
+                      </Form.Group>
 
-                    <div className='mb-2'>
-                      <label className='inline-flex mb-1 font-medium' htmlFor="">Password</label>
-                      <Form.Input size='lg' type='password' placeholder='Enter password' />
-                    </div>
+                      <Form.Group>
+                        <Form.Input 
+                          label='Password'
+                          size='lg' 
+                          type='password' 
+                          placeholder='Enter password' 
+                        />
+                      </Form.Group>
+                    </Form>
+                  </div>
 
-                    <p className='mb-12 text-center'>
-                      <a className='text-sky-500 hover:text-sky-600'
-                        href="#"
-                      >Forgot Password?</a>
-                    </p>
+                  <div className='flex justify-end mb-6'>
+                    <Button variant='link'>
+                      Forgot Password?
+                    </Button>
+                  </div>
 
-                    <Button className='mb-4' 
+                  <div className='flex flex-col gap-3 mb-12'>
+                    <Button 
                       href='/dashboard'
                       size='lg'
                       variant='primary'
                       block
-                    >Login</Button>
+                    >
+                      Login
+                    </Button>
 
                     <Button
                       href='/dashboard'
                       size='lg'
                       block
-                    >Continue with Google</Button>
-                  </Form>
+                    >
+                      Continue with Google
+                    </Button>
+                  </div>
 
-                  <p className='pt-12 text-center text-slate-500'>
-                    Don't have an account? 
-                    <a className='px-1 font-semibold text-slate-900 underline hover:no-underline' 
-                      href="#"
-                    >Sign up for free</a>
-                  </p>
+                  <div>
+                    <p className='text-center text-slate-500'>
+                      Don't have an account? {' '}
+                      <Button className='text-base text-slate-900' 
+                        variant='link'
+                      >
+                        Sign up for free
+                      </Button>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -79,15 +99,12 @@ const Login: NextPage = () => {
 
           {/* Right side */}
           <Col span={6}>
-            <Row className='h-full bg-gray-100'
-              align='center'
-              justify='center'
-            >
+            <div className='flex justify-center items-center h-full bg-gray-100 border-l border-gray-200 shadow-inner'>
               <Image className='scale-90' 
                 src='app-image.png' 
                 alt='App image'
               />
-            </Row>
+            </div>
           </Col>
         </Row>
       </div>

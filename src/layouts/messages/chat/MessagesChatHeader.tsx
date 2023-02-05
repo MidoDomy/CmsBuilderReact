@@ -8,7 +8,7 @@ import Avatar from 'components/Avatar';
 
 const MessagesChatHeader: React.FC = () => {
   return (
-    <div className='px-6 py-4 bg-white border border-t-0 border-gray-200'>
+    <div className='px-6 py-4'>
       <Row gapX={12} align='center'>
         <Col>
           <Avatar size='lg' />
