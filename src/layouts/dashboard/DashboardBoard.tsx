@@ -7,29 +7,63 @@ import DashboardDynamicWidgetImport from 'layouts/dashboard/DashboardDynamicWidg
 const DashboardBoard: React.FC = () => {
   const [board, setBoard] = useState([
     {
-      colStart: 2,
-      colEnd: 9,
-      rowStart: 3,
-      rowEnd: 5,
+      colStart: 1,
+      colEnd: -1,
+      rowStart: 1,
+      rowEnd: 3,
       widget: {
         id: 1, 
-        element: 'DashboardWidgetActivity',
-        name: 'Activity'
+        element: 'DashboardWidgetText',
+        name: 'Text'
       }
     },
     {
-      colStart: 13,
-      colEnd: 20,
+      colStart: 1,
+      colEnd: 14,
       rowStart: 3,
-      rowEnd: 5,
+      rowEnd: 9,
       widget: {
         id: 1, 
-        element: 'DashboardWidgetStatus',
-        name: 'Status'
+        element: 'DashboardWidgetStatisticalOverview',
+        name: 'Statistical overview'
+      }
+    },
+    {
+      colStart: 14,
+      colEnd: 21,
+      rowStart: 3,
+      rowEnd: 9,
+      widget: {
+        id: 1, 
+        element: 'DashboardWidgetActivityTimeline',
+        name: 'Activity Timeline'
+      }
+    },
+    {
+      colStart: 1,
+      colEnd: 14,
+      rowStart: 9,
+      rowEnd: 16,
+      widget: {
+        id: 1, 
+        element: 'DashboardWidgetEmployeeStatus',
+        name: 'Employee Status'
+      }
+    },
+    {
+      colStart: 14,
+      colEnd: 21,
+      rowStart: 9,
+      rowEnd: 16,
+      widget: {
+        id: 1, 
+        element: 'DashboardWidgetWorkingFormat',
+        name: 'Working format'
       }
     }
   ]);
 
+  // TODO: Add functionality of drag and drop
   const [{ isOver }, drop] = useDrop(() => ({
     accept: 'div',
     drop: (widget) => addWidgetToBoard(widget),
@@ -49,15 +83,16 @@ const DashboardBoard: React.FC = () => {
 
     setBoard(prevBoard => [...prevBoard, item])
   };
+  // ----------------------------------------
 
   return (
-    <>
+    <div>
       <Container className='py-10'>
-        <div className='relative grid grid-cols-[repeat(20,_minmax(0,_1fr))] grid-rows-[repeat(15,_50px)] gap-3'
+        <div className='relative grid grid-cols-[repeat(20,_minmax(0,_1fr))] grid-rows-[repeat(15,_50px)] gap-4'
           ref={drop}
         >
           {/* Bg dashed cubes */}
-          <div className='absolute top-0 left-0 w-full h-full grid grid-cols-[repeat(20,_minmax(0,_1fr))] grid-rows-[repeat(15,_50px)] gap-3'>
+          <div className='absolute top-0 left-0 w-full h-full grid grid-cols-[repeat(20,_minmax(0,_1fr))] grid-rows-[repeat(15,_50px)] gap-4'>
             { [...Array(20*15)].map((e, i) => <div key={i} className={`w-full h-full border-2 border-dashed border-gray-200 rounded-xl transition-opacity ${isOver ? 'opacity-100' : 'opacity-0'}`}></div>) } 
           </div>
 
@@ -72,7 +107,7 @@ const DashboardBoard: React.FC = () => {
           )} 
         </div>
       </Container>
-    </>
+    </div>
   )
 }
 
