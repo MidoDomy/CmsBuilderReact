@@ -13,7 +13,7 @@ const TabsNavItem: React.FC<Props> = ({ children, className, activeClass, name }
   const {current, setCurrent} = useContext(TabContext);
 
   return (
-    <button className={`inline-flex items-center px-2.5 py-1.5 border-b-2 transition-colors ${current == name ? activeClass : 'border-b-gray-200 text-slate-500 hover:text-slate-900'} ${className}`} 
+    <button className={`inline-flex items-center -mb-0.5 px-2.5 py-1.5 border-b-2 transition-colors ${current == name ? activeClass : 'border-b-gray-200 text-slate-500 hover:text-slate-900'} ${className}`} 
       onClick={() => setCurrent(name)}
     >
       {children}
