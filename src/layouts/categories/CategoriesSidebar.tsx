@@ -1,36 +1,60 @@
 import React from 'react';
 
 import Sidebar from 'components/Sidebar';
+import Row from 'components/Row';
+import Col from 'components/Col';
+import Button from 'components/Button';
+import Icon from 'components/Icon';
 import CategoriesSidebarItem from './sidebar/CategoriesSidebarItem';
 
 const CategoriesSidebar: React.FC = () => {
   const categories = [
     {
       id: 0,
-      name: 'Category One',
+      name: 'Category 1',
       subCategories: [
         {
           id: 1,
-          name: 'SubCategory One',
-          subCategories: []
+          name: 'SubCategory',
+          subCategories: [
+            {
+              id: 3,
+              name: 'SubSubCategory',
+              subCategories: []
+            }
+          ]
         }
       ]
     },
     {
       id: 2,
-      name: 'Category Two',
+      name: 'Category 2',
       subCategories: []
     }
   ]
 
   return (
-    <Sidebar className='w-72'>
-      <Sidebar.Header>
-        <h4 className='font-semibold text-lg text-slate-900'>Categories</h4>
+    <Sidebar className='w-80'>
+      <Sidebar.Header className='pt-8'>
+        <Row>
+          <Col fill>
+            <h3 className='font-medium'>Categories</h3>
+          </Col>
+
+          <Col>
+            <Button
+              variant='ghost'
+              size='sm'
+              rounded
+            >
+              <Icon name='plus' size={16}/>
+            </Button>
+          </Col>
+        </Row>
       </Sidebar.Header>
 
-      <Sidebar.Body className='px-0'>
-        <ul>
+      <Sidebar.Body>
+        <ul className='text-sm'>
           {categories.map((category) => (
             <li key={category.id}>
               <CategoriesSidebarItem name={category.name} subCategories={category.subCategories}/>
