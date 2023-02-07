@@ -1,8 +1,10 @@
 import React from 'react';
 
+import Container from 'components/Container';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Layout from 'layouts/general/Layout';
+import PageHeader from '../general/PageHeader';
 import SettingsSidebar from './SettingsSidebar';
 
 type Props = {
@@ -23,24 +25,18 @@ const SettingsLayout: React.FC<Props> = ({children, actions, title, description}
         </Col>
 
         <Col fill>
-          <div className='pt-10 pb-8 px-16'>
-            <div className='pb-5 border-b border-gray-200'>
-              <Row justify='between' align='end'>
-                <Col>
-                  <h4 className='mb-2 font-medium text-3xl'>{title}</h4>
-                  <p className='text-sm text-slate-500'>{description}</p>
-                </Col>
+          {/* Page header */}
+          <PageHeader
+            title={title}
+            description={description}
+            actions={actions}
+          />
 
-                <Col>
-                  {actions}
-                </Col>
-              </Row>
-            </div>
-            
-            {/* Content */}
-            <div>
+          {/* Content */}
+          <div>
+            <Container>
               {children}
-            </div>
+            </Container>
           </div>
         </Col>
       </Row>

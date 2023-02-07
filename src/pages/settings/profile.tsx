@@ -6,8 +6,8 @@ import Form from 'components/Form';
 import Icon from 'components/Icon';
 import Button from 'components/Button';
 import Avatar from 'components/Avatar';
-import SettingsSection from 'layouts/settings/SettingsSection';
 import SettingsLayout from 'layouts/settings/SettingsLayout';
+import Section from 'layouts/general/Section';
 
 const SettingsProfile: NextPage = () => {
   return (
@@ -15,7 +15,7 @@ const SettingsProfile: NextPage = () => {
       title='My details' 
       description='Update your photo and personal details here.'
       actions={
-        <Row justify='end' gapX={12}>
+        <Row justify='end' gapX={8}>
           <Col>
             <Button>Cancel</Button>
           </Col>
@@ -26,7 +26,7 @@ const SettingsProfile: NextPage = () => {
         </Row>
       }
     >
-      <SettingsSection title='Name'>
+      <Section title='Name'>
         <Row>
           <Col fill>
             <Form.Input placeholder='Enter first name' />
@@ -36,17 +36,17 @@ const SettingsProfile: NextPage = () => {
             <Form.Input placeholder='Enter last name' />
           </Col>
         </Row>
-      </SettingsSection>
+      </Section>
 
-      <SettingsSection title='Email address'>
+      <Section title='Email address'>
         <Form.Input 
           prefix={<Icon name='letter' size={18} />} 
           placeholder='Enter email' 
           type='email'
         />
-      </SettingsSection>
+      </Section>
 
-      <SettingsSection title='Your photo' description='This will be displayed on your profile.'>
+      <Section title='Your photo' description='This will be displayed on your profile.'>
         <Row>
           <Col>
             <Avatar size='xl' />
@@ -56,13 +56,13 @@ const SettingsProfile: NextPage = () => {
             <Form.FileUpload />
           </Col>
         </Row>
-      </SettingsSection>
+      </Section>
 
-      <SettingsSection title='Role'>
+      <Section title='Role'>
         <Form.Input placeholder='Enter your role title' />
-      </SettingsSection>
+      </Section>
 
-      <SettingsSection title='Country'>
+      <Section title='Country'>
         <Form.Select 
           placeholder='Select your country' 
           options={[
@@ -72,9 +72,9 @@ const SettingsProfile: NextPage = () => {
             }
           ]}
         />
-      </SettingsSection>
+      </Section>
 
-      <SettingsSection title='Timezone'>
+      <Section title='Timezone'>
         <Form.Select 
           placeholder='Select your timezone' 
           options={[
@@ -84,12 +84,12 @@ const SettingsProfile: NextPage = () => {
             }
           ]}
         />
-      </SettingsSection>
+      </Section>
 
-      <SettingsSection title='Bio' description='Write a short introduction.'>
+      <Section title='Bio' description='Write a short introduction.'>
         <Form.Textarea placeholder='Write short introduction' />
         <small className='text-slate-500'>Max 275 characters</small>
-      </SettingsSection>
+      </Section>
     </SettingsLayout>
   )
 }

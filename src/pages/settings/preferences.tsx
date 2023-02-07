@@ -6,7 +6,7 @@ import Form from 'components/Form';
 import Button from 'components/Button';
 import Image from 'components/Image';
 import SettingsLayout from 'layouts/settings/SettingsLayout';
-import SettingsSection from 'layouts/settings/SettingsSection';
+import Section from 'layouts/general/Section';
 
 const SettingsPreferences: NextPage = () => {
   return (
@@ -14,7 +14,7 @@ const SettingsPreferences: NextPage = () => {
       title='Preferences' 
       description='Change how administration looks and feelds in your browser.'
       actions={
-        <Row gapX={12}>
+        <Row gapX={8}>
           <Col>
             <Button>Cancel</Button>
           </Col>
@@ -25,7 +25,7 @@ const SettingsPreferences: NextPage = () => {
         </Row>
       }
     >
-      <SettingsSection
+      <Section
         title='Interface theme'
         description='Select or customize your theme.'
       >
@@ -63,14 +63,14 @@ const SettingsPreferences: NextPage = () => {
             </Form.Radio>
           </Col>
         </Row>
-      </SettingsSection>
+      </Section>
 
-      <SettingsSection
+      <Section
         title='Sticky header'
         description='Make the desktop header sticky on scroll down.'
       >
         <Form.Switch id='stickyHeader' />
-      </SettingsSection>
+      </Section>
     </SettingsLayout>
   )
 }

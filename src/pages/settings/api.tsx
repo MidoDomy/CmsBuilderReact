@@ -11,7 +11,7 @@ const SettingsApi: NextPage = () => {
       title='Api settings' 
       description='Go headless.'
       actions={
-        <Row gapX={12}>
+        <Row gapX={8}>
           <Col>
             <Button>Cancel</Button>
           </Col>

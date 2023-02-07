@@ -11,7 +11,7 @@ const SettingsGeneral: NextPage = () => {
       title='General settings' 
       description='General setting options.'
       actions={
-        <Row gapX={12}>
+        <Row gapX={8}>
           <Col>
             <Button>Cancel</Button>
           </Col>

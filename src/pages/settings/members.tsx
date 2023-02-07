@@ -11,7 +11,7 @@ const SettingsUsersAndPermissions: NextPage = () => {
       title='Members settings' 
       description='Change members settings and permissions.'
       actions={
-        <Row gapX={12}>
+        <Row gapX={8}>
           <Col>
             <Button>Cancel</Button>
           </Col>
