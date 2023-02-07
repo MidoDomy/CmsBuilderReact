@@ -1,9 +1,9 @@
 import type { NextPage } from 'next';
 
-import Layout from 'layouts/general/Layout';
 import Container from 'components/Container';
 import Sidebar from 'components/Sidebar';
 import Tabs from 'components/Tabs';
+import Layout from 'layouts/general/Layout';
 // import ComponentsNavigationBtn from 'layouts/content/components/ComponentsNavigationBtn';
 import StyleAlign from 'layouts/content/style/StyleAlign';
 import StyleSize from 'layouts/content/style/Size';
