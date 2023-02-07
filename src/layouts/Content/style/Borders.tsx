@@ -15,10 +15,10 @@ const StyleBorders: React.FC = () => {
 
       <Collapse.Content className='pt-3 pb-6 px-4'>
         {/* Border radius */}
-        <Row cols={2} gap={6} align='center' className='mb-6'>
+        <Row cols={2} gapX={6} align='center' className='mb-6'>
           <Col>
-            <Row cols={3} gap={6} align='center'>
-              <Col>
+            <Row cols={3} gapX={6} align='center'>
+              {/* <Col>
                 <Form.Radio id='borderRadiusTopLeft' name='borderRadius' hideRadio>
                   <Icon className='-rotate-90' name='border-radius-top-right' />
                 </Form.Radio>
@@ -48,7 +48,7 @@ const StyleBorders: React.FC = () => {
                 <Form.Radio id='borderRadiusBottomRight' name='borderRadius' hideRadio>
                   <Icon className='rotate-90' name='border-radius-top-right' />
                 </Form.Radio>
-              </Col>
+              </Col> */}
             </Row>
           </Col>
 
@@ -58,10 +58,10 @@ const StyleBorders: React.FC = () => {
         </Row>
 
         {/* Borders */}
-        <Row cols={2} gap={6} align='center'>
+        <Row cols={2} gapX={6} align='center'>
           <Col>
-            <Row cols={3} gap={6} align='center'>
-              <Col>
+            <Row cols={3} gapX={6} align='center'>
+              {/* <Col>
                 <Form.Radio id='borderLeft' name='borderSide' hideRadio>
                   <Icon name='border-left' />
                 </Form.Radio>
@@ -85,12 +85,12 @@ const StyleBorders: React.FC = () => {
                 <Form.Radio id='borderRight' name='borderSide' hideRadio>
                   <Icon className='-rotate-90' name='border-bottom' />
                 </Form.Radio>
-              </Col>
+              </Col> */}
             </Row>
           </Col>
 
           <Col>
-            <Form.Group className='mb-1.5' justify='between' align='center'>
+            {/* <Form.Group className='mb-1.5' justify='between' align='center'>
               <Form.Radio id='none' name='borderStyle' hideRadio>
                 <Icon name='x' size={18} />
               </Form.Radio>
@@ -116,7 +116,7 @@ const StyleBorders: React.FC = () => {
 
             <Form.Input className='mb-1.5' type='number' suffix='px' placeholder='0' />
 
-            <Form.Select options={['White', 'Black', 'Primary', 'Secondary']} />
+            <Form.Select options={['White', 'Black', 'Primary', 'Secondary']} /> */}
           </Col>
         </Row>
       </Collapse.Content>

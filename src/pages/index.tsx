@@ -87,7 +87,7 @@ const Login: NextPage = () => {
                     <div>
                       <div className='mb-6'>
                         <h1 className='mb-1 font-semibold text-3xl'>Forgot password?</h1>
-                        <p className='text-slate-500'>Don't worry, you can reset it via email.</p>
+                        <p className='text-slate-500'>Don&apos;t worry, you can reset it via email.</p>
                       </div>
     
                       <div className='mb-6'>

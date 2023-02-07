@@ -173,6 +173,7 @@ const NavigationSidebar: React.FC = () => {
                 link={item.link} 
                 subCategories={item.children}
                 isSidebarCollapsed={isSidebarCollapsed} 
+                level={0}
               />
             )}
           </ul>
@@ -187,6 +188,7 @@ const NavigationSidebar: React.FC = () => {
                 link={item.link} 
                 subCategories={item.children}
                 isSidebarCollapsed={isSidebarCollapsed} 
+                level={0}
               />
             )}
           </ul>

@@ -19,7 +19,7 @@ const EmailsContent: React.FC = () => {
               </Col>
 
               <Col>
-                <Row gap={10}>
+                <Row gapX={10}>
                   <Col>
                     <Button>
                       <Icon name='plus' size={18} />
@@ -28,7 +28,7 @@ const EmailsContent: React.FC = () => {
                   </Col>
 
                   <Col>
-                    <Button variant='primary' disabled>
+                    <Button variant='primary'>
                       <Icon name='checkmark' size={18} />
                       <span>Save</span>
                     </Button>

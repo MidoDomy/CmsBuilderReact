@@ -14,10 +14,10 @@ const StyleAlign: React.FC = () => {
       </Collapse.Trigger>
 
       <Collapse.Content className='pt-3 pb-6 px-4'>
-        <Row cols={2} gap={4}>
+        <Row cols={2} gapX={4}>
           <Col>
             {/* Justify */}
-            <Form.Group justify='between'>
+            {/* <Form.Group justify='between'>
               <Form.Radio id='justifyStart' name='justify' hideRadio>
                 <Icon name='justify-start' size={18} />
               </Form.Radio>
@@ -29,12 +29,12 @@ const StyleAlign: React.FC = () => {
               <Form.Radio id='justifyEnd' name='justify' hideRadio>
                 <Icon name='justify-end' size={18} />
               </Form.Radio>
-            </Form.Group>
+            </Form.Group> */}
           </Col>
 
           <Col>
             {/* Align */}
-            <Form.Group justify='between'>
+            {/* <Form.Group justify='between'>
               <Form.Radio id='alignStart' name='align' hideRadio>
                 <Icon name='align-start' size={18} />
               </Form.Radio>
@@ -46,7 +46,7 @@ const StyleAlign: React.FC = () => {
               <Form.Radio id='alignEnd' name='align' hideRadio>
                 <Icon name='align-end' size={18} />
               </Form.Radio>
-            </Form.Group>
+            </Form.Group> */}
           </Col>
         </Row>
       </Collapse.Content>

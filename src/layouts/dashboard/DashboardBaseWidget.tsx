@@ -3,7 +3,7 @@ import { useDrag } from 'react-dnd';
 
 type Props = {
   children?: React.ReactNode,
-  widget?: Object
+  widget: {name: string}
 }
 
 const DashboardBaseWidget: React.FC<Props> = ({ children, widget }) => {

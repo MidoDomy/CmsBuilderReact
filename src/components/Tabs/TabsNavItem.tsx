@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { TabContext } from 'contexts/Tab';
+import { TabsContext } from 'contexts/Tabs';
 
 type Props = {
   children?: React.ReactNode;
@@ -10,7 +10,7 @@ type Props = {
 }
 
 const TabsNavItem: React.FC<Props> = ({ children, className, activeClass, name }) => {
-  const {current, setCurrent} = useContext(TabContext);
+  const {current, setCurrent} = useContext(TabsContext);
 
   return (
     <button className={`inline-flex items-center -mb-0.5 px-2.5 py-1.5 border-b-2 transition-colors ${current == name ? activeClass : 'border-b-gray-200 text-slate-500 hover:text-slate-900'} ${className}`} 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { TabContext } from 'contexts/Tab';
+import { TabsContext } from 'contexts/Tabs';
 import TabsNav from './TabsNav';
 import TabsNavItem from './TabsNavItem';
 import TabsContent from './TabsContent';
@@ -15,11 +15,11 @@ const Tabs: React.FC<Props> = ({ children, className, active }) => {
   const [current, setCurrent] = useState(active ? active : '');
 
   return (
-    <TabContext.Provider value={{current, setCurrent}}>
+    <TabsContext.Provider value={{current, setCurrent}}>
       <div className={className}>
         {children}
       </div>
-    </TabContext.Provider>
+    </TabsContext.Provider>
   );
 }
 

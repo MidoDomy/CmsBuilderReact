@@ -14,7 +14,7 @@ const DashboardSidebar: React.FC = () => {
     <div className={`relative transition-all ${settings ? 'w-72' : 'w-0'}`}>
       <Button className='absolute top-10 left-0 -translate-x-full w-10 border-r-0 border-gray-100 rounded-r-none bg-white shadow-sm'
         square
-        onPress={() => setSettings(!settings)}
+        onClick={() => setSettings(!settings)}
       >
         <Icon name='settings' className='' />
       </Button>

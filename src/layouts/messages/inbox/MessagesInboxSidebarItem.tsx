@@ -10,7 +10,7 @@ type Props = {
   text?: string;
   time?: string;
   isUnread?: boolean;
-  acive?: boolean;
+  active?: boolean;
 }
 
 const MessagesInboxSidebarItem: React.FC<Props> = ({avatar, name, text, time, isUnread, active}) => {

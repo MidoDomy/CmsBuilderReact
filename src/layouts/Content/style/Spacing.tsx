@@ -22,7 +22,7 @@ const StyleSpacing: React.FC = () => {
             max='999' 
           />
 
-          <Row align='center' gap={0}>
+          <Row align='center' gapX={0}>
             <Col span={2}>
               <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center text-slate-800 dark:text-slate-200'
                 type='number'  
@@ -42,7 +42,7 @@ const StyleSpacing: React.FC = () => {
                   max='999' 
                 />
 
-                <Row align='center' gap={0}>
+                <Row align='center' gapX={0}>
                   <Col span={3}>
                     <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center text-slate-800 dark:text-slate-200'
                       type='number'  

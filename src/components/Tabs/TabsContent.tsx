@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { TabContext } from 'contexts/Tab';
+import { TabsContext } from 'contexts/Tabs';
 
 type Props = {
   children?: React.ReactNode,
@@ -9,7 +9,7 @@ type Props = {
 }
 
 const TabsContent: React.FC<Props> = ({ children, className, name }) => {
-  const {current} = useContext(TabContext);
+  const {current} = useContext(TabsContext);
 
   return (
     <>

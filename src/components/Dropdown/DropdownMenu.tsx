@@ -10,9 +10,9 @@ type Props = {
 const DropdownMenu: React.FC<Props> = ({ children, className }) => {
   const {state, setState, position} = useContext(DropdownContext);
 
-  const menuRef = useRef(null)
-  const closeMenu = (e) => {
-    if(menuRef.current && state && !menuRef.current.contains(e.target)){
+  const menuRef = useRef<any>(null)
+  const closeMenu = (ev: MouseEvent)  => {
+    if(menuRef.current && state && !menuRef.current.contains(ev.target)){
       setState(false)
     }
   }

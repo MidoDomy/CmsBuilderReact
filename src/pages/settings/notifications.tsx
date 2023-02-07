@@ -39,7 +39,7 @@ const SettingsNotifications: NextPage = () => {
             id='comments' 
             label='Comments'
           >
-            <span className='text-sm text-slate-500'>Notify me when I'm mentioned in a comment.</span>
+            <span className='text-sm text-slate-500'>Notify me when I&apos;m mentioned in a comment.</span>
           </Form.Switch>
         </Form.Group>
       </SettingsSection>

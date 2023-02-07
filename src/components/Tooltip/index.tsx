@@ -6,7 +6,7 @@ type Props = {
   text: string,
   small?: boolean,
   click?: boolean,
-  onClick?: (event: React.MouseEvent<HTMLDivElement>) => void
+  onClick?: () => void
 }
 
 const Tooltip: React.FC<Props> = ({ children, className, text, small, click, onClick, ...props }) => {
@@ -19,7 +19,7 @@ const Tooltip: React.FC<Props> = ({ children, className, text, small, click, onC
 
   return (
     <div className={`relative ${click ? '' : '[&:hover>:first-child]:block'} ${show ? '[&>:first-child]:block' : ''} ${className}`} 
-      onClick={click ? () => { setShow(true); onClick();} : () => {}}
+      onClick={click ? () => { setShow(true); onClick && onClick();} : () => {}}
       {...props}
     >
       <div className={`absolute bottom-full left-1/2 transform -translate-x-1/2 hidden py-1 text-center bg-gray-100 dark:bg-gray-800 text-slate-900 dark:text-white shadow-lg ${small ? '-translate-y-2 px-2 rounded-md text-xs' : '-translate-y-4 px-4 rounded-lg text-sm'}`}>

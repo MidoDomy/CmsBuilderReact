@@ -14,15 +14,15 @@ const StyleTypography: React.FC = () => {
       </Collapse.Trigger>
 
       <Collapse.Content className='pt-3 pb-6 px-4'>
-        <Row cols={2} gap={6}>
+        <Row cols={2} gapX={6}>
           {/* Font */}
           <Col span={2}>
-            <Form.Select options={['Sans serif', 'Roboto', 'Hanken Grotesk', 'Chivo Mono', 'Unbounded']} />
+            {/* <Form.Select options={['Sans serif', 'Roboto', 'Hanken Grotesk', 'Chivo Mono', 'Unbounded']} /> */}
           </Col>
 
           {/* Type */}
           <Col span={2}>
-            <Form.Group justify='around'>
+            {/* <Form.Group justify='around'>
               <Form.Radio id='H1' name='textType' hideRadio>H1</Form.Radio>
               <Form.Radio id='H2' name='textType' hideRadio>H2</Form.Radio>
               <Form.Radio id='H3' name='textType' hideRadio>H3</Form.Radio>
@@ -30,17 +30,17 @@ const StyleTypography: React.FC = () => {
               <Form.Radio id='H5' name='textType' hideRadio>H5</Form.Radio>
               <Form.Radio id='H6' name='textType' hideRadio>H6</Form.Radio>
               <Form.Radio id='p' name='textType' hideRadio>p</Form.Radio>
-            </Form.Group>
+            </Form.Group> */}
           </Col>
 
           {/* Color */}
           <Col>
-            <Form.Select options={['White', 'Black', 'Primary', 'Secondary']} />
+            {/* <Form.Select options={['White', 'Black', 'Primary', 'Secondary']} /> */}
           </Col>
 
           {/* Size */}
           <Col>
-            <Form.Select options={['xs', 'sm', 'base', 'lg', 'xl', '2xl', '3xl', '4xl']} />
+            {/* <Form.Select options={['xs', 'sm', 'base', 'lg', 'xl', '2xl', '3xl', '4xl']} /> */}
           </Col>
 
           {/* Line-height */}
@@ -65,7 +65,7 @@ const StyleTypography: React.FC = () => {
 
           {/* Text-style */}
           <Col>
-            <Form.Group justify='between' align='center'>
+            {/* <Form.Group justify='between' align='center'>
               <Form.Check id='textBold' name='textBold' hideCheck>
                 <Icon name='text-bold' size={20} />
               </Form.Check>
@@ -77,12 +77,12 @@ const StyleTypography: React.FC = () => {
               <Form.Check id='textUnderline' name='textUnderline' hideCheck>
                 <Icon name='text-underline' size={20} />
               </Form.Check>
-            </Form.Group>
+            </Form.Group> */}
           </Col>
 
           {/* Text-transform */}
           <Col>
-            <Form.Group justify='between'>
+            {/* <Form.Group justify='between'>
               <Form.Radio id='text-uppercase' name='textTransform' hideRadio>
                 <Icon name='text-uppercase' size={20} />
               </Form.Radio>
@@ -94,12 +94,12 @@ const StyleTypography: React.FC = () => {
               <Form.Radio id='text-lowercase' name='textTransform' hideRadio>
                 <Icon name='text-lowercase' size={20} />
               </Form.Radio>
-            </Form.Group>
+            </Form.Group> */}
           </Col>
 
           {/* Text align */}
           <Col>
-            <Form.Group justify='between'>
+            {/* <Form.Group justify='between'>
               <Form.Radio id='align-left' name='textAlign' hideRadio>
                 <Icon name='text-align-left' size={20} />
               </Form.Radio>
@@ -115,7 +115,7 @@ const StyleTypography: React.FC = () => {
               <Form.Radio id='align-justify' name='textAlign' hideRadio>
                 <Icon name='text-align-justify' size={20} />
               </Form.Radio>
-            </Form.Group>
+            </Form.Group> */}
           </Col>
         </Row>
       </Collapse.Content>

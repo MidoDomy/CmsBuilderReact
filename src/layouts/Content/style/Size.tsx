@@ -13,7 +13,7 @@ const StyleSize: React.FC = () => {
       </Collapse.Trigger>
 
       <Collapse.Content className='pt-3 pb-6 px-4'>
-        <Row cols={2} gap={6}>
+        <Row cols={2} gapX={6}>
           <Col>
             <Form.Input
               type='number' 

@@ -19,7 +19,7 @@ const CollectionsOverview: NextPage = () => {
         <div>
           <Button className='transform translate-y-1/2 bg-red-400 rounded-full'
             square
-            onPress={() => alert('Button pressed!')}
+            onClick={() => alert('Button pressed!')}
           >
             <Icon name='plus' />
           </Button>
@@ -30,7 +30,7 @@ const CollectionsOverview: NextPage = () => {
         <Button
           variant='secondary' 
           square
-          onPress={() => setIsTableView(false)}  
+          onClick={() => setIsTableView(false)}  
         >
           <Icon name='categories' />
         </Button>
@@ -38,7 +38,7 @@ const CollectionsOverview: NextPage = () => {
         <Button 
           variant='secondary' 
           square
-          onPress={() => setIsTableView(true)}  
+          onClick={() => setIsTableView(true)}  
         >
           Table
         </Button>

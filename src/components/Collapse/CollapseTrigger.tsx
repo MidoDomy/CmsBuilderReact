@@ -21,9 +21,9 @@ const CollapseTrigger: React.FC<Props> = ({ children, className, openClasses, cl
     >
       <span className='flex-1 text-left'>{children}</span>
       {state ?
-        <Icon name={openIcon} size={16} />
+        <Icon name={openIcon ? openIcon : 'arrow-head-up'} size={16} />
         :
-        <Icon name={closeIcon} size={16} />
+        <Icon name={closeIcon ? closeIcon : 'arrow-head-down'} size={16} />
       }
     </button>
   );

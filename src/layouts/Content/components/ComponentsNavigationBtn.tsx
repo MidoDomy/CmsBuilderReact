@@ -9,7 +9,7 @@ type ComponentsNavigationBtnProps = {
 const ComponentsNavigationBtn: React.FC<ComponentsNavigationBtnProps> = ({ component }) => {
   return (
     <>
-      {!component.parts ? 
+      {/* {!component.parts ? 
         <button className='flex items-center w-full py-2 px-4 hover:bg-gray-50 dark:hover:bg-gray-900 text-left transition-colors cursor-pointer'>
           {component.name}
         </button>
@@ -31,7 +31,7 @@ const ComponentsNavigationBtn: React.FC<ComponentsNavigationBtnProps> = ({ compo
             </ul>   
           </Collapse.Content>
         </Collapse>
-      }
+      } */}
     </>
   );
 }

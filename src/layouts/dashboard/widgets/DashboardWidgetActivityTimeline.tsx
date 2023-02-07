@@ -44,7 +44,7 @@ const DashboardWidgetActivityTimeline: React.FC = () => {
                 <div className='text-slate-500'>2 hrs ago</div>
 
                 <div className='mb-3'>
-                  You've uploaded <strong>documentation.pdf</strong> to the <strong>Webpixels</strong> project
+                  You&apos;ve uploaded <strong>documentation.pdf</strong> to the <strong>Webpixels</strong> project
                 </div>
 
                 <div>

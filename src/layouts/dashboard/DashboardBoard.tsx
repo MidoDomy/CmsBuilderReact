@@ -72,7 +72,7 @@ const DashboardBoard: React.FC = () => {
     }),
   }));
 
-  const addWidgetToBoard = (widget) => {
+  const addWidgetToBoard = (widget: any) => {
     let item = { 
       colStart: 1,
       colEnd: 6,

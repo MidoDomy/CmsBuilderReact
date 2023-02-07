@@ -11,6 +11,7 @@ type Props = {
   placeholder?: string;
   type?: string;
   required?: boolean;
+  defaultValue?: any;
 }
 
 const Input: React.FC<Props> = ({ className, prefix, suffix, size, label, placeholder, type, required, ...props }) => {

@@ -7,7 +7,7 @@ import Form from 'components/Form';
 const DashboardSidebarSettings: React.FC = () => {
   return (
     <>
-      <Row cols={2} gap={8} align='center'>
+      <Row cols={2} gapX={8} align='center'>
         <Col>
           <Form.Input type='number' prefix='C' defaultValue={20} />
         </Col>

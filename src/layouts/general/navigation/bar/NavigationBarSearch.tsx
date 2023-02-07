@@ -14,7 +14,7 @@ const NavigationBarSearch: React.FC = () => {
   });
 
   const [searchValue, setSearchValue] = useState('');
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setSearchValue(e.currentTarget.value);
   };
   const handleClear = () => {
