@@ -5,7 +5,7 @@ import Button from 'components/Button';
 import Icon from 'components/Icon';
 
 import Layout from 'layouts/general/Layout';
-import CollectionsCard from 'layouts/collections/CollectionsCard';
+// import CollectionsCard from 'layouts/collections/CollectionsCard';
 
 const CollectionsOverview: NextPage = () => {
 
@@ -50,8 +50,8 @@ const CollectionsOverview: NextPage = () => {
         </div>
         :
         <div className='flex flex-wrap gap-4'>
-          <CollectionsCard link='/collections/blogs' name='Blogs' />
-          <CollectionsCard link='/collections/overview' name='Articles' />
+          {/* <CollectionsCard link='/collections/blogs' name='Blogs' />
+          <CollectionsCard link='/collections/overview' name='Articles' /> */}
         </div>
       }
     </Layout>
