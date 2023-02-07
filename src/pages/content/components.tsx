@@ -4,7 +4,7 @@ import Layout from 'layouts/general/Layout';
 import Container from 'components/Container';
 import Sidebar from 'components/Sidebar';
 import Tabs from 'components/Tabs';
-import ComponentsNavigationBtn from 'layouts/content/components/ComponentsNavigationBtn';
+// import ComponentsNavigationBtn from 'layouts/content/components/ComponentsNavigationBtn';
 import StyleAlign from 'layouts/content/style/Align';
 import StyleSize from 'layouts/content/style/Size';
 import StyleSpacing from 'layouts/content/style/Spacing';
@@ -54,7 +54,7 @@ const Components: NextPage = () => {
           <ul>
             {components?.map((component, index) => (
               <li key={index}>
-                <ComponentsNavigationBtn component={component} />
+                {/* <ComponentsNavigationBtn component={component} /> */}
               </li>
             ))}
           </ul>
