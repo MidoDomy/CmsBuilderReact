@@ -5,7 +5,7 @@ import Container from 'components/Container';
 import Sidebar from 'components/Sidebar';
 import Tabs from 'components/Tabs';
 // import ComponentsNavigationBtn from 'layouts/content/components/ComponentsNavigationBtn';
-import StyleAlign from 'layouts/content/style/Align';
+import StyleAlign from 'layouts/content/style/StyleAlign';
 import StyleSize from 'layouts/content/style/Size';
 import StyleSpacing from 'layouts/content/style/Spacing';
 import StyleTypography from 'layouts/content/style/Typography';
