@@ -2,8 +2,8 @@ import React from 'react';
 
 import Row from 'components/Row';
 import Col from 'components/Col';
-import ColorsGroupItem from 'layouts/content/utils/colors/group/ColorsGroupItem';
-import ColorsGroupItemAdd from 'layouts/content/utils/colors/group/ColorsGroupItemAdd';
+import ColorsGroupItem from './group/ColorsGroupItem';
+import ColorsGroupItemAdd from './group/ColorsGroupItemAdd';
 
 type Props = {
   name: string;
