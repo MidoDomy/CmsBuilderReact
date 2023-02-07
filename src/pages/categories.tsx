@@ -52,6 +52,10 @@ const Categories: NextPage = () => {
                   <CategoriesSEO />
                   <CategoriesCustomFields />
                 </Tabs.Content>
+
+                <Tabs.Content name='Layout'>
+                  TODO: https://dev-oasis.atlassian.net/browse/CB-83
+                </Tabs.Content>
               </Tabs>
             </Container>
           </div>
