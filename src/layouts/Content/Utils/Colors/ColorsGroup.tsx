@@ -2,8 +2,7 @@ import React from 'react';
 
 import Row from 'components/Row';
 import Col from 'components/Col';
-import Icon from 'components/Icon';
-import ColorsGroupItem from 'layouts/content/utils/colors/group/ColorsGroupItem';
+import ColorsGroupItem from './group/ColorsGroupItem';
 import ColorsGroupItemAdd from './group/ColorsGroupItemAdd';
 
 type Props = {
