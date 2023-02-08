@@ -10,19 +10,20 @@ import Layout from 'layouts/general/Layout';
 import PageHeader from 'layouts/general/PageHeader';
 import CollectionsCard from 'layouts/collections/CollectionsCard';
 
-const CollectionsOverview: NextPage = () => {
+const CollectionsList: NextPage = () => {
   const [isTableView, setIsTableView] = useState(false);
 
   return (
     <Layout>
       {/* Page header */}
       <PageHeader 
-        title='Collections'
-        description='Create your own collection of items with the same fields.'
+        title='Collection name'
+        description='Small collection description.'
+        returnRoute='/collections/overview'
         actions={
           <Button>
             <Icon name='plus' size={16} />
-            Add new
+            Add new item
           </Button>
         }
       />
@@ -65,25 +66,23 @@ const CollectionsOverview: NextPage = () => {
         <Container>
           {isTableView ? 
             <div>
-              TODO: https://dev-oasis.atlassian.net/browse/CB-84
+              TODO: https://dev-oasis.atlassian.net/browse/CB-85
             </div>
             :
             <div>
               <Row gapX={16}>
                 <Col span={3}>
                   <CollectionsCard 
-                    link='/collections/list' 
-                    name='Blogs' 
-                    count={45}
+                    link='/collections/item' 
+                    name='Item 1' 
                     description='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
                   />
                 </Col>
 
                 <Col span={3}>
                   <CollectionsCard 
-                    link='/collections/list' 
-                    name='Products' 
-                    count={5}
+                    link='/collections/item' 
+                    name='Item 2' 
                   />
                 </Col>
               </Row>
@@ -95,4 +94,4 @@ const CollectionsOverview: NextPage = () => {
   )
 }
 
-export default CollectionsOverview;
+export default CollectionsList;
