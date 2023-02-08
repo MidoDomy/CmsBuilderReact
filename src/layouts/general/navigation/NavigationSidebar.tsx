@@ -36,6 +36,20 @@ const NavigationSidebar: React.FC = () => {
           name: 'Overview',
           link: '/collections/overview',
           children: null
+        },
+        {
+          id: 20,
+          icon: 'circle',
+          name: 'Blogs',
+          link: '/collections/list',
+          children: null
+        },
+        {
+          id: 21,
+          icon: 'circle',
+          name: 'Products',
+          link: '/collections/list',
+          children: null
         }
       ]
     },
