@@ -20,7 +20,7 @@ const CollectionsOverview: NextPage = () => {
         title='Collections'
         description='Create your own collection of items with the same fields.'
         actions={
-          <Button>
+          <Button href='/collections/config'>
             <Icon name='plus' size={16} />
             Add new
           </Button>
