@@ -7,7 +7,7 @@ import NavigationBarMessages from './bar/NavigationBarMessages';
 
 const NavigationBar: React.FC = () => {
   return (
-    <header className={`py-[7px] bg-white/75 border-b border-gray-200 shadow-sm`}>
+    <header className={`py-[7px] bg-white border-b border-gray-200 shadow-sm`}>
       <Container className='flex items-center justify-between'>
         {/* Search */}
         <div className='w-1/2'>

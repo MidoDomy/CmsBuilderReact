@@ -37,7 +37,7 @@ const Categories: NextPage = () => {
           <div>
             <Container>
               <Tabs active='General'>
-                <Tabs.Nav>
+                <Tabs.Nav className='mb-10'>
                   <Tabs.NavItem name='General'>
                     General
                   </Tabs.NavItem>
