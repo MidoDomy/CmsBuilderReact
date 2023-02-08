@@ -11,17 +11,17 @@ import Layout from 'layouts/general/Layout';
 import PageHeader from 'layouts/general/PageHeader';
 import Section from 'layouts/general/Section';
 
-const CollectionsItem: NextPage = () => {
+const CollectionsConfig: NextPage = () => {
   return (
     <Layout>
       {/* Page header */}
       <PageHeader 
-        title='Item name'
-        returnRoute='/collections/list'
+        title='Collection create/edit'
+        description='Add sections and fields that will be available in collection item.'
         actions={
           <Row gapX={8}>
             <Col>
-              <Button href='/collections/list'>
+              <Button href='/collections/overview'>
                 Cancel
               </Button>
             </Col>
@@ -45,25 +45,18 @@ const CollectionsItem: NextPage = () => {
                 General
               </Tabs.NavItem>
 
-              <Tabs.NavItem name='Layout'>
-                Layout
+              <Tabs.NavItem name='Item'>
+                Item config
               </Tabs.NavItem>
             </Tabs.Nav>
 
-            {/* Sections and fields */}
+            {/* Collection data */}
             <Tabs.Content name='General'>
               {/* General */}
               <Section 
                 title='General' 
-                description='General informations about collection item.'
+                description='General informations about collection.'
               >
-                <Form.Group>
-                  <Form.Switch
-                    id='activeCollectionItem' 
-                    label='Activate' 
-                  />
-                </Form.Group>
-
                 <Form.Group>
                   <Form.Input
                     label='Name'
@@ -82,19 +75,29 @@ const CollectionsItem: NextPage = () => {
                   <Form.FileUpload label='Image' />
                 </Form.Group>
               </Section>
-
-              {/* Additional sections and fields */}
-              <Section 
-                title='Additional section' 
-                description='Created additional sections in collection.'
-              >
-                Additional fields
-              </Section>
             </Tabs.Content>
 
-            {/* Assign layout to item */}
-            <Tabs.Content name='Layout'>
-              TODO: https://dev-oasis.atlassian.net/browse/CB-88
+            {/* Collection item data */}
+            <Tabs.Content name='Item'>
+              {/* Added section */}
+              <Section
+                title='Section name'
+                description='Section description.'
+              >
+                TODO: https://dev-oasis.atlassian.net/browse/CB-89
+              </Section>
+
+              {/* Add new section */}
+              <div className='flex flex-col items-center justify-center gap-1 py-8'>
+                <div className='font-medium text-sm'>Click to add new section</div>
+                <Button
+                  variant='primary'
+                  size='sm'
+                  rounded
+                >
+                  <Icon name='plus' size={16} />
+                </Button>
+              </div>
             </Tabs.Content>
           </Tabs>
         </Container>
@@ -103,4 +106,4 @@ const CollectionsItem: NextPage = () => {
   )
 }
 
-export default CollectionsItem;
+export default CollectionsConfig;
