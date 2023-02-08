@@ -21,7 +21,7 @@ const CollectionsList: NextPage = () => {
         description='Small collection description.'
         returnRoute='/collections/overview'
         actions={
-          <Button>
+          <Button href='/collections/item'>
             <Icon name='plus' size={16} />
             Add new item
           </Button>
