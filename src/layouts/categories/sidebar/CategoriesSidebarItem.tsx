@@ -5,7 +5,6 @@ import Row from 'components/Row';
 import Col from 'components/Col';
 import Collapse from 'components/Collapse';
 import Icon from 'components/Icon';
-import Button from 'components/Button';
 import CategoriesSidebarItemOptions from './CategoriesSidebarItemOptions';
 
 interface categoryItem {
