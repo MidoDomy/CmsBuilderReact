@@ -3,11 +3,12 @@ import React from 'react';
 type Props = {
   children: React.ReactNode;
   className?: string;
+  size?: 'sm' | 'normal';
 }
 
-const Label: React.FC<Props> = ({ children, className, ...props }) => {
+const Label: React.FC<Props> = ({ children, className, size, ...props }) => {
   return (
-    <label className='block mb-0.5 text-sm font-medium'
+    <label className={`block mb-0.5 font-medium ${size == 'sm' ? 'text-xs' : 'text-sm'}`}
       {...props}
     >
       {children}
@@ -16,7 +17,8 @@ const Label: React.FC<Props> = ({ children, className, ...props }) => {
 }
 
 Label.defaultProps = {
-  className: ''
+  className: '',
+  size: 'normal'
 }
 
 export default Label;

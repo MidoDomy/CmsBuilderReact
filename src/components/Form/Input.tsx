@@ -18,7 +18,7 @@ const Input: React.FC<Props> = ({ className, prefix, suffix, size, label, placeh
 
   const sizeClasses = (() => {switch(size) {
     case 'sm':
-      return (prefix ? 'pl-8 ' : 'pl-2.5 ') + (suffix ? 'pr-8 ' : 'pr-2.5 ') + 'py-1.5 text-sm'
+      return (prefix ? 'pl-8 ' : 'pl-2.5 ') + (suffix ? 'pr-8 ' : 'pr-2.5 ') + 'py-1 text-sm'
     case 'lg':
       return (prefix ? 'pl-8 ' : 'pl-3 ') + (suffix ? 'pr-8 ' : 'pr-3 ') + 'py-2'
     default: 
@@ -28,6 +28,7 @@ const Input: React.FC<Props> = ({ className, prefix, suffix, size, label, placeh
   return (
     <BaseField className={className}
       label={label}
+      labelSize={size == 'sm' ? 'sm' : 'normal'}
       required={required}
     >
       <div className='relative'>
