@@ -6,14 +6,15 @@ type Props = {
   children: React.ReactNode;
   className?: string;
   label?: string;
+  labelSize?: 'sm' | 'normal';
   error?: string;
   required?: boolean;
 }
 
-const BaseField: React.FC<Props> = ({ children, className, label, error, required }) => {
+const BaseField: React.FC<Props> = ({ children, className, label, labelSize, error, required }) => {
   return (
     <div className={className}>
-      {label && <Label>{label} {required && <span className='font-normal text-xs'>(required)</span>}</Label>}
+      {label && <Label size={labelSize}>{label} {required && <span className='font-normal text-xs'>(required)</span>}</Label>}
 
       <div className='select-none'>
         {children}
@@ -25,7 +26,8 @@ const BaseField: React.FC<Props> = ({ children, className, label, error, require
 }
 
 BaseField.defaultProps = {
-  className: ''
+  className: '',
+  labelSize: 'normal'
 }
 
 export default BaseField;

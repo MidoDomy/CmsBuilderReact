@@ -17,7 +17,7 @@ const Select: React.FC<Props> = ({ className, selectClass, options, label, place
 
   const sizeClasses = (() => {switch(size) {
     case 'sm':
-      return 'py-1.5 pl-2.5 pr-8 text-sm'
+      return 'py-1 pl-2.5 pr-8 text-sm'
     case 'lg':
       return 'py-2 pl-3 pr-8'
     default: 
@@ -27,6 +27,7 @@ const Select: React.FC<Props> = ({ className, selectClass, options, label, place
   return (
     <BaseField className={className}
       label={label}
+      labelSize={size == 'sm' ? 'sm' : 'normal'}
       required={required}
     >
       <div className='relative'>

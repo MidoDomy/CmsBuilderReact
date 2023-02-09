@@ -19,7 +19,7 @@ const ComponentsNavigationSidebarItem: React.FC<Props> = ({ component }) => {
   const hasParts = component.parts && component.parts.length;
 
   // TODO: Set active condition
-  const active = false;
+  const active = component.name == 'Button';
 
   return (
     <>
