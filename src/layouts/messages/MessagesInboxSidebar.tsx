@@ -10,7 +10,7 @@ import MessagesInboxSidebarItem from './inbox/MessagesInboxSidebarItem';
 
 const MessagesInboxSidebar: React.FC = () => {
   return (
-    <Sidebar className='w-72'>
+    <Sidebar className='w-80'>
       <Sidebar.Header className='pt-6 px-4'>
         <Row justify='between' align='center'>
           <Col>
