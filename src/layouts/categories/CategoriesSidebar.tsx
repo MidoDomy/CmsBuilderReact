@@ -56,7 +56,9 @@ const CategoriesSidebar: React.FC = () => {
       <Sidebar.Body>
         <ul className='text-sm'>
           {categories.map((category) => (
-            <li key={category.id}>
+            <li className='mb-1 last:mb-0' 
+              key={category.id}
+            >
               <CategoriesSidebarItem name={category.name} subCategories={category.subCategories}/>
             </li>
           ))}

@@ -20,7 +20,7 @@ const ComponentsSettingsSidebar: React.FC = () => {
           </Tabs.Nav>
 
           <Tabs.Content name='Options'>
-            Options
+            TODO: https://dev-oasis.atlassian.net/browse/CB-92
           </Tabs.Content>
 
           <Tabs.Content name='Styles'>
