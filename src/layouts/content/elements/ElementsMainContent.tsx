@@ -24,13 +24,15 @@ const ElementsMainContent: React.FC = () => {
             }}
           >
             {/* Image */}
-            <div
+            <div className='ring-2 ring-offset-2 ring-transparent hover:ring-sky-500 transition-all cursor-pointer'
               style={{
                 gridColumnStart: 1, 
                 gridColumnEnd: -1, 
                 gridRowStart: 1, 
                 gridRowEnd: 8,
-                marginBottom: '10px'
+                marginBottom: '10px',
+                borderRadius: '6px',
+                overflow: 'hidden'
               }}
             >
               <Image className='h-full w-full object-cover' 
@@ -39,7 +41,7 @@ const ElementsMainContent: React.FC = () => {
             </div>
 
             {/* Name */}
-            <div
+            <div className='ring-2 ring-offset-2 ring-transparent hover:ring-sky-500 transition-all cursor-pointer'
               style={{
                 gridColumnStart: 1, 
                 gridColumnEnd: -1, 
@@ -55,12 +57,12 @@ const ElementsMainContent: React.FC = () => {
             </div>
 
             {/* Description */}
-            <div
+            <div className='ring-2 ring-offset-2 ring-transparent hover:ring-sky-500 transition-all cursor-pointer'
               style={{
                 gridColumnStart: 1, 
                 gridColumnEnd: -1, 
                 gridRowStart: 9, 
-                gridRowEnd: 11,
+                gridRowEnd: 12,
                 paddingTop: '5px',
                 color: '#8491a3'
               }}
