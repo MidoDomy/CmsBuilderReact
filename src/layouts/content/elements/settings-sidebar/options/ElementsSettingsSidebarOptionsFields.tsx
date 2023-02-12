@@ -13,9 +13,8 @@ const ElementsSettingsSidebarOptionsFields: React.FC = () => {
       <Collapse.Content className='pt-3 pb-5 px-1'>
         <Form.Group>
           {/* Image */}
-          <Form.FileUpload
-            label='Image'
-          />
+          <Form.Label size='sm'>Image</Form.Label>
+          <Form.FileUpload />
         </Form.Group>
 
         <Form.Group>

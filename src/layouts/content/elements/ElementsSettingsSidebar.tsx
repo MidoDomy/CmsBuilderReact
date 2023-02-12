@@ -2,6 +2,7 @@ import React from 'react';
 
 import Sidebar from 'components/Sidebar';
 import Tabs from 'components/Tabs';
+import ElementsSettingsSidebarComponents from './settings-sidebar/ElementsSettingsSidebarComponents';
 import ElementsSettingsSidebarOptions from './settings-sidebar/ElementsSettingsSidebarOptions';
 import ElementsSettingsSidebarStyles from './settings-sidebar/ElementsSettingsSidebarStyles';
 
@@ -17,7 +18,7 @@ const ElementsSettingsSidebar: React.FC = () => {
           </Tabs.Nav>
 
           <Tabs.Content name='Components'>
-            Components
+            <ElementsSettingsSidebarComponents />
           </Tabs.Content>
 
           <Tabs.Content name='Options'>
