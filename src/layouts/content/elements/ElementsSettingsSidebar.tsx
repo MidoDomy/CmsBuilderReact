@@ -2,6 +2,7 @@ import React from 'react';
 
 import Sidebar from 'components/Sidebar';
 import Tabs from 'components/Tabs';
+import ElementsSettingsSidebarStyles from './settings-sidebar/ElementsSettingsSidebarStyles';
 
 const ElementsSettingsSidebar: React.FC = () => {
   return (
@@ -23,7 +24,7 @@ const ElementsSettingsSidebar: React.FC = () => {
           </Tabs.Content>
 
           <Tabs.Content name='Styles'>
-            Styles
+            <ElementsSettingsSidebarStyles />
           </Tabs.Content>
         </Tabs>
       </Sidebar.Body>
