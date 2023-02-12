@@ -3,18 +3,33 @@ import React from 'react';
 import Collapse from 'components/Collapse';
 import Form from 'components/Form';
 
-const ElementsSettingsSidebarOptionsGeneral: React.FC = () => {
+const ElementsSettingsSidebarOptionsFields: React.FC = () => {
   return (
     <Collapse active>
       <Collapse.Trigger className='py-1 px-2 rounded cursor-pointer transition-colors hover:bg-gray-50 text-sm'>
-        General
+        Fields
       </Collapse.Trigger>
 
       <Collapse.Content className='pt-3 pb-5 px-1'>
         <Form.Group>
+          {/* Image */}
+          <Form.FileUpload
+            label='Image'
+          />
+        </Form.Group>
+
+        <Form.Group>
           {/* Name */}
           <Form.Input
-            label='Element name'
+            label='Name'
+            size='sm'
+          />
+        </Form.Group>
+
+        <Form.Group>
+          {/* Description */}
+          <Form.Input
+            label='Description'
             size='sm'
           />
         </Form.Group>
@@ -23,4 +38,4 @@ const ElementsSettingsSidebarOptionsGeneral: React.FC = () => {
   );
 }
 
-export default ElementsSettingsSidebarOptionsGeneral;
+export default ElementsSettingsSidebarOptionsFields;
