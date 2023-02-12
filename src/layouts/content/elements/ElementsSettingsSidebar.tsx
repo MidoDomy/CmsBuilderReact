@@ -2,13 +2,14 @@ import React from 'react';
 
 import Sidebar from 'components/Sidebar';
 import Tabs from 'components/Tabs';
+import ElementsSettingsSidebarOptions from './settings-sidebar/ElementsSettingsSidebarOptions';
 import ElementsSettingsSidebarStyles from './settings-sidebar/ElementsSettingsSidebarStyles';
 
 const ElementsSettingsSidebar: React.FC = () => {
   return (
     <Sidebar className='w-80'>
       <Sidebar.Body>
-        <Tabs active='Options'>
+        <Tabs active='Styles'>
           <Tabs.Nav className='mb-3 text-sm'>
             <Tabs.NavItem name='Components'>Components</Tabs.NavItem>
             <Tabs.NavItem name='Options'>Options</Tabs.NavItem>
@@ -20,7 +21,7 @@ const ElementsSettingsSidebar: React.FC = () => {
           </Tabs.Content>
 
           <Tabs.Content name='Options'>
-            Options
+            <ElementsSettingsSidebarOptions />
           </Tabs.Content>
 
           <Tabs.Content name='Styles'>
