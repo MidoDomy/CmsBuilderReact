@@ -106,7 +106,7 @@ const NavigationSidebar: React.FC = () => {
           id: 11,
           icon: 'circle',
           name: 'Layouts',
-          link: '/content/layouts',
+          link: '/content/layouts/overview',
           children: null
         }
       ]
