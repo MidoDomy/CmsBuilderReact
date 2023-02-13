@@ -12,7 +12,7 @@ type Props = {
   name: string;
 }
 
-const LayoutsCard: React.FC<Props> = ({link, img, name}) => {
+const LayoutsOverviewCard: React.FC<Props> = ({link, img, name}) => {
   return (
     <div className='relative [&:hover>:first-child]:block'>
       {/* Dropdown menu */}
@@ -65,4 +65,4 @@ const LayoutsCard: React.FC<Props> = ({link, img, name}) => {
   )
 }
 
-export default LayoutsCard;
+export default LayoutsOverviewCard;
