@@ -33,7 +33,7 @@ const LayoutsDetailNavigationSidebar: React.FC = () => {
     },
     {
       id: 5,
-      name: 'Section Logos',
+      name: 'Section logos',
       parts: [
         {
           id: 6,
@@ -78,39 +78,6 @@ const LayoutsDetailNavigationSidebar: React.FC = () => {
           parts: [
             {
               id: 18,
-              name: 'Logo image',
-              parts: []
-            }
-          ]
-        },
-        {
-          id: 13,
-          name: 'Logo card',
-          parts: [
-            {
-              id: 19,
-              name: 'Logo image',
-              parts: []
-            }
-          ]
-        },
-        {
-          id: 14,
-          name: 'Logo card',
-          parts: [
-            {
-              id: 20,
-              name: 'Logo image',
-              parts: []
-            }
-          ]
-        },
-        {
-          id: 15,
-          name: 'Logo card',
-          parts: [
-            {
-              id: 21,
               name: 'Logo image',
               parts: []
             }
