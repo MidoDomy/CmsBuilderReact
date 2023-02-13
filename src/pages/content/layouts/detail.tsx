@@ -1,11 +1,11 @@
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
 
 import Layout from 'layouts/general/Layout';
 
 const Layouts: NextPage = () => {
   return (
     <Layout>
-      Layouts
+      Layout config
     </Layout>
   )
 }

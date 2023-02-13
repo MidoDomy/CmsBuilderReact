@@ -11,7 +11,7 @@ type Props = {
   description?: string;
 }
 
-const CollectionsOverviewCard: React.FC<Props> = ({link, img, name, count, description}) => {
+const CollectionsCard: React.FC<Props> = ({link, img, name, count, description}) => {
   return (
     <Link className='block h-full bg-white border border-gray-200 rounded-md cursor-pointer hover:shadow transition-shadow'
       href={link}
@@ -36,4 +36,4 @@ const CollectionsOverviewCard: React.FC<Props> = ({link, img, name, count, descr
   )
 }
 
-export default CollectionsOverviewCard;
+export default CollectionsCard;
