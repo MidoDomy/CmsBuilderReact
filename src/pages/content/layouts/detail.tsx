@@ -5,7 +5,7 @@ import Col from 'components/Col';
 import Layout from 'layouts/general/Layout';
 import LayoutsDetailNavigationSidebar from 'layouts/content/layouts/detail/LayoutsDetailNavigationSidebar';
 import LayoutsDetailContent from 'layouts/content/layouts/detail/LayoutsDetailContent';
-// import LayoutsDetailSettingsSidebar from 'layouts/content/layouts/detail/LayoutsDetailSettingsSidebar';
+import LayoutsDetailSettingsSidebar from 'layouts/content/layouts/detail/LayoutsDetailSettingsSidebar';
 
 const LayoutsDetail: NextPage = () => {
   return (
@@ -15,12 +15,14 @@ const LayoutsDetail: NextPage = () => {
           <LayoutsDetailNavigationSidebar />
         </Col>
 
-        <Col fill>
+        <Col className='max-w-[calc(100vw_-_669px)] overflow-auto'
+          fill
+        >
           <LayoutsDetailContent />
         </Col>
 
         <Col>
-          {/* <LayoutsDetailSettingsSidebar /> */}
+          <LayoutsDetailSettingsSidebar />
         </Col>
       </Row>
     </Layout>
