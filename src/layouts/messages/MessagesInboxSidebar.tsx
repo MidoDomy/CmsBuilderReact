@@ -39,14 +39,14 @@ const MessagesInboxSidebar: React.FC = () => {
         <Tabs active='direct'>
           <Tabs.Nav className='mx-4 mb-4 p-1.5 bg-gray-100 rounded-md'>
             <Tabs.NavItem className='w-1/2 justify-center py-0.5 !border-0 rounded text-sm'
-              activeClass='bg-gray-200'
+              activeClass='bg-white'
               name='direct'
             >
               Direct
             </Tabs.NavItem>
 
             <Tabs.NavItem className='w-1/2 justify-center py-0.5 !border-0 rounded text-sm' 
-              activeClass='bg-gray-200'
+              activeClass='bg-white'
               name='group'
             >
               Groups
