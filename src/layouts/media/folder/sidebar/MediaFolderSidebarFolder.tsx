@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Sidebar from 'components/Sidebar';
 import Image from 'components/Image';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
+import ModalConfirmDeletion from 'layouts/general/ModalConfirmDeletion';
 
 const MediaFolderSidebarFolder: React.FC = () => {
+  const [showModalConfirmDeletion, setShowModalConfirmDeletion] = useState(false);
+
   return (
     <Sidebar.Body className='px-5'>
       {/* Folder preview */}
@@ -122,10 +125,17 @@ const MediaFolderSidebarFolder: React.FC = () => {
         <Button 
           variant='danger-outline'
           block
+          onClick={() => setShowModalConfirmDeletion(true)}
         >
           Delete
         </Button>
       </div>
+
+      {/* Modal confirm deletion */}
+      <ModalConfirmDeletion 
+        isOpen={showModalConfirmDeletion}
+        onClose={() => setShowModalConfirmDeletion(false)}
+      />
     </Sidebar.Body>
   )
 }

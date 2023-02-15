@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Sidebar from 'components/Sidebar';
 import Row from 'components/Row';
@@ -6,8 +6,11 @@ import Col from 'components/Col';
 import Image from 'components/Image';
 import Form from 'components/Form';
 import Button from 'components/Button';
+import ModalConfirmDeletion from 'layouts/general/ModalConfirmDeletion';
 
 const MediaFolderSidebarItem: React.FC = () => {
+  const [showModalConfirmDeletion, setShowModalConfirmDeletion] = useState(false);
+
   return (
     <Sidebar.Body className='px-5'>
       {/* Image */}
@@ -116,6 +119,7 @@ const MediaFolderSidebarItem: React.FC = () => {
               <Button className='text-xs'
                 variant='danger-outline'
                 size='xs'
+                onClick={() => setShowModalConfirmDeletion(true)}
               >
                 Remove
               </Button>
@@ -133,6 +137,7 @@ const MediaFolderSidebarItem: React.FC = () => {
               <Button className='text-xs'
                 variant='danger-outline'
                 size='xs'
+                onClick={() => setShowModalConfirmDeletion(true)}
               >
                 Remove
               </Button>
@@ -157,12 +162,19 @@ const MediaFolderSidebarItem: React.FC = () => {
             <Button 
               variant='danger-outline'
               block
+              onClick={() => setShowModalConfirmDeletion(true)}
             >
               Delete
             </Button>
           </Col>
         </Row>
       </div>
+
+      {/* Modal confirm deletion */}
+      <ModalConfirmDeletion 
+        isOpen={showModalConfirmDeletion}
+        onClose={() => setShowModalConfirmDeletion(false)}
+      />
     </Sidebar.Body>
   )
 }
