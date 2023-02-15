@@ -23,7 +23,7 @@ const CategoriesSidebarItem: React.FC<Props> = ({ subCategories, name }) => {
   const [open, setOpen] = useState(false);
 
   // TODO: Set active condition
-  const active = false;
+  const active = name == 'Category 1';
 
   return (
     <>

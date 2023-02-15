@@ -45,9 +45,10 @@ const Modal: React.FC<Props> = ({ children, className, size, isOpen, showClose, 
                 {...props}
               >
                 {showClose &&
-                  <Button className='absolute top-2.5 right-6'
-                    square
+                  <Button className='absolute top-4 right-6'
+                    variant='ghost'
                     size='sm'
+                    rounded
                     onClick={onClose}
                   >
                     <Icon name='x' size={18} />

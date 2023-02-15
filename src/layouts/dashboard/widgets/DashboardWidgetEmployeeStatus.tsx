@@ -2,8 +2,6 @@ import React from 'react';
 
 import Row from 'components/Row';
 import Col from 'components/Col';
-import Icon from 'components/Icon';
-import Button from 'components/Button';
 import DataGrid from 'components/DataGrid';
 import Avatar from 'components/Avatar';
 
