@@ -18,19 +18,28 @@ const MediaOverviewFolder: React.FC<Props> = ({ name, size }) => {
       >
         <Col span={3}>
           <div className='aspect-square transition-transform hover:-translate-y-2'>
-            <Image className='w-full rounded' src='app-image.png' />
+            <Image className='w-full rounded' 
+              src='app-image.png' 
+              alt=''
+            />
           </div>
         </Col>
 
         <Col span={2}>
           <div className='aspect-square transition-transform hover:-translate-y-2'>
-            <Image className='w-full rounded' src='light-theme.png' />
+            <Image className='w-full rounded' 
+              src='light-theme.png' 
+              alt=''
+            />
           </div>
         </Col>
         
         <Col span={2}>
           <div className='aspect-square transition-transform hover:-translate-y-2'>
-            <Image className='w-full rounded' src='dark-theme.png' />
+            <Image className='w-full rounded' 
+              src='dark-theme.png' 
+              alt=''
+            />
           </div>
         </Col>
       </Row>

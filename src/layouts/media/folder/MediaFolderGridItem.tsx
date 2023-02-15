@@ -9,10 +9,10 @@ type Props = {
   active?: boolean;
 }
 
-const MediaFolderImage: React.FC<Props> = ({image, name, size, active}) => {
+const MediaFolderGridItem: React.FC<Props> = ({image, name, size, active}) => {
   return (
     <div className='cursor-pointer'>
-      <div className={`aspect-video mb-2 rounded ring-2 ring-offset-4 hover:ring-sky-500 transition-all ${active ? 'ring-sky-500' : 'ring-transparent'}`}>
+      <div className={`aspect-video mb-2 rounded ring-2 ring-offset-2 hover:ring-sky-500 transition-all ${active ? 'ring-sky-500' : 'ring-transparent'}`}>
         <Image className='w-full h-full object-cover rounded-lg' 
           src={image} 
           alt={name}
@@ -25,4 +25,4 @@ const MediaFolderImage: React.FC<Props> = ({image, name, size, active}) => {
   )
 }
 
-export default MediaFolderImage;
+export default MediaFolderGridItem;

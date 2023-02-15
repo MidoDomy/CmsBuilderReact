@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { useState } from 'react';
 import Link from 'next/link';
 
 import Layout from 'layouts/general/Layout';
@@ -8,9 +9,12 @@ import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
+import MediaOverviewModalAdd from 'layouts/media/overview/MediaOverviewModalAdd';
 import MediaOverviewFolder from 'layouts/media/overview/MediaOverviewFolder';
 
 const MediaOverview: NextPage = () => {
+  const [showModalAdd, setShowModalAdd] = useState(false);
+
   return (
     <Layout>
       {/* Page header */}
@@ -18,11 +22,17 @@ const MediaOverview: NextPage = () => {
         title='Media'
         description='Keep your media files organized.'
         actions={
-          <Button>
+          <Button onClick={() => setShowModalAdd(true)}>
             <Icon name='plus' size={18} />
-            <span>Add new folder</span>
+            <span>Add folder</span>
           </Button>
         }
+      />
+
+      {/* Modal add folder */}
+      <MediaOverviewModalAdd 
+        isOpen={showModalAdd}
+        onClose={() => setShowModalAdd(false)}
       />
 
       {/* Content */}

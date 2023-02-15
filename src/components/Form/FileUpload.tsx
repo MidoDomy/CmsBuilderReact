@@ -20,7 +20,7 @@ const FileUpload: React.FC<Props> = ({children, className, id, value, icon, labe
     <>
       {label && <Label>{label}</Label>}
       
-      <div className={`relative flex flex-col items-center py-5 px-6 bg-white border border-gray-200 rounded select-none cursor-pointer ${className}`}
+      <div className={`relative flex flex-col items-center py-5 px-6 bg-white border-2 border-dashed border-gray-200 rounded select-none cursor-pointer ${className}`}
         {...props}
       >
         <input className='absolute top-0 left-0 right-0 bottom-0 opacity-0 cursor-pointer' 

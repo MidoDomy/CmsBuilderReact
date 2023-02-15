@@ -7,7 +7,7 @@ type Props = {
 
 const DataGridRow: React.FC<Props> = ({children, className}) => {
   return (
-    <tr className={`shadow-sm rounded-lg ${className}`}>
+    <tr className={`bg-white hover:bg-gray-50 shadow-sm hover:shadow rounded-lg ${className}`}>
       {children}
     </tr>
   );

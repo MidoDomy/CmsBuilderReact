@@ -8,7 +8,7 @@ type Props = {
 
 const Label: React.FC<Props> = ({ children, className, size, ...props }) => {
   return (
-    <label className={`block mb-0.5 font-medium ${size == 'sm' ? 'text-xs' : 'text-sm'}`}
+    <label className={`block mb-1 ${size == 'sm' ? 'text-xs' : 'text-sm'}`}
       {...props}
     >
       {children}
