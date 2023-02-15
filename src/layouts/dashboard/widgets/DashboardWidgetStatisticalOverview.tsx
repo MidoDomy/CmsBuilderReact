@@ -3,6 +3,11 @@ import { Line } from "react-chartjs-2";
 import Chart from 'chart.js/auto';
 import { CategoryScale } from 'chart.js'; 
 
+import Row from 'components/Row';
+import Col from 'components/Col';
+import Button from 'components/Button';
+import Icon from 'components/Icon';
+
 Chart.register(CategoryScale);
 
 const DashboardWidgetStatisticalOverview: React.FC = () => {
@@ -60,10 +65,23 @@ const DashboardWidgetStatisticalOverview: React.FC = () => {
   
   return (
     <div className='h-full flex flex-col p-6 bg-white border border-gray-200 rounded-lg hover:shadow'>
-      <h5 className='mb-6 font-medium text-lg'>Statistical overview</h5>
+      <div className='mb-6'>
+        <Row justify='between' align='center'>
+          <Col>
+            <h5 className='font-medium text-lg'>Statistical overview</h5>
+          </Col>
+
+          <Col>
+            <Button size='sm'>
+              <Icon name='calendar' size={16} />
+              Select date
+            </Button>
+          </Col>
+        </Row>
+      </div>
 
       <div className='flex-1'>
-        <Line className=' max-h-full' 
+        <Line className='max-h-full' 
           data={chartData} 
           options={chartOptions}
         />
