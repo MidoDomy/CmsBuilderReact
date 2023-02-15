@@ -29,7 +29,10 @@ const NavigationSidebarProfile: React.FC<Props> = ({ isSidebarCollapsed }) => {
       </Dropdown.Trigger>
 
       <Dropdown.Menu className={`${isSidebarCollapsed ? '-ml-0.5' : 'ml-0.5'}`}>
-        <Dropdown.MenuItem link='/settings/profile'>
+        <Dropdown.MenuItem 
+          link='/settings/profile'
+          icon='profile'
+        >
           Profile settings
         </Dropdown.MenuItem>
 

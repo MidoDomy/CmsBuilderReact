@@ -163,7 +163,7 @@ const NavigationSidebar: React.FC = () => {
           </Link>
 
           {/* Collapse button */}
-          <Button className={`${isSidebarCollapsed ? 'absolute right-0 bottom-0 translate-x-1/2 translate-y-1/2 z-10' : ''}`}
+          <Button className={`${isSidebarCollapsed ? 'absolute right-0 bottom-0 translate-x-1/2 translate-y-1/2 z-10' : '-mb-0.5'}`}
             rounded
             onClick={toggleModal}
           >
