@@ -109,7 +109,7 @@ const MediaFolder: NextPage = () => {
                   )}
                 </DataGrid>
                 :
-                <Row gapX={16}>
+                <Row gapX={16} gapY={32}>
                   {medias?.map(media =>
                     <Col span={2} 
                       key={media.id}

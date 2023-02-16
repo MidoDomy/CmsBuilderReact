@@ -20,7 +20,7 @@ const ModalConfirmDeletion: React.FC<Props> = ({isOpen, onClose}) => {
       <Modal.Header>Confirm deletion</Modal.Header>
 
       <Modal.Body>
-        Click confirm to remove this item.
+        Are you sure you want to delete this item?
       </Modal.Body>
 
       <Modal.Footer>
