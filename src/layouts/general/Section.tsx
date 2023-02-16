@@ -14,8 +14,10 @@ const Section: React.FC<Props> = ({children, title, description}) => {
     <section className='py-7 first:pt-0 border-b border-gray-200'>
       <Row>
         <Col span={4}>
-          <h4 className='mb-1 font-medium text-sm'>{title}</h4>
-          <p className='text-sm text-slate-500'>{description}</p>
+          <div className='text-sm'>
+            <h4 className='mb-1 font-medium'>{title}</h4>
+            <p className='text-slate-500'>{description}</p>
+          </div>
         </Col>
 
         <Col span={6}>

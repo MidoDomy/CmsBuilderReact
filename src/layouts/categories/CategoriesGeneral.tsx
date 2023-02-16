@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Row from 'components/Row';
+import Col from 'components/Col';
 import Form from 'components/Form';
 import Section from 'layouts/general/Section';
 
@@ -10,17 +12,23 @@ const CategoriesGeneral: React.FC = () => {
       description='General informations about category.'
     >
       <Form.Group>
-        <Form.Switch
-          id='activeCategory' 
-          label='Activate category' 
-        />
-      </Form.Group>
+        <Row gapX={16} align='center'>
+          <Col span={8}>
+            <Form.Input
+              label='Name'
+              placeholder='Enter category name...'
+            />
+          </Col>
 
-      <Form.Group>
-        <Form.Input
-          label='Name'
-          placeholder='Enter category name...'
-        />
+          <Col span={3}>
+            <div className='flex justify-center pt-5'>
+              <Form.Switch
+                id='activeCollectionItem' 
+                label='Active' 
+              />
+            </div>
+          </Col>
+        </Row>
       </Form.Group>
 
       <Form.Group>
