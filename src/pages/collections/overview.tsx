@@ -45,9 +45,9 @@ const CollectionsOverview: NextPage = () => {
       />
 
       {/* Controls */}
-      <div>
+      <div className='mb-5'>
         <Container>
-          <div className='flex justify-end mb-5'>
+          <div className='flex justify-end'>
             <div className='p-0.5 bg-gray-100 rounded-md'>
               <Row gapX={3}>
                 <Col>
@@ -85,6 +85,7 @@ const CollectionsOverview: NextPage = () => {
               {collections?.map(collection =>
                 <CollectionsOverviewTableItem 
                   key={collection. id}
+                  link='/collections/list'
                   name={collection.name}
                   description={collection.description}
                   itemsCount={collection.itemsCount}
