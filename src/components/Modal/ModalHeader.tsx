@@ -7,7 +7,7 @@ type Props = {
 
 const ModalHeader: React.FC<Props> = ({ children, className, ...props }) => {
   return (
-    <div className={`pt-5 pb-3 px-6 ${className}`}
+    <div className={`pt-5 pb-3 px-6 font-medium ${className}`}
       {...props}
     >
       {children}
