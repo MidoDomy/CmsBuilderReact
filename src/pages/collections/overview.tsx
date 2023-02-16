@@ -6,11 +6,28 @@ import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
+import DataGrid from 'components/DataGrid';
 import Layout from 'layouts/general/Layout';
 import PageHeader from 'layouts/general/PageHeader';
-import CollectionsCard from 'layouts/collections/CollectionsCard';
+import CollectionsOverviewTableItem from 'layouts/collections/overview/CollectionsOverviewTableItem';
+import CollectionsOverviewGridItem from 'layouts/collections/overview/CollectionsOverviewGridItem';
 
 const CollectionsOverview: NextPage = () => {
+  const columns = [
+    { key: 'image', name: '' },
+    { key: 'name', name: 'Name' },
+    { key: 'description', name: 'Description' },
+    { key: 'itemsCount', name: 'Items count' },
+    { key: 'created', name: 'Created' },
+    { key: 'modified', name: 'Modified' }
+  ];
+  
+  const collections = [
+    { id: 0, name: 'Blogs', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', itemsCount: 43, created: 'June 8, 2020', modified: 'June 8, 2020' },
+    { id: 1, name: 'Products', description: '', itemsCount: 3, created: 'June 8, 2020', modified: 'June 8, 2020' },
+    { id: 2, name: 'Projects', description: 'Lorem ipsum dolor sit amet consectetur.', itemsCount: 7, created: 'June 8, 2020', modified: 'June 8, 2020' }
+  ];
+
   const [isTableView, setIsTableView] = useState(false);
 
   return (
@@ -18,11 +35,11 @@ const CollectionsOverview: NextPage = () => {
       {/* Page header */}
       <PageHeader 
         title='Collections'
-        description='Create your own collection of items with the same fields.'
+        description='Create collections with similar data to keep your business organized.'
         actions={
-          <Button href='/collections/config'>
+          <Button href='/collections/edit'>
             <Icon name='plus' size={16} />
-            Add new
+            Add collection
           </Button>
         }
       />
@@ -64,30 +81,33 @@ const CollectionsOverview: NextPage = () => {
       <div>
         <Container>
           {isTableView ? 
-            <div>
-              TODO: https://dev-oasis.atlassian.net/browse/CB-84
-            </div>
+            <DataGrid columns={columns}>
+              {collections?.map(collection =>
+                <CollectionsOverviewTableItem 
+                  key={collection. id}
+                  name={collection.name}
+                  description={collection.description}
+                  itemsCount={collection.itemsCount}
+                  created={collection.created}
+                  modified={collection.modified}
+                />
+              )}
+            </DataGrid>
             :
-            <div>
-              <Row gapX={16}>
-                <Col span={3}>
-                  <CollectionsCard 
+            <Row gapX={16} gapY={32}>
+              {collections?.map(collection =>
+                <Col span={3} 
+                  key={collection.id}
+                >
+                  <CollectionsOverviewGridItem
                     link='/collections/list' 
-                    name='Blogs' 
-                    count={45}
-                    description='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+                    name={collection.name}
+                    count={collection.itemsCount}
+                    description={collection.description}
                   />
                 </Col>
-
-                <Col span={3}>
-                  <CollectionsCard 
-                    link='/collections/list' 
-                    name='Products' 
-                    count={5}
-                  />
-                </Col>
-              </Row>
-            </div>
+              )}
+            </Row>
           }
         </Container>
       </div>
