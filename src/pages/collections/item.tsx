@@ -17,6 +17,7 @@ const CollectionsItem: NextPage = () => {
       {/* Page header */}
       <PageHeader 
         title='Item name'
+        description='Item description'
         returnRoute='/collections/list'
         actions={
           <Row gapX={8}>

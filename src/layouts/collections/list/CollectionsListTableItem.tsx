@@ -3,18 +3,18 @@ import Link from 'next/link';
 
 import DataGrid from 'components/DataGrid';
 import Image from 'components/Image';
-import CollectionsOverviewItemDropdown from './CollectionsOverviewItemDropdown';
+import CollectionsListItemDropdown from './CollectionsListItemDropdown';
 
 type Props = {
   link: string;
   name: string;
   description: string;
-  itemsCount: number;
   created: string;
   modified: string;
+  active: boolean;
 }
 
-const CollectionsOverviewTableItem: React.FC<Props> = ({link, name, description, itemsCount, created, modified}) => {
+const CollectionsListTableItem: React.FC<Props> = ({link, name, description, created, modified, active}) => {
   return (
     <DataGrid.Row>
       <DataGrid.Col className='w-20'>
@@ -39,12 +39,6 @@ const CollectionsOverviewTableItem: React.FC<Props> = ({link, name, description,
 
       <DataGrid.Col>
         <div className='text-sm'>
-          {itemsCount}
-        </div>
-      </DataGrid.Col>
-
-      <DataGrid.Col>
-        <div className='text-sm'>
           {created}
         </div>
       </DataGrid.Col>
@@ -55,11 +49,23 @@ const CollectionsOverviewTableItem: React.FC<Props> = ({link, name, description,
         </div>
       </DataGrid.Col>
 
+      <DataGrid.Col>
+        {active ?
+          <span className='px-3 py-1 bg-green-100 border border-green-500 rounded-2xl font-medium text-xs text-green-800'>
+            Yes
+          </span>
+          :
+          <span className='px-3 py-1 bg-red-100 border border-red-500 rounded-2xl font-medium text-xs text-red-800'>
+            No
+          </span>
+        }
+      </DataGrid.Col>
+
       <DataGrid.Col className='text-right'>
-        <CollectionsOverviewItemDropdown />
+        <CollectionsListItemDropdown />
       </DataGrid.Col>
     </DataGrid.Row>
   )
 }
 
-export default CollectionsOverviewTableItem;
+export default CollectionsListTableItem;

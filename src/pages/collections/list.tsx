@@ -6,24 +6,41 @@ import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
+import DataGrid from 'components/DataGrid';
 import Layout from 'layouts/general/Layout';
 import PageHeader from 'layouts/general/PageHeader';
-import CollectionsCard from 'layouts/collections/CollectionsCard';
+import CollectionsListTableItem from 'layouts/collections/list/CollectionsListTableItem';
+import CollectionsListGridItem from 'layouts/collections/list/CollectionsListGridItem';
 
 const CollectionsList: NextPage = () => {
-  const [isTableView, setIsTableView] = useState(false);
+  const columns = [
+    { key: 'image', name: '' },
+    { key: 'name', name: 'Name' },
+    { key: 'description', name: 'Description' },
+    { key: 'created', name: 'Created' },
+    { key: 'modified', name: 'Modified' },
+    { key: 'active', name: 'Active' }
+  ];
+  
+  const collections = [
+    { id: 0, name: 'Item 1', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', created: 'June 8, 2020', modified: 'June 8, 2020', active: false },
+    { id: 1, name: 'Item 2', description: '', created: 'June 8, 2020', modified: 'June 8, 2020', active: true },
+    { id: 2, name: 'Item 3', description: 'Lorem ipsum dolor sit amet consectetur.', created: 'June 8, 2020', modified: 'June 8, 2020', active: true }
+  ];
+
+  const [isTableView, setIsTableView] = useState(true);
 
   return (
     <Layout>
       {/* Page header */}
       <PageHeader 
         title='Collection name'
-        description='Small collection description.'
+        description='Collection small description goes here.'
         returnRoute='/collections/overview'
         actions={
           <Row gapX={8}>
             <Col>
-              <Button href='/collections/config'>
+              <Button href='/collections/edit'>
                 <Icon name='edit' size={16} />
                 Edit
               </Button>
@@ -32,7 +49,7 @@ const CollectionsList: NextPage = () => {
             <Col>
               <Button href='/collections/item'>
                 <Icon name='plus' size={16} />
-                Add new item
+                Add item
               </Button>
             </Col>
           </Row>
@@ -40,9 +57,9 @@ const CollectionsList: NextPage = () => {
       />
 
       {/* Controls */}
-      <div>
+      <div className='mb-5'>
         <Container>
-          <div className='flex justify-end mb-5'>
+          <div className='flex justify-end'>
             <div className='p-0.5 bg-gray-100 rounded-md'>
               <Row gapX={3}>
                 <Col>
@@ -76,28 +93,33 @@ const CollectionsList: NextPage = () => {
       <div>
         <Container>
           {isTableView ? 
-            <div>
-              TODO: https://dev-oasis.atlassian.net/browse/CB-85
-            </div>
+            <DataGrid columns={columns}>
+              {collections?.map(collection =>
+                <CollectionsListTableItem 
+                  key={collection. id}
+                  link='/collections/item' 
+                  name={collection.name}
+                  description={collection.description}
+                  created={collection.created}
+                  modified={collection.modified}
+                  active={collection.active}
+                />
+              )}
+            </DataGrid>
             :
-            <div>
-              <Row gapX={16}>
-                <Col span={3}>
-                  <CollectionsCard 
+            <Row gapX={16} gapY={32}>
+              {collections?.map(collection =>
+                <Col span={3} 
+                  key={collection.id}
+                >
+                  <CollectionsListGridItem
                     link='/collections/item' 
-                    name='Item 1' 
-                    description='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+                    name={collection.name}
+                    description={collection.description}
                   />
                 </Col>
-
-                <Col span={3}>
-                  <CollectionsCard 
-                    link='/collections/item' 
-                    name='Item 2' 
-                  />
-                </Col>
-              </Row>
-            </div>
+              )}
+            </Row>
           }
         </Container>
       </div>
