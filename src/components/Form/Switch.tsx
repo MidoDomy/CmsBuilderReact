@@ -21,7 +21,7 @@ const Switch: React.FC<Props> = ({ children, className, id, label, small, ...pro
         </div>
 
         <span className='pl-2 text-sm'>
-          {label && <div className={`font-medium ${children ? 'mb-0.5' : ''}`}>{label}</div>}
+          {label && <div className={children ? 'mb-0.5' : ''}>{label}</div>}
           {children}
         </span>
       </label>

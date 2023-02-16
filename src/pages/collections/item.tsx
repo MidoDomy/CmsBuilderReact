@@ -59,17 +59,23 @@ const CollectionsItem: NextPage = () => {
                 description='General informations about collection item.'
               >
                 <Form.Group>
-                  <Form.Switch
-                    id='activeCollectionItem' 
-                    label='Activate' 
-                  />
-                </Form.Group>
+                  <Row gapX={16} align='center'>
+                    <Col span={8}>
+                      <Form.Input
+                        label='Name'
+                        placeholder='Enter name...'
+                      />
+                    </Col>
 
-                <Form.Group>
-                  <Form.Input
-                    label='Name'
-                    placeholder='Enter name...'
-                  />
+                    <Col span={3}>
+                      <div className='flex justify-center pt-5'>
+                        <Form.Switch
+                          id='activeCollectionItem' 
+                          label='Active' 
+                        />
+                      </div>
+                    </Col>
+                  </Row>
                 </Form.Group>
 
                 <Form.Group>
@@ -80,7 +86,7 @@ const CollectionsItem: NextPage = () => {
                 </Form.Group>
 
                 <Form.Group>
-                  <Form.FileUpload label='Image' />
+                  <Form.FileUpload label='Prev. image' />
                 </Form.Group>
               </Section>
 
