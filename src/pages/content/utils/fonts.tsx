@@ -8,6 +8,7 @@ import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
+import FontsModalImport from 'layouts/content/utils/fonts/FontsModalImport';
 import FontsCard from 'layouts/content/utils/fonts/FontsCard';
 import FontsSidebarControls from 'layouts/content/utils/fonts/FontsSidebarControls';
 
@@ -20,8 +21,11 @@ const Fonts: NextPage = () => {
     {name: 'Unbounded', weights: ['200', '400', '600']}
   ];
 
-  const [currentFontSize, setCurrentSize] = useState(16);
-  const [currentFontWeight, setCurrentWeight] = useState(400);
+  const [showModalImport, setShowModalImport] = useState(false);
+  const [testText, setTestText] = useState('Lorem ipsum dolor, sit amet consectetur adipisicing elit.');
+  const [testFontSize, setTestFontSize] = useState(22);
+  const [testFontWeight, setTestFontWeight] = useState(400);
+  const [testItalic, setTestItalic] = useState(false);
 
   return (
     <Layout>
@@ -30,11 +34,17 @@ const Fonts: NextPage = () => {
         title='Fonts'
         description='Add fonts that you will use in your project.'
         actions={
-          <Button>
+          <Button onClick={() => setShowModalImport(true)}>
             <Icon name='plus' size={18} />
             <span>Import font</span>
           </Button>
         }
+      />
+
+      {/* Modal import */}
+      <FontsModalImport 
+        isOpen={showModalImport}
+        onClose={() => setShowModalImport(false)}
       />
 
       {/* Content */}
@@ -48,8 +58,10 @@ const Fonts: NextPage = () => {
                     <FontsCard 
                       name={font.name} 
                       weights={font.weights} 
-                      fontSize={currentFontSize}
-                      fontWeight={currentFontWeight}
+                      text={testText}
+                      fontSize={testFontSize}
+                      fontWeight={testFontWeight}
+                      italic={testItalic}
                     />
                   </Col>
                 ))}
@@ -58,8 +70,14 @@ const Fonts: NextPage = () => {
 
             <Col span={4}>
               <FontsSidebarControls 
-                fontSize={currentFontSize}
-                fontWeight={currentFontWeight}
+                text={testText}
+                setText={setTestText}
+                fontSize={testFontSize}
+                setFontSize={setTestFontSize}
+                fontWeight={testFontWeight}
+                setFontWeight={setTestFontWeight}
+                italic={testItalic}
+                setItalic={setTestItalic}
               />
             </Col>
           </Row>
