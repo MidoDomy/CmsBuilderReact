@@ -9,9 +9,11 @@ type Props = {
   required?: boolean;
   small?: boolean;
   rows?: number;
+  value?: any;
+  onChange?: (e: any) => any;
 }
 
-const Textarea: React.FC<Props> = ({ className, label, placeholder, required, small, rows, ...props }) => {
+const Textarea: React.FC<Props> = ({ className, value, onChange, label, placeholder, required, small, rows, ...props }) => {
   return (
     <BaseField className={className}
       label={label}
@@ -20,6 +22,8 @@ const Textarea: React.FC<Props> = ({ className, label, placeholder, required, sm
       <div>
         <textarea className={`w-full min-h-[100px] bg-white border border-gray-200 focus:border-sky-500 rounded outline-none text-slate-800 transition-colors ${small ? 'px-2.5 py-1.5 text-sm' : 'px-3 py-2'}`}
           placeholder={placeholder}
+          value={value}
+          onChange={onChange}
           rows={rows}
           {...props}
         />

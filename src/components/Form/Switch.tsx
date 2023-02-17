@@ -4,14 +4,22 @@ type Props = {
   children?: React.ReactNode;
   className?: string;
   id: string;
+  checked?: boolean;
   label?: string;
   small?: boolean;
+  onChange?: (e: any) => any;
 }
 
-const Switch: React.FC<Props> = ({ children, className, id, label, small, ...props }) => {
+const Switch: React.FC<Props> = ({ children, className, id, checked, label, small, onChange, ...props }) => {
   return (
     <div className={`relative flex overflow-hidden select-none ${className}`}>
-      <input className={`peer hidden`} type='checkbox' id={id} {...props} />
+      <input className={`peer hidden`} 
+        type='checkbox' 
+        id={id} 
+        checked={checked}
+        onChange={onChange}
+        {...props} 
+      />
       
       <label className={`flex items-start cursor-pointer peer-checked:[&>:first-child>div]:ml-auto peer-checked:[&>:first-child>div]:bg-white peer-checked:[&>:first-child]:bg-sky-500 peer-checked:[&>:first-child]:border-transparent`}
         htmlFor={id}

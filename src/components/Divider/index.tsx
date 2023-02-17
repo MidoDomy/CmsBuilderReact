@@ -12,10 +12,12 @@ const Divider: React.FC<Props> = ({ children, className, text, ...props }) => {
       {...props}
     >
       <div className='flex-1 border-b border-gray-200'></div>
-
-      <span className='px-3 text-sm text-slate-500'>
-        {text ? text : children}
-      </span>
+      
+      {(text || children) &&
+        <span className='px-3 text-sm text-slate-500'>
+          {text ? text : children}
+        </span>
+      }
 
       <div className='flex-1 border-b border-gray-200'></div>
     </div>
