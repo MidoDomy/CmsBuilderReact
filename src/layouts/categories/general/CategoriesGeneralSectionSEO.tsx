@@ -3,7 +3,7 @@ import React from 'react';
 import Form from 'components/Form';
 import Section from 'layouts/general/Section';
 
-const CategoriesSEO: React.FC = () => {
+const CategoriesGeneralSectionSEO: React.FC = () => {
   return (
     <Section 
       title='SEO' 
@@ -17,4 +17,4 @@ const CategoriesSEO: React.FC = () => {
   )
 }
 
-export default CategoriesSEO;
+export default CategoriesGeneralSectionSEO;

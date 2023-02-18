@@ -8,7 +8,7 @@ import Row from 'components/Row';
 import Col from 'components/Col';
 import Section from 'layouts/general/Section';
 
-const CategoriesCustomFields: React.FC = () => {
+const CategoriesGeneralSectionCustomFields: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
   const toggleModal = () => {
     setShowModal(!showModal)
@@ -89,4 +89,4 @@ const CategoriesCustomFields: React.FC = () => {
   )
 }
 
-export default CategoriesCustomFields;
+export default CategoriesGeneralSectionCustomFields;

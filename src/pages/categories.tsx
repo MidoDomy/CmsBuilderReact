@@ -1,17 +1,16 @@
 import type { NextPage } from 'next';
 
 import Container from 'components/Container';
-import Button from 'components/Button';
-import Icon from 'components/Icon';
 import Row from 'components/Row';
 import Col from 'components/Col';
+import Button from 'components/Button';
+import Icon from 'components/Icon';
 import Tabs from 'components/Tabs';
 import Layout from 'layouts/general/Layout';
-import CategoriesSidebar from 'layouts/categories/CategoriesSidebar';
 import PageHeader from 'layouts/general/PageHeader';
+import CategoriesSidebar from 'layouts/categories/CategoriesSidebar';
 import CategoriesGeneral from 'layouts/categories/CategoriesGeneral';
-import CategoriesSEO from 'layouts/categories/CategoriesSEO';
-import CategoriesCustomFields from 'layouts/categories/CategoriesCustomFields';
+import CategoriesLayout from 'layouts/categories/CategoriesLayout';
 
 const Categories: NextPage = () => {
   return (
@@ -36,25 +35,23 @@ const Categories: NextPage = () => {
           {/* Content */}
           <div>
             <Container>
-              <Tabs active='General'>
+              <Tabs active='general'>
                 <Tabs.Nav className='mb-10'>
-                  <Tabs.NavItem name='General'>
+                  <Tabs.NavItem name='general'>
                     General
                   </Tabs.NavItem>
 
-                  <Tabs.NavItem name='Layout'>
+                  <Tabs.NavItem name='layout'>
                     Layout
                   </Tabs.NavItem>
                 </Tabs.Nav>
 
-                <Tabs.Content name='General'>
+                <Tabs.Content name='general'>
                   <CategoriesGeneral />
-                  <CategoriesSEO />
-                  <CategoriesCustomFields />
                 </Tabs.Content>
 
-                <Tabs.Content name='Layout'>
-                  TODO: https://dev-oasis.atlassian.net/browse/CB-83
+                <Tabs.Content name='layout'>
+                  <CategoriesLayout />
                 </Tabs.Content>
               </Tabs>
             </Container>
