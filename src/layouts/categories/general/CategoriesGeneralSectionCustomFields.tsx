@@ -16,6 +16,7 @@ const CategoriesGeneralSectionCustomFields: React.FC = () => {
 
   return (
     <Section title='CustomFields' description='Add custom fields to category.'>
+      TODO: https://dev-oasis.atlassian.net/browse/CB-111
       <div className='flex flex-col items-center justify-center py-3 bg-white border border-gray-200 rounded'>
         <div className='text-sm text-slate-500'>Empty custom fields</div>
       </div>

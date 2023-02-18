@@ -10,6 +10,7 @@ import Layout from 'layouts/general/Layout';
 import PageHeader from 'layouts/general/PageHeader';
 import CategoriesSidebar from 'layouts/categories/CategoriesSidebar';
 import CategoriesGeneral from 'layouts/categories/CategoriesGeneral';
+import CategoriesSEO from 'layouts/categories/CategoriesSEO';
 import CategoriesLayout from 'layouts/categories/CategoriesLayout';
 
 const Categories: NextPage = () => {
@@ -41,6 +42,10 @@ const Categories: NextPage = () => {
                     General
                   </Tabs.NavItem>
 
+                  <Tabs.NavItem name='seo'>
+                    SEO
+                  </Tabs.NavItem>
+
                   <Tabs.NavItem name='layout'>
                     Layout
                   </Tabs.NavItem>
@@ -48,6 +53,10 @@ const Categories: NextPage = () => {
 
                 <Tabs.Content name='general'>
                   <CategoriesGeneral />
+                </Tabs.Content>
+
+                <Tabs.Content name='seo'>
+                  <CategoriesSEO />
                 </Tabs.Content>
 
                 <Tabs.Content name='layout'>

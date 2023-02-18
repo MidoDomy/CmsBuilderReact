@@ -5,7 +5,7 @@ import Col from 'components/Col';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 
-const LayoutsDetailContentBar: React.FC = () => {
+const LayoutsEditContentBar: React.FC = () => {
   return (
     <div className='sticky top-5 left-0 right-0'>
       <div className='absolute left-1/2 -translate-x-1/2 min-w-[1000px] px-3 py-1.5 bg-gray-100 rounded-lg shadow'>
@@ -73,4 +73,4 @@ const LayoutsDetailContentBar: React.FC = () => {
   );
 }
 
-export default LayoutsDetailContentBar;
+export default LayoutsEditContentBar;

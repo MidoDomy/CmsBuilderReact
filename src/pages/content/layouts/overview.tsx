@@ -110,7 +110,7 @@ const LayoutsOverview: NextPage = () => {
                   {group.layouts?.map(layout =>
                     <LayoutsOverviewTableItem 
                       key={layout.id}
-                      link='/content/layout/edit' 
+                      link='/content/layouts/edit' 
                       name={layout.name}
                       created={layout.created}
                       modified={layout.modified}
@@ -135,7 +135,7 @@ const LayoutsOverview: NextPage = () => {
                       {group.layouts?.map(layout =>
                         <Col span={2.5} key={layout.id}>
                           <LayoutsOverviewGridItem
-                            link='/content/layout/edit' 
+                            link='/content/layouts/edit' 
                             name={layout.name}
                           />
                         </Col>

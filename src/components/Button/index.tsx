@@ -31,7 +31,7 @@ const Button: React.FC<Props> = ({ children, className, variant, size, block, sq
     case 'danger':
       return 'bg-red-500 hover:bg-red-600 border border-red-500 hover:border-red-600 text-white shadow-sm'
     case 'danger-outline':
-      return 'hover:bg-red-500 border border-red-300 hover:border-red-500 text-red-500 hover:text-white shadow-sm'
+      return 'bg-white hover:bg-red-500 border border-red-300 hover:border-red-500 text-red-500 hover:text-white shadow-sm'
     default: 
       return 'bg-white hover:bg-gray-100 border border-gray-200 text-slate-700 shadow-sm'
   }})()

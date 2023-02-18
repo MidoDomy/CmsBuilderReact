@@ -8,7 +8,7 @@ import StylesTypography from 'layouts/content/styles/StylesTypography';
 import StylesBackgrounds from 'layouts/content/styles/StylesBackgrounds';
 import StylesBorders from 'layouts/content/styles/StylesBorders';
 
-const LayoutsDetailSettingsSidebarStyles: React.FC = () => {
+const LayoutsEditSettingsSidebarStyles: React.FC = () => {
   return (
     <div className='flex flex-col gap-1.5'>
       <StyleGrid />
@@ -22,4 +22,4 @@ const LayoutsDetailSettingsSidebarStyles: React.FC = () => {
   )
 }
 
-export default LayoutsDetailSettingsSidebarStyles;
+export default LayoutsEditSettingsSidebarStyles;
