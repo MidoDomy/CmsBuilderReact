@@ -11,11 +11,12 @@ type Props = {
   block?: boolean;
   square?: boolean;
   rounded?: boolean;
+  disabled?: boolean;
   href?: string;
   onClick?: () => void
 }
 
-const Button: React.FC<Props> = ({ children, className, variant, size, block, square, rounded, href, onClick, ...props }) => {
+const Button: React.FC<Props> = ({ children, className, variant, size, block, square, rounded, disabled, href, onClick, ...props }) => {
 
   // Classes -----------------------------------
   const variantClasses = (() => {switch(variant) {
@@ -46,8 +47,10 @@ const Button: React.FC<Props> = ({ children, className, variant, size, block, sq
       return (square || rounded ? 'p-2' : 'py-2 px-5')
   }})()
 
+  const disabledClasses = 'disabled:bg-gray-300 disabled:border-gray-300 disabled:text-slate-500 disabled:opacity-80'
+
   const getClasses = () => {
-    return `select-none inline-flex gap-2 items-center cursor-pointer font-medium transition-colors disabled:bg-gray-400 disabled:border-gray-400 disabled:hover:bg-opacity-100 ${variantClasses} ${variant === 'link' ? '' : sizeClasses} ${size === 'lg' ? 'text-base' : 'text-sm'} ${block ? 'w-full justify-center' : ''} ${rounded ? 'rounded-full' : 'rounded-md'} ${className}`;
+    return `select-none inline-flex gap-2 items-center cursor-pointer font-medium transition-colors ${variantClasses} ${variant === 'link' ? '' : sizeClasses} ${size === 'lg' ? 'text-base' : 'text-sm'} ${block ? 'w-full justify-center' : ''} ${rounded ? 'rounded-full' : 'rounded-md'} ${disabledClasses} ${className}`;
   }
   // -----------------------------------
 
@@ -55,7 +58,7 @@ const Button: React.FC<Props> = ({ children, className, variant, size, block, sq
     <>
       { href ? 
         <Link className={getClasses()} 
-          href={href}
+          href={!disabled ? href : ''}
           {...props}
         >
           {children}
@@ -63,6 +66,7 @@ const Button: React.FC<Props> = ({ children, className, variant, size, block, sq
       :
         <button className={getClasses()}
           onClick={onClick}
+          disabled={disabled}
           {...props}
         >
           {children}

@@ -1,15 +1,12 @@
 import type { NextPage } from 'next';
 import { useState } from 'react';
 
-import Row from 'components/Row';
-import Col from 'components/Col';
+import Container from 'components/Container';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
-import Modal from 'components/Modal';
-import Form from 'components/Form';
 import Layout from 'layouts/general/Layout';
 import PageHeader from 'layouts/general/PageHeader';
-import Container from 'components/Container';
+import ColorsModalAddGroup from 'layouts/content/utils/colors/ColorsModalAddGroup';
 import ColorsGroup from 'layouts/content/utils/colors/ColorsGroup';
 
 const Colors: NextPage = () => {
@@ -50,10 +47,7 @@ const Colors: NextPage = () => {
     }
   ];
 
-  const [showModal, setShowModal] = useState(false);
-  const toggleModal = () => {
-    setShowModal(!showModal)
-  }
+  const [showModalAddGroup, setShowModalAddGroup] = useState(false);
 
   return (
     <Layout metaTitle='Cms builder - colors'>
@@ -62,11 +56,17 @@ const Colors: NextPage = () => {
         title='Colors'
         description='Add colors that you will use in your project.'
         actions={
-          <Button onClick={toggleModal}>
+          <Button onClick={() => setShowModalAddGroup(true)}>
             <Icon name='plus' size={18} />
             <span>Add Group</span>
           </Button>
         }
+      />
+
+      {/* Modal add group */}
+      <ColorsModalAddGroup
+        isOpen={showModalAddGroup}
+        onClose={() => setShowModalAddGroup(false)}
       />
 
       {/* Content */}
@@ -83,48 +83,6 @@ const Colors: NextPage = () => {
           </div>
         </Container>
       </div>
-
-      {/* Add color group modal */}
-      <Modal 
-        size='sm'
-        isOpen={showModal} 
-        onClose={toggleModal}
-      >
-        <Modal.Header>Add color group</Modal.Header>
-
-        <Modal.Body>
-          <Form.Group>
-            <Form.Input label='Color group name' />
-          </Form.Group>
-
-          <Form.Group>
-            (TODO: Data table layout)
-          </Form.Group>
-        </Modal.Body>
-
-        <Modal.Footer>
-          <Row gapX={8} justify='end'>
-            <Col>
-              <Button
-                size='sm'
-                onClick={toggleModal}
-              >
-                Cancel
-              </Button>
-            </Col>
-
-            <Col>
-              <Button
-                size='sm'
-                variant='primary'
-                onClick={toggleModal}
-              >
-                Save
-              </Button>
-            </Col>
-          </Row>
-        </Modal.Footer>
-      </Modal>
     </Layout>
   )
 }

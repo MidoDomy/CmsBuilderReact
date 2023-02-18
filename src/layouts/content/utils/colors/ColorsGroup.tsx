@@ -12,14 +12,14 @@ type Props = {
 
 const ColorsGroup: React.FC<Props> = ({name, colors}) => {
   return (
-    <div className='[&:hover_.add-color]:opacity-100'>
+    <div>
       <Row gapX={16}>
         <Col>
-          <div className='w-16 text-sm font-medium'>{name}</div>
+          <div className='w-20 text-sm font-medium'>{name}</div>
         </Col>
 
         <Col fill>
-          <Row gapX={10}>
+          <Row gapX={10} gapY={20}>
             {colors.map(color => (
               <Col key={color.id}>
                 <ColorsGroupItem
@@ -29,7 +29,7 @@ const ColorsGroup: React.FC<Props> = ({name, colors}) => {
               </Col>
             ))}
 
-            {/* Add color */}
+            {/* Add color item */}
             <Col>
               <ColorsGroupItemAdd />
             </Col>
