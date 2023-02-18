@@ -3,30 +3,30 @@ import type { NextPage } from 'next';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Layout from 'layouts/general/Layout';
-import LayoutsDetailNavigationSidebar from 'layouts/content/layouts/detail/LayoutsDetailNavigationSidebar';
-import LayoutsDetailContent from 'layouts/content/layouts/detail/LayoutsDetailContent';
-import LayoutsDetailSettingsSidebar from 'layouts/content/layouts/detail/LayoutsDetailSettingsSidebar';
+import LayoutsEditNavigationSidebar from 'layouts/content/layouts/edit/LayoutsEditNavigationSidebar';
+import LayoutsEditContent from 'layouts/content/layouts/edit/LayoutsEditContent';
+import LayoutsEditSettingsSidebar from 'layouts/content/layouts/edit/LayoutsEditSettingsSidebar';
 
-const LayoutsDetail: NextPage = () => {
+const LayoutsEdit: NextPage = () => {
   return (
     <Layout>
       <Row gapX={0} noWrap>
         <Col>
-          <LayoutsDetailNavigationSidebar />
+          <LayoutsEditNavigationSidebar />
         </Col>
 
         <Col className='max-w-[calc(100vw_-_669px)] overflow-auto'
           fill
         >
-          <LayoutsDetailContent />
+          <LayoutsEditContent />
         </Col>
 
         <Col>
-          <LayoutsDetailSettingsSidebar />
+          <LayoutsEditSettingsSidebar />
         </Col>
       </Row>
     </Layout>
   )
 }
 
-export default LayoutsDetail;
+export default LayoutsEdit;

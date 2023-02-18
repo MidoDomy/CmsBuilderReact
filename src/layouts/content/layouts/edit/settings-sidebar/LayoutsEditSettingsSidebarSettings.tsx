@@ -7,7 +7,7 @@ import Col from 'components/Col';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 
-const LayoutsDetailSettingsSidebarSettings: React.FC = () => {
+const LayoutsEditSettingsSidebarSettings: React.FC = () => {
   return (
     <div>
       {/* Actions */}
@@ -126,4 +126,4 @@ const LayoutsDetailSettingsSidebarSettings: React.FC = () => {
   )
 }
 
-export default LayoutsDetailSettingsSidebarSettings;
+export default LayoutsEditSettingsSidebarSettings;

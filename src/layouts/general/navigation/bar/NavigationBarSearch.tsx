@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {useFocus} from 'react-aria'
+import { useFocus } from 'react-aria'
 
 import Form from 'components/Form';
 import Button from 'components/Button';
@@ -17,6 +17,7 @@ const NavigationBarSearch: React.FC = () => {
   const handleChange = (e: any) => {
     setSearchValue(e.currentTarget.value);
   };
+
   const handleClear = () => {
     setSearchValue('');
   }

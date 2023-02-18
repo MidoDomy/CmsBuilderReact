@@ -2,12 +2,12 @@ import React from 'react';
 
 import Image from 'components/Image';
 import Button from 'components/Button';
-import LayoutsDetailContentBar from './content/LayoutsDetailContentBar';
+import LayoutsEditContentBar from './content/LayoutsEditContentBar';
 
-const LayoutsDetailContent: React.FC = () => {
+const LayoutsEditContent: React.FC = () => {
   return (
     <div className='relative max-h-full max-w-full overflow-auto pb-10 px-28'>
-      <LayoutsDetailContentBar />
+      <LayoutsEditContentBar />
 
       <div className='mt-32 mx-auto border border-gray-200 rounded-lg shadow'
         style={{
@@ -415,4 +415,4 @@ const LayoutsDetailContent: React.FC = () => {
   )
 }
 
-export default LayoutsDetailContent;
+export default LayoutsEditContent;

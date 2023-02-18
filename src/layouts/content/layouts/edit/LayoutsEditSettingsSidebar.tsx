@@ -2,11 +2,11 @@ import React from 'react';
 
 import Sidebar from 'components/Sidebar';
 import Tabs from 'components/Tabs';
-import LayoutsDetailSettingsSidebarComponents from './settings-sidebar/LayoutsDetailSettingsSidebarComponents';
-import LayoutsDetailSettingsSidebarSettings from './settings-sidebar/LayoutsDetailSettingsSidebarSettings';
-import LayoutsDetailSettingsSidebarStyles from './settings-sidebar/LayoutsDetailSettingsSidebarStyles';
+import LayoutsEditSettingsSidebarComponents from './settings-sidebar/LayoutsEditSettingsSidebarComponents';
+import LayoutsEditSettingsSidebarSettings from './settings-sidebar/LayoutsEditSettingsSidebarSettings';
+import LayoutsEditSettingsSidebarStyles from './settings-sidebar/LayoutsEditSettingsSidebarStyles';
 
-const LayoutsDetailSettingsSidebar: React.FC = () => {
+const LayoutsEditSettingsSidebar: React.FC = () => {
   return (
     <Sidebar className='w-80'>
       <Sidebar.Body>
@@ -18,15 +18,15 @@ const LayoutsDetailSettingsSidebar: React.FC = () => {
           </Tabs.Nav>
 
           <Tabs.Content name='Components'>
-            <LayoutsDetailSettingsSidebarComponents />
+            <LayoutsEditSettingsSidebarComponents />
           </Tabs.Content>
 
           <Tabs.Content name='Settings'>
-            <LayoutsDetailSettingsSidebarSettings />
+            <LayoutsEditSettingsSidebarSettings />
           </Tabs.Content>
 
           <Tabs.Content name='Styles'>
-            <LayoutsDetailSettingsSidebarStyles />
+            <LayoutsEditSettingsSidebarStyles />
           </Tabs.Content>
         </Tabs>
       </Sidebar.Body>
@@ -34,4 +34,4 @@ const LayoutsDetailSettingsSidebar: React.FC = () => {
   )
 }
 
-export default LayoutsDetailSettingsSidebar;
+export default LayoutsEditSettingsSidebar;

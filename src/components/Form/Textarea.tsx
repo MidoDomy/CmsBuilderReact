@@ -19,15 +19,13 @@ const Textarea: React.FC<Props> = ({ className, value, onChange, label, placehol
       label={label}
       required={required}
     >
-      <div>
-        <textarea className={`w-full min-h-[100px] bg-white border border-gray-200 focus:border-sky-500 rounded outline-none text-slate-800 transition-colors ${small ? 'px-2.5 py-1.5 text-sm' : 'px-3 py-2'}`}
-          placeholder={placeholder}
-          value={value}
-          onChange={onChange}
-          rows={rows}
-          {...props}
-        />
-      </div>
+      <textarea className={`block w-full min-h-[100px] bg-white border border-gray-200 focus:border-sky-500 rounded outline-none text-slate-800 transition-colors ${small ? 'px-2.5 py-1.5 text-sm' : 'px-3 py-2'}`}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        rows={rows}
+        {...props}
+      />
     </BaseField>
   )
 }

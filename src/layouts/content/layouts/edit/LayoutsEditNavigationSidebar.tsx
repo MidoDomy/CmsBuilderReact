@@ -1,9 +1,9 @@
 import React from 'react';
 
 import Sidebar from 'components/Sidebar';
-import LayoutsDetailNavigationSidebarItem from './navigation-sidebar/LayoutsDetailNavigationSidebarItem';
+import LayoutsEditNavigationSidebarItem from './navigation-sidebar/LayoutsEditNavigationSidebarItem';
 
-const LayoutsDetailNavigationSidebar: React.FC = () => {
+const LayoutsEditNavigationSidebar: React.FC = () => {
   const content = [
     {
       id: 0,
@@ -147,7 +147,7 @@ const LayoutsDetailNavigationSidebar: React.FC = () => {
             <li className='mb-1 last:mb-0' 
               key={item.id}
             >
-              <LayoutsDetailNavigationSidebarItem item={item} />
+              <LayoutsEditNavigationSidebarItem item={item} />
             </li>
           ))}
         </ul>
@@ -156,4 +156,4 @@ const LayoutsDetailNavigationSidebar: React.FC = () => {
   )
 }
 
-export default LayoutsDetailNavigationSidebar;
+export default LayoutsEditNavigationSidebar;

@@ -23,18 +23,27 @@ const CategoriesSidebarItem: React.FC<Props> = ({ subCategories, name }) => {
   const [open, setOpen] = useState(false);
 
   // TODO: Set active condition
-  const active = name == 'Category 1';
+  const active = name == 'Header navigation';
 
   return (
     <>
       {!hasSubCategories ? 
         <Row gapX={2}>
-          {/* Name */}
           <Col fill>
             <Link className={`block py-0.5 px-2 rounded cursor-pointer transition-colors ${active ? 'bg-sky-50 text-sky-500' : 'hover:bg-gray-50'}`}
               href='#'
             >
-              <span className='text-sm'>{name}</span>
+              <Row gapX={6} align='center'>
+                {/* Name */}
+                <Col fill>
+                  <span className='text-sm'>{name}</span>
+                </Col>
+
+                {/* Status */}
+                <Col>
+                  <div className='border-2 border-green-500 rounded-full'></div>
+                </Col>
+              </Row>
             </Link>
           </Col>
 
@@ -65,6 +74,11 @@ const CategoriesSidebarItem: React.FC<Props> = ({ subCategories, name }) => {
                     {/* Name */}
                     <Col fill>
                       <span className='text-sm'>{name}</span>
+                    </Col>
+
+                    {/* Status */}
+                    <Col>
+                      <div className='border-2 border-green-500 rounded-full'></div>
                     </Col>
                   </Row>
                 </Link>

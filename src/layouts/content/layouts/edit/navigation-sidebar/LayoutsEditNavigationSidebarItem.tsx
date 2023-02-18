@@ -15,7 +15,7 @@ type Props = {
   item: LayoutsNavigationSidebarItem;
 }
 
-const LayoutsDetailNavigationSidebarItem: React.FC<Props> = ({ item }) => {
+const LayoutsEditNavigationSidebarItem: React.FC<Props> = ({ item }) => {
   const hasParts = item.parts && item.parts.length;
 
   // TODO: Set active condition
@@ -59,7 +59,7 @@ const LayoutsDetailNavigationSidebarItem: React.FC<Props> = ({ item }) => {
               <ul className='pl-0.5 border-l'>
                 {item.parts.map((part, index) => (
                   <li key={index}>
-                    <LayoutsDetailNavigationSidebarItem item={part} />
+                    <LayoutsEditNavigationSidebarItem item={part} />
                   </li>
                 ))}
               </ul>
@@ -71,4 +71,4 @@ const LayoutsDetailNavigationSidebarItem: React.FC<Props> = ({ item }) => {
   );
 }
 
-export default LayoutsDetailNavigationSidebarItem;
+export default LayoutsEditNavigationSidebarItem;
