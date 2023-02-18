@@ -3,6 +3,7 @@ import React from 'react';
 import Modal from 'components/Modal';
 import Row from 'components/Row';
 import Col from 'components/Col';
+import Form from 'components/Form';
 import Button from 'components/Button';
 
 type Props = {
@@ -10,18 +11,26 @@ type Props = {
   onClose: () => void;
 }
 
-const ModalConfirmDeletion: React.FC<Props> = ({isOpen, onClose}) => {
+const ColorsGroupModalAddItem: React.FC<Props> = ({isOpen, onClose}) => {
   return (
     <Modal 
       isOpen={isOpen} 
       onClose={onClose}
       showClose
-      size='sm'
     >
-      <Modal.Header>Confirm deletion</Modal.Header>
+      <Modal.Header>Add color</Modal.Header>
 
       <Modal.Body>
-        Are you sure you want to delete this item?
+        <Form.Group>
+          <Form.InputGroup label='Value'>
+            <Form.Color />
+            <Form.Input className='flex-1' />
+          </Form.InputGroup>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Input label='Name' />
+        </Form.Group>
       </Modal.Body>
 
       <Modal.Footer>
@@ -34,10 +43,10 @@ const ModalConfirmDeletion: React.FC<Props> = ({isOpen, onClose}) => {
 
           <Col>
             <Button 
-              variant='danger'
+              variant='primary'
               onClick={onClose}
             >
-              Confirm
+              Add
             </Button>
           </Col>
         </Row>
@@ -46,4 +55,4 @@ const ModalConfirmDeletion: React.FC<Props> = ({isOpen, onClose}) => {
   )
 }
 
-export default ModalConfirmDeletion;
+export default ColorsGroupModalAddItem;

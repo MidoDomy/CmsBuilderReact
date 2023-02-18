@@ -11,6 +11,7 @@ import Radio from './Radio';
 import Checkbox from './Checkbox';
 import Group from './Group';
 import FileUpload from './FileUpload';
+import Color from './Color';
 
 type Props = {
   children: React.ReactNode;
@@ -46,5 +47,6 @@ export default Object.assign(Form, {
   Radio: Radio,
   Checkbox: Checkbox,
   Group: Group,
-  FileUpload: FileUpload
+  FileUpload: FileUpload,
+  Color: Color
 });
