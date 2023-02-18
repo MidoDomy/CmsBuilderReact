@@ -5,7 +5,7 @@ import Row from 'components/Row';
 import Col from 'components/Col';
 import Collapse from 'components/Collapse';
 import Icon from 'components/Icon';
-import CategoriesSidebarItemOptions from './CategoriesSidebarItemOptions';
+import CategoriesSidebarItemDropdown from './CategoriesSidebarItemDropdown';
 
 interface categoryItem {
   id: number; 
@@ -29,18 +29,18 @@ const CategoriesSidebarItem: React.FC<Props> = ({ subCategories, name }) => {
     <>
       {!hasSubCategories ? 
         <Row gapX={2}>
+          {/* Name */}
           <Col fill>
-            {/* Name */}
-            <Link className={`block py-1 px-2 rounded cursor-pointer transition-colors ${active ? 'bg-sky-50 text-sky-500' : 'hover:bg-gray-50'}`}
+            <Link className={`block py-0.5 px-2 rounded cursor-pointer transition-colors ${active ? 'bg-sky-50 text-sky-500' : 'hover:bg-gray-50'}`}
               href='#'
             >
-              {name}
+              <span className='text-sm'>{name}</span>
             </Link>
           </Col>
 
+          {/* Dropdown options */}
           <Col>
-            {/* Dropdown options */}
-            <CategoriesSidebarItemOptions />
+            <CategoriesSidebarItemDropdown />
           </Col>
         </Row>
         :
@@ -49,7 +49,7 @@ const CategoriesSidebarItem: React.FC<Props> = ({ subCategories, name }) => {
           <div>
             <Row gapX={2} align='center'>
               <Col fill>
-                <Link className={`block py-1 px-2 rounded cursor-pointer transition-colors ${active ? 'bg-sky-50 text-sky-500' : 'hover:bg-gray-50'}`}
+                <Link className={`block py-0.5 px-2 rounded cursor-pointer transition-colors ${active ? 'bg-sky-50 text-sky-500' : 'hover:bg-gray-50'}`}
                   href='#'
                 >
                   <Row gapX={6} align='center'>
@@ -64,37 +64,38 @@ const CategoriesSidebarItem: React.FC<Props> = ({ subCategories, name }) => {
 
                     {/* Name */}
                     <Col fill>
-                      {name}
+                      <span className='text-sm'>{name}</span>
                     </Col>
                   </Row>
                 </Link>
               </Col>
 
+              {/* Trigger */}
               <Col>
-                {/* Trigger */}
                 <span onClick={() => setOpen(!open)}>
                   <Collapse.Trigger />
                 </span>
               </Col>
 
+              {/* Dropdown options */}
               <Col>
-                {/* Dropdown options */}
-                <CategoriesSidebarItemOptions />
+                <CategoriesSidebarItemDropdown />
               </Col>
             </Row>
           </div>
     
           {/* Children */}
-          <Collapse.Content>
-            <div className='pl-2'>
-              <ul className='pl-0.5 border-l'>
-                {subCategories.map((subCategory) => (
-                  <li key={subCategory.id}>
-                    <CategoriesSidebarItem name={subCategory.name} subCategories={subCategory.subCategories}/>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <Collapse.Content className='pt-1 pb-1 pl-2'>
+            <ul className='flex flex-col gap-1 pl-0.5 border-l'>
+              {subCategories.map((subCategory) => (
+                <li key={subCategory.id}>
+                  <CategoriesSidebarItem 
+                    name={subCategory.name} 
+                    subCategories={subCategory.subCategories}
+                  />
+                </li>
+              ))}
+            </ul>
           </Collapse.Content>
         </Collapse>
       }
