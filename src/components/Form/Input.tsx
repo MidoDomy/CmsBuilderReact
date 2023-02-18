@@ -12,10 +12,11 @@ type Props = {
   type?: string;
   required?: boolean;
   value?: any;
+  defaultValue?: any;
   onChange?: (e: any) => any;
 }
 
-const Input: React.FC<Props> = ({ className, value, onChange, prefix, suffix, size, label, placeholder, type, required, ...props }) => {
+const Input: React.FC<Props> = ({ className, value, defaultValue, onChange, prefix, suffix, size, label, placeholder, type, required, ...props }) => {
 
   const sizeClasses = (() => {switch(size) {
     case 'sm':
@@ -43,6 +44,7 @@ const Input: React.FC<Props> = ({ className, value, onChange, prefix, suffix, si
           placeholder={placeholder}
           type={type}
           value={value}
+          defaultValue={defaultValue}
           onChange={onChange}
           {...props}
         />
