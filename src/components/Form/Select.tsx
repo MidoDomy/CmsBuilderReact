@@ -10,10 +10,13 @@ type Props = {
   size?: 'sm' | 'md' | 'lg';
   label?: string;
   placeholder?: string;
+  value?: any;
+  defaultValue?: any;
   required?: boolean;
+  onChange?: (e: any) => any;
 }
 
-const Select: React.FC<Props> = ({ className, selectClass, options, label, placeholder, required, size, ...props }) => {
+const Select: React.FC<Props> = ({ className, selectClass, options, size, label, placeholder, value, defaultValue, required, onChange, ...props }) => {
 
   const sizeClasses = (() => {switch(size) {
     case 'sm':
@@ -32,7 +35,9 @@ const Select: React.FC<Props> = ({ className, selectClass, options, label, place
     >
       <div className='relative'>
         <select className={`appearance-none w-full bg-white border border-gray-200 focus:border-sky-500 rounded-md focus:outline-none select-none cursor-pointer ${sizeClasses} ${selectClass}`}
-          defaultValue={'default'}
+          value={value}
+          defaultValue={defaultValue}
+          onChange={onChange}
           {...props}
         >
           {placeholder && <option disabled value={'default'}>{placeholder}</option>}

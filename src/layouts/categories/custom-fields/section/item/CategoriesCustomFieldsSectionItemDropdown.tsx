@@ -4,8 +4,10 @@ import Dropdown from 'components/Dropdown';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 import ModalConfirmDeletion from 'layouts/general/ModalConfirmDeletion';
+import CategoriesCustomFieldsSectionModalAddItem from '../CategoriesCustomFieldsSectionModalAddItem';
 
-const CollectionsListItemDropdown: React.FC = () => {
+const CategoriesCustomFieldsSectionItemDropdown: React.FC = () => {
+  const [showModalEditField, setShowModalEditField] = useState(false);
   const [showModalConfirmDeletion, setShowModalConfirmDeletion] = useState(false);
 
   return (
@@ -23,7 +25,7 @@ const CollectionsListItemDropdown: React.FC = () => {
         <Dropdown.Menu className='-mr-1'>
           <Dropdown.MenuItem
             icon='edit'
-            link='/collections/item'
+            onClick={() => setShowModalEditField(true)}
           >
             Edit
           </Dropdown.MenuItem>
@@ -37,7 +39,13 @@ const CollectionsListItemDropdown: React.FC = () => {
           </Dropdown.MenuItem>
         </Dropdown.Menu>
       </Dropdown>
-
+    
+      {/* Modal edit */}
+      <CategoriesCustomFieldsSectionModalAddItem
+        isOpen={showModalEditField}
+        onClose={() => setShowModalEditField(false)}
+      />
+      
       {/* Modal confirm deletion */}
       <ModalConfirmDeletion 
         isOpen={showModalConfirmDeletion}
@@ -47,4 +55,4 @@ const CollectionsListItemDropdown: React.FC = () => {
   )
 }
 
-export default CollectionsListItemDropdown;
+export default CategoriesCustomFieldsSectionItemDropdown;
