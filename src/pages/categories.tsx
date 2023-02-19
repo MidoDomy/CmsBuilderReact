@@ -10,6 +10,7 @@ import Layout from 'layouts/general/Layout';
 import PageHeader from 'layouts/general/PageHeader';
 import CategoriesSidebar from 'layouts/categories/CategoriesSidebar';
 import CategoriesGeneral from 'layouts/categories/CategoriesGeneral';
+import CategoriesCustomFields from 'layouts/categories/CategoriesCustomFields';
 import CategoriesSEO from 'layouts/categories/CategoriesSEO';
 import CategoriesLayout from 'layouts/categories/CategoriesLayout';
 
@@ -25,6 +26,7 @@ const Categories: NextPage = () => {
           {/* Page header */}
           <PageHeader
             title='Category Name'
+            description='Category description'
             actions={
               <Button variant='primary'>
                 <Icon name='checkmark' size={18} />
@@ -42,6 +44,10 @@ const Categories: NextPage = () => {
                     General
                   </Tabs.NavItem>
 
+                  <Tabs.NavItem name='customFields'>
+                    Custom fields
+                  </Tabs.NavItem>
+
                   <Tabs.NavItem name='seo'>
                     SEO
                   </Tabs.NavItem>
@@ -53,6 +59,10 @@ const Categories: NextPage = () => {
 
                 <Tabs.Content name='general'>
                   <CategoriesGeneral />
+                </Tabs.Content>
+
+                <Tabs.Content name='customFields'>
+                  <CategoriesCustomFields />
                 </Tabs.Content>
 
                 <Tabs.Content name='seo'>

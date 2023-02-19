@@ -18,9 +18,11 @@ const CollectionsOverviewTableItem: React.FC<Props> = ({link, name, description,
   return (
     <DataGrid.Row>
       <DataGrid.Col className='w-20'>
-        <Image className='w-10 h-10 object-contain'
-          alt={name}
-        />
+        <Link href={link}>
+          <Image className='w-10 h-10 object-contain'
+            alt={name}
+          />
+        </Link>
       </DataGrid.Col>
 
       <DataGrid.Col>

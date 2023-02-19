@@ -20,10 +20,12 @@ const CollectionsListGridItem: React.FC<Props> = ({link, img, name, count, descr
       </div>
 
       <div className='h-40'>
-        <Image className='h-full w-full object-cover'
-          src={img} 
-          alt='Collection img'
-        />
+        <Link href={link}>
+          <Image className='h-full w-full object-cover'
+            src={img} 
+            alt='Collection img'
+          />
+        </Link>
       </div>
 
       <div className='flex-1 pt-3 px-4 pb-6'>

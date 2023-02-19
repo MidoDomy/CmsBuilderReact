@@ -3,9 +3,16 @@ import React, { useState } from 'react';
 import Dropdown from 'components/Dropdown';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
+import CategoriesCustomFieldsSectionModalAddItem from './CategoriesCustomFieldsSectionModalAddItem';
 import ModalConfirmDeletion from 'layouts/general/ModalConfirmDeletion';
 
-const CollectionsListItemDropdown: React.FC = () => {
+type Props = {
+  isEdit: boolean;
+  setIsEdit: (e: any) => any;
+}
+
+const CategoriesCustomFieldsSectionDropdown: React.FC<Props> = ({isEdit, setIsEdit}) => {
+  const [showModalAddField, setShowModalAddField] = useState(false);
   const [showModalConfirmDeletion, setShowModalConfirmDeletion] = useState(false);
 
   return (
@@ -16,14 +23,21 @@ const CollectionsListItemDropdown: React.FC = () => {
             size='sm'
             rounded
           >
-            <Icon name='three-dots' size={16} />
+            <Icon name='settings' size={16} />
           </Button>
         </Dropdown.Trigger>
 
         <Dropdown.Menu className='-mr-1'>
           <Dropdown.MenuItem
+            icon='plus'
+            onClick={() => setShowModalAddField(true)}
+          >
+            Add field
+          </Dropdown.MenuItem>
+
+          <Dropdown.MenuItem
             icon='edit'
-            link='/collections/item'
+            onClick={() => setIsEdit(!isEdit)}
           >
             Edit
           </Dropdown.MenuItem>
@@ -37,7 +51,13 @@ const CollectionsListItemDropdown: React.FC = () => {
           </Dropdown.MenuItem>
         </Dropdown.Menu>
       </Dropdown>
-
+    
+      {/* Modal edit */}
+      <CategoriesCustomFieldsSectionModalAddItem
+        isOpen={showModalAddField}
+        onClose={() => setShowModalAddField(false)}
+      />
+      
       {/* Modal confirm deletion */}
       <ModalConfirmDeletion 
         isOpen={showModalConfirmDeletion}
@@ -47,4 +67,4 @@ const CollectionsListItemDropdown: React.FC = () => {
   )
 }
 
-export default CollectionsListItemDropdown;
+export default CategoriesCustomFieldsSectionDropdown;

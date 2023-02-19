@@ -15,19 +15,19 @@ const CategoriesLayout: React.FC = () => {
 
   return (
     <>
-      <Section title='Layout'>
+      <Section title='Layout template'>
         <Row gapX={24}>
-          <Col>
+          <Col span={5}>
             <div className='p-2 bg-white border border-gray-200 rounded-md shadow-sm hover:shadow cursor-pointer'
               onClick={() => setShowModalLayoutChange(true)}
             >
-              <Image className='h-32 w-48 object-cover rounded'
+              <Image className='h-32 object-cover rounded'
                 alt='' 
               />
             </div>
           </Col>
 
-          <Col>
+          <Col span={7}>
             <div className='mb-4 text-sm'>
               <div className='font-medium'>Layout name</div>
               <div>Layout group name</div>
