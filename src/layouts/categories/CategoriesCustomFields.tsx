@@ -4,7 +4,9 @@ import CustomFieldsLayout from 'layouts/custom-fields/CustomFieldsLayout';
 
 const CategoriesCustomFields: React.FC = () => {
   return (
-    <CustomFieldsLayout />
+    <CustomFieldsLayout 
+      editable 
+    />
   )
 }
 
