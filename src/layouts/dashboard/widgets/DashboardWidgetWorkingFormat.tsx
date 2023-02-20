@@ -7,16 +7,8 @@ Chart.register(CategoryScale);
 
 const DashboardWidgetWorkingFormat: React.FC = () => {
   const StatisticakOverviewData = [
-    {
-      id: 1,
-      type: 'Remote',
-      visitors: 80
-    },
-    {
-      id: 2,
-      type: 'On site',
-      visitors: 40
-    }
+    {id: 1, type: 'Remote', workers: 80},
+    {id: 2, type: 'On site', workers: 40}
   ];
 
   const chartData = {
@@ -24,7 +16,7 @@ const DashboardWidgetWorkingFormat: React.FC = () => {
     datasets: [
       {
         labels: 'Working force',
-        data: StatisticakOverviewData.map((data) => data.visitors),
+        data: StatisticakOverviewData.map((data) => data.workers),
         backgroundColor: [
           "rgb(186 230 253)",
           "rgba(14 165 233)"
@@ -42,8 +34,10 @@ const DashboardWidgetWorkingFormat: React.FC = () => {
   };
 
   return (
-    <div className='h-full flex flex-col p-6 bg-white border border-gray-200 rounded-lg hover:shadow'>
-      <h5 className='mb-6 font-medium text-lg'>Working format</h5>
+    <div className='h-full flex flex-col p-6 bg-white border border-gray-200 rounded-md shadow-sm hover:shadow transition-shadow'>
+      <div className='mb-6'>
+        <h5 className='font-medium text-lg'>Working format</h5>
+      </div>
 
       <div className='relative flex-1'>
         <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 text-center'>

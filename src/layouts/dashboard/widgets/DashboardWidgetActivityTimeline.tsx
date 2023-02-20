@@ -7,21 +7,9 @@ import Button from 'components/Button';
 
 const DashboardWidgetActivityTimeline: React.FC = () => {
   return (
-    <div className='h-full flex flex-col bg-white border border-gray-200 rounded-lg hover:shadow'>
+    <div className='h-full flex flex-col bg-white border border-gray-200 rounded-md shadow-sm hover:shadow transition-shadow'>
       <div className='pt-6 pb-3 px-6'>
-        <Row justify='between'>
-          <Col>
-            <h5 className='font-medium text-lg'>Recent activity</h5>
-          </Col>
-
-          <Col>
-            <Button
-              variant='link'
-            >
-              See all
-            </Button>
-          </Col>
-        </Row>
+        <h5 className='font-medium text-lg'>Recent activity</h5>
       </div>
       
       {/* Activities */}

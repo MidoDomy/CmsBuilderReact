@@ -12,31 +12,11 @@ Chart.register(CategoryScale);
 
 const DashboardWidgetStatisticalOverview: React.FC = () => {
   const StatisticakOverviewData = [
-    {
-      id: 1,
-      year: 2016,
-      visitors: 80000
-    },
-    {
-      id: 2,
-      year: 2017,
-      visitors: 77677
-    },
-    {
-      id: 3,
-      year: 2018,
-      visitors: 78888
-    },
-    {
-      id: 4,
-      year: 2019,
-      visitors: 85000
-    },
-    {
-      id: 5,
-      year: 2020,
-      visitors: 86300
-    },
+    {id: 1, year: 2016, visitors: 80000},
+    {id: 2, year: 2017, visitors: 77677},
+    {id: 3, year: 2018, visitors: 78888},
+    {id: 4, year: 2019, visitors: 85000},
+    {id: 5, year: 2020, visitors: 86300},
   ];
 
   const chartData = {
@@ -64,7 +44,7 @@ const DashboardWidgetStatisticalOverview: React.FC = () => {
   };
   
   return (
-    <div className='h-full flex flex-col p-6 bg-white border border-gray-200 rounded-lg hover:shadow'>
+    <div className='h-full flex flex-col p-6 bg-white border border-gray-200 rounded-md shadow-sm hover:shadow transition-shadow'>
       <div className='mb-6'>
         <Row justify='between' align='center'>
           <Col>

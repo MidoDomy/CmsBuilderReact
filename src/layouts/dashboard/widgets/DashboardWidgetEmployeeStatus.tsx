@@ -4,10 +4,12 @@ import Row from 'components/Row';
 import Col from 'components/Col';
 import DataGrid from 'components/DataGrid';
 import Avatar from 'components/Avatar';
+import Button from 'components/Button';
+import Icon from 'components/Icon';
 
 const DashboardWidgetEmployeeStatus: React.FC = () => {
   const columns = [
-    { key: 'id', name: 'ID' },
+    { key: 'id', name: '' },
     { key: 'employee', name: 'Employee' },
     { key: 'salary', name: 'Salary' },
     { key: 'status', name: 'Status' }
@@ -22,32 +24,33 @@ const DashboardWidgetEmployeeStatus: React.FC = () => {
   ];
 
   return (
-    <div className='h-full flex flex-col p-6 bg-white border border-gray-200 rounded-lg hover:shadow'>
+    <div className='h-full flex flex-col p-6 bg-white border border-gray-200 rounded-md shadow-sm hover:shadow transition-shadow'>
       <div className='mb-6'>
-        <h5 className='font-medium text-lg'>Employees status</h5>
+        <Row justify='between' align='center'>
+          <Col>
+            <h5 className='font-medium text-lg'>Employees status</h5>
+          </Col>
+
+          <Col>
+            <Button size='sm'>
+              <Icon name='filter' size={16} />
+              Filter
+            </Button>
+          </Col>
+        </Row>
       </div>
 
       <div className='flex-1'>
         <DataGrid columns={columns}>
           {employees?.map(employee =>
             <DataGrid.Row key={employee.id}>
-              <DataGrid.Col className='w-14'>
-                <div className='text-sm text-center'>
-                  {employee.id}
-                </div>
+              <DataGrid.Col className='w-[60px] pr-0'>
+                  <Avatar alt='' />
               </DataGrid.Col>
 
               <DataGrid.Col>
-                <Row gapX={10}>
-                  <Col>
-                    <Avatar alt='' />
-                  </Col>
-
-                  <Col>
-                    <div className='font-medium text-sm'>{employee.name}</div>
-                    <div className='text-xs text-slate-500'>{employee.role}</div>
-                  </Col>
-                </Row>
+                <div className='font-medium text-sm'>{employee.name}</div>
+                <div className='text-xs text-slate-500'>{employee.role}</div>
               </DataGrid.Col>
 
               <DataGrid.Col>
