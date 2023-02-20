@@ -62,6 +62,10 @@ const Categories: NextPage = () => {
                 </Tabs.Content>
 
                 <Tabs.Content name='customFields'>
+                  <div className='-mt-5 mb-8 text-slate-500 text-sm'>
+                    Editing fields and sections will affect all categories.
+                  </div>
+
                   <CategoriesCustomFields />
                 </Tabs.Content>
 

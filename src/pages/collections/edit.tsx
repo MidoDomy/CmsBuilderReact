@@ -59,6 +59,10 @@ const CollectionsConfig: NextPage = () => {
 
             {/* Collection item data */}
             <Tabs.Content name='item'>
+              <div className='-mt-5 mb-8 text-slate-500 text-sm'>
+                Editing fields and sections will affect all collection items.
+              </div>
+
               <CollectionsEditCustomFields />
             </Tabs.Content>
           </Tabs>
