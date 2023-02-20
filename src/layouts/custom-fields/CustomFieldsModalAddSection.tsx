@@ -11,7 +11,7 @@ type Props = {
   onClose: () => void;
 }
 
-const CategoriesCustomFieldsModalAddSection: React.FC<Props> = ({isOpen, onClose}) => {
+const CustomFieldsModalAddSection: React.FC<Props> = ({isOpen, onClose}) => {
   return (
     <Modal 
       isOpen={isOpen} 
@@ -58,4 +58,4 @@ const CategoriesCustomFieldsModalAddSection: React.FC<Props> = ({isOpen, onClose
   )
 }
 
-export default CategoriesCustomFieldsModalAddSection;
+export default CustomFieldsModalAddSection;

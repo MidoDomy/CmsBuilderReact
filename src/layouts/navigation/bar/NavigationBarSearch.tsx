@@ -52,14 +52,9 @@ const NavigationBarSearch: React.FC = () => {
         <Form.Select selectClass='rounded-l-none rounded-r-3xl'
           placeholder='Advanced'
           options={[
-            {
-              value: 'categories',
-              name: 'Categories'
-            },
-            {
-              value: 'collections',
-              name: 'Collections'
-            }
+            {value: 'all', name: 'All'},
+            {value: 'categories', name: 'Categories'},
+            {value: 'collections', name: 'Collections'}
           ]}
         />
       </Form.InputGroup>

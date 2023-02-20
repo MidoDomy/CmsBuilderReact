@@ -2,17 +2,18 @@ import React from 'react';
 
 import Form from 'components/Form';
 
-const CategoriesCustomFieldsSectionModalAddTextarea: React.FC = () => {
+const CustomFieldsSectionModalAddSelect: React.FC = () => {
   return (
     <>
       <Form.Group>
-        <Form.Textarea 
+        <Form.Input 
           label='Default value'
           placeholder='Enter default value...'
+          type='number'
         />
       </Form.Group>
     </>
   )
 }
 
-export default CategoriesCustomFieldsSectionModalAddTextarea;
+export default CustomFieldsSectionModalAddSelect;

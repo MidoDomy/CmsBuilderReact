@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Dropdown from 'components/Dropdown';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
-import CategoriesCustomFieldsSectionModalAddItem from './CategoriesCustomFieldsSectionModalAddItem';
+import CustomFieldsSectionModalAddItem from './CustomFieldsSectionModalAddItem';
 import ModalConfirmDeletion from 'layouts/general/ModalConfirmDeletion';
 
 type Props = {
@@ -11,7 +11,7 @@ type Props = {
   setIsEdit: (e: any) => any;
 }
 
-const CategoriesCustomFieldsSectionDropdown: React.FC<Props> = ({isEdit, setIsEdit}) => {
+const CustomFieldsSectionDropdown: React.FC<Props> = ({isEdit, setIsEdit}) => {
   const [showModalAddField, setShowModalAddField] = useState(false);
   const [showModalConfirmDeletion, setShowModalConfirmDeletion] = useState(false);
 
@@ -53,7 +53,7 @@ const CategoriesCustomFieldsSectionDropdown: React.FC<Props> = ({isEdit, setIsEd
       </Dropdown>
     
       {/* Modal edit */}
-      <CategoriesCustomFieldsSectionModalAddItem
+      <CustomFieldsSectionModalAddItem
         isOpen={showModalAddField}
         onClose={() => setShowModalAddField(false)}
       />
@@ -67,4 +67,4 @@ const CategoriesCustomFieldsSectionDropdown: React.FC<Props> = ({isEdit, setIsEd
   )
 }
 
-export default CategoriesCustomFieldsSectionDropdown;
+export default CustomFieldsSectionDropdown;

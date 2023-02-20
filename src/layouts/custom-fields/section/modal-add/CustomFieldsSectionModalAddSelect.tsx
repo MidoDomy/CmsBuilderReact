@@ -2,7 +2,7 @@ import React from 'react';
 
 import Form from 'components/Form';
 
-const CategoriesCustomFieldsSectionModalAddSelect: React.FC = () => {
+const CustomFieldsSectionModalAddSelect: React.FC = () => {
   return (
     <>
       <Form.Group>
@@ -18,4 +18,4 @@ const CategoriesCustomFieldsSectionModalAddSelect: React.FC = () => {
   )
 }
 
-export default CategoriesCustomFieldsSectionModalAddSelect;
+export default CustomFieldsSectionModalAddSelect;

@@ -4,9 +4,9 @@ import Dropdown from 'components/Dropdown';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 import ModalConfirmDeletion from 'layouts/general/ModalConfirmDeletion';
-import CategoriesCustomFieldsSectionModalAddItem from '../CategoriesCustomFieldsSectionModalAddItem';
+import CustomFieldsSectionModalAddItem from '../CustomFieldsSectionModalAddItem';
 
-const CategoriesCustomFieldsSectionItemDropdown: React.FC = () => {
+const CustomFieldsSectionItemDropdown: React.FC = () => {
   const [showModalEditField, setShowModalEditField] = useState(false);
   const [showModalConfirmDeletion, setShowModalConfirmDeletion] = useState(false);
 
@@ -41,7 +41,7 @@ const CategoriesCustomFieldsSectionItemDropdown: React.FC = () => {
       </Dropdown>
     
       {/* Modal edit */}
-      <CategoriesCustomFieldsSectionModalAddItem
+      <CustomFieldsSectionModalAddItem
         isOpen={showModalEditField}
         onClose={() => setShowModalEditField(false)}
       />
@@ -55,4 +55,4 @@ const CategoriesCustomFieldsSectionItemDropdown: React.FC = () => {
   )
 }
 
-export default CategoriesCustomFieldsSectionItemDropdown;
+export default CustomFieldsSectionItemDropdown;

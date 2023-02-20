@@ -2,7 +2,7 @@ import React from 'react';
 
 import Form from 'components/Form';
 
-interface CategoriesCustomFieldsSectionItem {
+interface CustomFieldsSectionItem {
   label: string;
   placeholder: string;
   type: string;
@@ -10,10 +10,10 @@ interface CategoriesCustomFieldsSectionItem {
 }
 
 type Props = {
-  field: CategoriesCustomFieldsSectionItem;
+  field: CustomFieldsSectionItem;
 }
 
-const CategoriesCustomFieldsSectionItem: React.FC<Props> = ({field}) => {
+const CustomFieldsSectionItem: React.FC<Props> = ({field}) => {
   return (
     <>
       {field.type == 'number' ?
@@ -47,4 +47,4 @@ const CategoriesCustomFieldsSectionItem: React.FC<Props> = ({field}) => {
   )
 }
 
-export default CategoriesCustomFieldsSectionItem;
+export default CustomFieldsSectionItem;

@@ -6,9 +6,9 @@ import Button from 'components/Button';
 import Icon from 'components/Icon';
 import DataGrid from 'components/DataGrid';
 import Section from 'layouts/general/Section';
-import CategoriesCustomFieldsSectionTableItem from './section/CategoriesCustomFieldsSectionTableItem';
-import CategoriesCustomFieldSectionDropdown from './section/CategoriesCustomFieldSectionDropdown';
-import CategoriesCustomFieldsSectionItem from './section/CategoriesCustomFieldsSectionItem';
+import CustomFieldsSectionTableItem from './section/CustomFieldsSectionTableItem';
+import CustomFieldSectionDropdown from './section/CustomFieldSectionDropdown';
+import CustomFieldsSectionItem from './section/CustomFieldsSectionItem';
 
 interface CustomFieldsSectionField {
   id: number; 
@@ -26,7 +26,7 @@ type Props = {
   fields: CustomFieldsSectionField[];
 }
 
-const CategoriesCustomFieldsSection: React.FC<Props> = ({title, description, fields}) => {
+const CustomFieldsSection: React.FC<Props> = ({title, description, fields}) => {
   const columns = [
     { key: 'label', name: 'Label' },
     { key: 'name', name: 'Name' },
@@ -71,7 +71,7 @@ const CategoriesCustomFieldsSection: React.FC<Props> = ({title, description, fie
               </>
               :
               <Col>
-                <CategoriesCustomFieldSectionDropdown
+                <CustomFieldSectionDropdown
                   isEdit={isEdit}
                   setIsEdit={() => setIsEdit(!isEdit)}
                 />
@@ -85,7 +85,7 @@ const CategoriesCustomFieldsSection: React.FC<Props> = ({title, description, fie
         isEdit ?
           <DataGrid columns={columns}>
             {fields?.map(field =>
-              <CategoriesCustomFieldsSectionTableItem
+              <CustomFieldsSectionTableItem
                 key={field.id}
                 label={field.label}
                 name={field.name}
@@ -97,7 +97,7 @@ const CategoriesCustomFieldsSection: React.FC<Props> = ({title, description, fie
           :
           <>
             {fields?.map(field =>
-              <CategoriesCustomFieldsSectionItem
+              <CustomFieldsSectionItem
                 key={field.id}
                 field={field}
               />
@@ -112,4 +112,4 @@ const CategoriesCustomFieldsSection: React.FC<Props> = ({title, description, fie
   )
 }
 
-export default CategoriesCustomFieldsSection;
+export default CustomFieldsSection;

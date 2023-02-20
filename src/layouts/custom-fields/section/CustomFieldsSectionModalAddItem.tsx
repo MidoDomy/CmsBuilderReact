@@ -6,17 +6,17 @@ import Col from 'components/Col';
 import Form from 'components/Form';
 import Button from 'components/Button';
 import Divider from 'components/Divider';
-import CategoriesCustomFieldsSectionModalAddTextarea from './modal-add/CategoriesCustomFieldsSectionModalAddTextarea';
-import CategoriesCustomFieldsSectionModalAddSelect from './modal-add/CategoriesCustomFieldsSectionModalAddSelect';
-import CategoriesCustomFieldsSectionModalAddText from './modal-add/CategoriesCustomFieldsSectionModalAddNumber';
-import CategoriesCustomFieldsSectionModalAddNumber from './modal-add/CategoriesCustomFieldsSectionModalAddNumber';
+import CustomFieldsSectionModalAddTextarea from './modal-add/CustomFieldsSectionModalAddTextarea';
+import CustomFieldsSectionModalAddSelect from './modal-add/CustomFieldsSectionModalAddSelect';
+import CustomFieldsSectionModalAddText from './modal-add/CustomFieldsSectionModalAddNumber';
+import CustomFieldsSectionModalAddNumber from './modal-add/CustomFieldsSectionModalAddNumber';
 
 type Props = {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const CategoriesCustomFieldsSectionModalAddItem: React.FC<Props> = ({isOpen, onClose}) => {
+const CustomFieldsSectionModalAddItem: React.FC<Props> = ({isOpen, onClose}) => {
   const types = [
     {
       value: 'text',
@@ -96,15 +96,15 @@ const CategoriesCustomFieldsSectionModalAddItem: React.FC<Props> = ({isOpen, onC
         </Form.Group>
 
         {type == 'textarea' ?
-            <CategoriesCustomFieldsSectionModalAddTextarea />
+            <CustomFieldsSectionModalAddTextarea />
           :
           type == 'select' ?
-            <CategoriesCustomFieldsSectionModalAddSelect />
+            <CustomFieldsSectionModalAddSelect />
           :
           type == 'number' ?
-          <CategoriesCustomFieldsSectionModalAddNumber />
+          <CustomFieldsSectionModalAddNumber />
           :
-          <CategoriesCustomFieldsSectionModalAddText />
+          <CustomFieldsSectionModalAddText />
         }
       </Modal.Body>
 
@@ -130,4 +130,4 @@ const CategoriesCustomFieldsSectionModalAddItem: React.FC<Props> = ({isOpen, onC
   )
 }
 
-export default CategoriesCustomFieldsSectionModalAddItem;
+export default CustomFieldsSectionModalAddItem;

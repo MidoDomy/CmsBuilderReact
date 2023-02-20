@@ -1,7 +1,7 @@
 import React from 'react';
 
 import DataGrid from 'components/DataGrid';
-import CategoriesCustomFieldsSectionItemDropdown from './item/CategoriesCustomFieldsSectionItemDropdown';
+import CustomFieldsSectionItemDropdown from './item/CustomFieldsSectionItemDropdown';
 
 type Props = {
   label: string;
@@ -10,7 +10,7 @@ type Props = {
   defaultValue: string;
 }
 
-const CategoriesCustomFieldsSectionTableItem: React.FC<Props> = ({label, name, type, defaultValue}) => {
+const CustomFieldsSectionTableItem: React.FC<Props> = ({label, name, type, defaultValue}) => {
   return (
     <DataGrid.Row>
       <DataGrid.Col>
@@ -38,10 +38,10 @@ const CategoriesCustomFieldsSectionTableItem: React.FC<Props> = ({label, name, t
       </DataGrid.Col>
 
       <DataGrid.Col className='text-right'>
-        <CategoriesCustomFieldsSectionItemDropdown />
+        <CustomFieldsSectionItemDropdown />
       </DataGrid.Col>
     </DataGrid.Row>
   )
 }
 
-export default CategoriesCustomFieldsSectionTableItem;
+export default CustomFieldsSectionTableItem;
