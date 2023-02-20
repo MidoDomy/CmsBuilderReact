@@ -15,7 +15,7 @@ const CategoriesLayout: React.FC = () => {
 
   return (
     <>
-      <Section title='Layout template'>
+      <Section title='Layout assignment'>
         <Row gapX={24}>
           <Col span={5}>
             <div className='p-2 bg-white border border-gray-200 rounded-md shadow-sm hover:shadow cursor-pointer'

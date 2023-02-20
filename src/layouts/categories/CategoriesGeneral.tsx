@@ -36,6 +36,7 @@ const CategoriesGeneral: React.FC = () => {
       {/* Type */}
       <Section
         title='Type'
+        description='Normal page can be accessed directly with the assigned layout. A structuring element will only be displayed in the structure and is not directly accessible. A link allows for reference to internal or external sites/pages.'
       >
         <Form.Select
           options={[

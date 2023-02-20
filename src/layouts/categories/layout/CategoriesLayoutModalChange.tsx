@@ -53,6 +53,7 @@ const CategoriesLayoutModalChange: React.FC<Props> = ({isOpen, onClose}) => {
               placeholder='All'
               size='sm'
               options={[
+                {value: 'all', name: 'All'},
                 {value: 'basic', name: 'Basic'},
                 {value: 'pages', name: 'Pages'},
                 {value: 'settings', name: 'Settings'}
