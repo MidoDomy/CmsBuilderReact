@@ -4,6 +4,7 @@ import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
+import FormGroup from 'components/Form/Group';
 import DataGrid from 'components/DataGrid';
 import Section from 'layouts/general/Section';
 import CustomFieldsSectionTableItem from './section/CustomFieldsSectionTableItem';
@@ -21,12 +22,13 @@ interface CustomFieldsSectionField {
 }
 
 type Props = {
+  editable?: boolean;
   title: string;
   description: string;
   fields: CustomFieldsSectionField[];
 }
 
-const CustomFieldsSection: React.FC<Props> = ({title, description, fields}) => {
+const CustomFieldsSection: React.FC<Props> = ({editable, title, description, fields}) => {
   const columns = [
     { key: 'label', name: 'Label' },
     { key: 'name', name: 'Name' },
@@ -41,45 +43,47 @@ const CustomFieldsSection: React.FC<Props> = ({title, description, fields}) => {
       title={title}
       description={description}
     >
-      {/* actions */}
-      <div className='relative'>
-        <div className='absolute top-0 right-full pr-10'>
-          <Row gapX={8} justify='end' noWrap>
-            {isEdit ?
-              <>
-                <Col>
-                  <Button 
-                    variant='primary'
-                    size='sm' 
-                    rounded
-                    onClick={() => setIsEdit(false)}
-                  >
-                    <Icon name='checkmark' size={16} />
-                  </Button>
-                </Col>
+      {/* Actions */}
+      {editable &&
+        <div className='relative'>
+          <div className='absolute top-0 right-full pr-10'>
+            <Row gapX={8} justify='end' noWrap>
+              {isEdit ?
+                <>
+                  <Col>
+                    <Button 
+                      variant='primary'
+                      size='sm' 
+                      rounded
+                      onClick={() => setIsEdit(false)}
+                    >
+                      <Icon name='checkmark' size={16} />
+                    </Button>
+                  </Col>
 
+                  <Col>
+                    <Button 
+                      variant='danger'
+                      size='sm' 
+                      rounded
+                      onClick={() => setIsEdit(false)}
+                    >
+                      <Icon name='x' size={16} />
+                    </Button>
+                  </Col>
+                </>
+                :
                 <Col>
-                  <Button 
-                    variant='danger'
-                    size='sm' 
-                    rounded
-                    onClick={() => setIsEdit(false)}
-                  >
-                    <Icon name='x' size={16} />
-                  </Button>
+                  <CustomFieldSectionDropdown
+                    isEdit={isEdit}
+                    setIsEdit={() => setIsEdit(!isEdit)}
+                  />
                 </Col>
-              </>
-              :
-              <Col>
-                <CustomFieldSectionDropdown
-                  isEdit={isEdit}
-                  setIsEdit={() => setIsEdit(!isEdit)}
-                />
-              </Col>
-            }
-          </Row>
+              }
+            </Row>
+          </div>
         </div>
-      </div>
+      }
 
       {fields.length > 0 ?
         isEdit ?
@@ -97,10 +101,9 @@ const CustomFieldsSection: React.FC<Props> = ({title, description, fields}) => {
           :
           <>
             {fields?.map(field =>
-              <CustomFieldsSectionItem
-                key={field.id}
-                field={field}
-              />
+              <FormGroup key={field.id}>
+                <CustomFieldsSectionItem field={field}/>
+              </FormGroup>
             )}
           </>
         :
@@ -110,6 +113,10 @@ const CustomFieldsSection: React.FC<Props> = ({title, description, fields}) => {
       }
     </Section>
   )
+}
+
+CustomFieldsSection.defaultProps = {
+  editable: false
 }
 
 export default CustomFieldsSection;

@@ -10,6 +10,8 @@ import Tabs from 'components/Tabs';
 import Layout from 'layouts/general/Layout';
 import PageHeader from 'layouts/general/PageHeader';
 import Section from 'layouts/general/Section';
+import CollectionsEditGeneral from 'layouts/collections/edit/CollectionsEditGeneral';
+import CollectionsEditCustomFields from 'layouts/collections/edit/CollectionsItemCustomFields';
 
 const CollectionsConfig: NextPage = () => {
   return (
@@ -39,65 +41,25 @@ const CollectionsConfig: NextPage = () => {
       {/* Content */}
       <div>
         <Container>
-          <Tabs active='General'>
+          <Tabs active='general'>
             <Tabs.Nav className='mb-10'>
-              <Tabs.NavItem name='General'>
+              <Tabs.NavItem name='general'>
                 General
               </Tabs.NavItem>
 
-              <Tabs.NavItem name='Item'>
-                Item config
+              <Tabs.NavItem name='item'>
+                Item fields
               </Tabs.NavItem>
             </Tabs.Nav>
 
-            {/* Collection data */}
-            <Tabs.Content name='General'>
-              {/* General */}
-              <Section 
-                title='General' 
-                description='General informations about collection.'
-              >
-                <Form.Group>
-                  <Form.Input
-                    label='Name'
-                    placeholder='Enter name...'
-                  />
-                </Form.Group>
-
-                <Form.Group>
-                  <Form.Textarea
-                    label='Description'
-                    placeholder='Enter description...'
-                  />
-                </Form.Group>
-
-                <Form.Group>
-                  <Form.FileUpload label='Image' />
-                </Form.Group>
-              </Section>
+            {/* General */}
+            <Tabs.Content name='general'>
+              <CollectionsEditGeneral />
             </Tabs.Content>
 
             {/* Collection item data */}
-            <Tabs.Content name='Item'>
-              {/* Added section */}
-              <Section
-                title='Section name'
-                description='Section description.'
-              >
-                TODO: https://dev-oasis.atlassian.net/browse/CB-89
-              </Section>
-
-              {/* Add new section */}
-              <div className='flex flex-col items-center justify-center gap-1 py-8'>
-                <div className='font-medium text-sm'>Click to add new section</div>
-                <Button
-                  variant='primary'
-                  size='sm'
-                  rounded
-                >
-                  <Icon name='plus' size={16} />
-                </Button>
-              </div>
+            <Tabs.Content name='item'>
+              <CollectionsEditCustomFields />
             </Tabs.Content>
           </Tabs>
         </Container>
