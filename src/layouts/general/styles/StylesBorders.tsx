@@ -13,10 +13,10 @@ const StyleBorders: React.FC = () => {
         Borders
       </Collapse.Trigger>
 
-      <Collapse.Content className='pt-3 pb-5 px-1'>
-        <Form.Group>
+      <Collapse.Content className='pt-3 pb-3 px-1'>
+        <div className='mb-10'>
           {/* Border radius */}
-          <Row gapX={6}>
+          <Row gapX={6} align='center'>
             <Col span={5}>
               <Row gapX={6} gapY={6} align='start'>
                 <Col span={4}>
@@ -50,6 +50,7 @@ const StyleBorders: React.FC = () => {
                     id='borderRadiusAll'
                     name='borderRadius'
                     value='all'
+                    defaultChecked
                     hideRadio
                   >
                     <Icon name='border-all' />
@@ -85,18 +86,27 @@ const StyleBorders: React.FC = () => {
             </Col>
 
             <Col span={7}>
-              <Form.Input 
-                type='number' 
-                label='Radius' 
-                placeholder='0' 
-                size='sm'
-                suffix={<span className='text-xs'>px</span>} 
-              />
+              <Form.Group>
+                <Row gapX={6} align='center'>
+                  <Col span={3}>
+                    <Form.Label size='sm'>Radius</Form.Label>
+                  </Col>
+
+                  <Col fill>
+                    <Form.Input 
+                      type='number' 
+                      placeholder='0' 
+                      size='sm'
+                      suffix={<span className='text-xs'>px</span>} 
+                    />
+                  </Col>
+                </Row>
+              </Form.Group>
             </Col>
           </Row>
-        </Form.Group>
+        </div>
 
-        <Form.Group>
+        <div>
           {/* Borders */}
           <Row gapX={6} align='center'>
             <Col span={5}>
@@ -135,6 +145,7 @@ const StyleBorders: React.FC = () => {
                     id='borderAll'
                     name='border'
                     value='all'
+                    defaultChecked
                     hideRadio
                   >
                     <Icon name='border-all' />
@@ -172,57 +183,63 @@ const StyleBorders: React.FC = () => {
             <Col span={7}>
               <Form.Group>
                 {/* Style */}
-                <Form.Select 
-                  label='Style' 
-                  size='sm'
-                  options={[
-                    {
-                      value: 'solid',
-                      name: 'Solid'
-                    },
-                    {
-                      value: 'dashed',
-                      name: 'Dashed'
-                    }
-                  ]}
-                />
+                <Row gapX={6} align='center'>
+                  <Col span={3}>
+                    <Form.Label size='sm'>Style</Form.Label>
+                  </Col>
+
+                  <Col fill>
+                    <Form.Select 
+                      size='sm'
+                      options={[
+                        {value: 'solid', name: 'Solid'},
+                        {value: 'dashed', name: 'Dashed'}
+                      ]}
+                    />
+                  </Col>
+                </Row>
               </Form.Group>
 
               <Form.Group>
                 {/* Size */}
-                <Form.Input 
-                  label='Size'
-                  size='sm'
-                  type='number' 
-                  placeholder='0' 
-                  suffix={<span className='text-xs'>px</span>}
-                />
+                <Row gapX={6} align='center'>
+                  <Col span={3}>
+                    <Form.Label size='sm'>Size</Form.Label>
+                  </Col>
+
+                  <Col fill>
+                    <Form.Input 
+                      size='sm'
+                      type='number' 
+                      placeholder='0' 
+                      suffix={<span className='text-xs'>px</span>}
+                    />
+                  </Col>
+                </Row>
               </Form.Group>
         
               <Form.Group>
                 {/* Color */}
-                <Form.Select 
-                  label='Color'
-                  size='sm'
-                  options={[
-                    {
-                      value: 'Black',
-                      name: 'Black'
-                    },
-                    {
-                      value: 'White',
-                      name: 'White'
-                    },
-                    {
-                      value: 'Gray',
-                      name: 'Gray'
-                    }
-                  ]} 
-                />
+                <Row gapX={6} align='center'>
+                  <Col span={3}>
+                    <Form.Label size='sm'>Color</Form.Label>
+                  </Col>
+
+                  <Col fill>
+                    <Form.Select 
+                      size='sm'
+                      options={[
+                        {value: 'Black', name: 'Black'},
+                        {value: 'White', name: 'White'},
+                        {value: 'Gray', name: 'Gray'}
+                      ]} 
+                    />
+                  </Col>
+                </Row>
               </Form.Group>
             </Col>
           </Row>
-        </Form.Group>
+        </div>
       </Collapse.Content>
     </Collapse>
   );

@@ -12,7 +12,7 @@ const StyleGrid: React.FC = () => {
         Grid
       </Collapse.Trigger>
 
-      <Collapse.Content className='pt-3 pb-5 px-1'>
+      <Collapse.Content className='pt-3 pb-3 px-1'>
         <Form.Group>
           <Row gapX={6}>
             {/* Cols */}
@@ -20,7 +20,7 @@ const StyleGrid: React.FC = () => {
               <Form.Input
                 type='number' 
                 label='Cols'
-                placeholder='0' 
+                placeholder='-' 
                 size='sm'
               />
             </Col>
@@ -30,7 +30,7 @@ const StyleGrid: React.FC = () => {
               <Form.Input
                 type='number' 
                 label='Rows'
-                placeholder='0' 
+                placeholder='-' 
                 size='sm'
               />
             </Col>
@@ -38,29 +38,14 @@ const StyleGrid: React.FC = () => {
         </Form.Group>
 
         <Form.Group>
-          <Row gapX={6}>
-            {/* Cell width */}
-            <Col span={6}>
-              <Form.Input
-                type='number' 
-                label='Cell-width'
-                placeholder='0' 
-                suffix={<span className='text-xs'>px</span>}
-                size='sm'
-              />
-            </Col>
-
-            {/* Cell height */}
-            <Col span={6}>
-              <Form.Input
-                type='number' 
-                label='Cell-height'
-                placeholder='0' 
-                suffix={<span className='text-xs'>px</span>}
-                size='sm'
-              />
-            </Col>
-          </Row>
+          {/* Cell height */}
+            <Form.Input
+              type='number' 
+              label='Cell-height'
+              placeholder='-' 
+              suffix={<span className='text-xs'>px</span>}
+              size='sm'
+            />
         </Form.Group>
       </Collapse.Content>
     </Collapse>

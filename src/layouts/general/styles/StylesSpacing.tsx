@@ -11,85 +11,85 @@ const StyleSpacing: React.FC = () => {
         Spacing
       </Collapse.Trigger>
 
-      <Collapse.Content className='pt-3 pb-5 px-1'>
-        <div className='relative border border-gray-200 dark:border-gray-700 text-sm rounded'>
+      <Collapse.Content className='pt-3 pb-3 px-1'>
+        <div className='relative border border-gray-200 text-sm rounded'>
           <span className='absolute top-0 left-0 p-1 text-xs'>Margin</span>
-          <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center text-slate-800 dark:text-slate-200'
+          <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center'
             type='number'  
             id='marginTop'
-            placeholder='0' 
+            placeholder='-' 
             max='999' 
           />
 
           <Row align='center' gapX={0}>
             <Col span={2}>
-              <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center text-slate-800 dark:text-slate-200'
+              <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center'
                 type='number'  
                 id='marginLeft'
-                placeholder='0' 
+                placeholder='-' 
                 max='999' 
               />
             </Col>
 
             <Col span={8}>
-              <div className='relative border border-gray-200 dark:border-gray-700 rounded'>
+              <div className='relative border border-gray-200 rounded'>
                 <span className='absolute top-0 left-0 p-1 text-xs'>Padding</span>
-                <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center text-slate-800 dark:text-slate-200'
+                <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center'
                   type='number'  
                   id='paddingTop'
-                  placeholder='0' 
+                  placeholder='-' 
                   max='999' 
                 />
 
                 <Row align='center' gapX={0}>
                   <Col span={3}>
-                    <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center text-slate-800 dark:text-slate-200'
+                    <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center'
                       type='number'  
                       id='paddingLeft'
-                      placeholder='0' 
+                      placeholder='-' 
                       max='999' 
                     />
                   </Col>
 
                   <Col span={6}>
-                    <div className='p-0.5 border border-gray-200 dark:border-gray-700 rounded text-xs text-center'>
+                    <div className='p-0.5 border border-gray-200 rounded text-xs text-center'>
                       Content
                     </div>
                   </Col>
 
                   <Col span={3}>
-                    <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center text-slate-800 dark:text-slate-200'
+                    <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center'
                       type='number'  
                       id='paddingRight'
-                      placeholder='0' 
+                      placeholder='-' 
                       max='999' 
                     />
                   </Col>
                 </Row>
 
-                <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center text-slate-800 dark:text-slate-200'
+                <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center'
                   type='number'  
                   id='paddingBottom'
-                  placeholder='0' 
+                  placeholder='-' 
                   max='999' 
                 />
               </div>
             </Col>
 
             <Col span={2}>
-              <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center text-slate-800 dark:text-slate-200'
+              <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center'
                 type='number'  
                 id='marginRight'
-                placeholder='0' 
+                placeholder='-' 
                 max='999' 
               />
             </Col>
           </Row>
 
-          <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center text-slate-800 dark:text-slate-200'
+          <input className='appearance-textfield w-full px-1.5 py-1 bg-transparent outline-none text-center'
             type='number'  
             id='marginBottom'
-            placeholder='0' 
+            placeholder='-' 
             max='999' 
           />
         </div>

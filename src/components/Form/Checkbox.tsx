@@ -20,9 +20,11 @@ const Checkbox: React.FC<Props> = ({ children, className, id, value, label, hide
         {...props} 
       />
 
-      <div className={`peer-checked:block hidden absolute border-r-2 border-b-2 border-white rotate-45 scale-90 ${small ? 'top-[5px] left-1 h-2 w-[5px]' : 'top-1.5 left-[5px] h-2.5 w-1.5'}`}></div>
+      {!hideCheckbox &&
+        <div className={`peer-checked:block hidden absolute border-r-2 border-b-2 border-white rotate-45 scale-90 ${small ? 'top-[5px] left-1 h-2 w-[5px]' : 'top-1.5 left-[5px] h-2.5 w-1.5'}`}></div>
+      }
 
-      <label className='flex-1 cursor-pointer'
+      <label className={`flex-1 cursor-pointer ${hideCheckbox ? 'opacity-30 peer-checked:opacity-100 transition-opacity' : ''}`}
         htmlFor={id}
       >
         {label && <div className={`${children ? 'mb-0.5' : ''} ${small ? 'text-sm' : ''}`}>{label}</div>}
