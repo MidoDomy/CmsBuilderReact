@@ -12,14 +12,14 @@ const StyleSize: React.FC = () => {
         Size
       </Collapse.Trigger>
 
-      <Collapse.Content className='pt-3 pb-5 px-1'>
+      <Collapse.Content className='pt-3 pb-3 px-1'>
         <Form.Group>
           <Row gapX={6}>
             <Col span={6}>
               <Form.Input
                 type='number' 
                 label='Width'
-                placeholder='0' 
+                placeholder='-' 
                 suffix={<span className='text-xs'>px</span>}
                 size='sm'
               />
@@ -29,7 +29,7 @@ const StyleSize: React.FC = () => {
               <Form.Input
                 type='number' 
                 label='Height'
-                placeholder='0' 
+                placeholder='-' 
                 suffix={<span className='text-xs'>px</span>}
                 size='sm'
               />
@@ -43,7 +43,7 @@ const StyleSize: React.FC = () => {
               <Form.Input
                 type='number' 
                 label='Max-width'
-                placeholder='0' 
+                placeholder='-' 
                 suffix={<span className='text-xs'>px</span>}
                 size='sm'
               />
@@ -53,7 +53,7 @@ const StyleSize: React.FC = () => {
               <Form.Input
                 type='number' 
                 label='Max-height'
-                placeholder='0' 
+                placeholder='-' 
                 suffix={<span className='text-xs'>px</span>}
                 size='sm'
               />
@@ -67,7 +67,7 @@ const StyleSize: React.FC = () => {
               <Form.Input
                 type='number' 
                 label='Min-width'
-                placeholder='0' 
+                placeholder='-' 
                 suffix={<span className='text-xs'>px</span>}
                 size='sm'
               />
@@ -77,7 +77,7 @@ const StyleSize: React.FC = () => {
               <Form.Input
                 type='number' 
                 label='Min-height'
-                placeholder='0' 
+                placeholder='-' 
                 suffix={<span className='text-xs'>px</span>}
                 size='sm'
               />

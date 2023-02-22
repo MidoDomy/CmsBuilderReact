@@ -13,16 +13,17 @@ const StylesAlign: React.FC = () => {
         Alignment
       </Collapse.Trigger>
 
-      <Collapse.Content className='pt-3 pb-5 px-1'>
+      <Collapse.Content className='pt-3 pb-3 px-1'>
         <Row>
+          {/* Justify */}
           <Col span={6}>
-            {/* Justify */}
             <Row gapX={4} justify='between'>
               <Col>
                 <Form.Radio 
                   id='justifyStart' 
                   value='start'
                   name='justify' 
+                  defaultChecked
                   hideRadio
                 >
                   <Icon name='justify-start' size={18} />
@@ -53,14 +54,15 @@ const StylesAlign: React.FC = () => {
             </Row>
           </Col>
 
+          {/* Align */}
           <Col span={6}>
-            {/* Align */}
             <Row gapX={4} justify='between'>
               <Col>
                 <Form.Radio 
                   id='alignStart' 
                   value='start'
                   name='align' 
+                  defaultChecked
                   hideRadio
                 >
                   <Icon name='align-start' size={18} />

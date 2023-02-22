@@ -1,12 +1,12 @@
 import React from 'react';
 
-import StyleGrid from 'layouts/content/styles/StylesGrid';
-import StylesAlign from 'layouts/content/styles/StylesAlign';
-import StylesSize from 'layouts/content/styles/StylesSize';
-import StylesSpacing from 'layouts/content/styles/StylesSpacing';
-import StylesTypography from 'layouts/content/styles/StylesTypography';
-import StylesBackgrounds from 'layouts/content/styles/StylesBackgrounds';
-import StylesBorders from 'layouts/content/styles/StylesBorders';
+import StyleGrid from 'layouts/general/styles/StylesGrid';
+import StylesAlign from 'layouts/general/styles/StylesAlign';
+import StylesSize from 'layouts/general/styles/StylesSize';
+import StylesSpacing from 'layouts/general/styles/StylesSpacing';
+import StylesTypography from 'layouts/general/styles/StylesTypography';
+import StylesBackgrounds from 'layouts/general/styles/StylesBackgrounds';
+import StylesBorders from 'layouts/general/styles/StylesBorders';
 
 const LayoutsEditSettingsSidebarStyles: React.FC = () => {
   return (

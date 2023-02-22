@@ -34,7 +34,7 @@ const Select: React.FC<Props> = ({ className, selectClass, options, size, label,
       required={required}
     >
       <div className='relative'>
-        <select className={`appearance-none w-full bg-white border border-gray-200 focus:border-sky-500 rounded-md focus:outline-none select-none cursor-pointer ${sizeClasses} ${selectClass}`}
+        <select className={`appearance-none w-full bg-white border border-gray-200 focus:border-sky-500 rounded focus:outline-none select-none cursor-pointer ${sizeClasses} ${selectClass}`}
           value={value}
           defaultValue={defaultValue}
           onChange={onChange}

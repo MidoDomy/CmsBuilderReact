@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import CustomFieldsLayout from 'layouts/custom-fields/CustomFieldsLayout';
+import CustomFieldsLayout from 'layouts/general/custom-fields/CustomFieldsLayout';
 
 const CategoriesCustomFields: React.FC = () => {
   return (
