@@ -79,7 +79,7 @@ const ComponentsNavigationSidebar: React.FC = () => {
         </div>
       </Sidebar.Body>
 
-      <Sidebar.Header>
+      <Sidebar.Header className='pt-8'>
         <h3 className='font-medium'>Parts</h3>
       </Sidebar.Header>
 
