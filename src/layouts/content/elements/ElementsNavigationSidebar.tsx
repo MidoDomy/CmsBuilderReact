@@ -9,66 +9,35 @@ import ElementsNavigationSidebarItem from './navigation-sidebar/ElementsNavigati
 
 const ElementsNavigationSidebar: React.FC = () => {
   const elements = [
-    {
-      id: 0,
-      name: 'Blog card',
-      parts: [
-        {
-          id: 1,
-          name: 'Image',
-          parts: []
-        },
-        {
-          id: 2,
-          name: 'Name',
-          parts: []
-        },
-        {
-          id: 3,
-          name: 'Description',
-          parts: []
-        }
-      ]
-    },
-    {
-      id: 100,
-      name: 'Product',
-      parts: []
-    }
+    {id: 0, name: 'Blog card'},
+    {id: 1, name: 'Product'},
   ];
 
   return (
     <Sidebar className='w-72'>
       <Sidebar.Header className='pt-8'>
-        <Row justify='between' align='center'>
-          <Col>
+        <Row gapX={0}>
+          <Col fill>
             <h3 className='font-medium'>Elements</h3>
           </Col>
 
           <Col>
-            <Row gapX={8}>
-              <Col>
-                <Button size='sm' rounded>
-                  <Icon name='search' size={14} />
-                </Button>
-              </Col>
-
-              <Col>
-                <Button size='sm' rounded>
-                  <Icon name='plus' size={14} />
-                </Button>
-              </Col>
-            </Row>
+            {/* Show add category */}
+            <Button
+              variant='ghost'
+              size='sm'
+              rounded
+            >
+              <Icon name='plus' size={16}/>
+            </Button>
           </Col>
         </Row>
       </Sidebar.Header>
 
       <Sidebar.Body>
-        <ul className='text-sm'>
+        <ul className='flex flex-col gap-1.5'>
           {elements?.map(element => (
-            <li className='mb-1 last:mb-0' 
-              key={element.id}
-            >
+            <li key={element.id}>
               <ElementsNavigationSidebarItem element={element} />
             </li>
           ))}

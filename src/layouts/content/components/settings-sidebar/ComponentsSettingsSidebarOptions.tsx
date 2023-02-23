@@ -13,7 +13,7 @@ const ComponentsSettingsSidebarOptions: React.FC = () => {
       {value: 'md', name: 'Medium'},
       {value: 'lg', name: 'Large'}
     ]},
-    {id: 0, name: 'Type', options: [
+    {id: 1, name: 'Type', options: [
       {value: 'primary', name: 'Primary'},
       {value: 'secondary', name: 'Secondary'},
       {value: 'info', name: 'Info'}
@@ -68,8 +68,13 @@ const ComponentsSettingsSidebarOptions: React.FC = () => {
 
         <div>
           <Form.Group>
-            <Form.Label size='sm'>Icon</Form.Label>
-            <Form.FileUpload />
+            <Form.Select 
+              label='Icon'
+              size='sm'
+              options={[
+                {value: 'arrow-right', name: 'Arrow right'}
+              ]}
+            />
           </Form.Group>
 
           <Form.Group>

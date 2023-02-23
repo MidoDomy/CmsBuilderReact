@@ -8,11 +8,11 @@ type Props = {
 const ElementsSettingsSidebarComponentsItem: React.FC<Props> = ({children, name}) => {
   return (
     <div>
-      <div className='flex items-center justify-center h-28 p-3 bg-gray-50 hover:bg-gray-100 rounded transition-colors cursor-pointer'>
+      <div className='flex items-center justify-center aspect-square p-3 bg-gray-50 hover:bg-gray-100 rounded transition-colors cursor-pointer'>
         {children}
       </div>
       
-      <div className='pt-2 font-medium text-sm text-center'>
+      <div className='pt-2 font-medium text-xs text-center'>
         {name}
       </div>
     </div>

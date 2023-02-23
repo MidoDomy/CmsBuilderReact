@@ -10,22 +10,22 @@ const ElementsSettingsSidebar: React.FC = () => {
   return (
     <Sidebar className='w-80'>
       <Sidebar.Body>
-        <Tabs active='Styles'>
+        <Tabs active='options'>
           <Tabs.Nav className='mb-3 text-sm'>
-            <Tabs.NavItem name='Components'>Components</Tabs.NavItem>
-            <Tabs.NavItem name='Options'>Options</Tabs.NavItem>
-            <Tabs.NavItem name='Styles'>Styles</Tabs.NavItem>
+            <Tabs.NavItem name='components'>Components</Tabs.NavItem>
+            <Tabs.NavItem name='options'>Options</Tabs.NavItem>
+            <Tabs.NavItem name='styles'>Styles</Tabs.NavItem>
           </Tabs.Nav>
 
-          <Tabs.Content name='Components'>
+          <Tabs.Content name='components'>
             <ElementsSettingsSidebarComponents />
           </Tabs.Content>
 
-          <Tabs.Content name='Options'>
+          <Tabs.Content name='options'>
             <ElementsSettingsSidebarOptions />
           </Tabs.Content>
 
-          <Tabs.Content name='Styles'>
+          <Tabs.Content name='styles'>
             <ElementsSettingsSidebarStyles />
           </Tabs.Content>
         </Tabs>

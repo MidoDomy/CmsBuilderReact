@@ -24,7 +24,7 @@ const ElementsMainContent: React.FC = () => {
             }}
           >
             {/* Image */}
-            <div className='ring-2 ring-offset-2 ring-transparent hover:ring-sky-500 transition-all cursor-pointer'
+            <div className='ring-1 ring-offset-1 ring-transparent hover:ring-sky-500 transition-all cursor-pointer'
               style={{
                 gridColumnStart: 1, 
                 gridColumnEnd: -1, 
@@ -41,7 +41,7 @@ const ElementsMainContent: React.FC = () => {
             </div>
 
             {/* Name */}
-            <div className='ring-2 ring-offset-2 ring-transparent hover:ring-sky-500 transition-all cursor-pointer'
+            <div className='ring-1 ring-offset-1 ring-transparent hover:ring-sky-500 transition-all cursor-pointer'
               style={{
                 gridColumnStart: 1, 
                 gridColumnEnd: -1, 
@@ -57,7 +57,7 @@ const ElementsMainContent: React.FC = () => {
             </div>
 
             {/* Description */}
-            <div className='ring-2 ring-offset-2 ring-transparent hover:ring-sky-500 transition-all cursor-pointer'
+            <div className='ring-1 ring-offset-1 ring-transparent hover:ring-sky-500 transition-all cursor-pointer'
               style={{
                 gridColumnStart: 1, 
                 gridColumnEnd: -1, 
