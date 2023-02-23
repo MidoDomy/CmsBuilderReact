@@ -3,29 +3,29 @@ import React from 'react';
 import Sidebar from 'components/Sidebar';
 import Tabs from 'components/Tabs';
 import LayoutsEditSettingsSidebarComponents from './settings-sidebar/LayoutsEditSettingsSidebarComponents';
-import LayoutsEditSettingsSidebarSettings from './settings-sidebar/LayoutsEditSettingsSidebarSettings';
+import LayoutsEditSettingsSidebarOptions from './settings-sidebar/LayoutsEditSettingsSidebarOptions';
 import LayoutsEditSettingsSidebarStyles from './settings-sidebar/LayoutsEditSettingsSidebarStyles';
 
 const LayoutsEditSettingsSidebar: React.FC = () => {
   return (
     <Sidebar className='w-80'>
       <Sidebar.Body>
-        <Tabs active='Settings'>
+        <Tabs active='options'>
           <Tabs.Nav className='mb-3 text-sm'>
-            <Tabs.NavItem name='Components'>Comp./Elem.</Tabs.NavItem>
-            <Tabs.NavItem name='Settings'>Settings</Tabs.NavItem>
-            <Tabs.NavItem name='Styles'>Styles</Tabs.NavItem>
+            <Tabs.NavItem name='components'>Comp./Elem.</Tabs.NavItem>
+            <Tabs.NavItem name='options'>Options</Tabs.NavItem>
+            <Tabs.NavItem name='styles'>Styles</Tabs.NavItem>
           </Tabs.Nav>
 
-          <Tabs.Content name='Components'>
+          <Tabs.Content name='components'>
             <LayoutsEditSettingsSidebarComponents />
           </Tabs.Content>
 
-          <Tabs.Content name='Settings'>
-            <LayoutsEditSettingsSidebarSettings />
+          <Tabs.Content name='options'>
+            <LayoutsEditSettingsSidebarOptions />
           </Tabs.Content>
 
-          <Tabs.Content name='Styles'>
+          <Tabs.Content name='styles'>
             <LayoutsEditSettingsSidebarStyles />
           </Tabs.Content>
         </Tabs>

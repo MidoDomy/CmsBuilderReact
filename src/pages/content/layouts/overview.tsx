@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import Container from 'components/Container';
 import Row from 'components/Row';
@@ -26,23 +26,23 @@ const LayoutsOverview: NextPage = () => {
       id: 0,
       name: 'Basic',
       layouts: [
-        { id: 0, name: 'Header and Footer', created: 'June 8, 2020', modified: 'June 8, 2020' },
-        { id: 1, name: 'Header and Footer minimal', created: 'June 8, 2020', modified: 'June 8, 2020' }
+        { id: 10, name: 'Header and Footer', created: 'June 8, 2020', modified: 'June 8, 2020' },
+        { id: 11, name: 'Header and Footer minimal', created: 'June 8, 2020', modified: 'June 8, 2020' }
       ]
     },
     {
       id: 1,
       name: 'Pages',
       layouts: [
-        { id: 0, name: 'Homepage', created: 'June 8, 2020', modified: 'June 8, 2020' },
-        { id: 1, name: 'Blog overview', created: 'June 8, 2020', modified: 'June 8, 2020' }
+        { id: 12, name: 'Homepage', created: 'June 8, 2020', modified: 'June 8, 2020' },
+        { id: 13, name: 'Blog overview', created: 'June 8, 2020', modified: 'June 8, 2020' }
       ]
     },
     {
       id: 2,
       name: 'Settings',
       layouts: [
-        { id: 0, name: 'Settings basic layout', created: 'June 8, 2020', modified: 'June 8, 2020' }
+        { id: 14, name: 'Settings basic layout', created: 'June 8, 2020', modified: 'June 8, 2020' }
       ]
     }
   ];
@@ -102,7 +102,7 @@ const LayoutsOverview: NextPage = () => {
           {isTableView ? 
             <DataGrid columns={columns}>
               {layoutsGroups?.map(group =>
-                <>
+                <React.Fragment key={group.id}>
                   <tr className='[&:first-child>td]:pt-0'>
                     <td className='pt-3 font-medium'>{group.name}</td>
                   </tr>
@@ -116,17 +116,17 @@ const LayoutsOverview: NextPage = () => {
                       modified={layout.modified}
                     />
                   )}
-                </>
+                </React.Fragment>          
               )}
             </DataGrid>
             :
             <>
               {layoutsGroups?.map(group =>
-                <Collapse className='mb-6 last:mb-0'
+                <Collapse className='mb-4 last:mb-0'
                   key={group.id}
                   active
                 >
-                  <Collapse.Trigger className='mb-4 hover:bg-gray-100 border-b rounded-md'>
+                  <Collapse.Trigger className='mb-4 hover:bg-gray-100 border-b rounded-none hover:rounded'>
                     <h5 className='font-medium'>{group.name}</h5>
                   </Collapse.Trigger>
 

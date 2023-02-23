@@ -5,6 +5,7 @@ import Col from 'components/Col';
 import Button from 'components/Button';
 import Image from 'components/Image';
 import Tabs from 'components/Tabs';
+import Collapse from 'components/Collapse';
 import LayoutsEditSettingsSidebarComponentsItem from './components/LayoutsEditSettingsSidebarComponentsItem';
 
 const LayoutsEditSettingsSidebarComponents: React.FC = () => {
@@ -29,33 +30,41 @@ const LayoutsEditSettingsSidebarComponents: React.FC = () => {
 
         {/* Components */}
         <Tabs.Content name='components'>
-          <Row gapX={10} gapY={10}>
-            <Col span={6}>
-              <LayoutsEditSettingsSidebarComponentsItem name='Text'>
-                <span className='text-sm font-medium'>Lorem ipsum</span>
-              </LayoutsEditSettingsSidebarComponentsItem>
-            </Col>
+          <Collapse active>
+            <Collapse.Trigger className='py-1 px-2 rounded cursor-pointer transition-colors hover:bg-gray-50 text-sm'>
+              Basic
+            </Collapse.Trigger>
 
-            <Col span={6}>
-              <LayoutsEditSettingsSidebarComponentsItem name='Image'>
-                <Image alt='' />
-              </LayoutsEditSettingsSidebarComponentsItem>
-            </Col>
+            <Collapse.Content className='pt-3 pb-3 px-1'>
+              <Row gapX={8} gapY={12}>
+                <Col span={4}>
+                  <LayoutsEditSettingsSidebarComponentsItem name='Text'>
+                    <span className='text-sm font-medium text-center'>Lorem</span>
+                  </LayoutsEditSettingsSidebarComponentsItem>
+                </Col>
 
-            <Col span={6}>
-              <LayoutsEditSettingsSidebarComponentsItem name='Button'>
-                <Button>Button</Button>
-              </LayoutsEditSettingsSidebarComponentsItem>
-            </Col>
-          </Row>
+                <Col span={4}>
+                  <LayoutsEditSettingsSidebarComponentsItem name='Image'>
+                    <Image alt='' className='px-3' />
+                  </LayoutsEditSettingsSidebarComponentsItem>
+                </Col>
+
+                <Col span={4}>
+                  <LayoutsEditSettingsSidebarComponentsItem name='Button'>
+                    <Button size='xs'>Button</Button>
+                  </LayoutsEditSettingsSidebarComponentsItem>
+                </Col>
+              </Row>
+            </Collapse.Content>
+          </Collapse>
         </Tabs.Content>
 
         {/* Elements */}
         <Tabs.Content name='elements'>
           <Row gapX={10} gapY={10}>
             <Col span={6}>
-              <LayoutsEditSettingsSidebarComponentsItem name='Text'>
-                <span className='text-sm font-medium'>Blog</span>
+              <LayoutsEditSettingsSidebarComponentsItem name='Blog'>
+                <span className='text-sm font-medium'>Blog preview</span>
               </LayoutsEditSettingsSidebarComponentsItem>
             </Col>
           </Row>
