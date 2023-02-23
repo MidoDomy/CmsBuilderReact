@@ -9,7 +9,7 @@ const ComponentsSettingsSidebar: React.FC = () => {
   return (
     <Sidebar className='w-80 max-h-[calc(100vh_-_53px)] overflow-auto'>
       <Sidebar.Body>
-        <Tabs active='styles'>
+        <Tabs active='options'>
           <Tabs.Nav className='mb-3 text-sm'>
             <Tabs.NavItem name='options'>Options</Tabs.NavItem>
             <Tabs.NavItem name='styles'>Styles</Tabs.NavItem>
