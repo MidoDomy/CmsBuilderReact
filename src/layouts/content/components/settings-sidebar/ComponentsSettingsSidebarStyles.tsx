@@ -1,5 +1,6 @@
 import React from 'react';
 
+import StylesStates from 'layouts/general/styles/StylesStates';
 import StylesAlign from 'layouts/general/styles/StylesAlign';
 import StylesSize from 'layouts/general/styles/StylesSize';
 import StylesSpacing from 'layouts/general/styles/StylesSpacing';
@@ -15,6 +16,7 @@ import StylesTransition from 'layouts/general/styles/StylesTransition';
 const ComponentsSettingsSidebarStyles: React.FC = () => {
   return (
     <div className='flex flex-col gap-1.5'>
+      <StylesStates />
       <StylesAlign />
       <StylesSpacing />
       <StylesSize />
