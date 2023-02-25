@@ -6,7 +6,6 @@ import Row from 'components/Row';
 import Col from 'components/Col';
 import Avatar from 'components/Avatar';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import Dropdown from 'components/Dropdown';
 import Tabs from 'components/Tabs';
 import Modal from 'components/Modal';
@@ -20,7 +19,7 @@ const Test: NextPage = () => {
   return (
     <div className='p-20'>
       <Container className='border'>
-        <Row gap={32} gapX={20} gapY={10}>
+        <Row gapX={32} gapY={10}>
           <Col span={6}>
             <div className='bg-red-500 text-white'>nesto <div>vise</div></div>
           </Col>
@@ -79,10 +78,8 @@ const Test: NextPage = () => {
         <Button variant='secondary'>Button</Button>
         <Button variant='primary'>Button</Button>
         <Button rounded>
-          <Icon name='edit' size={16} />
         </Button>
         <Button square>
-          <Icon name='edit' size={16} />
         </Button>
       </div>
 
@@ -94,7 +91,6 @@ const Test: NextPage = () => {
           <Button variant='secondary'>Button</Button>
           <Button variant='primary'>Button</Button>
           <Button rounded>
-            <Icon name='edit' size={16} />
           </Button>
         </Button.Group>
 
@@ -135,7 +131,6 @@ const Test: NextPage = () => {
 
         <Dropdown>
           <Dropdown.Trigger>
-            <Icon name='three-dots' />
           </Dropdown.Trigger>
           
           <Dropdown.Menu>
@@ -357,13 +352,11 @@ const Test: NextPage = () => {
         <Form.Switch
           id='testSwitch1'
           label='Input field 1'
-          value='Switch 1 value'
           small
         />
         <Form.Switch
           id='testSwitch2'
           label='Input field 2'
-          value='Switch 2 value'
         />
       </div>
       {/* Textarea */}

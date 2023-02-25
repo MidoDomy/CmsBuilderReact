@@ -6,7 +6,6 @@ import Collapse from 'components/Collapse';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Form from 'components/Form';
-import Icon from 'components/Icon';
 
 const StyleBorders: React.FC = () => {
   return (
