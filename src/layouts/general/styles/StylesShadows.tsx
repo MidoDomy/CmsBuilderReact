@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 
+import { FiPlus, FiMoreVertical, FiTrash2 } from 'react-icons/fi';
+
 import Collapse from 'components/Collapse';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Form from 'components/Form';
 import Dropdown from 'components/Dropdown';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 
 interface BoxShadow {
   type: 'outside' | 'inside';
@@ -59,7 +60,7 @@ const StyleShadows: React.FC = () => {
                 rounded
                 onClick={addBoxShadow}
               >
-                <Icon name='plus' size={14} />  
+                <FiPlus size={14} />  
               </Button>
             </Col>
           </Row>
@@ -126,7 +127,7 @@ const StyleShadows: React.FC = () => {
                         size='sm'
                         rounded
                       >
-                        <Icon name='three-dots' size={16} />
+                        <FiMoreVertical size={16} />
                       </Button>
                     </Dropdown.Trigger>
 
@@ -155,10 +156,8 @@ const StyleShadows: React.FC = () => {
                         </Form.InputGroup>
                       </div>
 
-                      <Dropdown.MenuItem 
-                        icon='trash'
-                        variant='danger'
-                      >
+                      <Dropdown.MenuItem variant='danger'>
+                        <FiTrash2 size={16} />
                         Delete
                       </Dropdown.MenuItem>
                     </Dropdown.Menu>
@@ -185,7 +184,7 @@ const StyleShadows: React.FC = () => {
                 rounded
                 onClick={addTextShadow}
               >
-                <Icon name='plus' size={14} />  
+                <FiPlus size={14} />  
               </Button>
             </Col>
           </Row>
@@ -240,7 +239,7 @@ const StyleShadows: React.FC = () => {
                     size='sm'
                     rounded
                   >
-                    <Icon name='trash' size={14} />
+                    <FiTrash2 size={14} />
                   </Button>
                 </Col>
               </Row>

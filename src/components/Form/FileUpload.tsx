@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Icon from 'components/Icon'
+import { FiFile } from 'react-icons/fi';
+
 import Label from './Label';
 
 type Props = {
@@ -8,7 +9,7 @@ type Props = {
   className?: string;
   id?: string;
   value?: string;
-  icon?: string;
+  icon?: React.ReactNode;
   label?: string;
   description?: string | React.ReactNode;
   accept?: string;
@@ -32,7 +33,7 @@ const FileUpload: React.FC<Props> = ({children, className, id, value, icon, labe
 
         {icon &&
           <div className='mb-1 p-2 bg-sky-100 rounded-full'>
-            <Icon name={icon} />
+            {icon}
           </div>
         }
 
@@ -44,7 +45,7 @@ const FileUpload: React.FC<Props> = ({children, className, id, value, icon, labe
 
 FileUpload.defaultProps = {
   className: '',
-  icon: 'upload',
+  icon: <FiFile size={24} />,
   description: <div className='text-sm text-slate-500'><div><span className='font-medium text-sky-500'>Click to upload</span> or drag and drop</div> SVG, PNG or JPG (max. 800x400px)</div>,
   accept: 'image/*'
 }

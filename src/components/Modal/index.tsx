@@ -2,8 +2,9 @@ import React from 'react';
 import { FocusScope } from '@react-aria/focus';
 import { Overlay } from '@react-aria/overlays';
 
+import { FiX } from 'react-icons/fi';
+
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import ModalTitle from './ModalTitle';
 import ModalHeader from './ModalHeader';
 import ModalBody from './ModalBody';
@@ -51,7 +52,7 @@ const Modal: React.FC<Props> = ({ children, className, size, isOpen, showClose, 
                     rounded
                     onClick={onClose}
                   >
-                    <Icon name='x' size={18} />
+                    <FiX size={18} />
                   </Button>
                 }
 

@@ -1,10 +1,11 @@
 import React from 'react';
 
+import { FiPlus } from 'react-icons/fi';
+
 import Sidebar from 'components/Sidebar';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import ElementsNavigationSidebarItem from './navigation-sidebar/ElementsNavigationSidebarItem';
 
 const ElementsNavigationSidebar: React.FC = () => {
@@ -28,7 +29,7 @@ const ElementsNavigationSidebar: React.FC = () => {
               size='sm'
               rounded
             >
-              <Icon name='plus' size={16}/>
+              <FiPlus size={16}/>
             </Button>
           </Col>
         </Row>

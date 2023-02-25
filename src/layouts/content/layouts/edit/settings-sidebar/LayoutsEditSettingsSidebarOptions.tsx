@@ -1,11 +1,11 @@
 import React from 'react';
 
+import { FiTrash2, FiPlus } from 'react-icons/fi';
+
 import Form from 'components/Form';
-import Collapse from 'components/Collapse';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 
 const LayoutsEditSettingsSidebarOptions: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const LayoutsEditSettingsSidebarOptions: React.FC = () => {
               size='sm'
               block
             >
-              <Icon name='trash' size={16} />
+              <FiTrash2 size={16} />
               Remove
             </Button>
           </Col>
@@ -29,7 +29,7 @@ const LayoutsEditSettingsSidebarOptions: React.FC = () => {
               size='sm'
               block
             >
-              <Icon name='plus' size={16} />
+              <FiPlus size={16} />
               Component
             </Button>
           </Col>

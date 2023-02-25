@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { RxCornerTopLeft, RxCornerTopRight, RxCorners, RxCornerBottomLeft, RxCornerBottomRight, RxBorderBottom, RxBorderLeft, RxBorderRight, RxBorderTop, RxBorderAll } from 'react-icons/rx';
+
 import Collapse from 'components/Collapse';
 import Row from 'components/Row';
 import Col from 'components/Col';
@@ -26,7 +28,7 @@ const StyleBorders: React.FC = () => {
                     value='top-left'
                     hideRadio
                   >
-                    <Icon className='-rotate-90' name='border-radius-top-right' />
+                    <RxCornerTopLeft size={20} />
                   </Form.Radio>
                 </Col>
 
@@ -39,7 +41,7 @@ const StyleBorders: React.FC = () => {
                     value='top-right'
                     hideRadio
                   >
-                    <Icon name='border-radius-top-right' />
+                    <RxCornerTopRight size={20} />
                   </Form.Radio>
                 </Col>
                 
@@ -53,7 +55,7 @@ const StyleBorders: React.FC = () => {
                     defaultChecked
                     hideRadio
                   >
-                    <Icon name='border-all' />
+                    <RxCorners size={20} />
                   </Form.Radio>
                 </Col>
 
@@ -66,7 +68,7 @@ const StyleBorders: React.FC = () => {
                     value='bottom-left'
                     hideRadio
                   >
-                    <Icon className='rotate-180' name='border-radius-top-right' />
+                    <RxCornerBottomLeft size={20} />
                   </Form.Radio>
                 </Col>
 
@@ -79,7 +81,7 @@ const StyleBorders: React.FC = () => {
                     value='bottom-right'
                     hideRadio
                   >
-                    <Icon className='rotate-90' name='border-radius-top-right' />
+                    <RxCornerBottomRight size={20} />
                   </Form.Radio>
                 </Col>
               </Row>
@@ -112,7 +114,7 @@ const StyleBorders: React.FC = () => {
             <Col span={5}>
               <Row className='h-auto' 
                 gapX={6} 
-                gapY={12}
+                gapY={16}
               >
                 <Col span={4}></Col>
 
@@ -123,7 +125,7 @@ const StyleBorders: React.FC = () => {
                     value='top'
                     hideRadio
                   >
-                    <Icon name='border-top' />
+                    <RxBorderTop size={20} />
                   </Form.Radio>
                 </Col>
 
@@ -136,7 +138,7 @@ const StyleBorders: React.FC = () => {
                     value='left'
                     hideRadio
                   >
-                    <Icon name='border-left' />
+                    <RxBorderLeft size={20} />
                   </Form.Radio>
                 </Col>
 
@@ -148,7 +150,7 @@ const StyleBorders: React.FC = () => {
                     defaultChecked
                     hideRadio
                   >
-                    <Icon name='border-all' />
+                    <RxBorderAll size={20} />
                   </Form.Radio>
                 </Col>
 
@@ -159,7 +161,7 @@ const StyleBorders: React.FC = () => {
                     value='right'
                     hideRadio
                   >
-                    <Icon className='-rotate-90' name='border-bottom' />
+                    <RxBorderRight size={20} />
                   </Form.Radio>
                 </Col>
 
@@ -172,7 +174,7 @@ const StyleBorders: React.FC = () => {
                     value='bottom'
                     hideRadio
                   >
-                    <Icon name='border-bottom' />
+                    <RxBorderBottom size={20} />
                   </Form.Radio>
                 </Col>
 

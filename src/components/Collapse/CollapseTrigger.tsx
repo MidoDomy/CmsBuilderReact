@@ -1,15 +1,16 @@
 import React, { useContext } from 'react';
 
+import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
+
 import { CollapseContext } from 'contexts/Collapse';
-import Icon from 'components/Icon';
 
 type Props = {
   children?: React.ReactNode;
   className?: string;
   openClasses?: string;
   closeClasses?: string;
-  openIcon?: string;
-  closeIcon?: string;
+  openIcon?: React.ReactNode;
+  closeIcon?: React.ReactNode;
 }
 
 const CollapseTrigger: React.FC<Props> = ({ children, className, openClasses, closeClasses, openIcon, closeIcon }) => {
@@ -21,9 +22,9 @@ const CollapseTrigger: React.FC<Props> = ({ children, className, openClasses, cl
     >
       <span className='flex-1 text-left'>{children}</span>
       {state ?
-        <Icon name={openIcon ? openIcon : 'arrow-head-up'} size={16} />
+        (openIcon && openIcon)
         :
-        <Icon name={closeIcon ? closeIcon : 'arrow-head-down'} size={16} />
+        (closeIcon && closeIcon)
       }
     </button>
   );
@@ -33,8 +34,8 @@ CollapseTrigger.defaultProps = {
   className: '',
   openClasses: 'bg-gray-50',
   closeClasses: 'hover:bg-gray-50',
-  openIcon: 'arrow-head-up',
-  closeIcon: 'arrow-head-down'
+  openIcon: <FiChevronUp size={16} />,
+  closeIcon: <FiChevronDown size={16} />
 }
 
 export default CollapseTrigger;

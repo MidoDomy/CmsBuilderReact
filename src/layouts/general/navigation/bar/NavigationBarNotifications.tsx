@@ -1,9 +1,10 @@
 import React from 'react';
 
+import { FiBell, FiSettings } from 'react-icons/fi';
+
 import Dropdown from 'components/Dropdown';
 import Button from 'components/Button';
 import Badge from 'components/Badge';
-import Icon from 'components/Icon';
 import Tabs from 'components/Tabs';
 import NavigationBarNotificationsItem from './NavigationBarNotificationsItem';
 
@@ -15,7 +16,7 @@ const NavigationBarNotifications: React.FC = () => {
           rounded
         >
           <Badge />
-          <Icon name='bell' size={18} />
+          <FiBell size={18} />
         </Button>
       </Dropdown.Trigger>
 
@@ -45,7 +46,7 @@ const NavigationBarNotifications: React.FC = () => {
               size='sm'
               rounded
             >
-              <Icon name='settings' size={18} />
+              <FiSettings size={18} />
             </Button>
           </div>
 

@@ -1,10 +1,11 @@
 import type { NextPage } from 'next';
 
+import { FiCheck } from 'react-icons/fi';
+
 import Container from 'components/Container';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import Tabs from 'components/Tabs';
 import Layout from 'layouts/general/Layout';
 import PageHeader from 'layouts/general/PageHeader';
@@ -29,7 +30,7 @@ const Categories: NextPage = () => {
             description='Category description'
             actions={
               <Button variant='primary'>
-                <Icon name='checkmark' size={18} />
+                <FiCheck size={18} />
                 <span>Save</span>
               </Button>
             }

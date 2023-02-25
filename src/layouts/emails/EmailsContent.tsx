@@ -1,10 +1,12 @@
 import React from 'react';
 
+import { BiCheck } from 'react-icons/bi';
+import { FiPlus } from 'react-icons/fi';
+
 import Container from 'components/Container';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 
 const EmailsContent: React.FC = () => {
   return (
@@ -22,15 +24,15 @@ const EmailsContent: React.FC = () => {
                 <Row gapX={10}>
                   <Col>
                     <Button>
-                      <Icon name='plus' size={18} />
-                      <span>Add</span>
+                      <FiPlus size={18} />
+                      Add
                     </Button>
                   </Col>
 
                   <Col>
                     <Button variant='primary'>
-                      <Icon name='checkmark' size={18} />
-                      <span>Save</span>
+                      <BiCheck size={18} />
+                      Save
                     </Button>
                   </Col>
                 </Row>

@@ -6,60 +6,20 @@ import DashboardDynamicWidgetImport from 'layouts/dashboard/DashboardDynamicWidg
 
 const DashboardBoard: React.FC = () => {
   const [board, setBoard] = useState([
-    {
-      colStart: 1,
-      colEnd: -1,
-      rowStart: 1,
-      rowEnd: 3,
-      widget: {
-        id: 1, 
-        element: 'DashboardWidgetText',
-        name: 'Text'
-      }
+    { colStart: 1, colEnd: -1, rowStart: 1, rowEnd: 3, 
+      widget: { id: 1, element: 'DashboardWidgetText', name: 'Text' }
     },
-    {
-      colStart: 1,
-      colEnd: 14,
-      rowStart: 3,
-      rowEnd: 9,
-      widget: {
-        id: 1, 
-        element: 'DashboardWidgetStatisticalOverview',
-        name: 'Statistical overview'
-      }
+    { colStart: 1, colEnd: 14, rowStart: 3, rowEnd: 9, 
+      widget: { id: 1, element: 'DashboardWidgetStatisticalOverview', name: 'Statistical overview' }
     },
-    {
-      colStart: 14,
-      colEnd: 21,
-      rowStart: 3,
-      rowEnd: 9,
-      widget: {
-        id: 1, 
-        element: 'DashboardWidgetActivityTimeline',
-        name: 'Activity Timeline'
-      }
+    { colStart: 14, colEnd: 21, rowStart: 3, rowEnd: 9,
+      widget: { id: 1,  element: 'DashboardWidgetActivityTimeline', name: 'Activity Timeline' }
     },
-    {
-      colStart: 1,
-      colEnd: 14,
-      rowStart: 9,
-      rowEnd: 16,
-      widget: {
-        id: 1, 
-        element: 'DashboardWidgetEmployeeStatus',
-        name: 'Employee Status'
-      }
+    { colStart: 1, colEnd: 14, rowStart: 9, rowEnd: 16,
+      widget: { id: 1, element: 'DashboardWidgetEmployeeStatus', name: 'Employee Status' }
     },
-    {
-      colStart: 14,
-      colEnd: 21,
-      rowStart: 9,
-      rowEnd: 16,
-      widget: {
-        id: 1, 
-        element: 'DashboardWidgetWorkingFormat',
-        name: 'Working format'
-      }
+    { colStart: 14, colEnd: 21, rowStart: 9, rowEnd: 16,
+      widget: { id: 1, element: 'DashboardWidgetWorkingFormat', name: 'Working format' }
     }
   ]);
 

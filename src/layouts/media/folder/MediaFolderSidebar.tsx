@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
+import { FiX } from 'react-icons/fi';
+
 import Sidebar from 'components/Sidebar';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import MediaFolderSidebarFolder from './sidebar/MediaFolderSidebarFolder';
 import MediaFolderSidebarItem from './sidebar/MediaFolderSidebarItem';
 
@@ -32,7 +33,7 @@ const MediaOverviewSidebar: React.FC = () => {
               square
               onClick={() => setIsSelectedItem(!isSelectedItem)}
             >
-              <Icon name='x' />
+              <FiX size={22} />
             </Button>
           </Col>
         </Row>

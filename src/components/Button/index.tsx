@@ -50,7 +50,7 @@ const Button: React.FC<Props> = ({ children, className, variant, size, block, sq
   const disabledClasses = 'disabled:bg-gray-300 disabled:border-gray-300 disabled:text-slate-500 disabled:opacity-80'
 
   const getClasses = () => {
-    return `select-none inline-flex gap-2 items-center cursor-pointer font-medium transition-colors ${variantClasses} ${variant === 'link' ? '' : sizeClasses} ${size === 'lg' ? 'text-base' : 'text-sm'} ${block ? 'w-full justify-center' : ''} ${rounded ? 'rounded-full' : 'rounded-md'} ${disabledClasses} ${className}`;
+    return `select-none inline-flex gap-1.5 items-center cursor-pointer font-medium transition-colors ${variantClasses} ${variant === 'link' ? '' : sizeClasses} ${size === 'lg' ? 'text-base' : 'text-sm'} ${block ? 'w-full justify-center' : ''} ${rounded ? 'rounded-full' : 'rounded-md'} ${disabledClasses} ${className}`;
   }
   // -----------------------------------
 

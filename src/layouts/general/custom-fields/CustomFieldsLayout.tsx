@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
+import { FiPlus } from 'react-icons/fi';
+
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import CustomFieldsSection from './CustomFieldsSection';
 import CustomFieldsModalAddSection from './CustomFieldsModalAddSection';
 
@@ -16,7 +17,7 @@ const CustomFieldsLayout: React.FC<Props> = ({editable}) => {
       {id: 11, name: 'field2', label: 'Field 2', placeholder: 'Enter field 2...', type: 'text', defaultValue: '', rules: ''}
     ]},
     {id: 2, title: 'Section 2', description: 'Section 2 description', fields: []}
-  ]
+  ];
 
   const [showModalAddSection, setShowModalAddSection] = useState(false);
 
@@ -36,14 +37,14 @@ const CustomFieldsLayout: React.FC<Props> = ({editable}) => {
         <>
           {/* Add new section */}
           <div className='flex justify-center py-5'>
-            <div className='flex flex-col items-center text-slate-500 hover:text-slate-900 transition-colors'>
+            <div className='flex flex-col items-center text-slate-500'>
               <span className='mb-2 text-sm'>Add new section</span>
     
               <Button 
                 rounded
                 onClick={() => setShowModalAddSection(true)}
               >
-                <Icon name='plus' size={16} />
+                <FiPlus size={16} />
               </Button>
             </div>
           </div>

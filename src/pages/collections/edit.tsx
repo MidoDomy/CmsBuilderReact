@@ -1,15 +1,14 @@
 import type { NextPage } from 'next';
 
+import { FiCheck } from 'react-icons/fi';
+
 import Container from 'components/Container';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
-import Form from 'components/Form';
 import Tabs from 'components/Tabs';
 import Layout from 'layouts/general/Layout';
 import PageHeader from 'layouts/general/PageHeader';
-import Section from 'layouts/general/Section';
 import CollectionsEditGeneral from 'layouts/collections/edit/CollectionsEditGeneral';
 import CollectionsEditCustomFields from 'layouts/collections/edit/CollectionsItemCustomFields';
 
@@ -30,7 +29,7 @@ const CollectionsConfig: NextPage = () => {
 
             <Col>
               <Button variant='primary'>
-                <Icon name='checkmark' size={16} />
+                <FiCheck size={18} />
                 Save
               </Button>
             </Col>

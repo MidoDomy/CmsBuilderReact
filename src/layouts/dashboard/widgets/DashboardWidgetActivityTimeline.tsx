@@ -1,8 +1,9 @@
 import React from 'react';
 
+import { FiFile } from 'react-icons/fi';
+
 import Row from 'components/Row';
 import Col from 'components/Col';
-import Icon from 'components/Icon';
 import Button from 'components/Button';
 
 const DashboardWidgetActivityTimeline: React.FC = () => {
@@ -20,7 +21,7 @@ const DashboardWidgetActivityTimeline: React.FC = () => {
             <Col>
               <div className='flex flex-col items-center h-full'>
                 <div className='p-2.5 bg-sky-100 rounded-full'>
-                  <Icon name='file' size={20} />
+                  <FiFile size={20} />
                 </div>
 
                 <div className='flex-1 border-l'></div>
@@ -51,7 +52,7 @@ const DashboardWidgetActivityTimeline: React.FC = () => {
             <Col>
               <div className='flex flex-col items-center h-full'>
                 <div className='p-2.5 bg-sky-100 rounded-full'>
-                  <Icon name='file' size={20} />
+                  <FiFile size={20} />
                 </div>
 
                 <div className='flex-1 border-l'></div>
@@ -80,7 +81,7 @@ const DashboardWidgetActivityTimeline: React.FC = () => {
             <Col>
               <div className='flex flex-col items-center h-full'>
                 <div className='p-2.5 bg-sky-100 rounded-full'>
-                  <Icon name='file' size={20} />
+                  <FiFile size={20} />
                 </div>
 
                 <div className='flex-1 border-l'></div>

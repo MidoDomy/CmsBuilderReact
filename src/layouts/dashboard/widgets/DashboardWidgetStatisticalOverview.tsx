@@ -3,10 +3,11 @@ import { Line } from "react-chartjs-2";
 import Chart from 'chart.js/auto';
 import { CategoryScale } from 'chart.js'; 
 
+import { BiCalendar } from 'react-icons/bi';
+
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 
 Chart.register(CategoryScale);
 
@@ -53,7 +54,7 @@ const DashboardWidgetStatisticalOverview: React.FC = () => {
 
           <Col>
             <Button size='sm'>
-              <Icon name='calendar' size={16} />
+              <BiCalendar size={18} />
               Select date
             </Button>
           </Col>

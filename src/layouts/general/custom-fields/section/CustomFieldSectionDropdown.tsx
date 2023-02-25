@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
+import { FiSettings, FiPlus, FiEdit2, FiTrash2 } from 'react-icons/fi';
+
 import Dropdown from 'components/Dropdown';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import CustomFieldsSectionModalAddItem from './CustomFieldsSectionModalAddItem';
 import ModalConfirmDeletion from 'layouts/general/ModalConfirmDeletion';
 
@@ -23,30 +24,26 @@ const CustomFieldsSectionDropdown: React.FC<Props> = ({isEdit, setIsEdit}) => {
             size='sm'
             rounded
           >
-            <Icon name='settings' size={16} />
+            <FiSettings size={16} />
           </Button>
         </Dropdown.Trigger>
 
         <Dropdown.Menu className='-mr-1'>
-          <Dropdown.MenuItem
-            icon='plus'
-            onClick={() => setShowModalAddField(true)}
-          >
+          <Dropdown.MenuItem onClick={() => setShowModalAddField(true)}>
+            <FiPlus size={16} />
             Add field
           </Dropdown.MenuItem>
 
-          <Dropdown.MenuItem
-            icon='edit'
-            onClick={() => setIsEdit(!isEdit)}
-          >
+          <Dropdown.MenuItem onClick={() => setIsEdit(!isEdit)}>
+            <FiEdit2 size={16} />
             Edit
           </Dropdown.MenuItem>
 
           <Dropdown.MenuItem
-            icon='trash'
             variant='danger'
             onClick={() => setShowModalConfirmDeletion(true)}
           >
+            <FiTrash2 size={16} />
             Delete
           </Dropdown.MenuItem>
         </Dropdown.Menu>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-import Icon from 'components/Icon';
+import { FiPlusCircle } from 'react-icons/fi';
+
 import ColorsGroupModalAddItem from './ColorsGroupModalAddItem';
 
 const ColorsGroupItemAdd: React.FC = () => {
@@ -8,10 +9,10 @@ const ColorsGroupItemAdd: React.FC = () => {
 
   return (
     <>
-      <div className='flex items-center justify-center w-16 h-10 border-2 border-gray-200 hover:border-gray-300 border-dashed rounded text-slate-200 hover:text-slate-300 cursor-pointer transition-colors'
+      <div className='flex items-center justify-center w-16 h-10 border-2 border-gray-200 hover:border-gray-300 border-dashed rounded text-slate-300 hover:text-slate-400 cursor-pointer transition-colors'
         onClick={() => setShowModalAdd(true)}
       >
-        <Icon name='circle-plus' size={18} />
+        <FiPlusCircle size={18} />
       </div>
 
       {/* Modal add */}

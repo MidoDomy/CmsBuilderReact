@@ -1,19 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
 
-import Icon from 'components/Icon';
-
 type Props = {
   children?: React.ReactNode;
   className?: string;
   link?: string;
   active?: boolean;
   variant?: 'danger' | 'default';
-  icon?: string;
   onClick?: () => void;
 }
 
-const DropdownMenuItem: React.FC<Props> = ({ children, className, link, variant, icon, onClick, ...props }) => {
+const DropdownMenuItem: React.FC<Props> = ({ children, className, link, variant, onClick, ...props }) => {
   const variantClasses = variant == 'default' ? 'hover:bg-gray-50' : 'hover:bg-red-50 text-red-500'
 
   return (
@@ -23,7 +20,6 @@ const DropdownMenuItem: React.FC<Props> = ({ children, className, link, variant,
           href={link}
           {...props}
         >
-          {icon && <Icon name={icon} size={15} />}
           {children}
         </Link>
         :
@@ -31,7 +27,6 @@ const DropdownMenuItem: React.FC<Props> = ({ children, className, link, variant,
           onClick={onClick}
           {...props}
         >
-          {icon && <Icon name={icon} size={15} />}
           {children}
         </div>
       }

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
+import { FiEdit2, FiTrash2 } from 'react-icons/fi';
+
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Image from 'components/Image';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import Section from 'layouts/general/Section';
 import CategoriesLayoutModalChange from './layout/CategoriesLayoutModalChange';
 import ModalConfirmDeletion from 'layouts/general/ModalConfirmDeletion';
@@ -48,7 +49,7 @@ const CategoriesLayout: React.FC = () => {
                   href='/content/layouts/edit'
                   size='sm'
                 >
-                  <Icon name='edit' size={16} />
+                  <FiEdit2 size={16} />
                   Editor
                 </Button>
               </Col>
@@ -60,7 +61,7 @@ const CategoriesLayout: React.FC = () => {
                   square
                   onClick={() => setShowModalConfirmDeletion(true)}
                 >
-                  <Icon name='trash' size={16} />
+                  <FiTrash2 size={16} />
                 </Button>
               </Col>
             </Row>

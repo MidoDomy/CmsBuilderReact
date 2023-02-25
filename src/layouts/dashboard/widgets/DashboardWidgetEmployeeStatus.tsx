@@ -1,11 +1,12 @@
 import React from 'react';
 
+import { IoOptions } from 'react-icons/io5';
+
 import Row from 'components/Row';
 import Col from 'components/Col';
 import DataGrid from 'components/DataGrid';
 import Avatar from 'components/Avatar';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 
 const DashboardWidgetEmployeeStatus: React.FC = () => {
   const columns = [
@@ -33,7 +34,7 @@ const DashboardWidgetEmployeeStatus: React.FC = () => {
 
           <Col>
             <Button size='sm'>
-              <Icon name='filter' size={16} />
+              <IoOptions size={18} />
               Filter
             </Button>
           </Col>

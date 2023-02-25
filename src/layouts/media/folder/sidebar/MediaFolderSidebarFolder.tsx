@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import Sidebar from 'components/Sidebar';
-import Image from 'components/Image';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';

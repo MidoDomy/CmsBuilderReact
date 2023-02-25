@@ -1,5 +1,7 @@
 import type { NextPage } from 'next';
 
+import { FiCheck } from 'react-icons/fi';
+
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Form from 'components/Form';
@@ -20,7 +22,10 @@ const SettingsPreferences: NextPage = () => {
           </Col>
 
           <Col>
-            <Button variant='primary'>Save</Button>
+            <Button variant='primary'>
+              <FiCheck size={18} />
+              Save
+            </Button>
           </Col>
         </Row>
       }
@@ -31,35 +36,45 @@ const SettingsPreferences: NextPage = () => {
       >
         <Row cols={3} gapX={24}>
           <Col fill>
-            <Form.Radio className='rounded-xl' 
+            <Form.Radio className='rounded-lg' 
               id='systemTheme' 
               value='systemTheme'
               name='theme' 
               hideRadio
+              defaultChecked
             >
-              <Image className='w-full' src='system-theme.png' />
+              <Image className='w-full' 
+                src='system-theme.png'
+                alt=''
+              />
             </Form.Radio>
           </Col>
 
           <Col fill>
-            <Form.Radio className='rounded-xl' 
+            <Form.Radio className='rounded-lg' 
               id='lightTheme' 
               value='lightTheme'
               name='theme' 
               hideRadio
             >
-              <Image className='w-full' src='light-theme.png' />
+              <Image className='w-full' 
+                src='light-theme.png' 
+                alt=''
+              />
             </Form.Radio>
           </Col>
 
           <Col fill>
-            <Form.Radio className='rounded-xl' 
+            <Form.Radio className='rounded-lg' 
               id='darkTheme' 
               value='darkTheme'
               name='theme' 
               hideRadio
             >
-              <Image className='w-full' src='dark-theme.png' />
+              <Image className='w-full' 
+                src='dark-theme.png' 
+                alt=''
+              />
             </Form.Radio>
           </Col>
         </Row>
