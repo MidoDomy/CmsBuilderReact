@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
+import { FiMoreVertical, FiPlus, FiCopy, FiTrash2 } from 'react-icons/fi';
+
 import Dropdown from 'components/Dropdown';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import ModalConfirmDeletion from 'layouts/general/ModalConfirmDeletion';
 
 const CategoriesSidebarItemDropdown: React.FC = () => {
@@ -17,24 +18,26 @@ const CategoriesSidebarItemDropdown: React.FC = () => {
             size='sm'
             square
           >
-            <Icon name='three-dots' size={16} />
+            <FiMoreVertical size={16} />
           </Button>
         </Dropdown.Trigger>
 
         <Dropdown.Menu className='-mr-1'>
-          <Dropdown.MenuItem icon='plus'>
+          <Dropdown.MenuItem>
+            <FiPlus size={16} />
             Add subcategory
           </Dropdown.MenuItem>
 
-          <Dropdown.MenuItem icon='copy'>
+          <Dropdown.MenuItem>
+            <FiCopy size={16} />
             Duplicate
           </Dropdown.MenuItem>
 
           <Dropdown.MenuItem
-            icon='trash'
             variant='danger'
             onClick={() => setShowModalConfirmDeletion(true)}
           >
+            <FiTrash2 size={16} />
             Delete
           </Dropdown.MenuItem>
         </Dropdown.Menu>

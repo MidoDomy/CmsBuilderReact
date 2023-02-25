@@ -1,5 +1,7 @@
 import type { NextPage } from 'next';
 
+import { FiCheck } from 'react-icons/fi';
+
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
@@ -17,7 +19,10 @@ const SettingsGeneral: NextPage = () => {
           </Col>
 
           <Col>
-            <Button variant='primary'>Save</Button>
+            <Button variant='primary'>
+              <FiCheck size={18} />
+              Save
+            </Button>
           </Col>
         </Row>
       }

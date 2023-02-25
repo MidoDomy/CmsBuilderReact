@@ -2,13 +2,14 @@ import type { NextPage } from 'next';
 import { useState } from 'react';
 import Link from 'next/link';
 
+import { FiPlus } from 'react-icons/fi';
+
 import Layout from 'layouts/general/Layout';
 import PageHeader from 'layouts/general/PageHeader';
 import Container from 'components/Container';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import MediaOverviewModalAdd from 'layouts/media/overview/MediaOverviewModalAdd';
 import MediaOverviewFolder from 'layouts/media/overview/MediaOverviewFolder';
 
@@ -23,8 +24,8 @@ const MediaOverview: NextPage = () => {
         description='Keep your media files organized.'
         actions={
           <Button onClick={() => setShowModalAdd(true)}>
-            <Icon name='plus' size={18} />
-            <span>Add folder</span>
+            <FiPlus size={18} />
+            Add folder
           </Button>
         }
       />

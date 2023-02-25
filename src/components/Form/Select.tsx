@@ -1,7 +1,8 @@
 import React from 'react';
 
+import { FiChevronDown } from 'react-icons/fi';
+
 import BaseField from './BaseField';
-import Icon from 'components/Icon';
 
 type Props = {
   className?: string;
@@ -51,8 +52,7 @@ const Select: React.FC<Props> = ({ className, selectClass, options, size, label,
           ))}
         </select>
 
-        <Icon className='absolute top-1/2 right-3 -translate-y-1/2'
-          name='arrow-head-down' 
+        <FiChevronDown className='absolute top-1/2 right-3 -translate-y-1/2'
           size={16}
         />
       </div>

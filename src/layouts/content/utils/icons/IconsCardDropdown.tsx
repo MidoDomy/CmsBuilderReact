@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+
+import { FiMoreVertical, FiEdit2, FiTrash2 } from 'react-icons/fi'
 
 import Button from 'components/Button';
 import Dropdown from 'components/Dropdown';
-import Icon from 'components/Icon';
 import IconsModalAdd from './IconsModalAdd';
 import ModalConfirmDeletion from 'layouts/general/ModalConfirmDeletion';
 
-const FontsCardDropdown: React.FC = () => {
+const IconsCardDropdown: React.FC = () => {
   const [showModalEdit, setShowModalEdit] = useState(false);
   const [showModalConfirmDeletion, setShowModalConfirmDeletion] = useState(false);
 
@@ -18,23 +19,21 @@ const FontsCardDropdown: React.FC = () => {
       >
         <Dropdown.Trigger>
           <Button size='xs' rounded>
-            <Icon name='three-dots' size={13} />
+            <FiMoreVertical size={12} />
           </Button>
         </Dropdown.Trigger>
         
         <Dropdown.Menu className='-mr-2.5 !mt-1.5'>
-          <Dropdown.MenuItem 
-            icon='edit'
-            onClick={() => setShowModalEdit(true)}
-          >
+          <Dropdown.MenuItem onClick={() => setShowModalEdit(true)}>
+            <FiEdit2 size={16} />
             Edit
           </Dropdown.MenuItem>
 
           <Dropdown.MenuItem 
-            icon='trash'
             variant='danger'
             onClick={() => setShowModalConfirmDeletion(true)}
           >
+            <FiTrash2 size={16} />
             Delete
           </Dropdown.MenuItem>
         </Dropdown.Menu>
@@ -55,4 +54,4 @@ const FontsCardDropdown: React.FC = () => {
   )
 }
 
-export default FontsCardDropdown;
+export default IconsCardDropdown;

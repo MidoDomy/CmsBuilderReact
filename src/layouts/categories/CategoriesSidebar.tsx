@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
+import { FiPlus } from 'react-icons/fi';
+
 import Sidebar from 'components/Sidebar';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import CategoriesSidebarItem from './sidebar/CategoriesSidebarItem';
 import Form from 'components/Form';
 
@@ -51,7 +52,7 @@ const CategoriesSidebar: React.FC = () => {
               rounded
               onClick={() => setShowFieldAddCategory(!showFieldAddCategory)}
             >
-              <Icon name='plus' size={16}/>
+              <FiPlus size={16}/>
             </Button>
           </Col>
         </Row>

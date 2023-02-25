@@ -1,9 +1,10 @@
 import React from 'react';
 
+import { FiSearch, FiUser, FiSettings, FiGift, FiBell, FiUsers, FiLink } from 'react-icons/fi';
+
 import Sidebar from 'components/Sidebar';
 import Form from 'components/Form';
-import Icon from 'components/Icon';
-import SettingsSidebarLink from './sidebar/SettingsSidebarLink';
+import SettingsSidebarItem from './sidebar/SettingsSidebarItem';
 
 const SettingsSidebar: React.FC = () => {
   return (
@@ -13,53 +14,47 @@ const SettingsSidebar: React.FC = () => {
 
         <Form.Input
           placeholder='Search' 
-          prefix={<Icon name='search' size={18} />} 
+          prefix={<FiSearch size={18} />} 
         />
       </Sidebar.Header>
 
       <Sidebar.Body>
-        <ul className='flex flex-col gap-1'>
-          <SettingsSidebarLink 
-            link="/settings/profile"
-            icon='profile'
-          >
-            My details
-          </SettingsSidebarLink>
+        <ul className='flex flex-col gap-1.5'>
+          <SettingsSidebarItem 
+            link='/settings/profile'
+            text='My details'
+            icon={<FiUser size={18} />}
+          />
           
-          <SettingsSidebarLink 
-            link="/settings/general"
-            icon='settings'
-          >
-            General
-          </SettingsSidebarLink>
+          <SettingsSidebarItem 
+            link='/settings/general'
+            text='General'
+            icon={<FiSettings size={18} />}
+          />
           
-          <SettingsSidebarLink 
-            link="/settings/preferences"
-            icon='stars'
-          >
-            Preferences
-          </SettingsSidebarLink>
+          <SettingsSidebarItem 
+            link='/settings/preferences'
+            text='Preferences'
+            icon={<FiGift size={18} />}
+          />
           
-          <SettingsSidebarLink 
-            link="/settings/notifications"
-            icon='bell'
-          >
-            Notifications
-          </SettingsSidebarLink>
+          <SettingsSidebarItem 
+            link='/settings/notifications'
+            text='Notifications'
+            icon={<FiBell size={18} />}
+          />
           
-          <SettingsSidebarLink 
-            link="/settings/members"
-            icon='users'
-          >
-            Members
-          </SettingsSidebarLink>
+          <SettingsSidebarItem 
+            link='/settings/members'
+            text='Members'
+            icon={<FiUsers size={18} />}
+          />
           
-          <SettingsSidebarLink 
-            link="/settings/api"
-            icon='api'
-          >
-            API
-          </SettingsSidebarLink>
+          <SettingsSidebarItem 
+            link='/settings/api'
+            text='API'
+            icon={<FiLink size={18} />}
+          />
         </ul>
       </Sidebar.Body>
     </Sidebar>

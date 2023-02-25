@@ -1,10 +1,11 @@
 import React from 'react';
 
+import { FiMic, FiImage, FiSend } from 'react-icons/fi'
+
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Form from 'components/Form';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 
 const MessagesChatFooter: React.FC = () => {
   return (
@@ -18,14 +19,14 @@ const MessagesChatFooter: React.FC = () => {
         <div className='absolute right-3 top-1/2 -translate-y-1/2'>
           <Row gapX={16}>
             <Col>
-              <Row gapX={2}>
+              <Row gapX={0}>
                 <Col>
                   <Button
                     variant='ghost'
                     size='sm'
                     rounded
                   >
-                    <Icon name='microphone' size={16} />
+                    <FiMic size={16} />
                   </Button>
                 </Col>
 
@@ -35,7 +36,7 @@ const MessagesChatFooter: React.FC = () => {
                     size='sm'
                     rounded
                   >
-                    <Icon name='picture' size={16} />
+                    <FiImage size={16} />
                   </Button>
                 </Col>
               </Row>
@@ -47,7 +48,7 @@ const MessagesChatFooter: React.FC = () => {
                 size='sm'
                 rounded
               >
-                <Icon name='send' size={16} />
+                <FiSend size={14} />
               </Button>
             </Col>
           </Row>

@@ -4,7 +4,6 @@ import Sidebar from 'components/Sidebar';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Image from 'components/Image';
-import Form from 'components/Form';
 import Button from 'components/Button';
 import ModalConfirmDeletion from 'layouts/general/ModalConfirmDeletion';
 

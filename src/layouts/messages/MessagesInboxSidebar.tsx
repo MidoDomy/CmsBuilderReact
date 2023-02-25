@@ -1,10 +1,12 @@
 import React from 'react';
 
+import { FiSearch, FiEdit2 } from 'react-icons/fi';
+import { BiPin, BiMessageSquareDots } from 'react-icons/bi';
+
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Sidebar from 'components/Sidebar';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import Tabs from 'components/Tabs';
 import MessagesInboxSidebarItem from './inbox/MessagesInboxSidebarItem';
 
@@ -21,13 +23,13 @@ const MessagesInboxSidebar: React.FC = () => {
             <Row gapX={8}>
               <Col>
                 <Button size='sm' rounded>
-                  <Icon name='search' size={14} />
+                  <FiSearch size={14} />
                 </Button>
               </Col>
 
               <Col>
                 <Button size='sm' rounded>
-                  <Icon name='edit' size={14} />
+                  <FiEdit2 size={14} />
                 </Button>
               </Col>
             </Row>
@@ -58,7 +60,7 @@ const MessagesInboxSidebar: React.FC = () => {
             {/* Pinned messages */}
             <div>
               <div className='flex items-center gap-1 mb-1 px-4 text-sm text-slate-600'>
-                <Icon name='pin' size={14} />
+                <BiPin size={14} />
                 <span>Pinned</span>
               </div>
 
@@ -73,7 +75,7 @@ const MessagesInboxSidebar: React.FC = () => {
             {/* All messages */}
             <div>
               <div className='flex items-center gap-1 mt-4 mb-1 px-4 text-sm text-slate-600'>
-                <Icon name='message' size={14} />
+                <BiMessageSquareDots size={14} />
                 <span>All messages</span>
               </div>
 
@@ -95,7 +97,7 @@ const MessagesInboxSidebar: React.FC = () => {
           <Tabs.Content name='group'>
             <div>
               <div className='flex items-center gap-1 mb-1 px-4 text-sm text-slate-600'>
-                <Icon name='message' size={14} />
+                <BiMessageSquareDots size={14} />
                 <span>Group messages</span>
               </div>
 

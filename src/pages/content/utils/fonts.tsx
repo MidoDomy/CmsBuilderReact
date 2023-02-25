@@ -1,13 +1,14 @@
 import type { NextPage } from 'next';
 import { useState } from 'react';
 
+import { FiPlus } from 'react-icons/fi';
+
 import Layout from 'layouts/general/Layout';
 import PageHeader from 'layouts/general/PageHeader';
 import Container from 'components/Container';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import FontsModalImport from 'layouts/content/utils/fonts/FontsModalImport';
 import FontsCard from 'layouts/content/utils/fonts/FontsCard';
 import FontsSidebarControls from 'layouts/content/utils/fonts/FontsSidebarControls';
@@ -35,8 +36,8 @@ const Fonts: NextPage = () => {
         description='Add fonts that you will use in your project.'
         actions={
           <Button onClick={() => setShowModalImport(true)}>
-            <Icon name='plus' size={18} />
-            <span>Import font</span>
+            <FiPlus size={18} />
+            Import font
           </Button>
         }
       />

@@ -1,11 +1,12 @@
 import type { NextPage } from 'next';
 import React, { useState } from 'react';
 
+import { FiPlus, FiList, FiGrid } from 'react-icons/fi';
+
 import Container from 'components/Container';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import Collapse from 'components/Collapse';
 import DataGrid from 'components/DataGrid';
 import Layout from 'layouts/general/Layout';
@@ -22,26 +23,17 @@ const LayoutsOverview: NextPage = () => {
   ];
   
   const layoutsGroups = [
-    {
-      id: 0,
-      name: 'Basic',
-      layouts: [
+    {id: 0, name: 'Basic', layouts: [
         { id: 10, name: 'Header and Footer', created: 'June 8, 2020', modified: 'June 8, 2020' },
         { id: 11, name: 'Header and Footer minimal', created: 'June 8, 2020', modified: 'June 8, 2020' }
       ]
     },
-    {
-      id: 1,
-      name: 'Pages',
-      layouts: [
+    {id: 1, name: 'Pages', layouts: [
         { id: 12, name: 'Homepage', created: 'June 8, 2020', modified: 'June 8, 2020' },
         { id: 13, name: 'Blog overview', created: 'June 8, 2020', modified: 'June 8, 2020' }
       ]
     },
-    {
-      id: 2,
-      name: 'Settings',
-      layouts: [
+    {id: 2, name: 'Settings', layouts: [
         { id: 14, name: 'Settings basic layout', created: 'June 8, 2020', modified: 'June 8, 2020' }
       ]
     }
@@ -57,8 +49,8 @@ const LayoutsOverview: NextPage = () => {
         description='You can assign layouts to pages, but also inherit content from one another.'
         actions={
           <Button href='/content/layouts/edit'>
-            <Icon name='plus' size={18} />
-            <span>Add new</span>
+            <FiPlus size={18} />
+            Add new
           </Button>
         }
       />
@@ -76,7 +68,7 @@ const LayoutsOverview: NextPage = () => {
                     square
                     onClick={() => setIsTableView(true)}  
                   >
-                    <Icon name='list' size={18} />
+                    <FiList size={18} />
                   </Button>
                 </Col>
 
@@ -87,7 +79,7 @@ const LayoutsOverview: NextPage = () => {
                     square
                     onClick={() => setIsTableView(false)}  
                   >
-                    <Icon name='categories' size={18} />
+                    <FiGrid size={18} />
                   </Button>
                 </Col>
               </Row>

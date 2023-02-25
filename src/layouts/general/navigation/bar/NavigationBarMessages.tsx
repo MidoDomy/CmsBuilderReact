@@ -1,7 +1,8 @@
 import React from 'react';
 
+import { BiMessageSquareDots } from 'react-icons/bi';
+
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 
 const NavigationBarMessages: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const NavigationBarMessages: React.FC = () => {
       href='/messages'
       rounded
     >
-      <Icon name='message' size={18} />
+      <BiMessageSquareDots size={18} />
     </Button>
   );
 }

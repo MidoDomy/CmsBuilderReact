@@ -1,9 +1,11 @@
 import type { NextPage } from 'next';
 
+import { FiCheck } from 'react-icons/fi';
+import { BiEnvelope } from 'react-icons/bi';
+
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Form from 'components/Form';
-import Icon from 'components/Icon';
 import Button from 'components/Button';
 import Avatar from 'components/Avatar';
 import SettingsLayout from 'layouts/settings/SettingsLayout';
@@ -21,7 +23,10 @@ const SettingsProfile: NextPage = () => {
           </Col>
 
           <Col>
-            <Button variant='primary'>Save</Button>
+            <Button variant='primary'>
+              <FiCheck size={18} />
+              Save
+            </Button>
           </Col>
         </Row>
       }
@@ -40,7 +45,7 @@ const SettingsProfile: NextPage = () => {
 
       <Section title='Email address'>
         <Form.Input 
-          prefix={<Icon name='letter' size={18} />} 
+          prefix={<BiEnvelope size={20} />} 
           placeholder='Enter email' 
           type='email'
         />

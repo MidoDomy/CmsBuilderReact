@@ -1,10 +1,11 @@
 import React from 'react';
 
+import { FiChevronLeft } from 'react-icons/fi'
+
 import Container from 'components/Container';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 
 type Props = {
   title?: string;
@@ -26,7 +27,7 @@ const PageHeader: React.FC<Props> = ({title, description, actions, returnRoute})
                     href={returnRoute}
                     variant='link'
                   >
-                    <Icon name='arrow-head-left' size={16} />
+                    <FiChevronLeft size={24} />
                   </Button>
                 }
 

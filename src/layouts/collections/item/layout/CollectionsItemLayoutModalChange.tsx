@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 
+import { FiX, FiSearch } from 'react-icons/fi';
+
 import Modal from 'components/Modal';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Form from 'components/Form';
 import Image from 'components/Image';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 
 type Props = {
   isOpen: boolean;
@@ -31,7 +32,7 @@ const CategoriesLayoutModalChange: React.FC<Props> = ({isOpen, onClose}) => {
             <div className='relative flex-1'>
               <Form.Input className='[&_input]:rounded-l-3xl'
                 placeholder='Search layouts...'
-                prefix={<Icon name='search' size={16} />}
+                prefix={<FiSearch size={16} />}
                 size='sm'
                 onChange={(e: any) => {setSearchValue(e.currentTarget.value)}}
               />
@@ -44,7 +45,7 @@ const CategoriesLayoutModalChange: React.FC<Props> = ({isOpen, onClose}) => {
                   rounded
                   onClick={() => {setSearchValue('')}}
                 >
-                  <Icon name='x' size={16} />
+                  <FiX size={16} />
                 </Button>
               }
             </div>

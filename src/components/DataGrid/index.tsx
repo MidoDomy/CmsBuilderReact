@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Icon from 'components/Icon';
+import { FiArrowDown } from 'react-icons/fi';
 
 import DataGridRow from './DataGridRow';
 import DataGridCol from './DataGridCol';
@@ -28,7 +28,7 @@ const DataGrid: React.FC<Props> = ({children, className, columns}) => {
               <span className='inline-flex items-center gap-1'>
                 {column.name}
                 {column.name &&
-                  <Icon name='arrow-down' size={12} />
+                  <FiArrowDown size={12} />
                 }
               </span>
             </th>

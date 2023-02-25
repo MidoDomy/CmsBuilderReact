@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useFocus } from 'react-aria'
 
+import { FiSearch, FiX } from 'react-icons/fi';
+
 import Form from 'components/Form';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 
 const NavigationBarSearch: React.FC = () => {
 
@@ -27,7 +28,9 @@ const NavigationBarSearch: React.FC = () => {
       {/* Field */}
       <Form.InputGroup>
         <div className='flex-1 relative'>
-          <Icon className='absolute top-1/2 left-3 transform -translate-y-1/2' name='search' size={16} />
+          <FiSearch className='absolute top-1/2 left-3 transform -translate-y-1/2' 
+            size={16} 
+          />
 
           <input className='w-full h-full py-1 pl-9 pr-5 bg-gray-50 border border-r-0 focus:border-r border-gray-200 focus:border-sky-500 rounded-l-3xl focus:outline-none placeholder:text-slate-500'
             type='text' 
@@ -44,7 +47,7 @@ const NavigationBarSearch: React.FC = () => {
               rounded
               onClick={handleClear}
             >
-              <Icon name='x' size={16} />
+              <FiX size={16} />
             </Button>
           }
         </div>

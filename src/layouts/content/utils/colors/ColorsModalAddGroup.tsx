@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 
+import { FiTrash2 } from 'react-icons/fi';
+
 import Modal from 'components/Modal';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Form from 'components/Form';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import DataGrid from 'components/DataGrid';
 
 type Props = {
@@ -80,7 +81,7 @@ const ColorsModalAddGroup: React.FC<Props> = ({isOpen, onClose}) => {
                       rounded
                       onClick={() => removeColor(index)}
                     >
-                      <Icon name='trash' size={14} />
+                      <FiTrash2 size={14} />
                     </Button>
                   </DataGrid.Col>
                 </DataGrid.Row>

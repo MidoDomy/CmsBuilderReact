@@ -1,8 +1,9 @@
 import React from 'react';
 
+import { FiChevronUp, FiUser, FiLogOut } from 'react-icons/fi';
+
 import Dropdown from 'components/Dropdown';
 import Avatar from 'components/Avatar';
-import Icon from 'components/Icon';
 
 type Props = {
   isSidebarCollapsed: boolean;
@@ -22,25 +23,23 @@ const NavigationSidebarProfile: React.FC<Props> = ({ isSidebarCollapsed }) => {
                 <div className='text-xs text-slate-700'>Administrator</div>
               </div>
 
-              <Icon name='arrow-head-up' size={18} className='ml-2' />
+              <FiChevronUp size={18} className='ml-2' />
             </div>
           }
         </div>
       </Dropdown.Trigger>
 
       <Dropdown.Menu className={`${isSidebarCollapsed ? '-ml-0.5' : 'ml-0.5'}`}>
-        <Dropdown.MenuItem 
-          link='/settings/profile'
-          icon='profile'
-        >
+        <Dropdown.MenuItem link='/settings/profile'>
+          <FiUser size={16} />
           Profile settings
         </Dropdown.MenuItem>
 
         <Dropdown.MenuItem 
           link='/'
           variant='danger'
-          icon='logout'
         >
+          <FiLogOut size={16} />
           Log out
         </Dropdown.MenuItem>
       </Dropdown.Menu>

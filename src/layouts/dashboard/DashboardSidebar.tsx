@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
+import { FiSettings } from 'react-icons/fi';
+
 import Sidebar from 'components/Sidebar';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import Tabs from 'components/Tabs';
 import DashboardSidebarSettings from 'layouts/dashboard/sidebar/DashboardSidebarSettings';
 import DashboardSidebarWidgets from 'layouts/dashboard/sidebar/DashboardSidebarWidgets';
@@ -16,7 +17,7 @@ const DashboardSidebar: React.FC = () => {
         square
         onClick={() => setSettings(!settings)}
       >
-        <Icon name='settings' className='' />
+        <FiSettings size={24} />
       </Button>
 
       <Sidebar>

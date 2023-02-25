@@ -1,10 +1,11 @@
 import React from 'react';
 
+import { CiAlignBottom, CiAlignCenterH, CiAlignCenterV, CiAlignLeft, CiAlignRight, CiAlignTop } from 'react-icons/ci';
+
 import Collapse from 'components/Collapse';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Form from 'components/Form';
-import Icon from 'components/Icon';
 
 const StylesAlign: React.FC = () => {
   return (
@@ -26,7 +27,7 @@ const StylesAlign: React.FC = () => {
                   defaultChecked
                   hideRadio
                 >
-                  <Icon name='justify-start' size={18} />
+                  <CiAlignLeft size={22} />
                 </Form.Radio>
               </Col>
 
@@ -37,7 +38,7 @@ const StylesAlign: React.FC = () => {
                   name='justify' 
                   hideRadio
                 >
-                  <Icon name='justify-center' size={18} />
+                  <CiAlignCenterH size={22} />
                 </Form.Radio>
               </Col>
 
@@ -48,7 +49,7 @@ const StylesAlign: React.FC = () => {
                   name='justify' 
                   hideRadio
                 >
-                  <Icon name='justify-end' size={18} />
+                  <CiAlignRight size={22} />
                 </Form.Radio>
               </Col>
             </Row>
@@ -65,7 +66,7 @@ const StylesAlign: React.FC = () => {
                   defaultChecked
                   hideRadio
                 >
-                  <Icon name='align-start' size={18} />
+                  <CiAlignTop size={22} />
                 </Form.Radio>
               </Col>
 
@@ -76,7 +77,7 @@ const StylesAlign: React.FC = () => {
                   name='align' 
                   hideRadio
                 >
-                  <Icon name='align-center' size={18} />
+                  <CiAlignCenterV size={22} />
                 </Form.Radio>
               </Col>
 
@@ -87,7 +88,7 @@ const StylesAlign: React.FC = () => {
                   name='align' 
                   hideRadio
                 >
-                  <Icon name='align-end' size={18} />
+                  <CiAlignBottom size={22} />
                 </Form.Radio>
               </Col>
             </Row>

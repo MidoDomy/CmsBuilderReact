@@ -1,9 +1,13 @@
 import React from 'react';
 
+import { FiChevronRight } from 'react-icons/fi';
+import { CiMobile2 } from 'react-icons/ci'
+import { IoTabletLandscapeOutline } from 'react-icons/io5';
+import { BsLaptop } from 'react-icons/bs';
+
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 
 const LayoutsEditContentBar: React.FC = () => {
   return (
@@ -19,7 +23,7 @@ const LayoutsEditContentBar: React.FC = () => {
                     size='xs'
                     square
                   >
-                    <Icon name='mobile' size={16} />
+                    <CiMobile2 size={16} />
                   </Button>
                 </Col>
 
@@ -29,7 +33,7 @@ const LayoutsEditContentBar: React.FC = () => {
                     size='xs'
                     square
                   >
-                    <Icon name='tablet' size={16} />
+                    <IoTabletLandscapeOutline size={16} />
                   </Button>
                 </Col>
 
@@ -39,7 +43,7 @@ const LayoutsEditContentBar: React.FC = () => {
                     size='xs'
                     square
                   >
-                    <Icon name='laptop' size={16} />
+                    <BsLaptop size={16} />
                   </Button>
                 </Col>
               </Row>
@@ -63,7 +67,7 @@ const LayoutsEditContentBar: React.FC = () => {
                 size='sm'
               >
                 Publish
-                <Icon name='arrow-head-right' size={16} />
+                <FiChevronRight size={16} />
               </Button>
             </div>
           </Col>

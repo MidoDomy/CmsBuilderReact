@@ -1,148 +1,44 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
+import { HiOutlineHome } from 'react-icons/hi';
+import { BiCategory, BiBookContent, BiCollection } from 'react-icons/bi';
+import { MdOutlinePermMedia } from 'react-icons/md';
+import { FiMail, FiCircle, FiSettings, FiInfo, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+
 import Sidebar from 'components/Sidebar';
 import Image from 'components/Image';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import NavigationSidebarItem from './sidebar/NavigationSidebarItem';
 import NavigationSidebarProfile from './sidebar/NavigationSidebarProfile';
 
 const NavigationSidebar: React.FC = () => {
   const NavigationMenu = [
-    {
-      id: 0,
-      icon: 'home',
-      name: 'Dashboard',
-      link: '/dashboard',
-      children: null
-    },
-    {
-      id: 1,
-      icon: 'categories',
-      name: 'Categories',
-      link: '/categories',
-      children: null
-    },
-    {
-      id: 2,
-      icon: 'collections',
-      name: 'Collections',
-      link: '/collections',
-      children: [
-        {
-          id: 3,
-          icon: 'circle',
-          name: 'Overview',
-          link: '/collections/overview',
-          children: null
-        },
-        {
-          id: 20,
-          icon: 'circle',
-          name: 'Blogs',
-          link: '/collections/list',
-          children: null
-        },
-        {
-          id: 21,
-          icon: 'circle',
-          name: 'Products',
-          link: '/collections/list',
-          children: null
-        }
-      ]
-    },
-    {
-      id: 4,
-      icon: 'content',
-      name: 'Content',
-      link: '/content',
-      children: [
-        {
-          id: 5,
-          icon: 'circle',
-          name: 'Utils',
-          link: '/content/utils',
-          children: [
-            {
-              id: 6,
-              icon: null,
-              name: 'Colors',
-              link: '/content/utils/colors',
-              children: null
-            },
-            {
-              id: 7,
-              icon: null,
-              name: 'Fonts',
-              link: '/content/utils/fonts',
-              children: null
-            },
-            {
-              id: 8,
-              icon: null,
-              name: 'Icons',
-              link: '/content/utils/icons',
-              children: null
-            }
-          ]
-        },
-        {
-          id: 9,
-          icon: 'circle',
-          name: 'Components',
-          link: '/content/components',
-          children: null
-        },
-        {
-          id: 10,
-          icon: 'circle',
-          name: 'Elements',
-          link: '/content/elements',
-          children: null
-        },
-        {
-          id: 11,
-          icon: 'circle',
-          name: 'Layouts',
-          link: '/content/layouts/overview',
-          children: null
-        }
-      ]
-    },
-    {
-      id: 12,
-      icon: 'media',
-      name: 'Media',
-      link: '/media',
-      children: null
-    },
-    {
-      id: 13,
-      icon: 'letter-plane',
-      name: 'Emails',
-      link: '/emails',
-      children: null
-    }
-  ]
+    { id: 0, icon: <HiOutlineHome size={20} />, name: 'Dashboard', link: '/dashboard', children: null },
+    { id: 1, icon: <BiCategory size={20} />, name: 'Categories', link: '/categories', children: null },
+    { id: 2, icon: <BiCollection size={20} />, name: 'Collections', link: '/collections', children: [
+      { id: 3, icon: <FiCircle size={10} />, name: 'Overview', link: '/collections/overview', children: null },
+      { id: 20, icon: <FiCircle size={10} />, name: 'Blogs', link: '/collections/list', children: null },
+      { id: 21, icon: <FiCircle size={10} />, name: 'Products', link: '/collections/list', children: null }
+    ]},
+    { id: 4, icon: <BiBookContent size={20} />, name: 'Content', link: '/content', children: [
+      { id: 5, icon: <FiCircle size={10} />, name: 'Utils', link: '/content/utils', children: [
+        { id: 6, icon: null, name: 'Colors', link: '/content/utils/colors', children: null },
+        { id: 7, icon: null, name: 'Fonts', link: '/content/utils/fonts', children: null },
+        { id: 8, icon: null, name: 'Icons', link: '/content/utils/icons', children: null }
+      ]},
+      { id: 9, icon: <FiCircle size={10} />, name: 'Components', link: '/content/components', children: null },
+      { id: 10, icon: <FiCircle size={10} />, name: 'Elements', link: '/content/elements', children: null },
+      { id: 11, icon: <FiCircle size={10} />,  name: 'Layouts', link: '/content/layouts/overview', children: null }
+    ]},
+    { id: 12, icon: <MdOutlinePermMedia size={20} />, name: 'Media', link: '/media', children: null },
+    { id: 13, icon: <FiMail size={20} />, name: 'Emails', link: '/emails', children: null }
+  ];
 
   const NavigationGeneral = [
-    {
-      id: 14,
-      icon: 'settings',
-      name: 'Settings',
-      link: '/settings/profile',
-      children: null
-    },
-    {
-      id: 15,
-      icon: 'circle-info',
-      name: 'Support',
-      link: '/support',
-      children: null
-    }
-  ]
+    { id: 14, icon: <FiSettings size={20} />, name: 'Settings', link: '/settings/profile', children: null },
+    { id: 15, icon: <FiInfo size={20} />, name: 'Support', link: '/support', children: null }
+  ];
 
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true);
   const toggleModal = () => setIsSidebarCollapsed(!isSidebarCollapsed);
@@ -154,7 +50,7 @@ const NavigationSidebar: React.FC = () => {
           {/* Logo */}
           <Link href='/dashboard'>
             <h1 className={`flex items-center gap-2 font-medium text-xl text-slate-900 ${isSidebarCollapsed ? 'justify-center' : ''}`}>
-              <Image className='h-[26px] w-auto' />
+              <Image className='h-[26px] w-auto' alt='' />
 
               {!isSidebarCollapsed &&
                 <span>Logo</span>
@@ -168,9 +64,9 @@ const NavigationSidebar: React.FC = () => {
             onClick={toggleModal}
           >
             {isSidebarCollapsed ? 
-              <Icon name='arrow-head-right' size={12} />
+              <FiChevronRight size={12} />
               :
-              <Icon name='arrow-head-left' size={12} />
+              <FiChevronLeft size={12} />
             }
           </Button>
         </Sidebar.Header>

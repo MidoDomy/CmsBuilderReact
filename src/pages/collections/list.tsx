@@ -1,11 +1,12 @@
 import type { NextPage } from 'next';
 import { useState } from 'react';
 
+import { FiPlus, FiList, FiGrid, FiEdit2 } from 'react-icons/fi';
+
 import Container from 'components/Container';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import DataGrid from 'components/DataGrid';
 import Layout from 'layouts/general/Layout';
 import PageHeader from 'layouts/general/PageHeader';
@@ -41,14 +42,14 @@ const CollectionsList: NextPage = () => {
           <Row gapX={8}>
             <Col>
               <Button href='/collections/edit'>
-                <Icon name='edit' size={16} />
+                <FiEdit2 size={16} />
                 Edit
               </Button>
             </Col>
 
             <Col>
               <Button href='/collections/item'>
-                <Icon name='plus' size={16} />
+                <FiPlus size={16} />
                 Add item
               </Button>
             </Col>
@@ -69,7 +70,7 @@ const CollectionsList: NextPage = () => {
                     square
                     onClick={() => setIsTableView(true)}  
                   >
-                    <Icon name='list' size={18} />
+                    <FiList size={18} />
                   </Button>
                 </Col>
 
@@ -80,7 +81,7 @@ const CollectionsList: NextPage = () => {
                     square
                     onClick={() => setIsTableView(false)}  
                   >
-                    <Icon name='categories' size={18} />
+                    <FiGrid size={18} />
                   </Button>
                 </Col>
               </Row>

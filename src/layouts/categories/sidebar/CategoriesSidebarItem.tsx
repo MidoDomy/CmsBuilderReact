@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
+import { FaRegFolderOpen } from 'react-icons/fa';
+import { FiFolder } from 'react-icons/fi';
+
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Collapse from 'components/Collapse';
-import Icon from 'components/Icon';
 import CategoriesSidebarItemDropdown from './CategoriesSidebarItemDropdown';
 
 interface categoryItem {
@@ -65,9 +67,9 @@ const CategoriesSidebarItem: React.FC<Props> = ({ subCategories, name }) => {
                     {/* Icon */}
                     <Col>
                       {open ? 
-                        <Icon name='folder-open' size={16} />
+                        <FaRegFolderOpen size={16} />
                         :
-                        <Icon name='folder' size={16} />
+                        <FiFolder size={16} />
                       }
                     </Col>
 

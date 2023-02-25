@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
+import { FiPlus } from 'react-icons/fi';
+
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Form from 'components/Form';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 
 const ElementsSettingsSidebarOptions: React.FC = () => {
   const [variants, setVariants] = useState([
@@ -51,7 +52,7 @@ const ElementsSettingsSidebarOptions: React.FC = () => {
                 size='sm'
                 rounded
               >
-                <Icon name='plus' size={14} />
+                <FiPlus size={14} />
               </Button>
             </Col>
           </Row>

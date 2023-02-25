@@ -17,7 +17,7 @@ type Props = {
 
 const FontsSidebarControls: React.FC<Props> = ({text, setText, fontSize, setFontSize, fontWeight, setFontWeight, italic, setItalic}) => {
   return (
-    <div className='sticky top-7 pt-6 pb-8 px-5 rounded-lg bg-gray-100 border border-gray-200 shadow-sm hover:shadow'>
+    <div className='sticky top-7 pt-6 pb-8 px-5 rounded-md bg-gray-100 border border-gray-200 shadow-sm hover:shadow transition-shadow'>
       <div className='mb-5 font-medium text-2xl'>Test controls</div>
 
       {/* Text value */}
@@ -50,7 +50,7 @@ const FontsSidebarControls: React.FC<Props> = ({text, setText, fontSize, setFont
         >
           <Row gapX={4} gapY={8}>
             <Col>
-              <Form.Radio className={`py-0.5 px-1.5 rounded-3xl font-medium text-xs ${fontWeight == 100 ? 'bg-gray-600 text-white' : 'bg-gray-200'}`}
+              <Form.Radio className={`py-0.5 px-1.5 rounded-3xl font-medium text-xs [&_label]:opacity-100 ${fontWeight == 100 ? 'bg-gray-600 text-white' : 'bg-gray-200'}`}
                 id='fontWeight100'
                 name='fontWeight'
                 value={100}
@@ -60,7 +60,7 @@ const FontsSidebarControls: React.FC<Props> = ({text, setText, fontSize, setFont
             </Col>
 
             <Col>
-              <Form.Radio className={`py-0.5 px-1.5 rounded-3xl font-medium text-xs ${fontWeight == 200 ? 'bg-gray-600 text-white' : 'bg-gray-200'}`}
+              <Form.Radio className={`py-0.5 px-1.5 rounded-3xl font-medium text-xs [&_label]:opacity-100 ${fontWeight == 200 ? 'bg-gray-600 text-white' : 'bg-gray-200'}`}
                 id='fontWeight200'
                 name='fontWeight'
                 value={200}
@@ -70,7 +70,7 @@ const FontsSidebarControls: React.FC<Props> = ({text, setText, fontSize, setFont
             </Col>
 
             <Col>
-              <Form.Radio className={`py-0.5 px-1.5 rounded-3xl font-medium text-xs ${fontWeight == 300 ? 'bg-gray-600 text-white' : 'bg-gray-200'}`}
+              <Form.Radio className={`py-0.5 px-1.5 rounded-3xl font-medium text-xs [&_label]:opacity-100 ${fontWeight == 300 ? 'bg-gray-600 text-white' : 'bg-gray-200'}`}
                 id='fontWeight300'
                 name='fontWeight'
                 value={300}
@@ -80,7 +80,7 @@ const FontsSidebarControls: React.FC<Props> = ({text, setText, fontSize, setFont
             </Col>
 
             <Col>
-              <Form.Radio className={`py-0.5 px-1.5 rounded-3xl font-medium text-xs ${fontWeight == 400 ? 'bg-gray-600 text-white' : 'bg-gray-200'}`}
+              <Form.Radio className={`py-0.5 px-1.5 rounded-3xl font-medium text-xs [&_label]:opacity-100 ${fontWeight == 400 ? 'bg-gray-600 text-white' : 'bg-gray-200'}`}
                 id='fontWeight400'
                 name='fontWeight'
                 value={400}
@@ -90,7 +90,7 @@ const FontsSidebarControls: React.FC<Props> = ({text, setText, fontSize, setFont
             </Col>
 
             <Col>
-              <Form.Radio className={`py-0.5 px-1.5 rounded-3xl font-medium text-xs ${fontWeight == 500 ? 'bg-gray-600 text-white' : 'bg-gray-200'}`}
+              <Form.Radio className={`py-0.5 px-1.5 rounded-3xl font-medium text-xs [&_label]:opacity-100 ${fontWeight == 500 ? 'bg-gray-600 text-white' : 'bg-gray-200'}`}
                 id='fontWeight500'
                 name='fontWeight'
                 value={500}
@@ -100,7 +100,7 @@ const FontsSidebarControls: React.FC<Props> = ({text, setText, fontSize, setFont
             </Col>
 
             <Col>
-              <Form.Radio className={`py-0.5 px-1.5 rounded-3xl font-medium text-xs ${fontWeight == 600 ? 'bg-gray-600 text-white' : 'bg-gray-200'}`}
+              <Form.Radio className={`py-0.5 px-1.5 rounded-3xl font-medium text-xs [&_label]:opacity-100 ${fontWeight == 600 ? 'bg-gray-600 text-white' : 'bg-gray-200'}`}
                 id='fontWeight600'
                 name='fontWeight'
                 value={600}
@@ -110,7 +110,7 @@ const FontsSidebarControls: React.FC<Props> = ({text, setText, fontSize, setFont
             </Col>
 
             <Col>
-              <Form.Radio className={`py-0.5 px-1.5 rounded-3xl font-medium text-xs ${fontWeight == 700 ? 'bg-gray-600 text-white' : 'bg-gray-200'}`}
+              <Form.Radio className={`py-0.5 px-1.5 rounded-3xl font-medium text-xs [&_label]:opacity-100 ${fontWeight == 700 ? 'bg-gray-600 text-white' : 'bg-gray-200'}`}
                 id='fontWeight700'
                 name='fontWeight'
                 value={700}
@@ -120,7 +120,7 @@ const FontsSidebarControls: React.FC<Props> = ({text, setText, fontSize, setFont
             </Col>
 
             <Col>
-              <Form.Radio className={`py-0.5 px-1.5 rounded-3xl font-medium text-xs ${fontWeight == 800 ? 'bg-gray-600 text-white' : 'bg-gray-200'}`}
+              <Form.Radio className={`py-0.5 px-1.5 rounded-3xl font-medium text-xs [&_label]:opacity-100 ${fontWeight == 800 ? 'bg-gray-600 text-white' : 'bg-gray-200'}`}
                 id='fontWeight800'
                 name='fontWeight'
                 value={800}
@@ -130,7 +130,7 @@ const FontsSidebarControls: React.FC<Props> = ({text, setText, fontSize, setFont
             </Col>
 
             <Col>
-              <Form.Radio className={`py-0.5 px-1.5 rounded-3xl font-medium text-xs ${fontWeight == 900 ? 'bg-gray-600 text-white' : 'bg-gray-200'}`}
+              <Form.Radio className={`py-0.5 px-1.5 rounded-3xl font-medium text-xs [&_label]:opacity-100 ${fontWeight == 900 ? 'bg-gray-600 text-white' : 'bg-gray-200'}`}
                 id='fontWeight900'
                 name='fontWeight'
                 value={900}

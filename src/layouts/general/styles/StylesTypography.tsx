@@ -1,10 +1,13 @@
 import React from 'react';
 
+import { FiAlignLeft, FiAlignCenter, FiAlignRight, FiAlignJustify } from 'react-icons/fi';
+import { BiBold, BiItalic, BiUnderline } from 'react-icons/bi';
+import { RxLetterSpacing, RxLineHeight, RxLetterCaseUppercase, RxLetterCaseCapitalize, RxLetterCaseLowercase } from 'react-icons/rx';
+
 import Collapse from 'components/Collapse';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Form from 'components/Form';
-import Icon from 'components/Icon';
 
 const StyleTypography: React.FC = () => {
   return (
@@ -85,7 +88,7 @@ const StyleTypography: React.FC = () => {
                 type='number' 
                 defaultValue={100}
                 placeholder='-' 
-                prefix={<Icon name='line-height' size={16} />} 
+                prefix={<RxLineHeight size={16} />} 
                 suffix={<span className='text-xs'>px</span>}
               />
             </Col>
@@ -98,7 +101,7 @@ const StyleTypography: React.FC = () => {
                 type='number' 
                 defaultValue={0}
                 placeholder='-' 
-                prefix={<Icon name='letter-spacing' size={16} />} 
+                prefix={<RxLetterSpacing size={16} />} 
                 suffix={<span className='text-xs'>px</span>}
               />
             </Col>
@@ -118,7 +121,7 @@ const StyleTypography: React.FC = () => {
                       value='bold'
                       hideCheckbox
                     >
-                      <Icon name='text-bold' size={16} />
+                      <BiBold size={16} />
                     </Form.Checkbox>
                   </Col>
 
@@ -128,7 +131,7 @@ const StyleTypography: React.FC = () => {
                       value='italic'
                       hideCheckbox
                     >
-                      <Icon name='text-italic' size={16} />
+                      <BiItalic size={16} />
                     </Form.Checkbox>
                   </Col>
 
@@ -138,7 +141,7 @@ const StyleTypography: React.FC = () => {
                       value='underline'
                       hideCheckbox
                     >
-                      <Icon name='text-underline' size={16} />
+                      <BiUnderline size={16} />
                     </Form.Checkbox>
                   </Col>
                 </Row>
@@ -157,7 +160,7 @@ const StyleTypography: React.FC = () => {
                       value='uppercase'
                       hideRadio
                     >
-                      <Icon name='text-uppercase' size={16} />
+                      <RxLetterCaseUppercase size={16} />
                     </Form.Radio>
                   </Col>
 
@@ -169,7 +172,7 @@ const StyleTypography: React.FC = () => {
                       defaultChecked
                       hideRadio
                     >
-                      <Icon name='text-normal' size={16} />
+                      <RxLetterCaseCapitalize size={16} />
                     </Form.Radio>
                   </Col>
 
@@ -180,7 +183,7 @@ const StyleTypography: React.FC = () => {
                       value='lowercase'
                       hideRadio
                     >
-                      <Icon name='text-lowercase' size={16} />
+                      <RxLetterCaseLowercase size={16} />
                     </Form.Radio>
                   </Col>
                 </Row>
@@ -202,7 +205,7 @@ const StyleTypography: React.FC = () => {
                   defaultChecked
                   hideRadio
                 >
-                  <Icon name='text-align-left' size={16} />
+                  <FiAlignLeft size={16} />
                 </Form.Radio>
               </Col>
 
@@ -213,7 +216,7 @@ const StyleTypography: React.FC = () => {
                   value='center'
                   hideRadio
                 >
-                  <Icon name='text-align-center' size={16} />
+                  <FiAlignCenter size={16} />
                 </Form.Radio>
               </Col>
 
@@ -224,7 +227,7 @@ const StyleTypography: React.FC = () => {
                   value='right'
                   hideRadio
                 >
-                  <Icon name='text-align-right' size={16} />
+                  <FiAlignRight size={16} />
                 </Form.Radio>
               </Col>
 
@@ -235,7 +238,7 @@ const StyleTypography: React.FC = () => {
                   value='justify'
                   hideRadio
                 >
-                  <Icon name='text-align-justify' size={16} />
+                  <FiAlignJustify size={16} />
                 </Form.Radio>
               </Col>
             </Row>

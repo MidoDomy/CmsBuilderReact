@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 
+import { BiCheck } from 'react-icons/bi';
+import { FiX } from 'react-icons/fi';
+ 
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import FormGroup from 'components/Form/Group';
 import DataGrid from 'components/DataGrid';
 import Section from 'layouts/general/Section';
@@ -57,7 +59,7 @@ const CustomFieldsSection: React.FC<Props> = ({editable, title, description, fie
                       rounded
                       onClick={() => setIsEdit(false)}
                     >
-                      <Icon name='checkmark' size={16} />
+                      <BiCheck size={16} />
                     </Button>
                   </Col>
 
@@ -68,7 +70,7 @@ const CustomFieldsSection: React.FC<Props> = ({editable, title, description, fie
                       rounded
                       onClick={() => setIsEdit(false)}
                     >
-                      <Icon name='x' size={16} />
+                      <FiX size={16} />
                     </Button>
                   </Col>
                 </>

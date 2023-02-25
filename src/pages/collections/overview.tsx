@@ -1,11 +1,12 @@
 import type { NextPage } from 'next';
 import { useState } from 'react';
 
+import { FiPlus, FiList, FiGrid } from 'react-icons/fi';
+
 import Container from 'components/Container';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import DataGrid from 'components/DataGrid';
 import Layout from 'layouts/general/Layout';
 import PageHeader from 'layouts/general/PageHeader';
@@ -38,7 +39,7 @@ const CollectionsOverview: NextPage = () => {
         description='Create collections with similar data to keep your business organized.'
         actions={
           <Button href='/collections/edit'>
-            <Icon name='plus' size={16} />
+            <FiPlus size={16} />
             Add collection
           </Button>
         }
@@ -57,7 +58,7 @@ const CollectionsOverview: NextPage = () => {
                     square
                     onClick={() => setIsTableView(true)}  
                   >
-                    <Icon name='list' size={18} />
+                    <FiList size={18} />
                   </Button>
                 </Col>
 
@@ -68,7 +69,7 @@ const CollectionsOverview: NextPage = () => {
                     square
                     onClick={() => setIsTableView(false)}  
                   >
-                    <Icon name='categories' size={18} />
+                    <FiGrid size={18} />
                   </Button>
                 </Col>
               </Row>

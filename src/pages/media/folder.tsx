@@ -1,13 +1,14 @@
 import type { NextPage } from 'next';
 import { useState } from 'react';
 
+import { FiPlus, FiList, FiGrid } from 'react-icons/fi';
+
 import Layout from 'layouts/general/Layout';
 import PageHeader from 'layouts/general/PageHeader';
 import Container from 'components/Container';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
 import DataGrid from 'components/DataGrid';
 import MediaFolderModalImport from 'layouts/media/folder/MediaFolderModalImport';
 import MediaFolderGridItem from 'layouts/media/folder/MediaFolderGridItem';
@@ -44,8 +45,8 @@ const MediaFolder: NextPage = () => {
             title='Media folder'
             actions={
               <Button onClick={() => setShowModalImport(true)}>
-                <Icon name='plus' size={18} />
-                <span>Import new</span>
+                <FiPlus size={18} />
+                Import new
               </Button>
             }
           />
@@ -69,7 +70,7 @@ const MediaFolder: NextPage = () => {
                         square
                         onClick={() => setIsTableView(true)}  
                       >
-                        <Icon name='list' size={18} />
+                        <FiList size={18} />
                       </Button>
                     </Col>
 
@@ -80,7 +81,7 @@ const MediaFolder: NextPage = () => {
                         square
                         onClick={() => setIsTableView(false)}  
                       >
-                        <Icon name='categories' size={18} />
+                        <FiGrid size={18} />
                       </Button>
                     </Col>
                   </Row>
