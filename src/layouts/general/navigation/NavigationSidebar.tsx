@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 import { HiOutlineHome } from 'react-icons/hi';
-import { BiCategory, BiBookContent, BiCollection } from 'react-icons/bi';
+import { BiCategory, BiBookContent, BiCollection, BiCalendar, BiTask } from 'react-icons/bi';
 import { MdOutlinePermMedia } from 'react-icons/md';
-import { FiMail, FiCircle, FiSettings, FiInfo, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { FiMail, FiCircle, FiSettings, FiInfo, FiChevronLeft, FiChevronRight, FiUsers } from 'react-icons/fi';
 
 import Sidebar from 'components/Sidebar';
 import Image from 'components/Image';
@@ -35,9 +35,15 @@ const NavigationSidebar: React.FC = () => {
     { id: 13, icon: <FiMail size={20} />, name: 'Emails', link: '/emails', children: null }
   ];
 
+  const NavigationOrganisation = [
+    { id: 14, icon: <BiCalendar size={20} />, name: 'Calendar', link: '/coming-soon', children: null },
+    { id: 15, icon: <BiTask size={20} />, name: 'Board', link: '/coming-soon', children: null },
+    { id: 16, icon: <FiUsers size={20} />, name: 'Employees', link: '/coming-soon', children: null }
+  ];
+
   const NavigationGeneral = [
-    { id: 14, icon: <FiSettings size={20} />, name: 'Settings', link: '/settings/profile', children: null },
-    { id: 15, icon: <FiInfo size={20} />, name: 'Support', link: '/support', children: null }
+    { id: 17, icon: <FiSettings size={20} />, name: 'Settings', link: '/settings/profile', children: null },
+    { id: 18, icon: <FiInfo size={20} />, name: 'Support', link: '/support', children: null }
   ];
 
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true);
@@ -73,7 +79,7 @@ const NavigationSidebar: React.FC = () => {
         </Sidebar.Header>
 
         <Sidebar.Body className='pt-10'>
-          {/* Navigation */}
+          {/* Menu */}
           <h5 className={`mb-2 uppercase font-medium text-slate-500 ${isSidebarCollapsed ? '-mx-3 text-2xs text-center' : 'text-xs'}`}>Menu</h5>
           <ul className='text-sm mb-10'>
             {NavigationMenu?.map(item =>             
@@ -89,6 +95,25 @@ const NavigationSidebar: React.FC = () => {
             )}
           </ul>
 
+          {/* Organisation */}
+          <h5 className={`mb-2 uppercase font-medium text-slate-500 ${isSidebarCollapsed ? '-mx-3 text-2xs text-center' : 'text-xs'}`}>
+            {isSidebarCollapsed ? 'Organis.' : 'Organisation'}
+          </h5>
+          <ul className='text-sm mb-10'>
+            {NavigationOrganisation?.map(item =>             
+              <NavigationSidebarItem 
+                key={item.id} 
+                icon={item.icon} 
+                name={item.name} 
+                link={item.link} 
+                subCategories={item.children}
+                isSidebarCollapsed={isSidebarCollapsed} 
+                level={0}
+              />
+            )}
+          </ul>
+
+          {/* General */}
           <h5 className={`mb-2 uppercase font-medium text-slate-500 ${isSidebarCollapsed ? '-mx-3 text-2xs text-center' : 'text-xs'}`}>General</h5>
           <ul className='text-sm'>
             {NavigationGeneral?.map(item =>             
