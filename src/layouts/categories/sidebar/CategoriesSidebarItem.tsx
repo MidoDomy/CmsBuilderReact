@@ -102,7 +102,7 @@ const CategoriesSidebarItem: React.FC<Props> = ({ subCategories, name }) => {
     
           {/* Children */}
           <Collapse.Content className='pt-1 pb-1 pl-2'>
-            <ul className='flex flex-col gap-1 pl-0.5 border-l'>
+            <ul className='flex flex-col gap-1.5 pl-0.5 border-l'>
               {subCategories.map((subCategory) => (
                 <li key={subCategory.id}>
                   <CategoriesSidebarItem 

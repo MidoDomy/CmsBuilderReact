@@ -82,7 +82,7 @@ const CategoriesSidebar: React.FC = () => {
         }
 
         {/* Categories */}
-        <ul className='flex flex-col gap-1'>
+        <ul className='flex flex-col gap-1.5'>
           {categories.map((category) => (
             <li key={category.id}>
               <CategoriesSidebarItem 

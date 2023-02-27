@@ -49,7 +49,7 @@ const NavigationSidebar: React.FC = () => {
         <Sidebar.Header className='relative flex justify-between items-center border-b border-gray-200'>
           {/* Logo */}
           <Link href='/dashboard'>
-            <h1 className={`flex items-center gap-2 font-medium text-xl text-slate-900 ${isSidebarCollapsed ? 'justify-center' : ''}`}>
+            <h1 className={`flex items-center gap-2 font-medium text-xl ${isSidebarCollapsed ? 'justify-center' : ''}`}>
               <Image className='h-[26px] w-auto' alt='' />
 
               {!isSidebarCollapsed &&
@@ -60,13 +60,14 @@ const NavigationSidebar: React.FC = () => {
 
           {/* Collapse button */}
           <Button className={`${isSidebarCollapsed ? 'absolute right-0 bottom-0 translate-x-1/2 translate-y-1/2 z-10' : '-mb-0.5'}`}
+            size='sm'
             rounded
             onClick={toggleModal}
           >
             {isSidebarCollapsed ? 
-              <FiChevronRight size={12} />
+              <FiChevronRight size={16} />
               :
-              <FiChevronLeft size={12} />
+              <FiChevronLeft size={16} />
             }
           </Button>
         </Sidebar.Header>

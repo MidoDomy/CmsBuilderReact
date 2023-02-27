@@ -129,7 +129,7 @@ const Login: NextPage = () => {
           {/* Right side */}
           <Col span={6}>
             <div className='flex justify-center items-center h-full bg-gray-100 border-l border-gray-200 shadow-inner'>
-              <Image className='scale-90' 
+              <Image className='scale-90 border rounded-md shadow-sm' 
                 src='app-image.png' 
                 alt='App image'
               />
