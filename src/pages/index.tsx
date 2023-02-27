@@ -1,144 +1,134 @@
 import type { NextPage } from 'next';
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 
 import Row from 'components/Row';
 import Col from 'components/Col';
-import Image from 'components/Image';
 import Form from 'components/Form';
 import Button from 'components/Button';
 
-const Login: NextPage = () => {
-  const [resetPassword, setResetPassword] = useState(false);
-
+const Install: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Cms builder - Login</title>
+        <title>Cms builder - Install</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-        <meta property='og:title' content='Cms builder - Login' key='title' />
+        <meta property='og:title' content='Cms builder - Install' key='title' />
       </Head>
 
-      <div className='h-screen'>
-        <Row className='h-full'
-          gapX={0}
-        >
-          {/* Left side */}
-          <Col span={6}>
-            <div className='flex flex-col h-full'>
-              {/* Header */}
-              <div className='w-full px-16 py-7 border-b font-semibold text-2xl'>
-                Logo
-              </div>
+      <div className='h-screen flex justify-center items-center bg-gray-50'>
+        <div className='w-full max-w-4xl py-7 px-9 border border-gray-200 rounded-md bg-white shadow-sm hover:shadow transition-shadow'>
+          <h1 className='mb-8 font-medium text-3xl text-center'>Installation</h1>
 
-              <div className='flex-1 flex items-center justify-center px-10 pt-5 pb-56'>
-                <div className='w-full max-w-md'>
-                  {/* Login */}
-                  {!resetPassword && 
-                    <div>
-                      <div className='mb-6'>
-                        <h1 className='mb-1 font-semibold text-3xl'>Welcome back</h1>
-                        <p className='text-slate-500'>Welcome back! Please enter your details.</p>
-                      </div>
-    
-                      <div className='mb-5'>
-                        <Form>
-                          <Form.Group>
-                            <Form.Input 
-                              label='Email'
-                              size='lg' 
-                              placeholder='hi@example.com' 
-                            />
-                          </Form.Group>
-    
-                          <Form.Group>
-                            <Form.Input 
-                              label='Password'
-                              size='lg' 
-                              type='password' 
-                              placeholder='Enter password' 
-                            />
-                          </Form.Group>
-                        </Form>
-                      </div>
-    
-                      <div className='flex justify-end mb-6'>
-                        <Button 
-                          variant='link'
-                          onClick={() => setResetPassword(true)}
-                        >
-                          Forgot Password?
-                        </Button>
-                      </div>
-    
-                      <Button 
-                        href='/dashboard'
-                        size='lg'
-                        variant='primary'
-                        block
-                      >
-                        Login
-                      </Button>
-                    </div>
-                  }
+          <div className='mb-10'>
+            <h3 className='mb-2 font-medium text-sm'>Predefined</h3>
+            
+            <Button.Group>
+              <Button block>All</Button>
+              <Button block>Personal</Button>
+              <Button block>Bloger</Button>
+              <Button block>Company</Button>
+              <Button block>Big company</Button>
+            </Button.Group>
+          </div>
+          
+          <div className='mb-14'>
+            <Row gapX={16} gapY={16}>
+              <Col span={4}>
+                <Form.Checkbox
+                  id='headless'
+                  value='headless'
+                  label='Headless'
+                  small
+                />
+              </Col>
 
-                  {/* Reset password */}
-                  {resetPassword &&
-                    <div>
-                      <div className='mb-6'>
-                        <h1 className='mb-1 font-semibold text-3xl'>Forgot password?</h1>
-                        <p className='text-slate-500'>Don&apos;t worry, you can reset it via email.</p>
-                      </div>
-    
-                      <div className='mb-6'>
-                        <Form>
-                          <Form.Group>
-                            <Form.Input 
-                              label='Email'
-                              size='lg' 
-                              placeholder='hi@example.com' 
-                            />
-                          </Form.Group>
-                        </Form>
-                      </div>
+              <Col span={4}>
+                <Form.Checkbox
+                  id='dragAndDrop'
+                  value='dragAndDrop'
+                  label='Drag and drop'
+                  small
+                />
+              </Col>
 
-                      <div className='flex flex-col gap-3'>
-                        <Button 
-                          size='lg'
-                          variant='primary'
-                          block
-                        >
-                          Send
-                        </Button>
+              <Col span={4}>
+                <Form.Checkbox
+                  id='emails'
+                  value='emails'
+                  label='Email templates'
+                  small
+                />
+              </Col>
 
-                        <Button 
-                          size='lg'
-                          block
-                          onClick={() => setResetPassword(false)}
-                        >
-                          Go back to login
-                        </Button>
-                      </div>
-                    </div>
-                  }
-                </div>
-              </div>
-            </div>
-          </Col>
+              <Col span={4}>
+                <Form.Checkbox
+                  id='members'
+                  value='members'
+                  label='Members'
+                  small
+                />
+              </Col>
 
-          {/* Right side */}
-          <Col span={6}>
-            <div className='flex justify-center items-center h-full bg-gray-100 border-l border-gray-200 shadow-inner'>
-              <Image className='scale-90 border rounded-md shadow-sm' 
-                src='app-image.png' 
-                alt='App image'
-              />
-            </div>
-          </Col>
-        </Row>
+              <Col span={4}>
+                <Form.Checkbox
+                  id='messages'
+                  value='messages'
+                  label='Chat'
+                  small
+                />
+              </Col>
+
+              <Col span={4}>
+                <Form.Checkbox
+                  id='multiChannels'
+                  value='multiChannels'
+                  label='Multi-channels'
+                  small
+                />
+              </Col>
+
+              <Col span={4}>
+                <Form.Checkbox
+                  id='calendar'
+                  value='calendar'
+                  label='Calendar'
+                  small
+                />
+              </Col>
+
+              <Col span={4}>
+                <Form.Checkbox
+                  id='employees'
+                  value='employees'
+                  label='Employees'
+                  small
+                />
+              </Col>
+
+              <Col span={4}>
+                <Form.Checkbox
+                  id='taskBoard'
+                  value='taskBoard'
+                  label='Tasks board'
+                  small
+                />
+              </Col>
+            </Row>
+          </div>
+
+          <div className='text-center'>
+            <Button 
+              href='/login'
+              variant='primary'
+            >
+              Start installation
+            </Button>
+          </div>
+        </div>
       </div>
     </>
   )
 }
 
-export default Login;
+export default Install;

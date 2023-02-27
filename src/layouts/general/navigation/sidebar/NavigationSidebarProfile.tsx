@@ -36,7 +36,7 @@ const NavigationSidebarProfile: React.FC<Props> = ({ isSidebarCollapsed }) => {
         </Dropdown.MenuItem>
 
         <Dropdown.MenuItem 
-          link='/'
+          link='/login'
           variant='danger'
         >
           <FiLogOut size={16} />
