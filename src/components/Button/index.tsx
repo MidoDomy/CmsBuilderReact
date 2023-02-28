@@ -6,7 +6,7 @@ import ButtonGroup from './ButtonGroup';
 type Props = {
   children: React.ReactNode;
   className?: string;
-  variant?: 'primary' | 'secondary' | 'ghost' | 'danger' | 'danger-outline' | 'link' | 'default';
+  variant?: 'primary' | 'secondary' | 'ghost' | 'danger' | 'danger-outline' | 'danger-ghost' | 'link' | 'default';
   size?: 'xs' | 'sm' | 'md' | 'lg';
   block?: boolean;
   square?: boolean;
@@ -32,6 +32,8 @@ const Button: React.FC<Props> = ({ children, className, variant, size, block, sq
       return 'bg-red-500 hover:bg-red-600 border border-red-500 hover:border-red-600 text-white shadow-sm'
     case 'danger-outline':
       return 'bg-white hover:bg-red-500 border border-red-300 hover:border-red-500 text-red-500 hover:text-white shadow-sm'
+    case 'danger-ghost':
+      return 'bg-white hover:bg-red-100 text-red-500'
     default: 
       return 'bg-white hover:bg-gray-100 border border-gray-200 text-slate-700 shadow-sm'
   }})()

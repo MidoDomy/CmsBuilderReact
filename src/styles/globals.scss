@@ -49,5 +49,13 @@
       }
     }
   }
-}
 
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    @apply cursor-pointer bg-sky-500 rounded-full h-3 w-3 appearance-none;
+  }
+  
+  input[type='range']::-moz-range-thumb {
+    @apply cursor-pointer bg-sky-500 rounded-full h-3 w-3 appearance-none;
+  }
+}

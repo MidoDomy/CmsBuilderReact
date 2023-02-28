@@ -37,7 +37,7 @@ const ModalConfirmDeletion: React.FC<Props> = ({isOpen, onClose}) => {
               variant='danger'
               onClick={onClose}
             >
-              Confirm
+              Delete
             </Button>
           </Col>
         </Row>

@@ -18,6 +18,19 @@ const StyleBackgrounds: React.FC = () => {
         </Form.Group>
         
         <Form.Group>
+          {/* Background size */}
+          <Form.Select 
+            label='Background-size'
+            size='sm'
+            options={[
+              {value: 'default', name: 'Default'},
+              {value: 'cover', name: 'Cover'},
+              {value: 'contain', name: 'Contain'}
+            ]} 
+          />
+        </Form.Group>
+        
+        <Form.Group>
           {/* Background color */}
           <Form.Select 
             label='Background-color'

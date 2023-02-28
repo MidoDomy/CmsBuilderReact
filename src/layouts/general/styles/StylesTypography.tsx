@@ -66,16 +66,39 @@ const StyleTypography: React.FC = () => {
         </Form.Group>
 
         <Form.Group>
-          {/* Color */}
-          <Form.Select 
-            label='Color'
-            size='sm'
-            options={[
-              {value: 'Black', name: 'Black'},
-              {value: 'White', name: 'White'},
-              {value: 'Gray', name: 'Gray'}
-            ]} 
-          />
+          <Row gapX={6}>
+            {/* Color */}
+            <Col span={6}>
+              <Form.Select 
+                label='Color'
+                size='sm'
+                options={[
+                  {value: 'Black', name: 'Black'},
+                  {value: 'White', name: 'White'},
+                  {value: 'Gray', name: 'Gray'}
+                ]} 
+              />
+            </Col>
+
+            {/* Font-weight */}
+            <Col span={6}>
+              <Form.Select 
+                label='Font-weight'
+                size='sm'
+                options={[
+                  {value: '100', name: '100'},
+                  {value: '200', name: '200'},
+                  {value: '300', name: '300'},
+                  {value: '400', name: '400'},
+                  {value: '500', name: '500'},
+                  {value: '600', name: '600'},
+                  {value: '700', name: '700'},
+                  {value: '800', name: '800'},
+                  {value: '900', name: '900'}
+                ]} 
+              />
+            </Col>
+          </Row>
         </Form.Group>
 
         <Form.Group>

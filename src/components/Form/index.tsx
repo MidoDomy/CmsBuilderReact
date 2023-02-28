@@ -12,6 +12,7 @@ import Checkbox from './Checkbox';
 import Group from './Group';
 import FileUpload from './FileUpload';
 import Color from './Color';
+import Range from './Range';
 
 type Props = {
   children: React.ReactNode;
@@ -48,5 +49,6 @@ export default Object.assign(Form, {
   Checkbox: Checkbox,
   Group: Group,
   FileUpload: FileUpload,
-  Color: Color
+  Color: Color,
+  Range: Range
 });
