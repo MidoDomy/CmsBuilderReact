@@ -34,7 +34,7 @@ const NavigationSidebarItem: React.FC<Props> = ({ icon, name, link, subCategorie
     <li className='mb-1 last:mb-0'>
       {subCategories && subCategories.length > 0 ?
         <div className={`${isSidebarCollapsed ? 'relative [&:hover>:last-child]:block' : ''}`}>
-          <button className={`flex items-center justify-between w-full py-2 px-2 rounded transition-colors ${open && !active && !isSidebarCollapsed ? 'bg-gray-50 text-slate-900' : ''} ${active ? 'bg-sky-50 text-sky-600' : 'hover:bg-gray-50 text-slate-500 hover:text-slate-900'}`}
+          <button className={`flex items-center w-full py-2 px-2 rounded transition-colors ${open && !active && !isSidebarCollapsed ? 'bg-gray-50 text-slate-900' : ''} ${active ? 'bg-sky-50 text-sky-600' : 'hover:bg-gray-50 text-slate-500 hover:text-slate-900'} ${isSidebarCollapsed && level === 0 ? 'justify-center' : 'justify-between'}`}
             onClick={toggle}
           >
             <div className='flex items-center gap-2'>
@@ -73,7 +73,7 @@ const NavigationSidebarItem: React.FC<Props> = ({ icon, name, link, subCategorie
           </div>
         </div>
         :
-        <Link className={`flex items-center gap-2 py-2 px-2 rounded transition-colors ${active ? 'bg-sky-50 text-sky-600' : 'hover:bg-gray-50 text-slate-500 hover:text-slate-900'}`}
+        <Link className={`flex items-center gap-2 py-2 px-2 rounded transition-colors ${active ? 'bg-sky-50 text-sky-600' : 'hover:bg-gray-50 text-slate-500 hover:text-slate-900'} ${isSidebarCollapsed && level === 0 ? 'justify-center' : ''}`}
           href={link ? link : '/'}
         >
           <div className={`w-5 shrink-0 flex justify-center`}>

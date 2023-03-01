@@ -5,7 +5,7 @@ import Row from 'components/Row';
 import Col from 'components/Col';
 import Layout from 'layouts/general/Layout';
 import DashboardBoard from 'layouts/dashboard/DashboardBoard';
-// import DashboardSidebar from 'layouts/dashboard/DashboardSidebar';
+import DashboardSidebar from 'layouts/dashboard/DashboardSidebar';
 
 const Dashboard: NextPage = () => {
   return (
@@ -16,7 +16,7 @@ const Dashboard: NextPage = () => {
         </Col>
 
         <Col>
-          {/* <DashboardSidebar /> */}
+          <DashboardSidebar />
         </Col>
       </Row>
     </Layout>

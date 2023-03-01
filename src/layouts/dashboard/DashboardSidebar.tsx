@@ -12,18 +12,18 @@ const DashboardSidebar: React.FC = () => {
   const [settings, setSettings] = useState(false);
 
   return (
-    <div className={`relative transition-all ${settings ? 'w-72' : 'w-0'}`}>
-      <Button className='absolute top-10 left-0 -translate-x-full w-10 border-r-0 border-gray-100 rounded-r-none bg-white shadow-sm'
+    <div className={`relative transition-all ${settings ? 'w-80' : 'w-0'}`}>
+      <Button className='absolute top-11 left-0 -translate-x-full border-r-0 rounded-r-none shadow-none'
         square
         onClick={() => setSettings(!settings)}
       >
-        <FiSettings size={24} />
+        <FiSettings size={20} />
       </Button>
 
-      <Sidebar>
+      <Sidebar className='h-[calc(100vh_-_53px)] overflow-x-hidden overflow-y-auto'>
         <Sidebar.Body>
           <Tabs active='Settings'>
-            <Tabs.Nav className='mb-2'>
+            <Tabs.Nav className='mb-2 text-sm'>
               <Tabs.NavItem name='Settings'>Settings</Tabs.NavItem>
               <Tabs.NavItem name='Widgets'>Widgets</Tabs.NavItem>
             </Tabs.Nav>

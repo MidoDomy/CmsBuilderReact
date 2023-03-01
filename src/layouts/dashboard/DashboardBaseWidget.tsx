@@ -23,7 +23,7 @@ const DashboardBaseWidget: React.FC<Props> = ({ children, widget }) => {
         {children}
       </div>
 
-      <div className='pt-2 text-center font-medium text-sm text-slate-700'>{widget.name}</div>
+      <div className='pt-2 text-center font-medium text-sm'>{widget.name}</div>
     </div>
   )
 }

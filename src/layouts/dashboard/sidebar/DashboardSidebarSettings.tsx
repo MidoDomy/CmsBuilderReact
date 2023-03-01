@@ -6,25 +6,64 @@ import Form from 'components/Form';
 
 const DashboardSidebarSettings: React.FC = () => {
   return (
-    <>
-      <Row cols={2} gapX={8} align='center'>
-        <Col>
-          <Form.Input type='number' prefix='C' defaultValue={20} />
-        </Col>
+    <div>
+      <h3 className='my-3 font-medium'>Layout</h3>
 
-        <Col>
-          <Form.Input type='number' prefix='R' defaultValue={15} />
-        </Col>
+      <div>
+        <Form.Group>
+          <Row gapX={8} align='center'>
+            <Col span={6}>
+              <Form.Input 
+                type='number'
+                label='Columns'
+                size='sm'
+                defaultValue={20} 
+              />
+            </Col>
 
-        <Col>
-          <Form.Input type='number' prefix='G' defaultValue={12} />
-        </Col>
+            <Col span={6}>
+              <Form.Input 
+                type='number'
+                label='Rows'
+                size='sm'
+                defaultValue={15} 
+              />
+            </Col>
+          </Row>
+        </Form.Group>
 
-        <Col>
-          <Form.Switch id='fullWidthBoard' label='Full width' />
-        </Col>
-      </Row>
-    </>
+        <Form.Group>
+          <Row gapX={8} align='center'>
+            <Col span={6}>
+              <Form.Input 
+                type='number'
+                label='Row height'
+                size='sm'
+                defaultValue={20} 
+                suffix={<span className='text-sm'>px</span>}
+              />
+            </Col>
+
+            <Col span={6}>
+              <Form.Input 
+                type='number'
+                label='Gutter'
+                size='sm'
+                defaultValue={15} 
+                suffix={<span className='text-sm'>px</span>}
+              />
+            </Col>
+          </Row>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Switch 
+            id='fullWidthBoard' 
+            label='Full width' 
+          />
+        </Form.Group>
+      </div>
+    </div>
   )
 }
 
