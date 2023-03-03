@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 import { HiOutlineHome } from 'react-icons/hi';
-import { BiCategory, BiBookContent, BiCollection, BiCalendar, BiTask } from 'react-icons/bi';
+import { BiCategory, BiCollection, BiCalendar, BiTask } from 'react-icons/bi';
 import { MdOutlinePermMedia } from 'react-icons/md';
-import { FiMail, FiCircle, FiSettings, FiInfo, FiChevronLeft, FiChevronRight, FiUsers } from 'react-icons/fi';
+import { FiLayout, FiMail, FiCircle, FiSettings, FiInfo, FiChevronLeft, FiChevronRight, FiUsers } from 'react-icons/fi';
 
 import Sidebar from 'components/Sidebar';
 import Image from 'components/Image';
@@ -21,7 +21,7 @@ const NavigationSidebar: React.FC = () => {
       { id: 20, icon: <FiCircle size={10} />, name: 'Blogs', link: '/collections/list', children: null },
       { id: 21, icon: <FiCircle size={10} />, name: 'Products', link: '/collections/list', children: null }
     ]},
-    { id: 4, icon: <BiBookContent size={20} />, name: 'Content', link: '/content', children: [
+    { id: 4, icon: <FiLayout size={20} />, name: 'Content', link: '/content', children: [
       { id: 5, icon: <FiCircle size={10} />, name: 'Utils', link: '/content/utils', children: [
         { id: 6, icon: null, name: 'Colors', link: '/content/utils/colors', children: null },
         { id: 7, icon: null, name: 'Fonts', link: '/content/utils/fonts', children: null },
@@ -38,7 +38,7 @@ const NavigationSidebar: React.FC = () => {
   const NavigationOrganisation = [
     { id: 14, icon: <BiCalendar size={20} />, name: 'Calendar', link: '/coming-soon', children: null },
     { id: 15, icon: <BiTask size={20} />, name: 'Board', link: '/coming-soon', children: null },
-    { id: 16, icon: <FiUsers size={20} />, name: 'Employees', link: '/coming-soon', children: null }
+    { id: 16, icon: <FiUsers size={20} />, name: 'Employees', link: '/employees', children: null }
   ];
 
   const NavigationGeneral = [

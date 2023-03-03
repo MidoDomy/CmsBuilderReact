@@ -8,7 +8,7 @@ type Props = {
 
 const Tag: React.FC<Props> = ({ children, className, text, ...props }) => {
   return (
-    <span className={`py-0.5 px-2 rounded-xl bg-gray-100 dark:bg-gray-800 text-slate-700 dark:text-slate-300 text-xs font-semibold ${className}`}
+    <span className={`py-0.5 px-2 rounded-xl bg-gray-200 text-xs font-medium ${className}`}
      {...props}
     >
       {text ? text : children}

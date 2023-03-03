@@ -5,6 +5,7 @@ import { FiFile } from 'react-icons/fi';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import Button from 'components/Button';
+import Image from 'components/Image';
 
 const DashboardWidgetActivityTimeline: React.FC = () => {
   return (
@@ -37,7 +38,7 @@ const DashboardWidgetActivityTimeline: React.FC = () => {
                 </div>
 
                 <div>
-                  <div className="inline-block py-2 px-3 border border-dashed rounded-3xl font-medium text-slate-500">
+                  <div className="inline-block py-1.5 px-3 border border-dashed rounded-3xl font-medium text-slate-500">
                     documentation.pdf
                   </div>
                 </div>
@@ -99,19 +100,19 @@ const DashboardWidgetActivityTimeline: React.FC = () => {
                 <div>
                   <Row gapX={10}>
                     <Col span={2}>
-                      <img className='rounded-lg' src='https://picsum.photos/200' alt="" />
+                      <Image className='rounded-md' alt="" />
                     </Col>
 
                     <Col span={2}>
-                      <img className='rounded-lg' src='https://picsum.photos/200' alt="" />
+                      <Image className='rounded-md' alt="" />
                     </Col>
 
                     <Col span={2}>
-                      <img className='rounded-lg' src='https://picsum.photos/200' alt="" />
+                      <Image className='rounded-md' alt="" />
                     </Col>
 
                     <Col span={2}>
-                      <img className='rounded-lg' src='https://picsum.photos/200' alt="" />
+                      <Image className='rounded-md' alt="" />
                     </Col>
                   </Row>
                 </div>

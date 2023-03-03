@@ -5,23 +5,24 @@ import { IoOptions } from 'react-icons/io5';
 import Row from 'components/Row';
 import Col from 'components/Col';
 import DataGrid from 'components/DataGrid';
-import Avatar from 'components/Avatar';
 import Button from 'components/Button';
+import EmployeeTableItem from 'layouts/employees/EmployeesTableItem';
 
 const DashboardWidgetEmployeeStatus: React.FC = () => {
   const columns = [
     { key: 'id', name: '' },
     { key: 'employee', name: 'Employee' },
     { key: 'salary', name: 'Salary' },
-    { key: 'status', name: 'Status' }
+    { key: 'status', name: 'Status' },
+    { key: 'email', name: 'Email' }
   ];
   
   const employees = [
-    { id: 0, name: 'Ronny Asmo', role: 'Software engineer', salary: '3.200', workTime: 'full time', workStatus: 'test period', workPeriod: '2 months' },
-    { id: 1, name: 'Tomas Lonsetteig', role: 'Business analyst', salary: '4.000', workTime: 'full time', workStatus: 'test period', workPeriod: '1.5 months' },
-    { id: 2, name: 'Kathrine Lonsetteig', role: 'Project menager', salary: '2.800', workTime: 'full time', workStatus: 'test period', workPeriod: '1 year' },
-    { id: 3, name: 'Arne Opheim', role: 'Research Engineer', salary: '1.600', workTime: 'part time', workStatus: 'worker', workPeriod: '1.5 year' },
-    { id: 4, name: 'Ingrid Oline', role: 'Software engineer', salary: '5.000', workTime: 'full time', workStatus: 'worker', workPeriod: '2 year' }
+    { id: 0, name: 'Ronny Asmo', role: 'Software engineer', salary: '3.200', workTime: 'full time', workStatus: 'test period', workPeriod: '2 months', email: 'test@test.com' },
+    { id: 1, name: 'Tomas Lonsetteig', role: 'Business analyst', salary: '4.000', workTime: 'full time', workStatus: 'test period', workPeriod: '1.5 months', email: 'test@test.com' },
+    { id: 2, name: 'Kathrine Lonsetteig', role: 'Project menager', salary: '2.800', workTime: 'full time', workStatus: 'test period', workPeriod: '1 year', email: 'test@test.com' },
+    { id: 3, name: 'Arne Opheim', role: 'Research Engineer', salary: '1.600', workTime: 'part time', workStatus: 'worker', workPeriod: '1.5 year', email: 'test@test.com' },
+    { id: 4, name: 'Ingrid Oline', role: 'Software engineer', salary: '5.000', workTime: 'full time', workStatus: 'worker', workPeriod: '2 year', email: 'test@test.com' }
   ];
 
   return (
@@ -44,26 +45,16 @@ const DashboardWidgetEmployeeStatus: React.FC = () => {
       <div className='flex-1'>
         <DataGrid columns={columns}>
           {employees?.map(employee =>
-            <DataGrid.Row key={employee.id}>
-              <DataGrid.Col className='w-[60px] pr-0'>
-                  <Avatar alt='' />
-              </DataGrid.Col>
-
-              <DataGrid.Col>
-                <div className='font-medium text-sm'>{employee.name}</div>
-                <div className='text-xs text-slate-500'>{employee.role}</div>
-              </DataGrid.Col>
-
-              <DataGrid.Col>
-                <div className='text-sm'>{employee.salary}</div>
-                <div className='text-xs text-slate-500'>{employee.workPeriod}</div>
-              </DataGrid.Col>
-
-              <DataGrid.Col>
-                <div className='text-sm'>{employee.workStatus}</div>
-                <div className='text-xs text-slate-500'>{employee.workTime}</div>
-              </DataGrid.Col>
-            </DataGrid.Row>
+            <EmployeeTableItem 
+              key={employee.id}
+              name={employee.name}
+              role={employee.role}
+              salary={employee.salary}
+              workPeriod={employee.workPeriod}
+              workStatus={employee.workStatus}
+              workTime={employee.workTime}
+              email={employee.email}
+            />
           )}
         </DataGrid>
       </div>

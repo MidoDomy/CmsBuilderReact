@@ -6,9 +6,9 @@ import ComponentsNavigationSidebarItem from './ComponentsNavigationSidebarItem';
 const ComponentsNavigationSidebarParts: React.FC = () => {
   const componentParts = [
     {id: 0, name: 'Container'},
-    {id: 0, name: 'Icon'},
-    {id: 0, name: 'Header'},
-    {id: 0, name: 'Content'}
+    {id: 1, name: 'Icon'},
+    {id: 2, name: 'Header'},
+    {id: 3, name: 'Content'}
   ];
 
   return (
