@@ -19,8 +19,8 @@ const EmployeesOrganisationChart: NextPage = () => {
                 {/* Row */}
                 <div>
                   {/* Item */}
-                  <div className='bg-white border border-gray-200 rounded-md shadow-sm hover:shadow transition-shadow'>
-                    <div className='px-3 py-2 border-b border-gray-200 font-medium'>
+                  <div className='bg-white border border-gray-200 border-t-4 border-t-sky-500 rounded-md shadow-sm hover:shadow transition-shadow'>
+                    <div className='px-3 py-1.5 border-b border-gray-200 font-medium'>
                       Chief executive officer
                     </div>
 
@@ -52,8 +52,8 @@ const EmployeesOrganisationChart: NextPage = () => {
                       <div>
                         <div className='h-10 w-0.5 mx-auto bg-gray-200'></div>
 
-                        <div className='bg-white border border-gray-200 rounded-md shadow-sm hover:shadow transition-shadow'>
-                          <div className='px-3 py-2 border-b border-gray-200 font-medium'>
+                        <div className='bg-white border border-gray-200 border-t-4 border-t-gray-500 rounded-md shadow-sm hover:shadow transition-shadow'>
+                          <div className='px-3 py-1.5 border-b border-gray-200 font-medium'>
                             Project Manager
                           </div>
 
@@ -77,8 +77,8 @@ const EmployeesOrganisationChart: NextPage = () => {
                       <div>
                         <div className='h-10 w-0.5 mx-auto bg-gray-200'></div>
 
-                        <div className='bg-white border border-gray-200 rounded-md shadow-sm hover:shadow transition-shadow'>
-                          <div className='px-3 py-2 border-b border-gray-200 font-medium'>
+                        <div className='bg-white border border-gray-200 border-t-4 border-t-purple-500 rounded-md shadow-sm hover:shadow transition-shadow'>
+                          <div className='px-3 py-1.5 border-b border-gray-200 font-medium'>
                             Finance
                           </div>
 

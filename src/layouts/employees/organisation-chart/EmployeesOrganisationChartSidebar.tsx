@@ -12,12 +12,15 @@ const EmployeesOrganisationChartSidebar: React.FC = () => {
 
       <Sidebar.Body>
         <Form.Group>
-          <Form.Label>Card name</Form.Label>
-          <Form.Input size='sm' />
+          <Form.Input 
+            label='Card name'
+            size='sm' 
+          />
         </Form.Group>
 
         <Form.Group>
-          <Form.InputGroup label='Color'>
+          <Form.Label size='sm'>Color</Form.Label>
+          <Form.InputGroup>
             <Form.Color size='sm' />
 
             <Form.Input className='flex-1' 
@@ -27,8 +30,13 @@ const EmployeesOrganisationChartSidebar: React.FC = () => {
         </Form.Group>
 
         <Form.Group>
-          <Form.Label>Assign</Form.Label>
+          <Form.Label size='sm'>Prev. image</Form.Label>
+          <Form.FileUpload />
+        </Form.Group>
+
+        <Form.Group>
           <Form.Select 
+            label='Assign'
             size='sm' 
             options={[
               {value: 'Employee name 1', name: 'Employee name 1'},
