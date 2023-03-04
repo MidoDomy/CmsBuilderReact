@@ -48,6 +48,7 @@ const DashboardWidgetEmployeeStatus: React.FC = () => {
             <EmployeeTableItem 
               key={employee.id}
               name={employee.name}
+              link='/employees/employee' 
               role={employee.role}
               salary={employee.salary}
               workPeriod={employee.workPeriod}
