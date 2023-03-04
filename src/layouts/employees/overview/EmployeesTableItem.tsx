@@ -6,6 +6,7 @@ import Avatar from 'components/Avatar';
 
 type Props = {
   name?: string;
+  link: string;
   role?: string;
   salary?: string;
   workPeriod?: string;
@@ -14,17 +15,17 @@ type Props = {
   email?: string;
 }
 
-const EmployeeTableItem: React.FC<Props> = ({name, role, salary, workPeriod, workStatus, workTime, email}) => {
+const EmployeeTableItem: React.FC<Props> = ({name, link, role, salary, workPeriod, workStatus, workTime, email}) => {
   return (
     <DataGrid.Row>
       <DataGrid.Col className='w-[60px] pr-0'>
-        <Link href='/employees/employee'>
+        <Link href={link}>
           <Avatar alt='' />
         </Link>
       </DataGrid.Col>
 
       <DataGrid.Col>
-        <Link href='/employees/employee'>
+        <Link href={link}>
           <div className='font-medium text-sm hover:underline'>{name}</div>
         </Link>
         <div className='text-xs text-slate-500'>{role}</div>

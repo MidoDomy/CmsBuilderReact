@@ -6,7 +6,7 @@ import Row from 'components/Row';
 import Col from 'components/Col';
 import DataGrid from 'components/DataGrid';
 import Button from 'components/Button';
-import EmployeeTableItem from 'layouts/employees/EmployeesTableItem';
+import EmployeeTableItem from 'layouts/employees/overview/EmployeesTableItem';
 
 const DashboardWidgetEmployeeStatus: React.FC = () => {
   const columns = [

@@ -18,32 +18,36 @@ const NavigationSidebar: React.FC = () => {
     { id: 1, icon: <BiCategory size={20} />, name: 'Categories', link: '/categories', children: null },
     { id: 2, icon: <BiCollection size={20} />, name: 'Collections', link: '/collections', children: [
       { id: 3, icon: <FiCircle size={10} />, name: 'Overview', link: '/collections/overview', children: null },
-      { id: 20, icon: <FiCircle size={10} />, name: 'Blogs', link: '/collections/list', children: null },
-      { id: 21, icon: <FiCircle size={10} />, name: 'Products', link: '/collections/list', children: null }
+      { id: 4, icon: <FiCircle size={10} />, name: 'Blogs', link: '/collections/list', children: null },
+      { id: 5, icon: <FiCircle size={10} />, name: 'Products', link: '/collections/list', children: null }
     ]},
-    { id: 4, icon: <FiLayout size={20} />, name: 'Content', link: '/content', children: [
-      { id: 5, icon: <FiCircle size={10} />, name: 'Utils', link: '/content/utils', children: [
-        { id: 6, icon: null, name: 'Colors', link: '/content/utils/colors', children: null },
-        { id: 7, icon: null, name: 'Fonts', link: '/content/utils/fonts', children: null },
-        { id: 8, icon: null, name: 'Icons', link: '/content/utils/icons', children: null }
+    { id: 6, icon: <FiLayout size={20} />, name: 'Content', link: '/content', children: [
+      { id: 7, icon: <FiCircle size={10} />, name: 'Utils', link: '/content/utils', children: [
+        { id: 8, icon: null, name: 'Colors', link: '/content/utils/colors', children: null },
+        { id: 9, icon: null, name: 'Fonts', link: '/content/utils/fonts', children: null },
+        { id: 10, icon: null, name: 'Icons', link: '/content/utils/icons', children: null }
       ]},
-      { id: 9, icon: <FiCircle size={10} />, name: 'Components', link: '/content/components', children: null },
-      { id: 10, icon: <FiCircle size={10} />, name: 'Elements', link: '/content/elements', children: null },
-      { id: 11, icon: <FiCircle size={10} />,  name: 'Layouts', link: '/content/layouts/overview', children: null }
+      { id: 11, icon: <FiCircle size={10} />, name: 'Components', link: '/content/components', children: null },
+      { id: 12, icon: <FiCircle size={10} />, name: 'Elements', link: '/content/elements', children: null },
+      { id: 13, icon: <FiCircle size={10} />,  name: 'Layouts', link: '/content/layouts/overview', children: null }
     ]},
-    { id: 12, icon: <MdOutlinePermMedia size={20} />, name: 'Media', link: '/media', children: null },
-    { id: 13, icon: <FiMail size={20} />, name: 'Emails', link: '/emails', children: null }
+    { id: 14, icon: <MdOutlinePermMedia size={20} />, name: 'Media', link: '/media', children: null },
+    { id: 15, icon: <FiMail size={20} />, name: 'Emails', link: '/emails', children: null }
   ];
 
   const NavigationOrganisation = [
-    { id: 14, icon: <BiCalendar size={20} />, name: 'Calendar', link: '/coming-soon', children: null },
-    { id: 15, icon: <BiTask size={20} />, name: 'Board', link: '/coming-soon', children: null },
-    { id: 16, icon: <FiUsers size={20} />, name: 'Employees', link: '/employees', children: null }
+    { id: 16, icon: <BiCalendar size={20} />, name: 'Calendar', link: '/coming-soon', children: null },
+    { id: 17, icon: <BiTask size={20} />, name: 'Board', link: '/coming-soon', children: null },
+    { id: 18, icon: <FiUsers size={20} />, name: 'Employees', link: '/employees', children: [
+      { id: 19, icon: <FiCircle size={10} />, name: 'Overview', link: '/employees/overview', children: null },
+      { id: 20, icon: <FiCircle size={10} />, name: 'Teams', link: '/employees/teams', children: null },
+      { id: 21, icon: <FiCircle size={10} />, name: 'Organisation chart', link: '/employees/organisation-chart', children: null }
+    ]}
   ];
 
   const NavigationGeneral = [
-    { id: 17, icon: <FiSettings size={20} />, name: 'Settings', link: '/settings/profile', children: null },
-    { id: 18, icon: <FiInfo size={20} />, name: 'Support', link: '/support', children: null }
+    { id: 22, icon: <FiSettings size={20} />, name: 'Settings', link: '/settings/profile', children: null },
+    { id: 23, icon: <FiInfo size={20} />, name: 'Support', link: '/support', children: null }
   ];
 
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true);

@@ -22,7 +22,7 @@ const Employee: NextPage = () => {
         actions={
           <Row gapX={8}>
             <Col>
-              <Button href='/employees'>Cancel</Button>
+              <Button href='/employees/overview'>Cancel</Button>
             </Col>
   
             <Col>
