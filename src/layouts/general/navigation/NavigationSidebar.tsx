@@ -32,7 +32,7 @@ const NavigationSidebar: React.FC = () => {
       { id: 13, icon: <FiCircle size={10} />,  name: 'Layouts', link: '/content/layouts/overview', children: null }
     ]},
     { id: 14, icon: <MdOutlinePermMedia size={20} />, name: 'Media', link: '/media', children: null },
-    { id: 15, icon: <FiMail size={20} />, name: 'Emails', link: '/emails', children: null }
+    { id: 15, icon: <FiMail size={20} />, name: 'Emails', link: '/coming-soon', children: null }
   ];
 
   const NavigationOrganisation = [

@@ -25,7 +25,7 @@ const BoardRowItem: React.FC<Props> = ({role, name, completed}) => {
       </DataGrid.Col>
 
       <DataGrid.Col>
-        <div className='text-sm text-slate-500'>{role}</div>
+        <div className='uppercase text-sm text-slate-500'>{role}</div>
       </DataGrid.Col>
 
       <DataGrid.Col>
