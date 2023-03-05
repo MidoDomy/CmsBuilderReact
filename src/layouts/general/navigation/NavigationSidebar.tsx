@@ -37,7 +37,7 @@ const NavigationSidebar: React.FC = () => {
 
   const NavigationOrganisation = [
     { id: 16, icon: <BiCalendar size={20} />, name: 'Calendar', link: '/coming-soon', children: null },
-    { id: 17, icon: <BiTask size={20} />, name: 'Board', link: '/coming-soon', children: null },
+    { id: 17, icon: <BiTask size={20} />, name: 'Board', link: '/board', children: null },
     { id: 18, icon: <FiUsers size={20} />, name: 'Employees', link: '/employees', children: [
       { id: 19, icon: <FiCircle size={10} />, name: 'Overview', link: '/employees/overview', children: null },
       { id: 20, icon: <FiCircle size={10} />, name: 'Teams', link: '/employees/teams', children: null },
