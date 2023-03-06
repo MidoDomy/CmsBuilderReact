@@ -23,7 +23,7 @@ const Button: React.FC<Props> = ({ children, className, variant, size, block, sq
     case 'primary':
       return 'bg-sky-500 hover:bg-sky-600 border border-sky-500 hover:border-sky-600 text-white shadow-sm'
     case 'secondary':
-      return 'bg-sky-50 hover:bg-sky-100 border border-sky-50 hover:border-sky-100 text-sky-600 shadow-sm'
+      return 'bg-sky-50 hover:bg-sky-100 border border-sky-500 text-sky-600'
     case 'ghost':
       return 'hover:bg-gray-50 border border-transparent text-slate-700'
     case 'link':
